@@ -1,0 +1,474 @@
+﻿/* 
+Theme Name: Connections IL
+Theme URI: http://www.trans.co.il/wp_themes/
+Version: 2.0.3
+Description: התאמה לעברית של ערכת העיצוב Connections, מאת פטרישיה מולר במקור ומאת רן יניב הרטשטיין בעברית. 
+Author: <a href="http://www.vanillamist.com/blog/">פטרישיה מולר</a> ו<a href="http://www.trans.co.il/">רן יניב הרטשטיין</a>
+*/
+
+body {
+	margin:0;
+	padding:0;
+	font-family: sans-serif;
+	font-size: 1.0em;
+	text-align:center;
+	color:#29303B;
+	line-height:1.3em;
+	background: #F3F6ED; unicode-bidi: embed; direction: rtl;
+}
+a {
+	color: #909D73;	
+	text-decoration:none;
+}
+a:visited {
+	color: #8a3207;
+}
+a:hover {
+	color: #753206;
+	text-decoration:underline;
+}
+input, textarea 
+{
+	background: #F3F6ED;
+	border: #E1D6C6 1px solid;
+}
+#rap 
+{
+	background:#fff url(img/rap.jpg) center repeat-y;
+	width:760px;
+	margin:0 auto;
+	padding:0px 8px;
+	text-align:right;
+	font-family: sans-serif;
+	font-size: 0.9em;
+}
+#header {
+	background:#fff url(img/top.jpg) no-repeat bottom; 	
+ 	height: 183px;
+	margin: 0 auto;
+	width:760px;
+	padding:0;
+	border:#fc9 0px solid;
+}
+#main 
+{
+	margin:0 auto;
+	padding:0;
+	background:#000 url(img/content_bg.gif) repeat;
+	width:740px;
+}
+#content {
+	width:510px;
+	float:right;
+	padding:5px;
+	margin:0;
+	overflow:hidden;
+	display:inline;
+}
+#sidebar {
+	width:186px;
+	float:left;
+	padding:0px 18px 10px 8px;
+	margin:0;
+	font-size:1em;
+	color:#333;
+	display:inline;
+} 
+a img {
+	border: none;
+}
+acronym, abbr {
+	border-bottom: 1px dotted #0c6bf0;
+}
+acronym, abbr, span.caps {
+	cursor: help;
+	letter-spacing: .07em;
+}
+code {
+	font-size: 1em;
+	font-style: italic;
+}
+
+blockquote {
+	background: url(img/blockquote.gif) #F3F6ED no-repeat right top;
+	margin: 15px 15px 0 30px;
+	padding: 0 45px 20px 10px;
+}
+
+
+cite {
+	font-size: 0.9em;
+	font-style: normal;
+}
+h3 {
+	margin: 0;
+	padding: 0;
+	font-size:1.3em;
+}
+p {
+	margin: 0 0 1em;
+	padding: 0;
+	line-height: 1.5em;
+}
+h1, h2, h3, h4 {
+	font-family: serif;
+	font-weight: normal;
+	letter-spacing: 1px;
+}
+#header h1 
+{
+	margin: 0;	
+	font-size: 1.6em;	
+	font-weight: bold;
+	padding:10px 0 0 20px;
+	text-align:left;	
+}
+#header h1 a, #header h1 a:visited
+{
+	color:#C1CCA7;
+	text-decoration:none;
+}
+#header h1 a:hover 
+{
+	color:#F7F3ED;
+}
+#header #desc
+{
+	font-weight:normal;
+	font-family: sans-serif;
+	font-style:italic;
+	font-size:1.1em;
+	color:#B5C09D;
+	text-align:left;
+	margin:0;
+	padding:0 0 0 20px;
+}
+#sidebar ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#sidebar h2 {
+	margin: 10px 0 0 0;
+	padding:2px;
+	font-size: 1em;
+	color: #676E04;
+	text-align:center;
+	background:url(img/sidenav_top.jpg) no-repeat center;
+	border:#ccc 0px solid;
+	height:22px;
+	font-weight:bold;
+}
+
+#sidebar ul ul {
+	background: url(img/sidenav_bottom.jpg) #F3F6ED no-repeat bottom;
+	border: #E1D6C6 1px solid;
+	font-size: 0.9em;
+	list-style-type: none;
+	margin: 0;
+	padding: 5px;
+	padding-bottom: 3em;
+}
+
+#sidebar form {
+	background: url(img/sidenav_bottom.jpg) #F3F6ED no-repeat bottom;
+	border: #E1D6C6 1px solid;
+	font-size: 0.9em;
+	list-style-type: none;
+	margin: 0;
+	padding: 5px;
+	padding-bottom: 3em;
+}
+
+#sidebar ul ul li {
+	margin: 0.1em 0 0 0;
+	padding: 0;
+}
+
+#sidebar ul ul li a {
+	border: none;
+	text-decoration: none;
+}
+
+#sidebar ul ul li a:link {
+	color: #909D73;
+}
+
+#sidebar ul ul li a:visited {
+	color: #999999;
+}
+
+#sidebar ul ul li a:hover, #sidebar ul ul li a:active {
+	color: #990000;
+}
+
+#sidebar ul ul ul {
+	background: none;
+	border: none;
+	font-size: 1em;
+	list-style-type: none;
+	margin: 0;
+	padding: 5px 0;
+}
+
+#sidebar ul ul ul li {
+	background: url(img/subcat_bullet.gif) no-repeat 155px 7px;
+	margin: 0;
+	padding: 0 25px 0 0;
+}
+
+#content ul {
+	margin-right: 0;
+	padding-right: 45px;
+	list-style-type: none;
+}
+#content ul li {
+	background: url(img/bullet.gif) no-repeat 100% 7px;
+	padding-right: 1.5em;
+}
+.archive-description {
+	margin-bottom: 0;
+	font-family: serif;
+}
+.post 
+{
+	margin:0 0 30px 0;
+}
+.post-info 
+{
+	font-size:0.85em;
+	font-family: sans-serif;
+	margin:0;
+	padding: 0 5px 0 0;
+	color:#333;
+	float: right;
+}
+.post-info a
+{
+	color:#990000;
+}
+.post-info a:hover 
+{
+	color:#000;
+}
+.post-content {
+	padding:10px 0;
+	margin:3px 0;
+	border-top:#BBC4A3 1px solid;	
+	font-family: serif;
+	clear: both;
+
+}
+.post-title {
+	font-family: serif;
+	font-size:1.3em;
+	margin:0;
+	font-weight:bold;
+}
+.post-title a:link, .post-title a:visited, .post-title a:hover, .post-title a:active
+{
+	text-decoration:none;
+	color:#676E04;
+}
+.post-date {
+	float: right;
+	color: #BBC4A3;
+	font-family: serif;
+	font-size: 1.0em;
+	text-align: center;
+	font-weight: bold;
+	margin: 3px 0 10px;
+	padding: 8px 3px;
+	width: 55px;
+	background: #E7EBDE;
+	line-height: 1em;
+}
+.post-footer 
+{
+	padding-top:20px;
+	background:url(img/divider.gif) no-repeat center;
+}
+.navigation {
+   display: block;
+	margin: 10px;
+	height: 1.2em;
+}
+.alignright {float:right;}
+.alignleft {float:left;}
+#footer {
+	margin:0 auto;
+	padding: 7px 0;
+	border-top:#BBC4A3 1px solid;
+	clear: both;
+	font-size: 0.8em;
+	color: #999;
+	text-align:center;
+	width:740px;
+}
+#footer a {
+border:none;
+color:#7A7636;
+}
+
+.commentlist {
+	font-size:1em;
+	font-weight:normal;	
+}
+.commentlist small {
+	font-size: 11px;
+}
+#commentform 
+{
+	margin:0 0 0 40px;
+}
+#commentform textarea {
+	width: 80%;
+}
+#commentform p {
+	margin: 0 0 1em;
+}
+#comments,#respond {
+	text-transform: uppercase;
+	margin: 3em 0 1em 40px;
+	color: #676E04;
+	font-size: 0.9em;
+	font-family: sans-serif;
+}
+.commentlist li 
+{
+	margin:5px 0;
+	padding:10px 10px 20px 10px;
+	background:#F3F6ED url(img/comments_bottom.jpg) repeat-x bottom;
+	border:#E1D6C6 1px solid;
+}
+.commentlist .alt 
+{
+
+}
+#topnav 
+{
+	list-style:none;
+	font-size:0.9em;
+	margin:0 auto;	
+	padding:12px 0 0 20px;
+	text-align:left;	
+	font-family: sans-serif;
+	color:#BBC4A3;
+}
+#topnav li 
+{
+	list-style:none;
+	display:inline;
+	padding:0;
+	margin:0;
+	font-weight:bold;
+}
+
+#topnav li a:link, #topnav li a:visited
+{
+	text-decoration:none;	
+	color:#BBC4A3;
+}
+#topnav li a:hover, #topnav li a:active
+{
+	color:#F7F3ED;	
+}
+
+.pagenav {list-style: none;}
+
+/************/
+/* Calendar */
+/************/
+
+#calendar {
+	margin: 10px 0px 0px 0px;
+	position: inherit;
+}
+
+#wp-calendar {
+	background: url(img/sidenav_bottom.jpg) #F3F6ED no-repeat bottom;
+	border: #E1D6C6 1px solid;
+	border-top: #F3F6ED 1px solid;
+	empty-cells: show;
+	font-size: 0.9em;
+	margin: 0px;
+	padding: 3px;
+	padding-bottom: 3em;
+	text-align: center;
+	width: 100%;
+}
+
+#wp-calendar #next a {
+	padding-left: 10px;
+	text-align: left;
+}
+
+#wp-calendar #prev a {
+	padding-right: 10px;
+	text-align: right;
+}
+
+#wp-calendar a {
+	display: block;
+	text-decoration: none;
+}
+
+#wp-calendar a:hover {
+	background: #E0E6E0;
+	color: #333333;
+}
+
+#wp-calendar caption {
+	background: url(img/sidenav_top.jpg) no-repeat center;
+	border: #E1D6C6 1px solid;
+	color: #676E04;
+	font-size: 1.0em;
+	font-weight: bold;
+	font-family: serif;
+	height: 27px;
+	margin: 0;
+	padding: 2px;
+	text-align: center;
+}
+
+#wp-calendar caption a, #wp-calendar caption a:hover {
+	background: transparent;
+	color: #000000;
+}
+
+#wp-calendar td {
+	color: #CCCCCC;
+	letter-spacing: normal;
+	padding: 2px 0;
+	text-align: center;
+}
+
+#wp-calendar td.pad:hover {
+	background: #FFFFFF;
+}
+
+#wp-calendar td:hover, #wp-calendar #today {
+	background: #EEEEEE;
+	color: #BBBBBB;
+}
+
+#wp-calendar th {
+	font-style: normal;
+	text-transform: capitalize;
+}
+
+#wp-calendar .today {
+	background: #EEEEEE;
+	font-weight: bold;
+}
+
+/* Widgets */
+
+#searchform {
+	text-align:center;
+	}
+
+#searchform input {
+	margin-bottom: 2px;
+	}

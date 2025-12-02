@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site_data>
+<CoverflowSettings>
+<preset>
+<name type="string">cameraYOffset</name>
+<value type="number">0</value>
+</preset>
+<preset>
+<name type="string">cameraZOffset</name>
+<value type="number">-1000</value>
+</preset>
+<preset>
+<name type="string">planeRotationY</name>
+<value type="number">70</value>
+</preset>
+<preset>
+<name type="string">alphaSelected</name>
+<value type="number">1</value>
+</preset>
+<preset>
+<name type="string">animationInitialDrawTime</name>
+<value type="number">0.02</value>
+</preset>
+<preset>
+<name type="string">animationCameraSpeed</name>
+<value type="number">0.15</value>
+</preset>
+<preset>
+<name type="string">planeSpacing</name>
+<value type="number">24</value>
+</preset>
+<preset>
+<name type="string">selectedX</name>
+<value type="number">0</value>
+</preset>
+<preset>
+<name type="string">selectedScale</name>
+<value type="number">0.2</value>
+</preset>
+<preset>
+<name type="string">planeScale</name>
+<value type="number">0.25</value>
+</preset>
+<preset>
+<name type="string">selectedYRotation</name>
+<value type="number">0</value>
+</preset>
+<preset>
+<name type="string">alpha</name>
+<value type="number">1</value>
+</preset>
+<preset>
+<name type="string">seletedZ</name>
+<value type="number">-770</value>
+</preset>
+<preset>
+<name type="string">selectedXRotation</name>
+<value type="number">0</value>
+</preset>
+<preset>
+<name type="string">rollOverLightEffect</name>
+<value type="boolean">true</value>
+</preset>
+<preset>
+<name type="string">selectedPosFlag</name>
+<value type="boolean">true</value>
+</preset>
+<preset>
+<name type="string">isVertical</name>
+<value type="boolean">false</value>
+</preset>
+<preset>
+<name type="string">rollOverLightMultiplier</name>
+<value type="number">2</value>
+</preset>
+<preset>
+<name type="string">thumbnailQuality</name>
+<value type="number">6</value>
+</preset>
+<preset>
+<name type="string">rollOverDarkMultiplier</name>
+<value type="number">0.5</value>
+</preset>
+<preset>
+<name type="string">spacingSelected</name>
+<value type="number">365</value>
+</preset>
+<preset>
+<name type="string">cameraXOffset</name>
+<value type="number">0</value>
+</preset>
+<preset>
+<name type="string">spacingLeftOffset</name>
+<value type="number">40</value>
+</preset>
+</CoverflowSettings>
+<GridSettings>
+<preset>
+<name type="string">gridInitX</name>
+<value type="number">0</value>
+</preset>
+<preset>
+<name type="string">gridInitY</name>
+<value type="number">0</value>
+</preset>
+<preset>
+<name type="string">alpha</name>
+<value type="number">1</value>
+</preset>
+<preset>
+<name type="string">gridInitZ</name>
+<value type="number">1500</value>
+</preset>
+<preset>
+<name type="string">gridScale</name>
+<value type="number">0.25</value>
+</preset>
+<preset>
+<name type="string">gridInitAlpha</name>
+<value type="number">0</value>
+</preset>
+<preset>
+<name type="string">gridXOffset</name>
+<value type="number">-420</value>
+</preset>
+<preset>
+<name type="string">gridInitScale</name>
+<value type="number">0.01</value>
+</preset>
+<preset>
+<name type="string">gridYOffset</name>
+<value type="number">-350</value>
+</preset>
+<preset>
+<name type="string">animationRollOverTime</name>
+<value type="number">0.2</value>
+</preset>
+<preset>
+<name type="string">gridXSpacing</name>
+<value type="number">190</value>
+</preset>
+<preset>
+<name type="string">gridYSpacing</name>
+<value type="number">195</value>
+</preset>
+<preset>
+<name type="string">gridRandomZPosition</name>
+<value type="number">250</value>
+</preset>
+<preset>
+<name type="string">animationMouseMultiplier</name>
+<value type="number">1.3</value>
+</preset>
+<preset>
+<name type="string">animationSelectedTime</name>
+<value type="number">0.05</value>
+</preset>
+<preset>
+<name type="string">animationCameraSpeed</name>
+<value type="number">0.9</value>
+</preset>
+<preset>
+<name type="string">gridCenterYOnScreen</name>
+<value type="boolean">true</value>
+</preset>
+<preset>
+<name type="string">gridCenterXOnScreen</name>
+<value type="boolean">false</value>
+</preset>
+<preset>
+<name type="string">gridRows</name>
+<value type="number">5</value>
+</preset>
+<preset>
+<name type="string">rollOverZ</name>
+<value type="number">-200</value>
+</preset>
+<preset>
+<name type="string">gridSelectedXOffset</name>
+<value type="number">0</value>
+</preset>
+<preset>
+<name type="string">rollOverScale</name>
+<value type="number">0.3</value>
+</preset>
+<preset>
+<name type="string">gridSelectedYOffset</name>
+<value type="number">0</value>
+</preset>
+<preset>
+<name type="string">thumbnailQuality</name>
+<value type="number">1</value>
+</preset>
+<preset>
+<name type="string">gridSelectedScale</name>
+<value type="number">0.4</value>
+</preset>
+<preset>
+<name type="string">alphaUnSelected</name>
+<value type="number">0</value>
+</preset>
+<preset>
+<name type="string">gridSelectedZ</name>
+<value type="number">-650</value>
+</preset>
+<preset>
+<name type="string">gridCols</name>
+<value type="number">5</value>
+</preset>
+</GridSettings>
+<CarouselSettings>
+<preset>
+<name type="string">animationInitialCameraTime</name>
+<value type="number">0.2</value>
+</preset>
+<preset>
+<name type="string">animationCameraSpeed</name>
+<value type="number">0.24</value>
+</preset>
+<preset>
+<name type="string">alpha</name>
+<value type="number">1</value>
+</preset>
+<preset>
+<name type="string">thumbnailQuality</name>
+<value type="number">5</value>
+</preset>
+<preset>
+<name type="string">radiusSelected</name>
+<value type="number">1650</value>
+</preset>
+<preset>
+<name type="string">scale</name>
+<value type="number">0.12</value>
+</preset>
+<preset>
+<name type="string">radiusCamera</name>
+<value type="number">1775</value>
+</preset>
+<preset>
+<name type="string">radius</name>
+<value type="number">1400</value>
+</preset>
+<preset>
+<name type="string">animationSelectedTime</name>
+<value type="number">0.75</value>
+</preset>
+</CarouselSettings>
+<GallerySettings>
+<preset>
+<name type="string">segmentsH</name>
+<value type="number">1</value>
+</preset>
+<preset>
+<name type="string">thumbQuality</name>
+<value type="number">7</value>
+</preset>
+<preset>
+<name type="string">renderDelay</name>
+<value type="number">55</value>
+</preset>
+<preset>
+<name type="string">autoQuality</name>
+<value type="boolean">false</value>
+</preset>
+<preset>
+<name type="string">background</name>
+<value type="string"></value>
+</preset>
+<preset>
+<name type="string">cameraZoom</name>
+<value type="number">40</value>
+</preset>
+<preset>
+<name type="string">cameraInitZ</name>
+<value type="number">20000</value>
+</preset>
+<preset>
+<name type="string">interactive</name>
+<value type="boolean">true</value>
+</preset>
+<preset>
+<name type="string">cameraFov</name>
+<value type="number">50</value>
+</preset>
+<preset>
+<name type="string">movieMaterialTransparent</name>
+<value type="boolean">true</value>
+</preset>
+<preset>
+<name type="string">usePreciseMaterial</name>
+<value type="boolean">true</value>
+</preset>
+<preset>
+<name type="string">segmentsW</name>
+<value type="number">1</value>
+</preset>
+</GallerySettings>
+<StripSettings>
+<preset>
+<name type="string">animationCameraSpeed</name>
+<value type="number">0.18</value>
+</preset>
+<preset>
+<name type="string">animationCameraTargetSpeed</name>
+<value type="number">0.18</value>
+</preset>
+<preset>
+<name type="string">gridSelectedZ</name>
+<value type="number">-1050</value>
+</preset>
+<preset>
+<name type="string">alpha</name>
+<value type="number">1</value>
+</preset>
+<preset>
+<name type="string">gridScale</name>
+<value type="number">0.25</value>
+</preset>
+<preset>
+<name type="string">cycleTotalDegrees</name>
+<value type="number">0</value>
+</preset>
+<preset>
+<name type="string">cameraSelectedZOffset</name>
+<value type="number">-680</value>
+</preset>
+<preset>
+<name type="string">cycleExtrusion</name>
+<value type="number">0</value>
+</preset>
+<preset>
+<name type="string">cameraNotSelectedZOffset</name>
+<value type="number">-1900</value>
+</preset>
+<preset>
+<name type="string">cycleScaleMultiplier</name>
+<value type="number">0</value>
+</preset>
+<preset>
+<name type="string">gridRows</name>
+<value type="number">1</value>
+</preset>
+<preset>
+<name type="string">rollOverZ</name>
+<value type="number">-200</value>
+</preset>
+<preset>
+<name type="string">gridXOffset</name>
+<value type="number">-975</value>
+</preset>
+<preset>
+<name type="string">gridYSpacing</name>
+<value type="number">240</value>
+</preset>
+<preset>
+<name type="string">rollOverScale</name>
+<value type="number">0.3</value>
+</preset>
+<preset>
+<name type="string">gridYOffset</name>
+<value type="number">-310</value>
+</preset>
+<preset>
+<name type="string">gridRandomZPosition</name>
+<value type="number">0</value>
+</preset>
+<preset>
+<name type="string">thumbnailQuality</name>
+<value type="number">4</value>
+</preset>
+<preset>
+<name type="string">gridXSpacing</name>
+<value type="number">225</value>
+</preset>
+<preset>
+<name type="string">gridSelectedScale</name>
+<value type="number">0.75</value>
+</preset>
+<preset>
+<name type="string">animationTime</name>
+<value type="number">0.45</value>
+</preset>
+</StripSettings>
+<DateGridSettings>
+<preset>
+<name type="string">animationCameraSpeed</name>
+<value type="number">0.5</value>
+</preset>
+<preset>
+<name type="string">alphaSelected</name>
+<value type="number">1</value>
+</preset>
+<preset>
+<name type="string">alpha</name>
+<value type="number">0.1</value>
+</preset>
+<preset>
+<name type="string">gridScale</name>
+<value type="number">0.11</value>
+</preset>
+<preset>
+<name type="string">gridXOffset</name>
+<value type="number">50</value>
+</preset>
+<preset>
+<name type="string">alphaOver</name>
+<value type="number">1</value>
+</preset>
+<preset>
+<name type="string">gridYOffset</name>
+<value type="number">35</value>
+</preset>
+<preset>
+<name type="string">gridRows</name>
+<value type="number">4</value>
+</preset>
+<preset>
+<name type="string">gridYSpacing</name>
+<value type="number">75</value>
+</preset>
+<preset>
+<name type="string">gridRandomZPosition</name>
+<value type="number">0</value>
+</preset>
+<preset>
+<name type="string">thumbnailQuality</name>
+<value type="number">0</value>
+</preset>
+<preset>
+<name type="string">gridXSpacing</name>
+<value type="number">100</value>
+</preset>
+<preset>
+<name type="string">gridSelectedZ</name>
+<value type="number">-375</value>
+</preset>
+<preset>
+<name type="string">gridCols</name>
+<value type="number">4</value>
+</preset>
+</DateGridSettings>
+</site_data>

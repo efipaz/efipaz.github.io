@@ -1,0 +1,234 @@
+﻿/*  
+Theme Name: Red Train IL
+Theme URI: http://www.trans.co.il/wp_themes/
+Version: 2.0.3
+Description: התאמה לעברית של ערכת העיצוב Red Train, מאת ולדימיר סימוביק במקור ומאת רן יניב הרטשטיין בעברית. 
+Author: <a href="http://www.vlad-design.de">ולדימיר סימוביק</a> ו<a href="http://www.trans.co.il/">רן יניב הרטשטיין</a>
+*/
+
+body {
+background: #320000 url(images/hintergrund.gif) repeat-x fixed; 
+padding: 1em 0;
+font: 72.5% verdana, sans-serif;
+unicode-bidi: embed;
+direction: rtl;
+}
+
+a {
+color: #ffc;
+}
+
+a:hover {
+color: #fff;
+text-decoration: none;
+}
+
+hr {
+display: none;
+}
+
+img {
+border: none;
+}
+
+ins {
+text-decoration: none;
+border-bottom: 1px dashed #eee;
+}
+
+acronym, abbr, dfn {
+border-bottom: 1px dashed #eee;
+font-style: normal;
+}
+
+blockquote {
+border-right: 5px solid #320000;
+margin: 1em 0;
+padding: 10px;
+background: #600000;
+width: 470px;
+}
+
+code, pre {
+color: #f93;
+font-family: sans-serif;
+}
+
+.bild-links {
+float: right;
+margin: 0 0 3px 15px;
+}
+
+.bild-rechts {
+float: left;
+margin: 0 15px 3px 0;
+}
+
+.center {
+text-align: center;
+}
+
+.search-button {
+font-size: 1em;
+font-weight: bold;
+border: 1px solid #300000;
+background: #800000;
+color: #ffc;
+padding: 1px 2px;
+}
+
+#container {
+margin: 0 auto;
+width: 730px;
+border-bottom: 5px solid #eee;
+background: url(images/container.gif);
+color: #eee;
+line-height: 150%;
+}
+
+#header {
+height: 205px;
+background: url(images/bahn.jpg) no-repeat;
+}
+
+#header h1 {
+font: italic 30px serif;
+font-weight: bold;
+color: #fff;
+line-height: 180px;
+padding: 0 15px;
+}
+
+#header h1 a {
+color: #fff;
+text-decoration: none;
+}
+
+#sidebar {
+float: left;
+width: 166px;
+padding: 0 15px 10px 15px;
+}
+
+#sidebar h2 {
+font: bold 1.4em sans-serif;
+margin: .8em 0 .2em 0;
+}
+
+#sidebar ul {
+list-style: none;
+margin: .4em 0 1em 0;
+padding: 0;
+}
+
+#sidebar ul li ul {
+margin: .2em 0 .4em .5em;
+}
+
+#sidebar a {
+text-decoration: none;
+font-weight: bold;
+}
+
+#sidebar input {
+margin-bottom: 3px;
+background: #eee;
+font-size: 1em;
+border: 1px solid #300000;
+}
+
+#content {
+margin: 1em 15px 1.5em 215px;
+font-size: 1.1em;
+}
+
+#content h2 {
+font: italic 2.1em serif;
+font-weight: bold;
+margin: 5px 0;
+letter-spacing: 1px;
+}
+
+#content h2 a {
+text-decoration: none;
+}
+
+#content h3 {
+padding: 0 17px 0 0;
+margin: .5em 0;
+font-size: 1.4em;
+}
+
+#content h4 {
+font-size: 1.3em;
+padding: 0;
+margin: 1em 0;
+}
+
+#content h5 {
+font-size: 1.1em;
+padding: 0;
+margin: 1em 0;
+}
+
+#content .date {
+font-size: 1em;
+text-align: left;
+font-weight: bold;
+}
+
+#content .meta {
+font-size: .9em;
+}
+
+#content .feedback {
+margin: 15px 0 15px 0;
+text-align: left;
+padding-bottom: 10px;
+border-bottom: 1px solid #700000;
+}
+
+#commentlist li {
+margin-bottom: 1.5em;
+padding-bottom: 1em;
+border-bottom: 1px solid #700000;
+}
+
+#commentform {
+margin: 1em 0;
+padding: 1em;
+border: 1px solid #300000;
+background: #600000;
+}
+
+#commentform textarea {
+background: #eee;
+}
+
+#commentform #email, #commentform #author, #commentform #url {
+font-size: 1.1em;
+background: #eee;
+border: 1px solid #300000;
+width: 180px;
+}
+
+#footer {
+clear: both;
+margin: 3em 15px 0 15px;
+padding: 5px;
+text-align: center;
+}
+
+.sidebargation {
+   display: block;
+	margin: 10px;
+	height: 1.6em;
+	}
+
+.alignright {float:right;}
+.alignleft {float:left;}
+
+.comments {
+	padding-top: 15px;
+	clear: both;
+	}

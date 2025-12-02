@@ -1,0 +1,792 @@
+body {
+	text-align:center;
+	background: #FFFFFF;
+	margin:0;
+	padding:0;}
+
+ul { 
+	list-style-type: none;
+	margin: 0; }
+	
+a:active  { color: #ba3202; text-decoration: none; }
+a:link  { color: #ba3202; text-decoration: none; }
+a:visited  { color: #ba3202; text-decoration: none; }
+a:hover  { color: #ba3202; text-decoration: underline; }
+
+	
+img {
+	border-width: 0;
+}
+
+#presentationcontainer {
+   background: url(../images/common/bg-presentation.gif) top center fixed repeat-y;
+	width: 994px;
+	position: relative;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: left;
+	padding: 0;
+	display: block; 
+}
+	
+/*  MASTER HEAD */
+	
+#masterheadcontainer {
+	background: url(../images/common/bg-masterhead.jpg) no-repeat;
+	width: 978px;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-right: 8px;
+	margin-left: 8px;
+	text-align: left;
+	position: relative;
+}
+
+#masterhead-logo {
+	position: absolute;
+	top: 0px;
+	display: block;
+	width: 272px;
+	height: 119px;
+	background: url(../images/common/yellowstonepark-logo.jpg) no-repeat;
+}
+
+#masterhead-dreamplanlive {
+	position: absolute;
+	top: 63px;
+	left: 287px;
+	/*top: 0px;
+	left: 271px;
+	height: 119px;*/
+	display: block;
+	width: 353px;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold; 
+	color: #412b09; 
+	z-index: 100;
+}
+
+#masterhead-utility {
+	position: absolute;
+	top: 0px;
+	left: 265px;
+	display: block;
+	width: 353px;
+	height: 119px;
+	text-align: left; 
+	z-index: 1;
+}
+
+#utility-supernav {
+	position: absolute;
+	top: 26px;
+	left: 425px;
+	display: block;
+	width: 353px;
+	height: 119px;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 8.5pt;
+	font-weight: bold; 
+	color: #ba3202; 
+}
+	
+#utility-supernav a:link { color: #ba3202; text-decoration: none; }
+#utility-supernav a:visited { color: #ba3202; text-decoration: none; }
+#utility-supernav a:hover { color: #ba3202; text-decoration: underline;}
+#utility-supernav a:active { color: #ba3202; text-decoration: none; }
+
+#utility-pod {
+	position: absolute;
+	top: 26px;
+	left: 658px;
+	display: block;
+	width: 36px;
+	height: 14px;
+	background: url(../images/common/icon-pod.gif) no-repeat;
+	text-align: right; 
+}
+
+#utility-rss {
+	position: absolute;
+	top: 26px;
+	left: 608px;
+	display: block;
+	width: 36px;
+	height: 14px;
+	background: url(../images/common/icon-rss.gif) no-repeat;
+	text-align: right; 
+}
+
+#utility-searchbox {
+	position: absolute;
+	top: 70px;
+	left: 355px;
+	display: block;
+	width: 160px;
+	height: 54px;
+	background: transparent;
+}
+
+#searchfield {
+	width: 110px;
+	margin: 2px;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #9e9e9e;
+	height: 16px;
+	position: absolute;
+	top: 1px;
+	left: 12px;
+	padding: 0px;
+	border-top-width: 2px;
+	display: block; }
+
+#searchsubmit {
+	position: absolute;
+	top: 3px;
+	right:-30px;
+	background-image: url(../images/common/btn-search.gif);
+	width: 53px;
+	height: 22px;
+	display: block; }
+
+	
+#utility-language {
+	position: absolute;
+	top: 73px;
+	left: 558px;
+	display: block;
+	width: 160px;
+	height: 54px;
+	background: transparent;
+}
+
+#utility-language select
+{
+    BACKGROUND: #FFFFFF;
+    font-family: verdana, helvetica, arial, san-serif;
+	color: #666666; 
+	font-size: 10px;
+	border:1px solid #7e9db9;
+	height:18px;
+	
+}
+
+/*  HOME FLASH - MAP - PHOTO CALLOUT */
+
+#focuscontainer {
+	width: 978px;
+	margin: 0px 8px 0px 8px;
+	text-align: left;
+	position: relative;
+}
+
+#focus-flash {
+	position: relative;
+	width: 667px;
+	height: 407px;
+	top: 0px;
+	float: left;
+	z-index: 0;
+}
+
+#focus-utility {
+	background-image: url(../images/home/bg-focus.jpg);
+	position: relative;
+	width: 311px;
+	height: 407px;
+	top: 0px;
+	float: right;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: normal; 
+	color: #000000;
+	z-index: 0;
+}
+
+#focus-utility-mapheader { position: absolute; top: 38px; left: 15px; display: block;}
+#focus-utility-mapcontent {position: absolute; top: 100px; left: 18px; display: block; width: 148px;}
+
+#focus-utility-photoheader { position: absolute; top: 224px; left: 15px; display: block;}
+#focus-utility-photocontent {position: absolute; top: 286px; left: 18px; display: block; width: 148px;}
+
+/*  HOME CALLOUT */
+
+#homecalloutcontainer {
+	background-image: url(../images/home/bg-callout.jpg);
+	background-repeat: no-repeat;
+	width: 978px;
+	margin: 0px 8px 0px 8px;
+	position: relative;
+	clear: both;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: normal; 
+	color: #3e1e11; 
+	text-align: center;
+	line-height: 13px;
+}
+
+#callout-freetripheader {position: absolute; top: 17px; left: 42px; display: block; width: 160px; height: 16px;}
+#callout-freetripcontent {position: absolute; top: 40px; left: 20px; display: block; width: 208px;}
+
+#callout-podheader {position: absolute; top: 17px; left: 322px; display: block;}
+#callout-podcontent {position: absolute; top: 40px; left: 261px; display: block; width: 208px; }
+
+#callout-videoheader {position: absolute; top: 17px; left: 580px; display: block; }
+#callout-videocontent {position: absolute; top: 40px; left: 506px; display: block; width: 208px;}
+
+#callout-ecardheader { position: absolute; top: 17px; left: 756px; display: block;}
+#callout-ecardcontent {position: absolute; top: 40px; left: 753px; display: block; width: 205px;}
+
+/*  HOME CONTENT */
+
+#homecontainer {
+	background: url(../images/home/bg-content.gif);
+	width:978px;
+	margin-right:8px;
+	margin-left:8px;
+	margin-top:0px;
+	margin-bottom:0px;
+	padding:0px;
+	text-align:left; 
+}
+
+#homecontent {
+	width: 650px;
+	float: left;
+	margin: 10px 0px 0px 13px;
+	padding:0;
+	display: inline; 
+	clear: none;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: normal; 
+	color: #3f3928; 
+	text-align: left;
+	line-height: 15px;
+}
+
+#homeads {
+	position: relative;
+	width: 240px;
+	margin-top: 0px;
+	/*margin-right: 15px;
+	margin-left: 714px; */
+	margin-right: 15px;
+	float: right;
+}
+
+#homespaces {
+	position: relative;
+	width: 15px;
+	margin-top: 0px;
+	margin-left: 714px; 
+}
+
+/*  FOOTER */
+
+#footercontainer 
+{
+	clear: both;
+	text-align: left;
+	position: relative;
+	background: url(../images/common/bg-footer.jpg);
+	margin-left: 8px;
+	margin-right: auto;
+	width: 978px;
+	font-size: 10px;
+	font-family : arial, verdana, geneva, sans-serif;
+	font-weight: normal;
+	color: #2d2d2d;
+	height: 69px;
+}
+
+#footer-nav {
+	position: relative;
+	color: #ca5f30;
+	text-decoration: none;
+	padding: 15px 5px 5px 25px;
+	display: block;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;	
+	line-height: 16px;
+}
+
+#footer-credit {
+	position: relative;
+	color: #574e3a;
+	text-decoration: none;
+	padding: 5px 5px 5px 25px;
+	display: block;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;	
+	line-height: 16px;
+}
+
+#footer-nav a:link { color: #ca5f30; text-decoration: none; }
+#footer-nav a:visited { color: #ca5f30; text-decoration: none; }
+#footer-nav a:hover { color: #ca5f30; text-decoration: underline;}
+#footer-nav a:active { color: #ca5f30; text-decoration: none; }
+
+#footer-credit a:link { color: #574e3a; text-decoration: none; }
+#footer-credit a:visited { color: #574e3a; text-decoration: none; }
+#footer-credit a:hover { color: #574e3a; text-decoration: underline;}
+#footer-credit a:active { color: #574e3a; text-decoration: none; }
+
+
+/*  MISC */
+#mtblogincontainer {
+	position: absolute;
+	top: -33px;
+	left: 30px;
+	display: block;
+	width: 207px;
+	height: 404px;
+	background: url(../images/common/tab/mainTab/tab-mtb-over.jpg) no-repeat;
+}
+
+#mtblogincontent {
+	width: 185px;
+	padding:0;
+	display: inline; 
+	clear: none;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal; 
+	color: #FFFFFF; 
+	text-align: left;
+	line-height: 15px;
+}
+
+#mtbtext {
+	width: 185px;
+	margin: 60px 15px 0px 15px;
+	padding:0;
+	display: inline; 
+	clear: none;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal; 
+	color: #FFFFFF; 
+	text-align: left;
+	line-height: 15px;
+	position: absolute;
+	top: 0px;
+}
+
+#mtbdemobtn {
+	position: absolute;
+	top: 77px;
+	left: 58px;
+	width: 82px;
+	height: 12px; 
+}
+
+#login-box {
+	position: absolute;
+	top: 150px;
+	left: 20px;
+	display: block;
+	width: 160px;
+	height: 54px;
+	background: transparent;
+	font-size: 11px;
+	font-weight: bold; 
+}
+
+#fieldusername {
+	width: 140px;
+	margin: 2px;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #848484;
+	height: 18px;
+	position: absolute;
+	top: 23px;
+	left: 0px;
+	padding: 0px;
+	display: block; 
+}
+
+#fieldpassword {
+	width: 140px;
+	margin: 2px;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #848484;
+	height: 18px;
+	position: absolute;
+	top: 52px;
+	left: 0px;
+	padding: 0px;
+	display: block; 
+}
+
+#login-button {
+	position: absolute;
+	top: 85px;
+	right:12px;
+	background-image: url(../images/common/button/btnMTB-Login.gif);
+	width: 44px;
+	height: 21px;
+	display: block;
+}
+
+#login-footer {
+	position: absolute;
+	top: 295px;
+	left: 20px;
+	display: block;
+	width: 160px;
+	height: 54px;
+	background: transparent;
+	font-size: 11px;
+	font-weight: bold; 
+}
+
+#login-footer-text 
+{
+	width: 177px;
+	padding:0;
+	display: inline; 
+	clear: none;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal; 
+	color: #FFFFFF; 
+	text-align: left;
+	position: absolute;
+	top: 18px;
+}
+
+#login-footer-more {
+	position: absolute;
+	top: 70px;
+	left: 0px;
+	display: block;
+	width: 160px;
+	height: 54px;
+	background: transparent;
+	font-size: 11px;
+	font-weight: bold; 
+}
+
+#mtblogincontainer a:link {color: #e79001; font-weight: bold; text-decoration: underline;}
+#mtblogincontainer a:visited {color: #e79001; font-weight: bold; text-decoration: underline;}
+#mtblogincontainer a:hover {color: #e79001; font-weight: bold; text-decoration: none;}
+
+#login-box-password {
+	position: absolute;
+	top: 80px;
+	left: 5px;
+	display: block;
+	width: 100px;
+	height: 54px;
+	background: transparent;
+	font-size: 10px;
+	font-weight: normal; 
+}
+
+.errorText {font-family:arial,verdana;font-size:11px;color:red;}
+.ErrorText {font-family:arial,verdana;font-size:11px;color:red;}
+
+.articletitle {
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold; 
+	color: #ba3202; 
+	text-align: left;
+	line-height: 13px;
+}
+
+.articletitle a:active  { color: #ba3202; text-decoration: none; }
+.articletitle a:link  { color: #ba3202; text-decoration: none; }
+.articletitle a:visited  { color: #ba3202; text-decoration: none; }
+.articletitle a:hover  { color: #ba3202; text-decoration: underline; }
+
+.dividedln {	
+	position: relative;
+	width: 633px;
+	height: 1px;
+	top: 20px;
+	bottom: 20px;
+	left: 5px;
+	margin-right: auto;
+	background: url(../images/common/bg-dividedln.gif);
+	background-repeat:no-repeat;
+}
+
+.input 
+{
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #9e9e9e;
+	height: 16px;
+	top: 1px;
+	left: 12px;
+}
+	
+.landingcallout-left {
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal; 
+	color: #3f3928; 
+	text-align: left;
+	line-height: 13px;
+	width: 364px;
+	background-color: #f2e7bf;	
+}
+
+.landingcallout-right {
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal; 
+	text-align: left;
+	line-height: 15px;
+	width: 549px;	
+}
+
+.landingcallout-left-photo {
+	width: 337px;
+	padding: 10px 0px 0px 13px;
+}
+
+.landingcallout-left-content {
+	width: 320px;
+	padding: 10px 0px 0px 16px;
+	line-height: 15px;
+}
+
+.landingcallout-right-content {
+	padding: 5px 0px 0px 0px;
+}
+
+.landingcallout-bold {
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 15px;
+	font-weight: bold; 
+	color: #ba3202; 
+	padding: 10px 0px 0px 0px;
+}
+
+.landingcallout-right-link {
+	padding: 15px 0px 0px 0px;
+	font-weight: bold; 
+}
+
+.landingcallout-footer {
+	width: 248px;
+	padding: 10px 0px 0px 0px;
+	line-height: 15px;
+}
+
+.landingcallout-footer-bold {
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold; 
+	color: #ba3202; 
+	padding: 10px 0px 0px 5px;
+}
+.landingcallout-footer-content {
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal; 
+	color: #3f3928; 
+	padding: 5px 0px 0px 5px;
+	width: 190px;
+}
+
+.landingcallout-footer-link {
+	padding: 10px 0px 0px 5px;
+	font-weight: bold; 
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+.landingcallout-left-link {
+	padding: 15px 0px 0px 0px;
+	font-weight: bold; 
+	font-size: 11px;
+}
+
+.photoguide {
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal; 
+	color: #3f3928; 
+	margin: 10px 0px 0px 20px;
+	width: 200px;
+	
+}
+
+.onlinemagazine {
+	padding: 10px 0px 0px 0px;
+	font-weight: normal; 
+	font-size: 12px;
+}
+
+.landingcallout-footer-content2 {
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal; 
+	color: #3f3928; 
+	padding: 5px 0px 0px 5px;
+	width: 180px;
+}
+
+.titlebold {
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold; 
+}
+
+.title14 {
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold; 
+}
+
+.title16 {
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold; 
+}
+
+.title18
+{
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 20px;
+}
+
+.leftbox-dividedln {
+	background-image: url(../images/common/directory/leftbox-dividedline.gif);
+	background-repeat: no-repeat;
+	width: 185px;
+	height: 1px;
+	margin: 19px 0px 15px 0px;
+}
+
+.title10
+{
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	line-height: 20px;
+}
+
+.tdprivacy
+{
+	color: #ba3202;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+}
+
+.title9
+{
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 9px;
+	font-weight: normal;
+	line-height: 20px;
+}
+
+.title20
+{
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 40px;
+}
+
+.tdLnk
+{
+	color: #ba3202;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+
+#rightColumnDefault {
+	position: absolute;
+	top: 0px;
+	right:0px;
+	height: 22px;
+	width: 232px;
+	height: 139px;
+	display: block;
+}
+
+#rightColumnDefault-blank {
+	padding: 0px 0px 0px 16px;
+}
+
+
+.rightcoltext {
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal; 
+	color: #3f3928; 
+}
+
+#media-searchbox {
+	position: absolute;
+	top: 6px;
+	left: 490px;
+	display: block;
+	width: 160px;
+	height: 54px;
+	background: transparent;
+}
+
+#media-searchfield {
+	width: 110px;
+	margin: 2px;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #9e9e9e;
+	height: 16px;
+	position: absolute;
+	top: 1px;
+	left: 12px;
+	padding: 0px;
+	border-top-width: 2px;
+	display: block; }
+
+#media-searchsubmit {
+	position: absolute;
+	top: 3px;
+	right:-30px;
+	background-image: url(../images/common/button/btnTripNoteSearch.gif);
+	width: 53px;
+	height: 22px;
+	display: block; }
+	
+.dividedln-694px {
+	background-image: url(../images/common/landingthing-dividedln.gif);
+	background-repeat: no-repeat;
+	width: 694px;
+	margin: 15px 8px 16px 15px;
+}
+
+.tdSmallBusDir
+{
+	color: #3f3928;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	line-height: 15px;
+}
