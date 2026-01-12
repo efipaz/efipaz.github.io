@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Travel Photography - India and Myanmar photo galleries by Efi Paz">
+  <title>Travel Photography - Efipaz.com</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="modern-style.css">
+  <style>
+    .gallery-hero {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('LightOfIndia/pictures/P1010076.JPG');
+      background-size: cover;
+      background-position: center;
+    }
+    .destination-card {
+      position: relative;
+      height: 400px;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+    .destination-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .destination-card:hover img {
+      transform: scale(1.05);
+    }
+    .destination-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 2rem;
+      background: linear-gradient(transparent, rgba(0,0,0,0.9));
+      color: white;
+    }
+    .destination-overlay h3 {
+      color: white;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .destination-overlay p {
+      opacity: 0.9;
+      margin-bottom: 1rem;
+    }
+    .photo-stats {
+      display: flex;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+    .photo-stat {
+      text-align: center;
+    }
+    .photo-stat .number {
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--accent-gold);
+    }
+    .photo-stat .label {
+      font-size: 0.875rem;
+      color: var(--text-light);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <a href="index-modern.html" class="logo">Efi<span>Paz</span></a>
+      <nav class="nav">
+        <a href="index-modern.html">Home</a>
+        <a href="spiritual.html">Spirituality</a>
+        <a href="travel.html" class="active">Travel</a>
+        <a href="business.html">Business</a>
+        <a href="living-modern.html">Living</a>
+        <a href="ethics-modern.html">Ethics</a>
+        <a href="personal.html">Personal</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero gallery-hero" style="padding: 4rem 0;">
+    <div class="container hero-content">
+      <p class="hero-subtitle">Visual Journeys</p>
+      <h1>Travel Photography</h1>
+      <p>Capturing the essence of cultures, people, and sacred places across Asia</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index-modern.html">Home</a> <span>&rarr;</span> Travel Photography
+    </div>
+  </div>
+
+  <!-- Light of India -->
+  <section class="section">
+    <div class="container">
+      <div class="two-col">
+        <div class="destination-card">
+          <img src="LightOfIndia/pictures/P1010076.JPG" alt="Light of India" onerror="this.style.background='linear-gradient(135deg, #dd6b20, #d69e2e)'">
+          <div class="destination-overlay">
+            <h3>Light of India</h3>
+            <p>A photographic journey through the spiritual heart of India (2005)</p>
+            <a href="LightOfIndia/index.html" class="btn btn-primary">View Full Gallery</a>
+          </div>
+        </div>
+        <div>
+          <h2>Light of India (2005)</h2>
+          <p>India is a land of infinite contrasts - ancient temples and modern cities, profound spirituality and chaotic streets, vibrant colors and peaceful ashrams. This collection captures the essence of a journey through this incredible subcontinent.</p>
+
+          <div class="photo-stats">
+            <div class="photo-stat">
+              <div class="number">1000+</div>
+              <div class="label">Photos</div>
+            </div>
+            <div class="photo-stat">
+              <div class="number">2005</div>
+              <div class="label">Year</div>
+            </div>
+          </div>
+
+          <h4 style="margin-top: 2rem;">Gallery Categories:</h4>
+          <ul class="feature-list">
+            <li><strong>Religion & Spirituality</strong> - Temples, ceremonies, holy men</li>
+            <li><strong>People & Portraits</strong> - Faces of India across all walks of life</li>
+            <li><strong>Children</strong> - The joy and innocence of India's youth</li>
+            <li><strong>Animals</strong> - Wildlife, sacred cows, elephants, and more</li>
+            <li><strong>Daily Life</strong> - Markets, streets, and everyday scenes</li>
+            <li><strong>Landscapes</strong> - The diverse geography of India</li>
+          </ul>
+
+          <div style="margin-top: 2rem;">
+            <a href="LightOfIndia/index.html" class="btn btn-primary">Enter Gallery</a>
+            <a href="LightOfIndia/Wide/index.html" style="margin-left: 1rem;" class="btn btn-secondary">Wide Format</a>
+            <a href="LightOfIndia/favorites/index.html" style="margin-left: 1rem;" class="btn btn-secondary">Favorites</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Myanmar -->
+  <section class="section" style="background: #f0f4f8;">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <h2>Myanmar Images</h2>
+          <p>Myanmar (Burma) is one of Southeast Asia's most spiritually rich countries. With thousands of golden pagodas, peaceful monasteries, and some of the warmest, most genuine people you'll ever meet, this collection documents a journey through the "Golden Land."</p>
+
+          <div class="photo-stats">
+            <div class="photo-stat">
+              <div class="number">500+</div>
+              <div class="label">Photos</div>
+            </div>
+          </div>
+
+          <h4 style="margin-top: 2rem;">Gallery Highlights:</h4>
+          <ul class="feature-list">
+            <li><strong>Pagodas & Temples</strong> - The famous golden stupas of Myanmar</li>
+            <li><strong>Monks & Monasteries</strong> - Buddhist monastic life</li>
+            <li><strong>People & Culture</strong> - Traditional dress, crafts, and customs</li>
+            <li><strong>Sacred Sites</strong> - Bagan, Shwedagon, and other holy places</li>
+            <li><strong>Landscapes</strong> - Rivers, mountains, and rural Myanmar</li>
+          </ul>
+
+          <div style="margin-top: 2rem;">
+            <a href="Burma/index.html" class="btn btn-primary">Enter Gallery</a>
+            <a href="Burma/Wide/index.html" style="margin-left: 1rem;" class="btn btn-secondary">Wide Format</a>
+            <a href="Burma/favorites/index.html" style="margin-left: 1rem;" class="btn btn-secondary">Favorites</a>
+          </div>
+        </div>
+        <div class="destination-card">
+          <img src="Burma/pictures/P1020040.JPG" alt="Myanmar Images" onerror="this.style.background='linear-gradient(135deg, #d69e2e, #dd6b20)'">
+          <div class="destination-overlay">
+            <h3>Myanmar Images</h3>
+            <p>Exploring the golden pagodas and peaceful monasteries of Burma</p>
+            <a href="Burma/index.html" class="btn btn-primary">View Full Gallery</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photography Philosophy -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <h2>On Travel Photography</h2>
+        <p>Capturing moments of connection, beauty, and truth</p>
+      </div>
+
+      <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <p style="font-size: 1.1rem; line-height: 1.8; font-style: italic;">
+          "Photography is not about capturing what you see, but about revealing what you feel.
+          When traveling through India and Myanmar, I was constantly moved by the depth of spirituality,
+          the warmth of the people, and the timeless wisdom that permeates everyday life.
+          These images are an attempt to share those moments of connection."
+        </p>
+        <p style="margin-top: 1rem; color: var(--accent-gold);">- Efi Paz</p>
+      </div>
+
+      <div class="card-grid" style="margin-top: 3rem;">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Authentic Moments</h3>
+            <p class="card-text">Capturing unposed, genuine moments of daily life, ritual, and human connection across cultures.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Spiritual Landscape</h3>
+            <p class="card-text">Documenting the visible expressions of inner life - temples, ceremonies, meditation, and devotion.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Human Portrait</h3>
+            <p class="card-text">Each face tells a story. Portraits that reveal the depth and dignity of people from all walks of life.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; Efipaz.com - Amit Friedmann (Efi Paz). All rights reserved.</p>
+        <p style="margin-top: 0.5rem;"><a href="index-modern.html" style="color: var(--text-light);">Back to Home</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

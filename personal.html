@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal art, drawings, and family content by Efi Paz">
+  <title>Personal & Art - Efipaz.com</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="modern-style.css">
+  <style>
+    .artist-card {
+      background: var(--bg-card);
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+    }
+    .artist-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+    .artist-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .artist-info {
+      padding: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <a href="index-modern.html" class="logo">Efi<span>Paz</span></a>
+      <nav class="nav">
+        <a href="index-modern.html">Home</a>
+        <a href="spiritual.html">Spirituality</a>
+        <a href="travel.html">Travel</a>
+        <a href="business.html">Business</a>
+        <a href="living-modern.html">Living</a>
+        <a href="ethics-modern.html">Ethics</a>
+        <a href="personal.html" class="active">Personal</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" style="padding: 3rem 0; background: linear-gradient(135deg, #c53030 0%, #e53e3e 100%);">
+    <div class="container hero-content">
+      <p class="hero-subtitle">Creative Expression</p>
+      <h1>Personal & Art</h1>
+      <p>Artwork, drawings, family moments, and creative expressions</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index-modern.html">Home</a> <span>&rarr;</span> Personal & Art
+    </div>
+  </div>
+
+  <!-- Drawings Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Art & Drawings</h2>
+        <p>A collection of artwork and illustrations</p>
+      </div>
+
+      <div class="card-grid">
+        <div class="artist-card">
+          <img src="Drawings/Danielle.jpg" alt="Danielle" onerror="this.style.background='linear-gradient(135deg, #4299e1, #2c5282)'; this.innerHTML='<div style=\\'height:200px;display:flex;align-items:center;justify-content:center;color:white;font-size:2rem\\'>Art</div>'">
+          <div class="artist-info">
+            <h3>Danielle</h3>
+            <p class="card-text">Portrait artwork</p>
+            <a href="Drawings/Danielle.jpg" class="card-link">View &rarr;</a>
+          </div>
+        </div>
+
+        <div class="artist-card">
+          <img src="Drawings/parker.jpg" alt="Parker" onerror="this.style.background='linear-gradient(135deg, #319795, #234e52)'">
+          <div class="artist-info">
+            <h3>Parker</h3>
+            <p class="card-text">Illustration</p>
+            <a href="Drawings/parker.jpg" class="card-link">View &rarr;</a>
+          </div>
+        </div>
+
+        <div class="artist-card">
+          <img src="Drawings/rampole.jpg" alt="Rampole" onerror="this.style.background='linear-gradient(135deg, #d69e2e, #744210)'">
+          <div class="artist-info">
+            <h3>Rampole</h3>
+            <p class="card-text">Artwork</p>
+            <a href="Drawings/rampole.jpg" class="card-link">View &rarr;</a>
+          </div>
+        </div>
+
+        <div class="artist-card">
+          <img src="Drawings/watts-pic.jpg" alt="Alan Watts" onerror="this.style.background='linear-gradient(135deg, #805ad5, #553c9a)'">
+          <div class="artist-info">
+            <h3>Alan Watts Portrait</h3>
+            <p class="card-text">Portrait of the philosopher</p>
+            <a href="Drawings/watts-pic.jpg" class="card-link">View &rarr;</a>
+          </div>
+        </div>
+
+        <div class="artist-card">
+          <img src="Drawings/huxley.jpg" alt="Aldous Huxley" onerror="this.style.background='linear-gradient(135deg, #e53e3e, #c53030)'">
+          <div class="artist-info">
+            <h3>Aldous Huxley</h3>
+            <p class="card-text">Portrait of the author</p>
+            <a href="Drawings/huxley.jpg" class="card-link">View &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="Drawings/index.html" class="btn btn-primary">View Full Gallery</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Family Section -->
+  <section class="section" style="background: #f0f4f8;">
+    <div class="container">
+      <div class="section-header">
+        <h2>Family</h2>
+        <p>Personal and family content</p>
+      </div>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Evyatar</h3>
+            <p class="card-text">Special birthday page with personal content</p>
+            <a href="Evyatar/index.html" class="card-link">Visit &rarr;</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Family Section</h3>
+            <p class="card-text">Family photos and memories</p>
+            <a href="family/index.html" class="card-link">Visit &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Galleries -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Photo Collections</h2>
+        <p>Various photo galleries</p>
+      </div>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Jaffa</h3>
+            <p class="card-text">Photos from the ancient port city of Jaffa</p>
+            <a href="Misc/Photos/jaffa.html" class="card-link">View Gallery &rarr;</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Saar</h3>
+            <p class="card-text">Saar photo collection</p>
+            <a href="Misc/Photos/saar.html" class="card-link">View Gallery &rarr;</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Melody</h3>
+            <p class="card-text">Melody photo collection</p>
+            <a href="Misc/Photos/melody.html" class="card-link">View Gallery &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quotes Section -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <h2>Wisdom Quotes</h2>
+        <p>A collection of inspiring quotes and sayings</p>
+      </div>
+
+      <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <p style="font-size: 1.1rem; line-height: 1.8;">
+          A curated collection of quotes from spiritual teachers, philosophers, and thinkers
+          that have inspired and guided my journey.
+        </p>
+        <a href="Misc/quotes/index.php" class="btn btn-primary" style="margin-top: 2rem;">Browse Quotes</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Legacy Content -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Legacy Content</h2>
+        <p>Historical content and archives</p>
+      </div>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Blog Archive</h3>
+            <p class="card-text">Historical blog posts and articles</p>
+            <a href="Misc/Blog/about.html" class="card-link">View &rarr;</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">India Links</h3>
+            <p class="card-text">Resources and links related to India</p>
+            <a href="India/index.html" class="card-link">View &rarr;</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Money Topic</h3>
+            <p class="card-text">Articles about finance and money</p>
+            <a href="money/index.html" class="card-link">View &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About the Site -->
+  <section class="section" style="background: #f0f4f8;">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <h2>About This Site</h2>
+          <p style="font-size: 1.1rem; line-height: 1.8;">
+            Efipaz.com has been online since the mid-2000s, serving as a personal platform
+            for sharing content about spirituality, philosophy, travel, and business.
+            Over the years, it has grown to include thousands of pages, photos, and resources.
+          </p>
+          <p style="font-size: 1.1rem; line-height: 1.8; margin-top: 1rem;">
+            This modernized version aims to make the content more accessible while preserving
+            all the original materials that have accumulated over nearly two decades.
+          </p>
+          <div style="margin-top: 1.5rem;">
+            <a href="indexold.html" class="btn btn-secondary">View Original Site</a>
+          </div>
+        </div>
+        <div>
+          <h3>Site Statistics</h3>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
+            <div class="contact-card" style="text-align: center;">
+              <div style="font-size: 2rem; font-weight: bold; color: var(--primary-color);">3,355+</div>
+              <div>Total Files</div>
+            </div>
+            <div class="contact-card" style="text-align: center;">
+              <div style="font-size: 2rem; font-weight: bold; color: var(--accent-orange);">1,500+</div>
+              <div>Photos</div>
+            </div>
+            <div class="contact-card" style="text-align: center;">
+              <div style="font-size: 2rem; font-weight: bold; color: var(--accent-teal);">30+</div>
+              <div>PDF Documents</div>
+            </div>
+            <div class="contact-card" style="text-align: center;">
+              <div style="font-size: 2rem; font-weight: bold; color: var(--accent-gold);">6</div>
+              <div>Major Sections</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; Efipaz.com - Amit Friedmann (Efi Paz). All rights reserved.</p>
+        <p style="margin-top: 0.5rem;"><a href="index-modern.html" style="color: var(--text-light);">Back to Home</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
