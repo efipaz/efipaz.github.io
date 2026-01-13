@@ -890,14 +890,19 @@ blockquote, .quote {
   }
 }
 
-/* פריט גלריה עם lazy loading */
+/* פריט גלריה - תמונות גלויות מיד, עם אפקט fade-in נעים */
 .gallery__item {
   border: none;
 }
 
 .gallery__item img {
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.3s ease, filter 0.4s ease, transform 0.4s ease;
+}
+
+/* אפקט fade-in אופציונלי כש-JS פעיל */
+.gallery__item img.loading {
+  opacity: 0;
 }
 
 .gallery__item img.loaded {

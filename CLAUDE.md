@@ -20,7 +20,7 @@ efipaz/
 ├── personal.html           # תוכן אישי ואמנות
 ├── living.html             # לחיות בשלום עם הכסף
 ├── ethics.html             # אתיקה
-├── archive.html            # ארכיב תוכן ישן
+├── archive.html            # ארכיון תוכן ישן
 ├── style.css               # ה-CSS הראשי - עיצוב מינימליסטי יפני
 │
 ├── en/                     # גרסה אנגלית
@@ -100,6 +100,13 @@ bash scripts/validate-all.sh
 ### scripts/audit.sh
 יוצר דוח מצב מפורט של כל קבצי ה-HTML → `AUDIT_REPORT.md`
 
+### scripts/cleanup-dead-code.sh
+מנקה קוד מת (PHP, Flash, CSS ישן) מהפרויקט.
+```bash
+bash scripts/cleanup-dead-code.sh --dry-run  # לבדיקה בלבד
+bash scripts/cleanup-dead-code.sh            # למחיקה בפועל
+```
+
 ---
 
 ## היסטוריית בעיות - למד משגיאות העבר!
@@ -126,8 +133,14 @@ bash scripts/validate-all.sh
 **השתמש רק ב-`style.css` הראשי** עבור עמודים חדשים.
 
 ### 4. תיקיית archive/
-תיקייה זו מכילה את האתר הישן.
-**אין לערוך קבצים ב-archive/ אלא אם התבקשת במפורש.**
+תיקייה זו מכילה תוכן ישן בעל ערך:
+- `courses/` - קורסים עסקיים (PDF ו-HTML)
+- `Quotes.html` - ציטוטים
+- `Personal_Training.html` - מתודולוגיית אימון
+- `family/` - תוכן משפחתי (טיוטה)
+
+**אין לערוך או למחוק קבצים ב-archive/ אלא אם התבקשת במפורש.**
+קוד טכני (PHP, WordPress) כבר נוקה מהתיקייה.
 
 ---
 
@@ -155,11 +168,20 @@ travel/india/pictures/
 
 ### קומפוננט הגלריה
 
-הגלריה צריכה לכלול:
+הגלריה משתמשת ב:
 1. **גריד תמונות רספונסיבי** - CSS Grid עם auto-fill
-2. **Lightbox** - צפייה בתמונה מוגדלת
-3. **Lazy loading** - טעינה עצלה לביצועים
-4. **פילטר grayscale** - עם הסרה ב-hover (בהתאם לעיצוב)
+2. **Lightbox** - צפייה בתמונה מוגדלת (`assets/js/gallery.js`)
+3. **Lazy loading מובנה** - `loading="lazy"` (תכונת דפדפן, לא JS)
+4. **פילטר grayscale** - עם הסרה ב-hover
+
+**חשוב:** השתמש ב-`src` רגיל, לא ב-`data-src`:
+```html
+<!-- נכון -->
+<img src="pictures/Animals/image.jpg" loading="lazy" alt="תיאור">
+
+<!-- לא נכון (ישן) -->
+<img data-src="pictures/Animals/image.jpg">
+```
 
 ---
 

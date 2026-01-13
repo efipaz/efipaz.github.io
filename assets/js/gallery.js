@@ -1,46 +1,18 @@
 /**
- * גלריית תמונות מודרנית עם Lightbox
+ * גלריית תמונות עם Lightbox
  * Efi Paz - efipaz.com
  *
  * תכונות:
- * - Lazy loading לטעינה מהירה
  * - Lightbox עם ניווט
  * - תמיכה ב-touch swipe במובייל
  * - מקלדת (חצים, ESC)
+ * - קיפול קטגוריות
+ *
+ * הערה: Lazy loading מתבצע ע"י הדפדפן באמצעות loading="lazy"
  */
 
 (function() {
   'use strict';
-
-  // ===== Lazy Loading =====
-  function initLazyLoading() {
-    const images = document.querySelectorAll('.gallery__item img[data-src]');
-
-    if ('IntersectionObserver' in window) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target;
-            img.src = img.dataset.src;
-            img.onload = () => img.classList.add('loaded');
-            img.onerror = () => {
-              img.classList.add('loaded');
-              img.alt = 'תמונה לא זמינה';
-            };
-            observer.unobserve(img);
-          }
-        });
-      }, { rootMargin: '100px' });
-
-      images.forEach(img => observer.observe(img));
-    } else {
-      // Fallback לדפדפנים ישנים
-      images.forEach(img => {
-        img.src = img.dataset.src;
-        img.onload = () => img.classList.add('loaded');
-      });
-    }
-  }
 
   // ===== Lightbox =====
   let currentImages = [];
@@ -128,10 +100,10 @@
         closeLightbox();
         break;
       case 'ArrowLeft':
-        showNext(); // RTL
+        showNext(); // RTL - שמאל = הבא
         break;
       case 'ArrowRight':
-        showPrev(); // RTL
+        showPrev(); // RTL - ימין = קודם
         break;
     }
   }
@@ -162,19 +134,23 @@
   function initGallery() {
     const galleryItems = document.querySelectorAll('.gallery__item');
 
-    galleryItems.forEach((item, index) => {
+    galleryItems.forEach((item) => {
       item.addEventListener('click', (e) => {
         e.preventDefault();
 
         // מצא את כל התמונות בגלריה הנוכחית
         const gallery = item.closest('.gallery, .gallery--full, .gallery-section__content');
         const items = gallery ? gallery.querySelectorAll('.gallery__item') : galleryItems;
-        const images = Array.from(items).map(el => el.href || el.querySelector('img')?.dataset.src || el.querySelector('img')?.src);
+
+        // קבל את ה-URL של התמונות (מה-href או מה-src)
+        const images = Array.from(items).map(el =>
+          el.href || el.querySelector('img')?.src
+        ).filter(Boolean);
 
         // מצא את האינדקס הנכון
         const clickedIndex = Array.from(items).indexOf(item);
 
-        openLightbox(images.filter(Boolean), clickedIndex >= 0 ? clickedIndex : 0);
+        openLightbox(images, clickedIndex >= 0 ? clickedIndex : 0);
       });
     });
   }
@@ -195,7 +171,6 @@
 
   // ===== אתחול =====
   function init() {
-    initLazyLoading();
     initGallery();
     initCollapsible();
   }
