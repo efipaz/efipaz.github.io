@@ -4,98 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Travel Photography - India and Myanmar photo galleries by Efi Paz">
-  <title>Travel Photography - Efipaz.com</title>
+  <title>Travel Photography | Efi Paz</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="modern-style.css">
-  <style>
-    .gallery-hero {
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('LightOfIndia/pictures/P1010076.JPG');
-      background-size: cover;
-      background-position: center;
-    }
-    .destination-card {
-      position: relative;
-      height: 400px;
-      border-radius: 1rem;
-      overflow: hidden;
-      box-shadow: var(--shadow-lg);
-    }
-    .destination-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-    .destination-card:hover img {
-      transform: scale(1.05);
-    }
-    .destination-overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 2rem;
-      background: linear-gradient(transparent, rgba(0,0,0,0.9));
-      color: white;
-    }
-    .destination-overlay h3 {
-      color: white;
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-    .destination-overlay p {
-      opacity: 0.9;
-      margin-bottom: 1rem;
-    }
-    .photo-stats {
-      display: flex;
-      gap: 2rem;
-      margin-top: 1rem;
-    }
-    .photo-stat {
-      text-align: center;
-    }
-    .photo-stat .number {
-      font-size: 2rem;
-      font-weight: bold;
-      color: var(--accent-gold);
-    }
-    .photo-stat .label {
-      font-size: 0.875rem;
-      color: var(--text-light);
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
 
+  <!-- Header -->
   <header class="header">
-    <div class="container">
-      <a href="index.html" class="logo">Efi<span>Paz</span></a>
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">Efi Paz</a>
       <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="spiritual.html">Spirituality</a>
-        <a href="travel.html" class="active">Travel</a>
-        <a href="business.html">Business</a>
-        <a href="living.html">Living</a>
-        <a href="ethics.html">Ethics</a>
-        <a href="personal.html">Personal</a>
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="spiritual.html" class="nav__link">Spirituality</a></li>
+          <li><a href="travel.html" class="nav__link nav__link--active">Travel</a></li>
+          <li><a href="business.html" class="nav__link">Business</a></li>
+          <li><a href="living.html" class="nav__link">Living</a></li>
+          <li><a href="ethics.html" class="nav__link">Ethics</a></li>
+        </ul>
+        <div class="lang-switch">
+          <a href="index.html">עב</a>
+          <a href="en/index.html" class="active">EN</a>
+        </div>
+        <button class="nav__toggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </nav>
     </div>
   </header>
 
-  <section class="hero gallery-hero" style="padding: 4rem 0;">
-    <div class="container hero-content">
-      <p class="hero-subtitle">Visual Journeys</p>
-      <h1>Travel Photography</h1>
-      <p>Capturing the essence of cultures, people, and sacred places across Asia</p>
-    </div>
-  </section>
-
-  <div class="container">
-    <div class="breadcrumb">
-      <a href="index.html">Home</a> <span>&rarr;</span> Travel Photography
+  <!-- Page Header -->
+  <div class="page-header--hero" style="background-image: url('LightOfIndia/pictures/Religion/Temples/P1010076.JPG');">
+    <div class="container">
+      <nav class="breadcrumbs" style="color: rgba(255,255,255,0.7);">
+        <a href="index.html" style="color: rgba(255,255,255,0.7);">Home</a>
+        <span class="breadcrumbs__separator">/</span>
+        <span>Travel Photography</span>
+      </nav>
+      <h1 class="page-header__title">Travel Photography</h1>
+      <p class="page-header__subtitle">Capturing the essence of cultures, people, and sacred places across Asia</p>
+      <p class="page-header__subtitle" style="font-size: 0.9rem; margin-top: 0.5rem; direction: rtl;">
+        צילומי מסע - לכידת מהות התרבויות, האנשים והמקומות הקדושים
+      </p>
     </div>
   </div>
 
@@ -103,43 +59,44 @@
   <section class="section">
     <div class="container">
       <div class="two-col">
-        <div class="destination-card">
-          <img src="LightOfIndia/pictures/P1010076.JPG" alt="Light of India" onerror="this.style.background='linear-gradient(135deg, #dd6b20, #d69e2e)'">
-          <div class="destination-overlay">
-            <h3>Light of India</h3>
-            <p>A photographic journey through the spiritual heart of India (2005)</p>
-            <a href="LightOfIndia/index.html" class="btn btn-primary">View Full Gallery</a>
-          </div>
+        <div class="two-col__image">
+          <a href="LightOfIndia/index.html">
+            <img src="LightOfIndia/pictures/Religion/Temples/P1010076.JPG" alt="Light of India">
+          </a>
         </div>
         <div>
           <h2>Light of India (2005)</h2>
           <p>India is a land of infinite contrasts - ancient temples and modern cities, profound spirituality and chaotic streets, vibrant colors and peaceful ashrams. This collection captures the essence of a journey through this incredible subcontinent.</p>
 
-          <div class="photo-stats">
-            <div class="photo-stat">
-              <div class="number">1000+</div>
-              <div class="label">Photos</div>
+          <div style="display: flex; gap: 2rem; margin: 1.5rem 0;">
+            <div style="text-align: center;">
+              <div style="font-size: 2rem; font-weight: 700; color: var(--color-secondary);">1000+</div>
+              <div style="font-size: 0.875rem; color: var(--color-text-light);">Photos</div>
             </div>
-            <div class="photo-stat">
-              <div class="number">2005</div>
-              <div class="label">Year</div>
+            <div style="text-align: center;">
+              <div style="font-size: 2rem; font-weight: 700; color: var(--color-secondary);">14</div>
+              <div style="font-size: 0.875rem; color: var(--color-text-light);">Categories</div>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-size: 2rem; font-weight: 700; color: var(--color-secondary);">2005</div>
+              <div style="font-size: 0.875rem; color: var(--color-text-light);">Year</div>
             </div>
           </div>
 
-          <h4 style="margin-top: 2rem;">Gallery Categories:</h4>
-          <ul class="feature-list">
+          <h4>Gallery Categories:</h4>
+          <ul class="content-list">
             <li><strong>Religion & Spirituality</strong> - Temples, ceremonies, holy men</li>
             <li><strong>People & Portraits</strong> - Faces of India across all walks of life</li>
             <li><strong>Children</strong> - The joy and innocence of India's youth</li>
             <li><strong>Animals</strong> - Wildlife, sacred cows, elephants, and more</li>
-            <li><strong>Daily Life</strong> - Markets, streets, and everyday scenes</li>
+            <li><strong>Architecture</strong> - Palaces, homes, and historic structures</li>
             <li><strong>Landscapes</strong> - The diverse geography of India</li>
           </ul>
 
-          <div style="margin-top: 2rem;">
-            <a href="LightOfIndia/index.html" class="btn btn-primary">Enter Gallery</a>
-            <a href="LightOfIndia/Wide/index.html" style="margin-left: 1rem;" class="btn btn-secondary">Wide Format</a>
-            <a href="LightOfIndia/favorites/index.html" style="margin-left: 1rem;" class="btn btn-secondary">Favorites</a>
+          <div style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="LightOfIndia/index.html" class="btn btn--primary">Enter Gallery</a>
+            <a href="LightOfIndia/Wide/index.html" class="btn btn--secondary">Wide Format</a>
+            <a href="LightOfIndia/favorites/index.html" class="btn btn--secondary">Favorites</a>
           </div>
         </div>
       </div>
@@ -147,96 +104,137 @@
   </section>
 
   <!-- Myanmar -->
-  <section class="section" style="background: #f0f4f8;">
+  <section class="section section--alt">
     <div class="container">
       <div class="two-col">
         <div>
           <h2>Myanmar Images</h2>
           <p>Myanmar (Burma) is one of Southeast Asia's most spiritually rich countries. With thousands of golden pagodas, peaceful monasteries, and some of the warmest, most genuine people you'll ever meet, this collection documents a journey through the "Golden Land."</p>
 
-          <div class="photo-stats">
-            <div class="photo-stat">
-              <div class="number">500+</div>
-              <div class="label">Photos</div>
+          <div style="display: flex; gap: 2rem; margin: 1.5rem 0;">
+            <div style="text-align: center;">
+              <div style="font-size: 2rem; font-weight: 700; color: var(--color-secondary);">500+</div>
+              <div style="font-size: 0.875rem; color: var(--color-text-light);">Photos</div>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-size: 2rem; font-weight: 700; color: var(--color-secondary);">5</div>
+              <div style="font-size: 0.875rem; color: var(--color-text-light);">Categories</div>
             </div>
           </div>
 
-          <h4 style="margin-top: 2rem;">Gallery Highlights:</h4>
-          <ul class="feature-list">
+          <h4>Gallery Highlights:</h4>
+          <ul class="content-list">
             <li><strong>Pagodas & Temples</strong> - The famous golden stupas of Myanmar</li>
             <li><strong>Monks & Monasteries</strong> - Buddhist monastic life</li>
             <li><strong>People & Culture</strong> - Traditional dress, crafts, and customs</li>
             <li><strong>Sacred Sites</strong> - Bagan, Shwedagon, and other holy places</li>
-            <li><strong>Landscapes</strong> - Rivers, mountains, and rural Myanmar</li>
+            <li><strong>Nature</strong> - Landscapes, rivers, and rural Myanmar</li>
           </ul>
 
-          <div style="margin-top: 2rem;">
-            <a href="Burma/index.html" class="btn btn-primary">Enter Gallery</a>
-            <a href="Burma/Wide/index.html" style="margin-left: 1rem;" class="btn btn-secondary">Wide Format</a>
-            <a href="Burma/favorites/index.html" style="margin-left: 1rem;" class="btn btn-secondary">Favorites</a>
+          <div style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="Burma/index.html" class="btn btn--primary">Enter Gallery</a>
+            <a href="Burma/Wide/index.html" class="btn btn--secondary">Wide Format</a>
+            <a href="Burma/favorites/index.html" class="btn btn--secondary">Favorites</a>
           </div>
         </div>
-        <div class="destination-card">
-          <img src="Burma/pictures/P1020040.JPG" alt="Myanmar Images" onerror="this.style.background='linear-gradient(135deg, #d69e2e, #dd6b20)'">
-          <div class="destination-overlay">
-            <h3>Myanmar Images</h3>
-            <p>Exploring the golden pagodas and peaceful monasteries of Burma</p>
-            <a href="Burma/index.html" class="btn btn-primary">View Full Gallery</a>
-          </div>
+        <div class="two-col__image">
+          <a href="Burma/index.html">
+            <img src="Burma/pictures/Religion/P1020040.JPG" alt="Myanmar Images">
+          </a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Photography Philosophy -->
-  <section class="section section-dark">
+  <section class="section section--dark">
     <div class="container">
-      <div class="section-header">
+      <div class="content-section__header">
         <h2>On Travel Photography</h2>
-        <p>Capturing moments of connection, beauty, and truth</p>
+        <p class="content-section__subtitle">Capturing moments of connection, beauty, and truth</p>
       </div>
 
-      <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-        <p style="font-size: 1.1rem; line-height: 1.8; font-style: italic;">
+      <div class="container--narrow" style="text-align: center;">
+        <blockquote class="quote" style="background: rgba(255,255,255,0.1); border-color: var(--color-secondary);">
           "Photography is not about capturing what you see, but about revealing what you feel.
           When traveling through India and Myanmar, I was constantly moved by the depth of spirituality,
           the warmth of the people, and the timeless wisdom that permeates everyday life.
           These images are an attempt to share those moments of connection."
-        </p>
-        <p style="margin-top: 1rem; color: var(--accent-gold);">- Efi Paz</p>
+          <cite class="quote__author" style="color: var(--color-secondary);">— Efi Paz</cite>
+        </blockquote>
       </div>
 
-      <div class="card-grid" style="margin-top: 3rem;">
+      <div class="cards mt-3">
         <div class="card">
-          <div class="card-body">
-            <h3 class="card-title">Authentic Moments</h3>
-            <p class="card-text">Capturing unposed, genuine moments of daily life, ritual, and human connection across cultures.</p>
+          <div class="card__content">
+            <h3 class="card__title">Authentic Moments</h3>
+            <p class="card__text">Capturing unposed, genuine moments of daily life, ritual, and human connection across cultures.</p>
           </div>
         </div>
         <div class="card">
-          <div class="card-body">
-            <h3 class="card-title">Spiritual Landscape</h3>
-            <p class="card-text">Documenting the visible expressions of inner life - temples, ceremonies, meditation, and devotion.</p>
+          <div class="card__content">
+            <h3 class="card__title">Spiritual Landscape</h3>
+            <p class="card__text">Documenting the visible expressions of inner life - temples, ceremonies, meditation, and devotion.</p>
           </div>
         </div>
         <div class="card">
-          <div class="card-body">
-            <h3 class="card-title">Human Portrait</h3>
-            <p class="card-text">Each face tells a story. Portraits that reveal the depth and dignity of people from all walks of life.</p>
+          <div class="card__content">
+            <h3 class="card__title">Human Portrait</h3>
+            <p class="card__text">Each face tells a story. Portraits that reveal the depth and dignity of people from all walks of life.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-bottom">
-        <p>&copy; Efipaz.com - Amit Friedmann (Efi Paz). All rights reserved.</p>
-        <p style="margin-top: 0.5rem;"><a href="index.html" style="color: var(--text-light);">Back to Home</a></p>
+      <div class="footer__inner">
+        <div class="footer__section">
+          <h4>Spirituality</h4>
+          <ul class="footer__links">
+            <li><a href="KM/km_index.html">Krishnamurti</a></li>
+            <li><a href="WATTS/index.html">Alan Watts</a></li>
+            <li><a href="DeMello/demello.html">Anthony de Mello</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h4>Travel</h4>
+          <ul class="footer__links">
+            <li><a href="LightOfIndia/index.html">Light of India</a></li>
+            <li><a href="Burma/index.html">Myanmar</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h4>Business</h4>
+          <ul class="footer__links">
+            <li><a href="BC/index.html">Consulting</a></li>
+            <li><a href="BC/services.html">Services</a></li>
+            <li><a href="BC/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h4>Courses</h4>
+          <ul class="footer__links">
+            <li><a href="living.html">Living with Money</a></li>
+            <li><a href="ethics.html">Ethics</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; Efi Paz - Amit Friedmann. All rights reserved.</p>
+        <p style="margin-top: 0.5rem;"><a href="index.html">חזרה לדף הבית</a></p>
       </div>
     </div>
   </footer>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    document.querySelector('.nav__toggle').addEventListener('click', function() {
+      document.querySelector('.nav__list').classList.toggle('is-open');
+    });
+  </script>
 
 </body>
 </html>
