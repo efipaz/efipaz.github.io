@@ -4,102 +4,122 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Business Consulting Services by Efi Paz - Coaching, Strategy, and Leadership">
-  <title>Business Consulting - Efipaz.com</title>
+  <title>Business Consulting | Efi Paz</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="modern-style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
 
+  <!-- Header -->
   <header class="header">
-    <div class="container">
-      <a href="index.html" class="logo">Efi<span>Paz</span></a>
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">Efi Paz</a>
       <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="spiritual.html">Spirituality</a>
-        <a href="travel.html">Travel</a>
-        <a href="business.html" class="active">Business</a>
-        <a href="living.html">Living</a>
-        <a href="ethics.html">Ethics</a>
-        <a href="personal.html">Personal</a>
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="spiritual.html" class="nav__link">Spirituality</a></li>
+          <li><a href="travel.html" class="nav__link">Travel</a></li>
+          <li><a href="business.html" class="nav__link nav__link--active">Business</a></li>
+          <li><a href="living.html" class="nav__link">Living</a></li>
+          <li><a href="ethics.html" class="nav__link">Ethics</a></li>
+        </ul>
+        <div class="lang-switch">
+          <a href="index.html">עב</a>
+          <a href="en/index.html" class="active">EN</a>
+        </div>
+        <button class="nav__toggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </nav>
     </div>
   </header>
 
-  <section class="hero" style="padding: 3rem 0; background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);">
-    <div class="container hero-content">
-      <p class="hero-subtitle">Professional Services</p>
-      <h1>Business Consulting</h1>
-      <p>Strategic guidance for business growth, leadership development, and organizational excellence</p>
-    </div>
-  </section>
-
-  <div class="container">
-    <div class="breadcrumb">
-      <a href="index.html">Home</a> <span>&rarr;</span> Business Consulting
+  <!-- Page Header -->
+  <div class="page-header--hero" style="background-image: url('LightOfIndia/pictures/Architecture/Palaces/P1010035.JPG');">
+    <div class="container">
+      <nav class="breadcrumbs" style="color: rgba(255,255,255,0.7);">
+        <a href="index.html" style="color: rgba(255,255,255,0.7);">Home</a>
+        <span class="breadcrumbs__separator">/</span>
+        <span>Business Consulting</span>
+      </nav>
+      <h1 class="page-header__title">Business Consulting</h1>
+      <p class="page-header__subtitle">Strategic guidance for business growth, leadership development, and organizational excellence</p>
+      <p class="page-header__subtitle" style="font-size: 0.9rem; margin-top: 0.5rem; direction: rtl;">
+        ייעוץ עסקי - אסטרטגיה, מנהיגות ופיתוח ארגוני
+      </p>
     </div>
   </div>
 
   <!-- Services Overview -->
   <section class="section">
     <div class="container">
-      <div class="section-header">
+      <div class="content-section__header">
         <h2>Consulting Services</h2>
-        <p>Helping businesses grow with practical strategies and mindful leadership</p>
+        <p class="content-section__subtitle">Helping businesses grow with practical strategies and mindful leadership</p>
       </div>
 
-      <div class="card-grid">
-        <div class="category-card business">
-          <div class="category-icon">&#128200;</div>
-          <h3 class="category-title">Business Strategy</h3>
-          <p class="category-desc">Strategic planning, market analysis, and growth strategies tailored to your business goals and market conditions.</p>
+      <div class="cards">
+        <div class="card">
+          <div class="card__content">
+            <h3 class="card__title">Business Strategy</h3>
+            <p class="card__text">Strategic planning, market analysis, and growth strategies tailored to your business goals and market conditions.</p>
+          </div>
         </div>
 
-        <div class="category-card business">
-          <div class="category-icon">&#128101;</div>
-          <h3 class="category-title">Leadership Coaching</h3>
-          <p class="category-desc">One-on-one coaching for executives and managers to develop leadership skills and achieve personal and professional goals.</p>
+        <div class="card">
+          <div class="card__content">
+            <h3 class="card__title">Leadership Coaching</h3>
+            <p class="card__text">One-on-one coaching for executives and managers to develop leadership skills and achieve personal and professional goals.</p>
+          </div>
         </div>
 
-        <div class="category-card business">
-          <div class="category-icon">&#128736;</div>
-          <h3 class="category-title">Organizational Development</h3>
-          <p class="category-desc">Building effective teams, improving organizational culture, and creating systems for sustainable success.</p>
+        <div class="card">
+          <div class="card__content">
+            <h3 class="card__title">Organizational Development</h3>
+            <p class="card__text">Building effective teams, improving organizational culture, and creating systems for sustainable success.</p>
+          </div>
         </div>
 
-        <div class="category-card business">
-          <div class="category-icon">&#128176;</div>
-          <h3 class="category-title">Sales & Marketing</h3>
-          <p class="category-desc">Developing effective sales strategies, marketing plans, and customer acquisition approaches.</p>
+        <div class="card">
+          <div class="card__content">
+            <h3 class="card__title">Sales & Marketing</h3>
+            <p class="card__text">Developing effective sales strategies, marketing plans, and customer acquisition approaches.</p>
+          </div>
         </div>
 
-        <div class="category-card business">
-          <div class="category-icon">&#128202;</div>
-          <h3 class="category-title">Management Training</h3>
-          <p class="category-desc">Training programs for managers on time management, team leadership, and effective communication.</p>
+        <div class="card">
+          <div class="card__content">
+            <h3 class="card__title">Management Training</h3>
+            <p class="card__text">Training programs for managers on time management, team leadership, and effective communication.</p>
+          </div>
         </div>
 
-        <div class="category-card business">
-          <div class="category-icon">&#127919;</div>
-          <h3 class="category-title">Business Planning</h3>
-          <p class="category-desc">Comprehensive business planning including financial projections, operational planning, and goal setting.</p>
+        <div class="card">
+          <div class="card__content">
+            <h3 class="card__title">Business Planning</h3>
+            <p class="card__text">Comprehensive business planning including financial projections, operational planning, and goal setting.</p>
+          </div>
         </div>
       </div>
 
       <div style="text-align: center; margin-top: 3rem;">
-        <a href="BC/services.html" class="btn btn-primary">View Full Services</a>
-        <a href="BC/index.html" style="margin-left: 1rem;" class="btn btn-secondary">Original BC Site</a>
+        <a href="BC/services.html" class="btn btn--primary">View Full Services</a>
+        <a href="BC/index.html" class="btn btn--secondary" style="margin-left: 1rem;">Original BC Site</a>
       </div>
     </div>
   </section>
 
   <!-- Training Materials -->
-  <section class="section" style="background: #f0f4f8;">
+  <section class="section section--alt">
     <div class="container">
-      <div class="section-header">
+      <div class="content-section__header">
         <h2>Training Resources</h2>
-        <p>Professional development materials and guides</p>
+        <p class="content-section__subtitle">Professional development materials and guides</p>
       </div>
 
       <div class="two-col">
@@ -107,78 +127,64 @@
           <h3>Business Training Modules</h3>
           <p>Comprehensive training materials covering essential business skills from management to sales.</p>
 
-          <ul class="doc-list" style="margin-top: 1.5rem;">
-            <li>
-              <a href="reidman/3_mgmnt/mgmnt.pdf" class="doc-link">
-                <span class="doc-icon">&#128196;</span>
-                <div class="doc-info">
-                  <h5>Management Fundamentals</h5>
-                  <span>PDF Training Guide</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="reidman/3_mgmnt/time.pdf" class="doc-link">
-                <span class="doc-icon">&#128196;</span>
-                <div class="doc-info">
-                  <h5>Time Management</h5>
-                  <span>PDF Training Guide</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="reidman/4_mark/marketing.pdf" class="doc-link">
-                <span class="doc-icon">&#128196;</span>
-                <div class="doc-info">
-                  <h5>Marketing Essentials</h5>
-                  <span>PDF Training Guide</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="reidman/5_adv/advertizing.pdf" class="doc-link">
-                <span class="doc-icon">&#128196;</span>
-                <div class="doc-info">
-                  <h5>Advertising Strategies</h5>
-                  <span>PDF Training Guide</span>
-                </div>
-              </a>
-            </li>
-          </ul>
+          <div class="document-list mt-2">
+            <a href="reidman/3_mgmnt/mgmnt.pdf" class="document-item">
+              <div class="document-item__icon">PDF</div>
+              <div class="document-item__info">
+                <div class="document-item__title">Management Fundamentals</div>
+                <div class="document-item__meta">Training Guide</div>
+              </div>
+            </a>
+            <a href="reidman/3_mgmnt/time.pdf" class="document-item">
+              <div class="document-item__icon">PDF</div>
+              <div class="document-item__info">
+                <div class="document-item__title">Time Management</div>
+                <div class="document-item__meta">Training Guide</div>
+              </div>
+            </a>
+            <a href="reidman/4_mark/marketing.pdf" class="document-item">
+              <div class="document-item__icon">PDF</div>
+              <div class="document-item__info">
+                <div class="document-item__title">Marketing Essentials</div>
+                <div class="document-item__meta">Training Guide</div>
+              </div>
+            </a>
+            <a href="reidman/5_adv/advertizing.pdf" class="document-item">
+              <div class="document-item__icon">PDF</div>
+              <div class="document-item__info">
+                <div class="document-item__title">Advertising Strategies</div>
+                <div class="document-item__meta">Training Guide</div>
+              </div>
+            </a>
+          </div>
         </div>
         <div>
           <h3>Sales Training</h3>
           <p>Develop effective sales skills and learn to handle objections professionally.</p>
 
-          <ul class="doc-list" style="margin-top: 1.5rem;">
-            <li>
-              <a href="reidman/6_sell/selling.pdf" class="doc-link">
-                <span class="doc-icon">&#128196;</span>
-                <div class="doc-info">
-                  <h5>Professional Selling</h5>
-                  <span>PDF Training Guide</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="reidman/6_sell/objections.doc" class="doc-link">
-                <span class="doc-icon">&#128196;</span>
-                <div class="doc-info">
-                  <h5>Handling Objections</h5>
-                  <span>Word Document</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="reidman/7_plan/plan.pdf" class="doc-link">
-                <span class="doc-icon">&#128196;</span>
-                <div class="doc-info">
-                  <h5>Business Planning</h5>
-                  <span>PDF Training Guide</span>
-                </div>
-              </a>
-            </li>
-          </ul>
+          <div class="document-list mt-2">
+            <a href="reidman/6_sell/selling.pdf" class="document-item">
+              <div class="document-item__icon">PDF</div>
+              <div class="document-item__info">
+                <div class="document-item__title">Professional Selling</div>
+                <div class="document-item__meta">Training Guide</div>
+              </div>
+            </a>
+            <a href="reidman/6_sell/objections.doc" class="document-item">
+              <div class="document-item__icon">DOC</div>
+              <div class="document-item__info">
+                <div class="document-item__title">Handling Objections</div>
+                <div class="document-item__meta">Word Document</div>
+              </div>
+            </a>
+            <a href="reidman/7_plan/plan.pdf" class="document-item">
+              <div class="document-item__icon">PDF</div>
+              <div class="document-item__info">
+                <div class="document-item__title">Business Planning</div>
+                <div class="document-item__meta">Training Guide</div>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -187,37 +193,37 @@
   <!-- Approach -->
   <section class="section">
     <div class="container">
-      <div class="section-header">
+      <div class="content-section__header">
         <h2>Our Approach</h2>
-        <p>Combining business acumen with mindful leadership</p>
+        <p class="content-section__subtitle">Combining business acumen with mindful leadership</p>
       </div>
 
-      <div style="max-width: 800px; margin: 0 auto;">
+      <div class="container--narrow">
         <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
           What sets our consulting apart is the integration of practical business strategies with
           principles of mindful leadership. Drawing from both Western business practices and Eastern
           philosophy, we help leaders and organizations achieve sustainable success while maintaining
           balance and purpose.
         </p>
+      </div>
 
-        <div class="card-grid">
-          <div class="card">
-            <div class="card-body">
-              <h3 class="card-title">Listen First</h3>
-              <p class="card-text">Understanding your unique situation, challenges, and goals before proposing solutions.</p>
-            </div>
+      <div class="cards">
+        <div class="card">
+          <div class="card__content">
+            <h3 class="card__title">Listen First</h3>
+            <p class="card__text">Understanding your unique situation, challenges, and goals before proposing solutions.</p>
           </div>
-          <div class="card">
-            <div class="card-body">
-              <h3 class="card-title">Practical Solutions</h3>
-              <p class="card-text">Actionable strategies that can be implemented immediately with measurable results.</p>
-            </div>
+        </div>
+        <div class="card">
+          <div class="card__content">
+            <h3 class="card__title">Practical Solutions</h3>
+            <p class="card__text">Actionable strategies that can be implemented immediately with measurable results.</p>
           </div>
-          <div class="card">
-            <div class="card-body">
-              <h3 class="card-title">Sustainable Growth</h3>
-              <p class="card-text">Building systems and capabilities for long-term success, not just quick fixes.</p>
-            </div>
+        </div>
+        <div class="card">
+          <div class="card__content">
+            <h3 class="card__title">Sustainable Growth</h3>
+            <p class="card__text">Building systems and capabilities for long-term success, not just quick fixes.</p>
           </div>
         </div>
       </div>
@@ -225,13 +231,15 @@
   </section>
 
   <!-- Contact CTA -->
-  <section class="section section-dark">
+  <section class="section section--dark">
     <div class="container">
-      <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+      <div class="content-section__header">
         <h2>Ready to Grow Your Business?</h2>
-        <p style="margin: 1.5rem 0;">Let's discuss how we can help you achieve your business goals.</p>
-        <a href="BC/contact.html" class="btn btn-primary">Contact Us</a>
-        <a href="BC/About.html" style="margin-left: 1rem;" class="btn btn-secondary">About Efi Paz</a>
+        <p class="content-section__subtitle">Let's discuss how we can help you achieve your business goals.</p>
+      </div>
+      <div style="text-align: center;">
+        <a href="BC/contact.html" class="btn btn--ghost">Contact Us</a>
+        <a href="BC/About.html" class="btn btn--ghost" style="margin-left: 1rem;">About Efi Paz</a>
       </div>
     </div>
   </section>
@@ -239,44 +247,90 @@
   <!-- Quick Links -->
   <section class="section">
     <div class="container">
-      <h3 style="text-align: center; margin-bottom: 2rem;">Quick Links</h3>
-      <div class="card-grid">
-        <a href="BC/index.html" class="card" style="text-decoration: none;">
-          <div class="card-body text-center">
-            <h4>BC Home</h4>
-            <p class="card-text">Original Business Consulting homepage</p>
+      <div class="content-section__header">
+        <h3>Quick Links</h3>
+      </div>
+      <div class="cards">
+        <a href="BC/index.html" class="card">
+          <div class="card__content text-center">
+            <h4 class="card__title">BC Home</h4>
+            <p class="card__text">Original Business Consulting homepage</p>
+            <span class="card__link">Visit</span>
           </div>
         </a>
-        <a href="BC/services.html" class="card" style="text-decoration: none;">
-          <div class="card-body text-center">
-            <h4>Services</h4>
-            <p class="card-text">Full list of consulting services</p>
+        <a href="BC/services.html" class="card">
+          <div class="card__content text-center">
+            <h4 class="card__title">Services</h4>
+            <p class="card__text">Full list of consulting services</p>
+            <span class="card__link">View</span>
           </div>
         </a>
-        <a href="BC/projects.html" class="card" style="text-decoration: none;">
-          <div class="card-body text-center">
-            <h4>Projects</h4>
-            <p class="card-text">Past projects and case studies</p>
+        <a href="BC/projects.html" class="card">
+          <div class="card__content text-center">
+            <h4 class="card__title">Projects</h4>
+            <p class="card__text">Past projects and case studies</p>
+            <span class="card__link">Explore</span>
           </div>
         </a>
-        <a href="BC/customers.html" class="card" style="text-decoration: none;">
-          <div class="card-body text-center">
-            <h4>Customers</h4>
-            <p class="card-text">Client testimonials and references</p>
+        <a href="BC/customers.html" class="card">
+          <div class="card__content text-center">
+            <h4 class="card__title">Customers</h4>
+            <p class="card__text">Client testimonials and references</p>
+            <span class="card__link">Read</span>
           </div>
         </a>
       </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-bottom">
-        <p>&copy; Efipaz.com - Amit Friedmann (Efi Paz). All rights reserved.</p>
-        <p style="margin-top: 0.5rem;"><a href="index.html" style="color: var(--text-light);">Back to Home</a></p>
+      <div class="footer__inner">
+        <div class="footer__section">
+          <h4>Spirituality</h4>
+          <ul class="footer__links">
+            <li><a href="KM/km_index.html">Krishnamurti</a></li>
+            <li><a href="WATTS/index.html">Alan Watts</a></li>
+            <li><a href="DeMello/demello.html">Anthony de Mello</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h4>Travel</h4>
+          <ul class="footer__links">
+            <li><a href="LightOfIndia/index.html">Light of India</a></li>
+            <li><a href="Burma/index.html">Myanmar</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h4>Business</h4>
+          <ul class="footer__links">
+            <li><a href="BC/index.html">Consulting</a></li>
+            <li><a href="BC/services.html">Services</a></li>
+            <li><a href="BC/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h4>Courses</h4>
+          <ul class="footer__links">
+            <li><a href="living.html">Living with Money</a></li>
+            <li><a href="ethics.html">Ethics</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; Efi Paz - Amit Friedmann. All rights reserved.</p>
+        <p style="margin-top: 0.5rem;"><a href="index.html">חזרה לדף הבית</a></p>
       </div>
     </div>
   </footer>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    document.querySelector('.nav__toggle').addEventListener('click', function() {
+      document.querySelector('.nav__list').classList.toggle('is-open');
+    });
+  </script>
 
 </body>
 </html>

@@ -1,243 +1,242 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Efipaz.com - Personal website of Amit Friedmann (Efi Paz). Exploring spirituality, philosophy, travel photography, business consulting, and mindful living.">
-  <meta name="author" content="Amit Friedmann (Efi Paz)">
-  <title>Efipaz.com - Spirituality, Philosophy & Travel</title>
+  <meta name="description" content="אפי פז - יועץ עסקי, מחפש רוחני וצלם. רוחניות, פילוסופיה, צילום מסעות, וחיים מודעים.">
+  <title>אפי פז | רוחניות, פילוסופיה ומסעות</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="modern-style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
 
   <!-- Header -->
   <header class="header">
-    <div class="container">
-      <a href="index.html" class="logo">Efi<span>Paz</span></a>
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">אפי פז</a>
       <nav class="nav">
-        <a href="index.html" class="active">Home</a>
-        <a href="spiritual.html">Spirituality</a>
-        <a href="travel.html">Travel</a>
-        <a href="business.html">Business</a>
-        <a href="living.html">Living</a>
-        <a href="ethics.html">Ethics</a>
-        <a href="personal.html">Personal</a>
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link nav__link--active">בית</a></li>
+          <li><a href="spiritual.html" class="nav__link">רוחניות</a></li>
+          <li><a href="travel.html" class="nav__link">מסעות</a></li>
+          <li><a href="business.html" class="nav__link">עסקים</a></li>
+          <li><a href="living.html" class="nav__link">כסף ושלווה</a></li>
+          <li><a href="ethics.html" class="nav__link">אתיקה</a></li>
+        </ul>
+        <div class="lang-switch">
+          <a href="index.html" class="active">עב</a>
+          <a href="en/index.html">EN</a>
+        </div>
+        <button class="nav__toggle" aria-label="תפריט">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </nav>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="hero">
-    <div class="container hero-content">
-      <p class="hero-subtitle">Welcome to</p>
-      <h1>Efipaz.com</h1>
-      <p>A journey through spirituality, philosophy, travel photography, and conscious living. Exploring the intersection of Eastern wisdom, business insight, and the art of mindful existence.</p>
-      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a href="#explore" class="btn btn-primary">Explore Content</a>
-        <a href="spiritual.html" class="btn btn-secondary">Begin Journey</a>
+  <section class="hero hero--with-image" style="background-image: url('LightOfIndia/pictures/Religion/Temples/P1010076.JPG');">
+    <div class="container hero__content">
+      <h1>אפי פז</h1>
+      <p class="hero__subtitle">רוחניות, פילוסופיה, צילום ויעוץ עסקי</p>
+      <p class="hero__subtitle" style="font-size: 1rem; margin-top: 0.5rem; opacity: 0.85;">
+        Spirituality, Philosophy, Photography & Business Consulting
+      </p>
+      <div class="hero__cta">
+        <a href="#content" class="btn btn--ghost">גלה עוד</a>
+        <a href="en/index.html" class="btn btn--secondary" style="border-color: white; color: white;">English Version</a>
       </div>
     </div>
   </section>
 
-  <!-- Main Content Categories -->
-  <section id="explore" class="section">
+  <!-- Main Content -->
+  <section id="content" class="section">
     <div class="container">
-      <div class="section-header">
-        <h2>Explore My World</h2>
-        <p>Discover content spanning spirituality, travel photography, business wisdom, and the art of mindful living</p>
+      <div class="content-section__header">
+        <h2>תחומי העניין שלי</h2>
+        <p class="content-section__subtitle">מסע בין רוחניות, צילום, עסקים וחיים מודעים</p>
       </div>
 
-      <div class="card-grid">
-        <!-- Spiritual/Philosophy -->
-        <div class="category-card spiritual">
-          <div class="category-icon">&#9775;</div>
-          <h3 class="category-title">Spirituality & Philosophy</h3>
-          <p class="category-desc">Teachings from Krishnamurti, Alan Watts, and Anthony de Mello. Exploring consciousness, awareness, and the nature of existence.</p>
-          <a href="spiritual.html" class="btn btn-primary">Explore</a>
-        </div>
+      <div class="cards">
+        <!-- רוחניות -->
+        <a href="spiritual.html" class="card">
+          <div class="card__image">
+            <img src="KM/Krishnamurti.jpg" alt="ג'ידו קרישנמורטי">
+          </div>
+          <div class="card__content">
+            <h3 class="card__title">רוחניות ופילוסופיה</h3>
+            <p class="card__text">תורותיהם של קרישנמורטי, אלן ואטס ואנתוני דה מלו. חקירת התודעה, המודעות וטבע הקיום.</p>
+            <span class="card__link">לתכנים</span>
+          </div>
+        </a>
 
-        <!-- Travel Photography -->
-        <div class="category-card travel">
-          <div class="category-icon">&#128247;</div>
-          <h3 class="category-title">Travel Photography</h3>
-          <p class="category-desc">Photographic journeys through India and Myanmar. Capturing the essence of cultures, people, and sacred places.</p>
-          <a href="travel.html" class="btn btn-primary">View Gallery</a>
-        </div>
+        <!-- מסעות וצילום -->
+        <a href="travel.html" class="card">
+          <div class="card__image">
+            <img src="LightOfIndia/pictures/People/Portraits/P1010046.JPG" alt="צילום מהודו">
+          </div>
+          <div class="card__content">
+            <h3 class="card__title">מסעות וצילום</h3>
+            <p class="card__text">מסעות צילום בהודו ובמיאנמר. לכידת מהות התרבויות, האנשים והמקומות הקדושים.</p>
+            <span class="card__link">לגלריות</span>
+          </div>
+        </a>
 
-        <!-- Business Consulting -->
-        <div class="category-card business">
-          <div class="category-icon">&#128188;</div>
-          <h3 class="category-title">Business Consulting</h3>
-          <p class="category-desc">Professional coaching and consulting services. Helping businesses grow with practical strategies and mindful leadership.</p>
-          <a href="business.html" class="btn btn-primary">Learn More</a>
-        </div>
+        <!-- ייעוץ עסקי -->
+        <a href="business.html" class="card">
+          <div class="card__image">
+            <img src="LightOfIndia/pictures/Architecture/Palaces/P1010035.JPG" alt="ייעוץ עסקי">
+          </div>
+          <div class="card__content">
+            <h3 class="card__title">ייעוץ עסקי</h3>
+            <p class="card__text">אימון וייעוץ מקצועי לעסקים. אסטרטגיה, מנהיגות ופיתוח ארגוני.</p>
+            <span class="card__link">למידע</span>
+          </div>
+        </a>
 
-        <!-- Living with Money -->
-        <div class="category-card living">
-          <div class="category-icon">&#9878;</div>
-          <h3 class="category-title">Living in Peace with Money</h3>
-          <p class="category-desc">A unique course bridging economics and spirituality. Finding harmony between material needs and inner peace.</p>
-          <a href="living.html" class="btn btn-primary">Discover</a>
-        </div>
+        <!-- לחיות בשלום עם הכסף -->
+        <a href="living.html" class="card">
+          <div class="card__image">
+            <img src="LightOfIndia/pictures/Landscape/P1010021.JPG" alt="לחיות בשלום עם הכסף">
+          </div>
+          <div class="card__content">
+            <h3 class="card__title">לחיות בשלום עם הכסף</h3>
+            <p class="card__text">קורס ייחודי המגשר בין כלכלה לרוחניות. מציאת הרמוניה בין צרכים חומריים לשלום פנימי.</p>
+            <span class="card__link">לקורס</span>
+          </div>
+        </a>
 
-        <!-- Ethics -->
-        <div class="category-card ethics">
-          <div class="category-icon">&#9878;</div>
-          <h3 class="category-title">Ethics & Values</h3>
-          <p class="category-desc">Exploring ethical frameworks, organizational values, and the principles that guide meaningful living and working.</p>
-          <a href="ethics.html" class="btn btn-primary">Read More</a>
-        </div>
+        <!-- אתיקה וערכים -->
+        <a href="ethics.html" class="card">
+          <div class="card__image">
+            <img src="LightOfIndia/pictures/Religion/Temples/P1010081.JPG" alt="אתיקה וערכים">
+          </div>
+          <div class="card__content">
+            <h3 class="card__title">אתיקה וערכים</h3>
+            <p class="card__text">חקירת מסגרות אתיות, ערכים ארגוניים והעקרונות המנחים חיים ועבודה משמעותיים.</p>
+            <span class="card__link">לקריאה</span>
+          </div>
+        </a>
 
-        <!-- Personal / Art -->
-        <div class="category-card personal">
-          <div class="category-icon">&#127912;</div>
-          <h3 class="category-title">Art & Personal</h3>
-          <p class="category-desc">Personal artwork, drawings, family moments, and creative expressions. The more intimate side of life's journey.</p>
-          <a href="personal.html" class="btn btn-primary">View</a>
-        </div>
+        <!-- אישי ואמנות -->
+        <a href="personal.html" class="card">
+          <div class="card__image">
+            <img src="Drawings/Danielle/Princess Danielle.jpg" alt="ציורים ואמנות">
+          </div>
+          <div class="card__content">
+            <h3 class="card__title">אמנות ואישי</h3>
+            <p class="card__text">יצירות אמנות, ציורים ורגעים אישיים. הצד האינטימי יותר של המסע.</p>
+            <span class="card__link">לגלריה</span>
+          </div>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Featured Philosophers Section -->
-  <section class="section section-dark">
+  <!-- מורי הרוח -->
+  <section class="section section--alt">
     <div class="container">
-      <div class="section-header">
-        <h2>Wisdom Traditions</h2>
-        <p>Exploring teachings from great spiritual teachers and philosophers</p>
+      <div class="content-section__header">
+        <h2>מורי הרוח</h2>
+        <p class="content-section__subtitle">תורות מגדולי המורים הרוחניים והפילוסופים</p>
       </div>
 
-      <div class="card-grid">
-        <div class="card">
-          <div class="card-body">
-            <h3 class="card-title">J. Krishnamurti</h3>
-            <p class="card-text">Indian philosopher known for his insights on the nature of the mind, meditation, and the importance of radical psychological transformation.</p>
-            <a href="KM/km_index.html" class="card-link">Explore Teachings &rarr;</a>
+      <div class="cards">
+        <a href="KM/km_index.html" class="card">
+          <div class="card__content">
+            <h3 class="card__title">ג'ידו קרישנמורטי</h3>
+            <p class="card__text">פילוסוף הודי (1895-1986) הידוע בתובנותיו על טבע המחשבה, מדיטציה וחשיבות השינוי הפסיכולוגי הרדיקלי.</p>
+            <span class="card__link">לתכנים</span>
           </div>
-        </div>
+        </a>
 
-        <div class="card">
-          <div class="card-body">
-            <h3 class="card-title">Alan Watts</h3>
-            <p class="card-text">British philosopher who interpreted Eastern philosophy for Western audiences, making Zen Buddhism and Taoism accessible and relevant.</p>
-            <a href="WATTS/index.html" class="card-link">Read Essays &rarr;</a>
+        <a href="WATTS/index.html" class="card">
+          <div class="card__content">
+            <h3 class="card__title">אלן ואטס</h3>
+            <p class="card__text">פילוסוף בריטי (1915-1973) שפירש פילוסופיה מזרחית לקהל המערבי והפך את הזן והטאו לנגישים ורלוונטיים.</p>
+            <span class="card__link">למאמרים</span>
           </div>
-        </div>
+        </a>
 
-        <div class="card">
-          <div class="card-body">
-            <h3 class="card-title">Anthony de Mello</h3>
-            <p class="card-text">Indian Jesuit priest whose teachings blend Christian spirituality with Buddhist and Taoist wisdom, focusing on awareness and awakening.</p>
-            <a href="DeMello/demello.html" class="card-link">Discover More &rarr;</a>
+        <a href="DeMello/demello.html" class="card">
+          <div class="card__content">
+            <h3 class="card__title">אנתוני דה מלו</h3>
+            <p class="card__text">כומר ישועי הודי (1931-1987) שתורתו משלבת רוחניות נוצרית עם חוכמה בודהיסטית וטאואיסטית, בדגש על מודעות והתעוררות.</p>
+            <span class="card__link">לגלות עוד</span>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Travel Highlights -->
+  <!-- גלריות צילום -->
   <section class="section">
     <div class="container">
-      <div class="section-header">
-        <h2>Travel Photography</h2>
-        <p>Visual journeys through the spiritual landscapes of Asia</p>
+      <div class="content-section__header">
+        <h2>גלריות צילום</h2>
+        <p class="content-section__subtitle">מסעות ויזואליים בנופים הרוחניים של אסיה</p>
       </div>
 
       <div class="two-col">
-        <div>
-          <h3>Light of India (2005)</h3>
-          <p>A photographic journey through the vibrant colors, ancient temples, diverse people, and spiritual essence of India. From bustling markets to serene ashrams, these images capture the soul of an incredible land.</p>
-          <ul class="feature-list">
-            <li>Sacred temples and religious ceremonies</li>
-            <li>Portraits of people across India</li>
-            <li>Wildlife and nature photography</li>
-            <li>Street scenes and daily life</li>
-          </ul>
-          <a href="LightOfIndia/index.html" class="btn btn-primary mt-2">View India Gallery</a>
+        <div class="two-col__image">
+          <img src="LightOfIndia/pictures/Religion/Temples/P1010076.JPG" alt="אור הודו">
         </div>
         <div>
-          <img src="LightOfIndia/pictures/P1010076.JPG" alt="Light of India - Photography from India" style="width:100%; border-radius: 1rem; box-shadow: var(--shadow-lg);">
+          <h3>אור הודו (2005)</h3>
+          <p>מסע צילומי דרך הצבעים התוססים, המקדשים העתיקים, האנשים המגוונים והמהות הרוחנית של הודו. משווקים הומים ועד אשראמים שלווים.</p>
+          <ul class="content-list">
+            <li>מקדשים קדושים וטקסים דתיים</li>
+            <li>דיוקנאות אנשים מרחבי הודו</li>
+            <li>צילומי טבע וחיות בר</li>
+            <li>סצנות רחוב וחיי יומיום</li>
+          </ul>
+          <a href="LightOfIndia/index.html" class="btn btn--primary mt-2">לגלריית הודו</a>
         </div>
       </div>
 
-      <div class="two-col mt-4" style="margin-top: 3rem;">
+      <div class="two-col mt-4" style="margin-top: 4rem;">
         <div>
-          <img src="Burma/pictures/P1020040.JPG" alt="Myanmar Images - Photography from Burma" style="width:100%; border-radius: 1rem; box-shadow: var(--shadow-lg);">
-        </div>
-        <div>
-          <h3>Myanmar Images</h3>
-          <p>Exploring the golden pagodas, peaceful monasteries, and warm people of Myanmar (Burma). A journey through one of Southeast Asia's most spiritually rich countries.</p>
-          <ul class="feature-list">
-            <li>Golden pagodas and Buddhist temples</li>
-            <li>Monks and monastery life</li>
-            <li>Traditional culture and crafts</li>
-            <li>Landscapes and sacred sites</li>
+          <h3>תמונות ממיאנמר</h3>
+          <p>חקירת הפגודות המוזהבות, המנזרים השלווים והאנשים החמים של מיאנמר (בורמה). מסע באחת המדינות העשירות ביותר ברוחניות בדרום-מזרח אסיה.</p>
+          <ul class="content-list">
+            <li>פגודות מוזהבות ומקדשים בודהיסטיים</li>
+            <li>נזירים וחיי מנזר</li>
+            <li>תרבות מסורתית ומלאכת יד</li>
+            <li>נופים ואתרים קדושים</li>
           </ul>
-          <a href="Burma/index.html" class="btn btn-primary mt-2">View Myanmar Gallery</a>
+          <a href="Burma/index.html" class="btn btn--primary mt-2">לגלריית מיאנמר</a>
+        </div>
+        <div class="two-col__image">
+          <img src="Burma/pictures/Religion/P1020040.JPG" alt="מיאנמר">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section class="section section-dark">
+  <!-- אודות -->
+  <section class="section section--dark">
     <div class="container">
-      <div class="section-header">
-        <h2>About Efi Paz</h2>
-        <p>Business consultant, spiritual seeker, and photographer</p>
+      <div class="content-section__header">
+        <h2>אודות אפי פז</h2>
+        <p class="content-section__subtitle">יועץ עסקי, מחפש רוחני וצלם</p>
       </div>
 
-      <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-        <p style="font-size: 1.1rem; line-height: 1.8;">
-          Amit Friedmann (Efi Paz) brings together diverse interests spanning business consulting,
-          spiritual philosophy, and travel photography. With experience in business coaching and
-          a deep interest in Eastern philosophy, particularly the teachings of Krishnamurti, Alan Watts,
-          and Anthony de Mello, this website serves as a platform for sharing insights, images,
-          and courses designed to help people live more consciously and purposefully.
+      <div class="container--narrow" style="text-align: center;">
+        <p style="font-size: 1.1rem; line-height: 1.9;">
+          עמית פרידמן (אפי פז) מאחד תחומי עניין מגוונים הכוללים ייעוץ עסקי,
+          פילוסופיה רוחנית וצילום מסעות. עם ניסיון באימון עסקי ועניין עמוק
+          בפילוסופיה מזרחית, במיוחד תורותיהם של קרישנמורטי, אלן ואטס ואנתוני דה מלו,
+          אתר זה משמש כפלטפורמה לשיתוף תובנות, תמונות וקורסים שנועדו לעזור לאנשים
+          לחיות בצורה מודעת ומשמעותית יותר.
         </p>
         <div style="margin-top: 2rem;">
-          <a href="BC/About.html" class="btn btn-primary" style="margin-right: 1rem;">Professional Bio</a>
-          <a href="BC/contact.html" class="btn btn-secondary">Get in Touch</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Hebrew Content Section -->
-  <section class="section" dir="rtl">
-    <div class="container">
-      <div class="section-header">
-        <h2>תוכן בעברית</h2>
-        <p>תכנים בעברית על רוחניות, פילוסופיה וחיים מודעים</p>
-      </div>
-
-      <div class="card-grid">
-        <div class="card">
-          <div class="card-body">
-            <h3 class="card-title">קרישנמורטי</h3>
-            <p class="card-text">מאמרים ותמונות על הפילוסוף ההודי ג'ידו קרישנמורטי ותורתו על מודעות ושחרור.</p>
-            <a href="KM/km_index.html" class="card-link">&larr; קרא עוד</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-body">
-            <h3 class="card-title">אלאן ווטס</h3>
-            <p class="card-text">הספר אודות הטאבו ומאמרים נוספים בעברית על פילוסופיה מזרחית.</p>
-            <a href="WATTS/index.html" class="card-link">&larr; קרא עוד</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-body">
-            <h3 class="card-title">לחיות בשלום עם הכסף</h3>
-            <p class="card-text">קורס ייחודי המשלב כלכלה ורוח - למציאת שלום פנימי עם עולם הכסף.</p>
-            <a href="living.html" class="card-link">&larr; למידע נוסף</a>
-          </div>
+          <a href="BC/About.html" class="btn btn--ghost">קורות חיים מקצועיים</a>
+          <a href="BC/contact.html" class="btn btn--ghost" style="margin-right: 1rem;">יצירת קשר</a>
         </div>
       </div>
     </div>
@@ -246,44 +245,51 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h4>Spirituality</h4>
-          <ul>
-            <li><a href="KM/km_index.html">Krishnamurti</a></li>
-            <li><a href="WATTS/index.html">Alan Watts</a></li>
-            <li><a href="DeMello/demello.html">Anthony de Mello</a></li>
+      <div class="footer__inner">
+        <div class="footer__section">
+          <h4>רוחניות</h4>
+          <ul class="footer__links">
+            <li><a href="KM/km_index.html">קרישנמורטי</a></li>
+            <li><a href="WATTS/index.html">אלן ואטס</a></li>
+            <li><a href="DeMello/demello.html">אנתוני דה מלו</a></li>
           </ul>
         </div>
-        <div class="footer-section">
-          <h4>Travel</h4>
-          <ul>
-            <li><a href="LightOfIndia/index.html">Light of India</a></li>
-            <li><a href="Burma/index.html">Myanmar Images</a></li>
+        <div class="footer__section">
+          <h4>מסעות</h4>
+          <ul class="footer__links">
+            <li><a href="LightOfIndia/index.html">אור הודו</a></li>
+            <li><a href="Burma/index.html">מיאנמר</a></li>
           </ul>
         </div>
-        <div class="footer-section">
-          <h4>Business</h4>
-          <ul>
-            <li><a href="BC/index.html">Consulting Services</a></li>
-            <li><a href="BC/services.html">Services</a></li>
-            <li><a href="BC/contact.html">Contact</a></li>
+        <div class="footer__section">
+          <h4>עסקים</h4>
+          <ul class="footer__links">
+            <li><a href="BC/index.html">ייעוץ עסקי</a></li>
+            <li><a href="BC/services.html">שירותים</a></li>
+            <li><a href="BC/contact.html">יצירת קשר</a></li>
           </ul>
         </div>
-        <div class="footer-section">
-          <h4>Courses</h4>
-          <ul>
-            <li><a href="living.html">Living with Money</a></li>
-            <li><a href="ethics.html">Ethics</a></li>
+        <div class="footer__section">
+          <h4>קורסים</h4>
+          <ul class="footer__links">
+            <li><a href="living.html">לחיות בשלום עם הכסף</a></li>
+            <li><a href="ethics.html">אתיקה וערכים</a></li>
           </ul>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; Efipaz.com - Amit Friedmann (Efi Paz). All rights reserved.</p>
-        <p style="margin-top: 0.5rem;"><a href="indexold.html" style="color: var(--text-light);">View Original Site</a></p>
+      <div class="footer__bottom">
+        <p>&copy; אפי פז - עמית פרידמן. כל הזכויות שמורות.</p>
+        <p style="margin-top: 0.5rem;"><a href="en/index.html">English Version</a></p>
       </div>
     </div>
   </footer>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    document.querySelector('.nav__toggle').addEventListener('click', function() {
+      document.querySelector('.nav__list').classList.toggle('is-open');
+    });
+  </script>
 
 </body>
 </html>
