@@ -38,7 +38,7 @@
    				}
    				echo "
 					<td align='center' width=".$width." valign='top'>
-						<font size='2' >Copyright © 2006 Efi Paz & Amit Friedmann.</font>
+						<font size='2' >Copyright © 2006 Efi Paz & Efi Paz.</font>
 					</td>
 				";
 				$width = "30%";
