@@ -1,112 +1,177 @@
-# Efipaz.com
+# efipaz.com
 
-A personal website by **Efi Paz** - exploring spirituality, philosophy, travel photography, business consulting, and mindful living.
-
-## Overview
-
-This website has been online since the mid-2000s, serving as a platform for sharing content about Eastern philosophy, travel experiences, and professional services. The site has been modernized in 2026 with a clean, responsive design while preserving all original content.
-
-## Site Structure
-
-### Main Sections
-
-| Section | Description | Page |
-|---------|-------------|------|
-| **Home** | Main landing page with overview of all content | `index.html` |
-| **Spirituality** | Teachings from Krishnamurti, Alan Watts, Anthony de Mello | `spiritual.html` |
-| **Travel** | Photo galleries from India and Myanmar | `travel.html` |
-| **Business** | Consulting services and training materials | `business.html` |
-| **Living** | "Living in Peace with Money" course (Hebrew) | `living.html` |
-| **Ethics** | Ethics and values content | `ethics.html` |
-| **Personal** | Art, drawings, and family content | `personal.html` |
-
-### Content Directories
-
-```
-efipaz/
-├── BC/                 # Business Consulting pages
-├── Burma/              # Myanmar photo gallery
-├── DeMello/            # Anthony de Mello content
-├── Drawings/           # Art and illustrations
-├── Ethics/             # Ethics materials
-├── Evyatar/            # Personal family content
-├── India/              # India-related links
-├── KM/                 # Krishnamurti materials
-├── LightOfIndia/       # India photo gallery
-├── Living/             # "Living with Money" course
-├── Misc/               # Miscellaneous content
-├── WATTS/              # Alan Watts content (Hebrew)
-├── family/             # Family photos
-├── reidman/            # Business training PDFs
-└── lib/                # JavaScript libraries
-```
-
-## Spiritual Content
-
-### Philosophers Featured
-
-- **J. Krishnamurti** (1895-1986) - Indian philosopher focused on the nature of the mind and radical psychological transformation
-- **Alan Watts** (1915-1973) - British philosopher who interpreted Eastern philosophy for Western audiences
-- **Anthony de Mello** (1931-1987) - Indian Jesuit priest blending Eastern and Western spiritual traditions
-
-### Available Resources (PDFs)
-
-- Krishnamurti: "Awareness in Action", "Life, Death and Survival"
-- Alan Watts: "The Book on the Taboo" (Hebrew), various articles
-- De Mello: "Awareness", "How to Lose Your Mind"
-
-## Travel Photography
-
-### Light of India (2005)
-Extensive photo collection from travels through India including:
-- Sacred temples and religious ceremonies
-- Portraits of people across India
-- Wildlife and nature
-- Street scenes and daily life
-
-### Myanmar Images
-Photographs from Myanmar (Burma) featuring:
-- Golden pagodas and Buddhist temples
-- Monks and monastery life
-- Traditional culture and crafts
-
-## Technical Details
-
-### Technologies Used
-
-- **HTML5** - Semantic markup
-- **CSS3** - Modern styling with CSS variables
-- **Responsive Design** - Mobile-first approach
-- **RTL Support** - Full Hebrew/RTL language support
-- **Google Fonts** - Heebo (Hebrew), Inter, Playfair Display
-
-### Browser Support
-
-- Modern browsers (Chrome, Firefox, Safari, Edge)
-- Mobile responsive (iOS, Android)
-- Legacy pages maintained for historical content
-
-## File Statistics
-
-- **3,355+** total files
-- **1,500+** photographs
-- **30+** PDF documents
-- **6** major content sections
-
-## Languages
-
-- **English** - Primary language for travel and philosophy content
-- **Hebrew** - Business content, "Living with Money" course, some translations
-
-## License
-
-All content is copyright of Amit Friedmann (Efi Paz). Personal use permitted.
-
-## Contact
-
-For inquiries, please visit the [contact page](BC/contact.html).
+> אתר אישי של **אפי פז** — רוחניות, צילום מסעות, וחיים מודעים
 
 ---
 
-*Last updated: January 2026*
+## מה יש כאן?
+
+האתר פועל מאמצע שנות ה-2000 ועבר מודרניזציה בינואר 2026.
+הוא כולל תוכן על פילוסופיה מזרחית, גלריות צילום ממסעות, וקורס "לחיות בשלום עם הכסף".
+
+---
+
+## התחלה מהירה
+
+```bash
+# פתח את האתר בדפדפן
+open index.html
+
+# הרץ בדיקות לפני commit
+bash scripts/validate-all.sh
+```
+
+---
+
+## מבנה האתר
+
+### דפים ראשיים
+
+| דף | תיאור | קובץ |
+|----|-------|------|
+| בית | עמוד הנחיתה הראשי | `index.html` |
+| רוחניות | קרישנמורטי, אלן ואטס, דה מלו | `spiritual.html` |
+| מסעות | גלריות צילום מהודו ומיאנמר | `travel.html` |
+| אישי | אמנות, ציורים, תוכן משפחתי | `personal.html` |
+| כסף ושלווה | קורס "לחיות בשלום עם הכסף" | `living.html` |
+| ארכיב | תוכן ישן מהאתר המקורי | `archive.html` |
+
+### דפים נוספים (לא בתפריט הראשי)
+
+- `business.html` — ייעוץ עסקי ושירותים
+- `ethics.html` — אתיקה וערכים
+
+---
+
+## מבנה התיקיות
+
+```
+efipaz/
+├── index.html          # דף הבית
+├── style.css           # עיצוב ראשי (מינימליסטי יפני)
+│
+├── en/                 # גרסה אנגלית (6 דפים)
+│
+├── travel/             # גלריות צילום
+│   ├── india/          # 868 תמונות ב-12 קטגוריות
+│   └── myanmar/        # 369 תמונות
+│
+├── teachers/           # מורים רוחניים
+│   ├── krishnamurti/
+│   ├── watts/
+│   └── demello/
+│
+├── business/           # דפי ייעוץ עסקי
+├── living/             # קורס "כסף ושלווה"
+├── personal/           # תוכן אישי
+├── assets/             # לוגו ותמונות שירות
+├── scripts/            # סקריפטי תחזוקה
+├── lib/                # ספריות JavaScript
+└── archive/            # האתר הישן (לא לגעת!)
+```
+
+---
+
+## תוכן רוחני
+
+### שלושה מורים
+
+| מורה | שנים | תחום |
+|------|------|------|
+| **ג'ידו קרישנמורטי** | 1895–1986 | פילוסוף הודי — טבע התודעה ושינוי פסיכולוגי |
+| **אלן ואטס** | 1915–1973 | פילוסוף בריטי — פירוש פילוסופיה מזרחית למערב |
+| **אנתוני דה מלו** | 1931–1987 | כומר ישועי הודי — שילוב מסורות מזרח ומערב |
+
+---
+
+## גלריות צילום
+
+### הודו (Light of India)
+
+868 תמונות ב-12 קטגוריות:
+
+- `Animals` — בעלי חיים
+- `Architecture` — אדריכלות
+- `Art_and_Craft` — אמנות ומלאכה
+- `Children` — ילדים
+- `Colors` — צבעים
+- `Landscape` — נופים
+- `Openings` — פתחים
+- `Outside` — חוץ
+- `People` — אנשים
+- `Portraits` — דיוקנאות
+- `Religion` — דת
+- `Tress_Flowers_and_Fruit` — עצים, פרחים ופירות
+
+### מיאנמר (בורמה)
+
+369 תמונות — פגודות מוזהבות, נזירים, ותרבות מסורתית.
+
+---
+
+## פרטים טכניים
+
+### טכנולוגיות
+
+- **HTML5** — סמנטיקה מודרנית
+- **CSS3** — משתני CSS, עיצוב מינימליסטי
+- **רספונסיבי** — מותאם לנייד
+- **RTL** — תמיכה מלאה בעברית
+- **גופנים** — Heebo (עברית), Inter (אנגלית)
+
+### עיצוב
+
+3 צבעים בלבד (מינימליזם יפני):
+- `#F7F5F0` — רקע שמנת
+- `#1A1A1A` — טקסט כהה
+- `#8B2635` — אדום יפני להדגשה
+
+---
+
+## סטטיסטיקות
+
+| מה | כמה |
+|----|-----|
+| קבצים | 3,384 |
+| תמונות | 2,630 |
+| PDFs | 20 |
+| שפות | 2 (עברית, אנגלית) |
+
+---
+
+## סקריפטים שימושיים
+
+```bash
+# בדיקות מקיפות (הרץ לפני כל commit!)
+bash scripts/validate-all.sh
+
+# בדיקת קידוד עברית
+bash scripts/check-encoding.sh
+
+# בדיקת קישורים שבורים
+bash scripts/check-links.sh
+
+# דוח מצב מפורט
+bash scripts/audit.sh
+```
+
+---
+
+## קבצי תיעוד
+
+| קובץ | מטרה |
+|------|------|
+| `README.md` | הקובץ הזה — סקירה כללית |
+| `CLAUDE.md` | הוראות עבודה לסוכני AI |
+| `AUDIT_REPORT.md` | דוח מצב קבצים אוטומטי |
+
+---
+
+## רישיון
+
+כל התוכן שייך לאפי פז. שימוש אישי מותר.
+
+---
+
+*עודכן: ינואר 2026*
 
