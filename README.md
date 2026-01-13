@@ -1,6 +1,6 @@
 # Efipaz.com
 
-A personal website by **Amit Friedmann (Efi Paz)** - exploring spirituality, philosophy, travel photography, business consulting, and mindful living.
+A personal website by **Efi Paz** - exploring spirituality, philosophy, travel photography, business consulting, and mindful living.
 
 ## Overview
 
@@ -109,3 +109,4 @@ For inquiries, please visit the [contact page](BC/contact.html).
 ---
 
 *Last updated: January 2026*
+
