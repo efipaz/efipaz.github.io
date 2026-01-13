@@ -867,6 +867,274 @@ blockquote, .quote {
 }
 
 /* ============================================
+   גלריית תמונות מודרנית עם Lightbox
+   ============================================ */
+
+/* גריד גלריה משופר */
+.gallery--full {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--space-xs);
+}
+
+@media (min-width: 768px) {
+  .gallery--full {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: var(--space-sm);
+  }
+}
+
+@media (min-width: 1200px) {
+  .gallery--full {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+/* פריט גלריה עם lazy loading */
+.gallery__item {
+  border: none;
+}
+
+.gallery__item img {
+  opacity: 0;
+  transition: opacity 0.3s ease, filter 0.4s ease, transform 0.4s ease;
+}
+
+.gallery__item img.loaded {
+  opacity: 1;
+}
+
+/* קטגוריה מקופלת */
+.gallery-section {
+  margin-bottom: var(--space-lg);
+}
+
+.gallery-section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: var(--space-sm);
+  user-select: none;
+}
+
+.gallery-section__header h3 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.gallery-section__count {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  font-weight: 400;
+}
+
+.gallery-section__toggle {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition);
+}
+
+.gallery-section__toggle::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-left: 2px solid var(--color-text);
+  border-bottom: 2px solid var(--color-text);
+  transform: rotate(-45deg);
+  transition: transform var(--transition);
+}
+
+.gallery-section.is-collapsed .gallery-section__toggle::before {
+  transform: rotate(135deg);
+}
+
+.gallery-section__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: var(--space-xs);
+  transition: max-height 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .gallery-section__content {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+.gallery-section.is-collapsed .gallery-section__content {
+  display: none;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lightbox.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox__content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox__img {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox__img.loaded {
+  opacity: 1;
+}
+
+.lightbox__loader {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-top-color: var(--color-bg);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.lightbox__img.loaded + .lightbox__loader {
+  display: none;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* כפתורי Lightbox */
+.lightbox__close,
+.lightbox__prev,
+.lightbox__next {
+  position: absolute;
+  background: none;
+  border: none;
+  color: var(--color-bg);
+  cursor: pointer;
+  padding: var(--space-md);
+  transition: opacity var(--transition), transform var(--transition);
+  opacity: 0.7;
+}
+
+.lightbox__close:hover,
+.lightbox__prev:hover,
+.lightbox__next:hover {
+  opacity: 1;
+}
+
+.lightbox__close {
+  top: var(--space-md);
+  right: var(--space-md);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.lightbox__close::before {
+  content: '×';
+}
+
+.lightbox__prev,
+.lightbox__next {
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+}
+
+.lightbox__prev {
+  left: var(--space-md);
+}
+
+.lightbox__prev::before {
+  content: '‹';
+}
+
+.lightbox__next {
+  right: var(--space-md);
+}
+
+.lightbox__next::before {
+  content: '›';
+}
+
+/* מונה תמונות */
+.lightbox__counter {
+  position: absolute;
+  bottom: var(--space-md);
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--color-bg);
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* מובייל */
+@media (max-width: 768px) {
+  .lightbox__prev,
+  .lightbox__next {
+    padding: var(--space-sm);
+    font-size: 2rem;
+  }
+
+  .lightbox__close {
+    top: var(--space-sm);
+    right: var(--space-sm);
+    font-size: 1.5rem;
+  }
+}
+
+/* Touch swipe hint */
+.lightbox__swipe-hint {
+  position: absolute;
+  bottom: calc(var(--space-md) + 30px);
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--color-bg);
+  font-size: 0.8rem;
+  opacity: 0.5;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .lightbox__swipe-hint {
+    display: block;
+  }
+
+  .lightbox__prev,
+  .lightbox__next {
+    display: none;
+  }
+}
+
+/* ============================================
    הדפסה
    ============================================ */
 @media print {
