@@ -1,34 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Spiritual teachings and philosophy - Krishnamurti, Alan Watts, Anthony de Mello">
-  <title>Spirituality & Philosophy | Efi Paz</title>
+  <meta name="description" content="רוחניות ופילוסופיה - קרישנמורטי, אלן ואטס, אנתוני דה מלו">
+  <title>רוחניות ופילוסופיה | אפי פז</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
 
-  <!-- Header -->
   <header class="header">
     <div class="container header__inner">
-      <a href="index.html" class="header__logo">Efi Paz</a>
+      <a href="index.html" class="header__logo">אפי פז</a>
       <nav class="nav">
         <ul class="nav__list">
-          <li><a href="index.html" class="nav__link">Home</a></li>
-          <li><a href="spiritual.html" class="nav__link nav__link--active">Spirituality</a></li>
-          <li><a href="travel.html" class="nav__link">Travel</a></li>
-          <li><a href="business.html" class="nav__link">Business</a></li>
-          <li><a href="living.html" class="nav__link">Living</a></li>
-          <li><a href="ethics.html" class="nav__link">Ethics</a></li>
+          <li><a href="index.html" class="nav__link">בית</a></li>
+          <li><a href="spiritual.html" class="nav__link nav__link--active">רוחניות</a></li>
+          <li><a href="travel.html" class="nav__link">מסעות</a></li>
+          <li><a href="personal.html" class="nav__link">אישי</a></li>
+          <li><a href="living.html" class="nav__link">כסף ושלווה</a></li>
+          <li><a href="archive.html" class="nav__link">ארכיב</a></li>
         </ul>
         <div class="lang-switch">
-          <a href="index.html">עב</a>
-          <a href="en/index.html" class="active">EN</a>
+          <a href="spiritual.html" class="active">עב</a>
+          <a href="en/spiritual.html">EN</a>
         </div>
         <button class="nav__toggle" aria-label="Menu">
           <span></span>
@@ -39,256 +38,231 @@
     </div>
   </header>
 
-  <!-- Page Header -->
-  <div class="page-header--hero" style="background-image: url('LightOfIndia/pictures/Religion/Temples/P1010081.JPG');">
+  <div class="page-header">
     <div class="container">
-      <nav class="breadcrumbs" style="color: rgba(255,255,255,0.7);">
-        <a href="index.html" style="color: rgba(255,255,255,0.7);">Home</a>
-        <span class="breadcrumbs__separator">/</span>
-        <span>Spirituality</span>
-      </nav>
-      <h1 class="page-header__title">Spirituality & Philosophy</h1>
-      <p class="page-header__subtitle">Exploring consciousness, awareness, and the nature of existence through the teachings of great spiritual masters</p>
-      <p class="page-header__subtitle" style="font-size: 0.9rem; margin-top: 0.5rem; direction: rtl;">
-        רוחניות ופילוסופיה - חקירת התודעה והמודעות דרך תורות מורים גדולים
-      </p>
+      <h1>רוחניות ופילוסופיה</h1>
+      <p class="page-header__subtitle">חקירת התודעה והמודעות דרך תורות מורים גדולים</p>
     </div>
   </div>
 
-  <!-- Krishnamurti Section -->
-  <section class="section">
+  <section id="krishnamurti" class="section">
     <div class="container">
       <div class="person-card">
         <div class="person-card__image">
-          <img src="KM/Krishnamurti.jpg" alt="J. Krishnamurti">
+          <img src="KM/Krishnamurti.jpg" alt="קרישנמורטי">
         </div>
         <div>
-          <h2 class="person-card__name">Jiddu Krishnamurti</h2>
-          <p class="person-card__dates">1895–1986 | Indian Philosopher & Speaker</p>
+          <h2 class="person-card__name">ג'ידו קרישנמורטי</h2>
+          <p class="person-card__dates">1895-1986 | פילוסוף הודי</p>
           <p class="person-card__bio">
-            Krishnamurti was a philosopher, speaker, and writer who spent decades traveling the world speaking about the need for a radical change in mankind. He emphasized that truth is a pathless land and that no organization, belief, or dogma can lead one to truth.
+            קרישנמורטי היה פילוסוף ונואם שהקדיש עשורים לנסיעות בעולם ולדבר על הצורך בשינוי רדיקלי באנושות.
+            הוא הדגיש שהאמת היא ארץ ללא שבילים ושאף ארגון, אמונה או דוגמה לא יכולים להוביל אדם לאמת.
           </p>
-          <p>His teachings focus on the nature of the mind, meditation without method, psychological freedom, and the importance of self-knowledge through direct observation.</p>
-          <a href="KM/km_index.html" class="btn btn--primary mt-2">Explore Krishnamurti Content</a>
+          <p>תורתו מתמקדת בטבע המחשבה, מדיטציה ללא שיטה, חופש פסיכולוגי וחשיבות ההכרה העצמית דרך התבוננות ישירה.</p>
+          <a href="KM/km_index.html" class="btn mt-2">לתכנים</a>
         </div>
       </div>
 
-      <h3 class="mt-3">Available Resources</h3>
-      <div class="document-list mt-1">
+      <h3 class="mt-3">חומרים זמינים</h3>
+      <div class="document-list mt-2">
         <a href="KM/Awareness_in_Action_Intro.pdf" class="document-item">
           <div class="document-item__icon">PDF</div>
           <div class="document-item__info">
-            <div class="document-item__title">Awareness in Action - Introduction</div>
-            <div class="document-item__meta">PDF Document</div>
+            <div class="document-item__title">מודעות בפעולה - מבוא</div>
+            <div class="document-item__meta">מסמך PDF</div>
           </div>
         </a>
         <a href="KM/LIFE, DEATH AND SURVIVAL.pdf" class="document-item">
           <div class="document-item__icon">PDF</div>
           <div class="document-item__info">
-            <div class="document-item__title">Life, Death and Survival</div>
-            <div class="document-item__meta">PDF Document</div>
-          </div>
-        </a>
-        <a href="KM/km_index.html" class="document-item">
-          <div class="document-item__icon" style="background: var(--color-primary);">WEB</div>
-          <div class="document-item__info">
-            <div class="document-item__title">Krishnamurti Articles & Photos</div>
-            <div class="document-item__meta">Web Gallery with articles and photography</div>
+            <div class="document-item__title">חיים, מוות והישרדות</div>
+            <div class="document-item__meta">מסמך PDF</div>
           </div>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Alan Watts Section -->
-  <section class="section section--alt">
+  <section id="watts" class="section section--alt">
     <div class="container">
       <div class="person-card">
         <div class="person-card__image">
-          <img src="LightOfIndia/pictures/Religion/Temples/P1010076.JPG" alt="Alan Watts" style="object-position: center;">
+          <img src="LightOfIndia/pictures/Religion/Buddhist_monks/Alchi_063.jpg" alt="אלן ואטס">
         </div>
         <div>
-          <h2 class="person-card__name">Alan Watts</h2>
-          <p class="person-card__dates">1915–1973 | British Philosopher & Writer</p>
+          <h2 class="person-card__name">אלן ואטס</h2>
+          <p class="person-card__dates">1915-1973 | פילוסוף בריטי</p>
           <p class="person-card__bio">
-            Alan Watts was a British philosopher who interpreted and popularized Eastern philosophy for a Western audience. Known for his accessible writing style and engaging lectures, he made Zen Buddhism, Taoism, and Hindu philosophy understandable to millions.
+            אלן ואטס היה פילוסוף בריטי שפירש פילוסופיה מזרחית לקהל המערבי.
+            הוא הפך את בודהיזם הזן, הטאואיזם והפילוסופיה ההינדית לנגישים ומובנים לקוראים רבים.
           </p>
-          <p>His work explores the illusion of the separate ego, the wisdom of insecurity, the taboo against knowing who you are, and the art of living in the present moment.</p>
-          <a href="WATTS/index.html" class="btn btn--primary mt-2">Explore Alan Watts Content</a>
+          <p>עבודתו חוקרת את האשליה של האגו הנפרד, חוכמת חוסר הביטחון, הטאבו נגד לדעת מי אתה, ואמנות החיים ברגע הנוכחי.</p>
+          <a href="WATTS/index.html" class="btn mt-2">לתכנים</a>
         </div>
       </div>
 
-      <h3 class="mt-3">Available Resources (Hebrew Translations)</h3>
-      <div class="document-list mt-1">
+      <h3 class="mt-3">חומרים זמינים בעברית</h3>
+      <div class="document-list mt-2">
         <a href="WATTS/Instincts_heb_watts.pdf" class="document-item">
           <div class="document-item__icon">PDF</div>
           <div class="document-item__info">
-            <div class="document-item__title">Instincts (Hebrew) - אינסטינקטים</div>
-            <div class="document-item__meta">PDF Document - Hebrew Translation</div>
+            <div class="document-item__title">אינסטינקטים</div>
+            <div class="document-item__meta">תרגום לעברית</div>
           </div>
         </a>
         <a href="WATTS/ZEN_CONTROL_HEB.pdf" class="document-item">
           <div class="document-item__icon">PDF</div>
           <div class="document-item__info">
-            <div class="document-item__title">Zen Control (Hebrew) - זן ושליטה</div>
-            <div class="document-item__meta">PDF Document - Hebrew Translation</div>
+            <div class="document-item__title">זן ושליטה</div>
+            <div class="document-item__meta">תרגום לעברית</div>
           </div>
         </a>
         <a href="WATTS/MEDITATION_HEB.pdf" class="document-item">
           <div class="document-item__icon">PDF</div>
           <div class="document-item__info">
-            <div class="document-item__title">Meditation (Hebrew) - מדיטציה</div>
-            <div class="document-item__meta">PDF Document - Hebrew Translation</div>
+            <div class="document-item__title">מדיטציה</div>
+            <div class="document-item__meta">תרגום לעברית</div>
           </div>
         </a>
         <a href="WATTS/חוכמה מלאה שמחה.pdf" class="document-item">
           <div class="document-item__icon">PDF</div>
           <div class="document-item__info">
-            <div class="document-item__title">Wisdom Full of Joy - חוכמה מלאה שמחה</div>
-            <div class="document-item__meta">PDF Document - Hebrew</div>
+            <div class="document-item__title">חוכמה מלאה שמחה</div>
+            <div class="document-item__meta">מסמך PDF</div>
           </div>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Anthony de Mello Section -->
-  <section class="section">
+  <section id="demello" class="section">
     <div class="container">
       <div class="person-card">
         <div class="person-card__image">
-          <img src="DeMello/demello.jpg" alt="Anthony de Mello" onerror="this.style.background='var(--color-secondary)'; this.style.display='flex'; this.alt='AM';">
+          <img src="DeMello/demello.jpg" alt="אנתוני דה מלו">
         </div>
         <div>
-          <h2 class="person-card__name">Anthony de Mello</h2>
-          <p class="person-card__dates">1931–1987 | Indian Jesuit Priest & Psychotherapist</p>
+          <h2 class="person-card__name">אנתוני דה מלו</h2>
+          <p class="person-card__dates">1931-1987 | כומר ישועי הודי</p>
           <p class="person-card__bio">
-            Anthony de Mello was an Indian Jesuit priest and psychotherapist who became widely known for his books on spirituality. His teachings uniquely blend Eastern and Western spiritual traditions, combining insights from Christianity, Buddhism, and Taoism.
+            אנתוני דה מלו היה כומר ישועי הודי ופסיכותרפיסט שנודע בספריו על רוחניות.
+            תורתו משלבת באופן ייחודי מסורות רוחניות מזרחיות ומערביות - נצרות, בודהיזם וטאואיזם.
           </p>
-          <p>His work emphasizes awareness, waking up from the illusions that cause suffering, and finding happiness through understanding rather than acquiring.</p>
-          <a href="DeMello/demello.html" class="btn btn--primary mt-2">Explore de Mello Content</a>
+          <p>עבודתו מדגישה מודעות, התעוררות מאשליות שגורמות סבל, ומציאת אושר דרך הבנה ולא דרך רכישה.</p>
+          <a href="DeMello/demello.html" class="btn mt-2">לתכנים</a>
         </div>
       </div>
 
-      <h3 class="mt-3">Available Resources</h3>
-      <div class="document-list mt-1">
+      <h3 class="mt-3">חומרים זמינים</h3>
+      <div class="document-list mt-2">
         <a href="DeMello/Anthony de Mello - Awareness.pdf" class="document-item">
           <div class="document-item__icon">PDF</div>
           <div class="document-item__info">
-            <div class="document-item__title">Awareness</div>
-            <div class="document-item__meta">PDF Document - Complete Book</div>
+            <div class="document-item__title">מודעות</div>
+            <div class="document-item__meta">ספר מלא - אנגלית</div>
           </div>
         </a>
         <a href="DeMello/How to Lose Your Mind.pdf" class="document-item">
           <div class="document-item__icon">PDF</div>
           <div class="document-item__info">
-            <div class="document-item__title">How to Lose Your Mind</div>
-            <div class="document-item__meta">PDF Document</div>
+            <div class="document-item__title">איך לאבד את הראש</div>
+            <div class="document-item__meta">מסמך PDF - אנגלית</div>
           </div>
         </a>
         <a href="DeMello/How_to_Lose_Your_Mind_in_Under_an_Hour.heb.pdf" class="document-item">
           <div class="document-item__icon">PDF</div>
           <div class="document-item__info">
-            <div class="document-item__title">How to Lose Your Mind (Hebrew)</div>
-            <div class="document-item__meta">PDF Document - תרגום לעברית</div>
+            <div class="document-item__title">איך לאבד את הראש בפחות משעה</div>
+            <div class="document-item__meta">תרגום לעברית</div>
           </div>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Common Themes -->
-  <section class="section section--dark">
+  <section class="section section--alt">
     <div class="container">
-      <div class="content-section__header">
-        <h2>Common Themes</h2>
-        <p class="content-section__subtitle">Core ideas shared across these wisdom traditions</p>
-      </div>
-
+      <h2 class="text-center mb-4">נושאים משותפים</h2>
       <div class="cards">
         <div class="card">
           <div class="card__content">
-            <h3 class="card__title">Awareness</h3>
-            <p class="card__text">The foundation of all spiritual growth - learning to observe thoughts, emotions, and reactions without judgment or identification.</p>
+            <h3 class="card__title">מודעות</h3>
+            <p class="card__text">היסוד של כל צמיחה רוחנית - לימוד להתבונן במחשבות, רגשות ותגובות ללא שיפוט או הזדהות.</p>
           </div>
         </div>
         <div class="card">
           <div class="card__content">
-            <h3 class="card__title">Present Moment</h3>
-            <p class="card__text">Life exists only in the now. The past is memory, the future imagination. True peace comes from fully inhabiting the present.</p>
+            <h3 class="card__title">הרגע הנוכחי</h3>
+            <p class="card__text">החיים קיימים רק בעכשיו. העבר הוא זיכרון, העתיד דמיון. שלום אמיתי בא מלחיות את ההווה במלואו.</p>
           </div>
         </div>
         <div class="card">
           <div class="card__content">
-            <h3 class="card__title">Self-Knowledge</h3>
-            <p class="card__text">Understanding oneself deeply - not through books or teachers, but through direct observation of one's own mind and behavior.</p>
+            <h3 class="card__title">הכרה עצמית</h3>
+            <p class="card__text">להבין את עצמך לעומק - לא דרך ספרים או מורים, אלא דרך התבוננות ישירה במוח ובהתנהגות שלך.</p>
           </div>
         </div>
         <div class="card">
           <div class="card__content">
-            <h3 class="card__title">Freedom from Conditioning</h3>
-            <p class="card__text">Recognizing and transcending the cultural, social, and psychological conditioning that limits our perception and understanding.</p>
+            <h3 class="card__title">חופש מהתניה</h3>
+            <p class="card__text">לזהות ולחרוג מההתניה התרבותית, החברתית והפסיכולוגית שמגבילה את התפיסה וההבנה שלנו.</p>
           </div>
         </div>
         <div class="card">
           <div class="card__content">
-            <h3 class="card__title">Non-Attachment</h3>
-            <p class="card__text">Finding peace not by controlling life but by releasing our grip on outcomes, opinions, and the need for things to be different.</p>
+            <h3 class="card__title">אי-היאחזות</h3>
+            <p class="card__text">למצוא שלום לא בשליטה על החיים אלא בשחרור האחיזה בתוצאות, דעות והצורך שדברים יהיו אחרת.</p>
           </div>
         </div>
         <div class="card">
           <div class="card__content">
-            <h3 class="card__title">Interconnection</h3>
-            <p class="card__text">Seeing through the illusion of separation - recognizing that we are not isolated individuals but part of the fabric of existence.</p>
+            <h3 class="card__title">קשר הדדי</h3>
+            <p class="card__text">לראות דרך אשליית הפרדה - להכיר שאנחנו לא פרטים מבודדים אלא חלק ממרקם הקיום.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
         <div class="footer__section">
-          <h4>Spirituality</h4>
+          <h4>רוחניות</h4>
           <ul class="footer__links">
-            <li><a href="KM/km_index.html">Krishnamurti</a></li>
-            <li><a href="WATTS/index.html">Alan Watts</a></li>
-            <li><a href="DeMello/demello.html">Anthony de Mello</a></li>
+            <li><a href="#krishnamurti">קרישנמורטי</a></li>
+            <li><a href="#watts">אלן ואטס</a></li>
+            <li><a href="#demello">אנתוני דה מלו</a></li>
           </ul>
         </div>
         <div class="footer__section">
-          <h4>Travel</h4>
+          <h4>מסעות</h4>
           <ul class="footer__links">
-            <li><a href="LightOfIndia/index.html">Light of India</a></li>
-            <li><a href="Burma/index.html">Myanmar</a></li>
+            <li><a href="travel.html#india">אור הודו</a></li>
+            <li><a href="travel.html#burma">מיאנמר</a></li>
           </ul>
         </div>
         <div class="footer__section">
-          <h4>Business</h4>
+          <h4>עוד</h4>
           <ul class="footer__links">
-            <li><a href="BC/index.html">Consulting</a></li>
-            <li><a href="BC/services.html">Services</a></li>
-            <li><a href="BC/contact.html">Contact</a></li>
+            <li><a href="living.html">לחיות בשלום עם הכסף</a></li>
+            <li><a href="personal.html">אישי ואמנות</a></li>
+            <li><a href="archive.html">ארכיב</a></li>
           </ul>
         </div>
         <div class="footer__section">
-          <h4>Courses</h4>
+          <h4>שפה</h4>
           <ul class="footer__links">
-            <li><a href="living.html">Living with Money</a></li>
-            <li><a href="ethics.html">Ethics</a></li>
+            <li><a href="en/index.html">English</a></li>
           </ul>
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; Efi Paz - Amit Friedmann. All rights reserved.</p>
-        <p style="margin-top: 0.5rem;"><a href="index.html">חזרה לדף הבית</a></p>
+        <p>אפי פז · עמית פרידמן</p>
       </div>
     </div>
   </footer>
 
-  <!-- Mobile Menu Script -->
   <script>
     document.querySelector('.nav__toggle').addEventListener('click', function() {
       document.querySelector('.nav__list').classList.toggle('is-open');
