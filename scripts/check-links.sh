@@ -35,8 +35,11 @@ for file in $HTML_FILES; do
         # Remove query strings and anchors for file check
         TARGET_CLEAN=$(echo "$TARGET" | sed 's/[?#].*//')
 
-        # Check if file exists
-        if [ ! -e "$TARGET_CLEAN" ]; then
+        # Decode URL encoding (%20 -> space, etc.)
+        TARGET_DECODED=$(printf '%b' "${TARGET_CLEAN//%/\\x}")
+
+        # Check if file exists (try both encoded and decoded paths)
+        if [ ! -e "$TARGET_CLEAN" ] && [ ! -e "$TARGET_DECODED" ]; then
             echo "BROKEN: $file"
             echo "  -> $link (target: $TARGET_CLEAN)"
             BROKEN_LINKS=$((BROKEN_LINKS + 1))
