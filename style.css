@@ -497,8 +497,15 @@ a:hover {
    ============================================ */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: var(--space-sm);
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--space-xs);
+}
+
+@media (min-width: 480px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: var(--space-sm);
+  }
 }
 
 .gallery__item {
@@ -523,8 +530,15 @@ a:hover {
 /* קטגוריות גלריה */
 .gallery-categories {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: var(--space-md);
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: var(--space-sm);
+}
+
+@media (min-width: 480px) {
+  .gallery-categories {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: var(--space-md);
+  }
 }
 
 .gallery-category {
@@ -890,13 +904,19 @@ blockquote, .quote {
 /* גריד גלריה משופר */
 .gallery--full {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   gap: var(--space-xs);
+}
+
+@media (min-width: 480px) {
+  .gallery--full {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
 }
 
 @media (min-width: 768px) {
   .gallery--full {
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: var(--space-sm);
   }
 }
