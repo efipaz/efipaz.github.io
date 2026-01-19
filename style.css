@@ -1177,6 +1177,53 @@ blockquote, .quote {
 }
 
 /* ============================================
+   ניווט בתהליך
+   ============================================ */
+.process-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-xs);
+  margin-top: var(--space-md);
+}
+
+.process-nav__item {
+  display: inline-block;
+  padding: var(--space-xs) var(--space-sm);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all var(--transition);
+}
+
+.process-nav__item:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.process-nav__item--active {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+.process-nav__item--active:hover {
+  color: var(--color-bg);
+}
+
+@media (max-width: 480px) {
+  .process-nav {
+    gap: var(--space-xs);
+  }
+
+  .process-nav__item {
+    font-size: 0.8rem;
+    padding: calc(var(--space-xs) / 2) var(--space-xs);
+  }
+}
+
+/* ============================================
    הדפסה
    ============================================ */
 @media print {

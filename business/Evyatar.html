@@ -1,14 +1,104 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-<!--  Created with the CoffeeCup HTML Editor 2008  -->
-<!--           http://www.coffeecup.com/           -->
-<!--         Brewed on 16/10/2010 22:40:44         -->
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
 <head>
-  <title></title>
-  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="אפ.אי. יעוץ עסקי">
+  <title>אפ.אי. יעוץ עסקי</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">אפ.אי. יעוץ עסקי</a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">ראשי</a></li>
+          <li><a href="services.html" class="nav__link">שירותים</a></li>
+          <li><a href="projects.html" class="nav__link">פרויקטים</a></li>
+          <li><a href="customers.html" class="nav__link">לקוחות</a></li>
+          <li><a href="About.html" class="nav__link">אודות</a></li>
+          <li><a href="contact.html" class="nav__link">צור קשר</a></li>
+        </ul>
+        <div class="lang-switch">
+          <a href="../index.html">לאתר הראשי</a>
+        </div>
+        <button class="nav__toggle" aria-label="תפריט">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>עמוד זה בבנייה</h1>
+      <p class="page-header__subtitle">התוכן יתווסף בקרוב</p>
+    </div>
+  </section>
+
+  <!-- Redirect -->
+  <section class="section">
+    <div class="container text-center">
+      <p class="mb-3">בינתיים, מוזמנים לבקר בעמודים האחרים באתר:</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="index.html" class="btn">עמוד ראשי</a>
+        <a href="services.html" class="btn">שירותים</a>
+        <a href="About.html" class="btn">אודות</a>
+        <a href="contact.html" class="btn btn--accent">צור קשר</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__section">
+          <h4>ניווט</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">ראשי</a></li>
+            <li><a href="services.html">שירותים</a></li>
+            <li><a href="projects.html">פרויקטים</a></li>
+            <li><a href="customers.html">לקוחות</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h4>מידע</h4>
+          <ul class="footer__links">
+            <li><a href="About.html">אודות אפי פז</a></li>
+            <li><a href="links.html">קישורים</a></li>
+            <li><a href="contact.html">צור קשר</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h4>קשר</h4>
+          <ul class="footer__links">
+            <li><a href="mailto:efipaz@gmail.com">efipaz@gmail.com</a></li>
+            <li>054-451-4502</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p><a href="../index.html">אפי פז</a> - אתר אישי</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile navigation toggle
+    document.querySelector('.nav__toggle').addEventListener('click', function() {
+      document.querySelector('.nav__list').classList.toggle('is-open');
+    });
+  </script>
+
 </body>
 </html>
-
