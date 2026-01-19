@@ -1,0 +1,2284 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Short Wisdom Stories by Anthony de Mello - A collection of 172 wisdom stories about awakening, awareness, and enlightenment">
+  <title>Short Wisdom Stories by Anthony de Mello | Efi Paz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+  <style>
+    /* Stories-specific styles */
+    .story {
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    .story:last-child {
+      border-bottom: none;
+    }
+    .story h3 {
+      color: var(--color-accent);
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+    }
+    .story__content {
+      line-height: 1.8;
+    }
+    .story__content p {
+      margin-bottom: 1rem;
+    }
+    .story__morsel,
+    .story__bonus {
+      margin-top: 1.5rem;
+      padding: 1rem 1.5rem;
+      background: rgba(139, 38, 53, 0.05);
+      border-left: 3px solid var(--color-accent);
+      font-style: italic;
+    }
+    .story__morsel p,
+    .story__bonus p {
+      margin: 0;
+    }
+    .stories-nav {
+      position: sticky;
+      top: 80px;
+      background: var(--color-bg);
+      padding: 1rem 0;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+      z-index: 10;
+    }
+    .stories-nav__inner {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .stories-nav label {
+      font-weight: 500;
+    }
+    .stories-nav select {
+      padding: 0.5rem 1rem;
+      border: 1px solid rgba(0,0,0,0.2);
+      border-radius: 4px;
+      background: white;
+      font-family: inherit;
+      font-size: 0.9rem;
+    }
+    .story-count {
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="../../index.html" class="header__logo">Efi Paz</a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="../../index.html" class="nav__link">Home</a></li>
+          <li><a href="../../spiritual.html" class="nav__link nav__link--active">Spirituality</a></li>
+          <li><a href="../../travel.html" class="nav__link">Travels</a></li>
+          <li><a href="../../archive.html" class="nav__link">Archive</a></li>
+          <li><a href="../../living.html" class="nav__link">Money &amp; Peace</a></li>
+        </ul>
+        <button class="nav__toggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="../../index.html">Home</a> / <a href="../../spiritual.html">Spirituality</a> / <a href="demello.html">Anthony de Mello</a> / Stories
+      </nav>
+      <h1>Short Wisdom Stories</h1>
+      <p class="page-header__subtitle">by Anthony de Mello</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container container--narrow">
+      
+      <div class="stories-nav">
+        <div class="stories-nav__inner">
+          <label for="story-select">Jump to story:</label>
+          <select id="story-select" onchange="if(this.value) location.hash=this.value">
+            <option value="">Select a story...</option>
+            <option value="#story-001">001. Adulthood</option>
+            <option value="#story-002">002. Affirmation</option>
+            <option value="#story-003">003. Aggression</option>
+            <option value="#story-004">004. Appearances</option>
+            <option value="#story-005">005. Arrival</option>
+            <option value="#story-006">006. Art</option>
+            <option value="#story-007">007. At-One-Ment</option>
+            <option value="#story-008">008. Atheism</option>
+            <option value="#story-009">009. Attachment</option>
+            <option value="#story-010">010. Autonomy</option>
+            <option value="#story-011">011. Avoidance</option>
+            <option value="#story-012">012. Awareness</option>
+            <option value="#story-013">013. Being</option>
+            <option value="#story-014">014. Belief</option>
+            <option value="#story-015">015. Blindness</option>
+            <option value="#story-016">016. Bondage</option>
+            <option value="#story-017">017. Celebration</option>
+            <option value="#story-018">018. Change</option>
+            <option value="#story-019">019. Charism</option>
+            <option value="#story-020">020. Communion</option>
+            <option value="#story-021">021. Comprehension</option>
+            <option value="#story-022">022. Concealment</option>
+            <option value="#story-023">023. Contemplation</option>
+            <option value="#story-024">024. Contradiction</option>
+            <option value="#story-025">025. Creation</option>
+            <option value="#story-026">026. Creativity</option>
+            <option value="#story-027">027. Cultivation</option>
+            <option value="#story-028">028. Daring</option>
+            <option value="#story-029">029. Deception</option>
+            <option value="#story-030">030. Definitions</option>
+            <option value="#story-031">031. Demonstration</option>
+            <option value="#story-032">032. Destiny</option>
+            <option value="#story-033">033. Destruction</option>
+            <option value="#story-034">034. Detachment</option>
+            <option value="#story-035">035. Development</option>
+            <option value="#story-036">036. Disappearance</option>
+            <option value="#story-037">037. Discipleship</option>
+            <option value="#story-038">038. Discipline</option>
+            <option value="#story-039">039. Disclosure</option>
+            <option value="#story-040">040. Distance</option>
+            <option value="#story-041">041. Distraction</option>
+            <option value="#story-042">042. Dreams</option>
+            <option value="#story-043">043. Emptiness</option>
+            <option value="#story-044">044. Enlightenment</option>
+            <option value="#story-045">045. Enthusiasm</option>
+            <option value="#story-046">046. Escape</option>
+            <option value="#story-047">047. Evolution</option>
+            <option value="#story-048">048. Exhibition</option>
+            <option value="#story-049">049. Exposure</option>
+            <option value="#story-050">050. Fantasy</option>
+            <option value="#story-051">051. Fearlessness</option>
+            <option value="#story-052">052. Formulations</option>
+            <option value="#story-053">053. Friendliness</option>
+            <option value="#story-054">054. Frustration</option>
+            <option value="#story-055">055. Genius</option>
+            <option value="#story-056">056. Grace</option>
+            <option value="#story-057">057. Greatness</option>
+            <option value="#story-058">058. Harmony</option>
+            <option value="#story-059">059. Healing</option>
+            <option value="#story-060">060. Heaven</option>
+            <option value="#story-061">061. Holiness</option>
+            <option value="#story-062">062. Homecoming</option>
+            <option value="#story-063">063. Humanity</option>
+            <option value="#story-064">064. Identification</option>
+            <option value="#story-065">065. Identity</option>
+            <option value="#story-066">066. Ideology</option>
+            <option value="#story-067">067. Idolatry</option>
+            <option value="#story-068">068. Illusion</option>
+            <option value="#story-069">069. Imitation</option>
+            <option value="#story-070">070. Impoverishment</option>
+            <option value="#story-071">071. Incompetence</option>
+            <option value="#story-072">072. Infinity</option>
+            <option value="#story-073">073. Inflexibility</option>
+            <option value="#story-074">074. Innocence</option>
+            <option value="#story-075">075. Insanity</option>
+            <option value="#story-076">076. Insinuation</option>
+            <option value="#story-077">077. Instrumentality</option>
+            <option value="#story-078">078. Investment</option>
+            <option value="#story-079">079. Judgment</option>
+            <option value="#story-080">080. Lightheartedness</option>
+            <option value="#story-081">081. Limitation</option>
+            <option value="#story-082">082. Manifestation</option>
+            <option value="#story-083">083. Maya</option>
+            <option value="#story-084">084. Meaning</option>
+            <option value="#story-085">085. Miracles</option>
+            <option value="#story-086">086. Moderation</option>
+            <option value="#story-087">087. Motion</option>
+            <option value="#story-088">088. Noise</option>
+            <option value="#story-089">089. Non-Experience</option>
+            <option value="#story-090">090. Non-Instruction</option>
+            <option value="#story-091">091. Nonviolence</option>
+            <option value="#story-092">092. Openness</option>
+            <option value="#story-093">093. Opposition</option>
+            <option value="#story-094">094. Oppression</option>
+            <option value="#story-095">095. Origins</option>
+            <option value="#story-096">096. Persecution</option>
+            <option value="#story-097">097. Perspective</option>
+            <option value="#story-098">098. Pragmatism</option>
+            <option value="#story-099">099. Prayer</option>
+            <option value="#story-100">100. Precedence</option>
+            <option value="#story-101">101. Prejudice</option>
+            <option value="#story-102">102. Presence</option>
+            <option value="#story-104">104. Priorities</option>
+            <option value="#story-105">105. Projection</option>
+            <option value="#story-106">106. Prophecy</option>
+            <option value="#story-107">107. Proportion</option>
+            <option value="#story-108">108. Purification</option>
+            <option value="#story-109">109. Realism</option>
+            <option value="#story-110">110. Reality</option>
+            <option value="#story-111">111. Realization</option>
+            <option value="#story-112">112. Rebirth</option>
+            <option value="#story-113">113. Receptivity</option>
+            <option value="#story-114">114. Recklessness</option>
+            <option value="#story-115">115. Recognition</option>
+            <option value="#story-116">116. Rejection</option>
+            <option value="#story-117">117. Religion</option>
+            <option value="#story-118">118. Repression</option>
+            <option value="#story-119">119. Responsibility</option>
+            <option value="#story-120">120. Restriction</option>
+            <option value="#story-121">121. Transience</option>
+            <option value="#story-122">122. Tribulation</option>
+            <option value="#story-123">123. Trust</option>
+            <option value="#story-124">124. Understanding</option>
+            <option value="#story-125">125. Unobtrusiveness</option>
+            <option value="#story-126">126. Vanity</option>
+            <option value="#story-127">127. Violence</option>
+            <option value="#story-128">128. Wisdom</option>
+            <option value="#story-129">129. Withdrawal</option>
+            <option value="#story-130">130. Wonder</option>
+            <option value="#story-131">131. Words</option>
+            <option value="#story-132">132. Improvement</option>
+            <option value="#story-133">133. Ignorance</option>
+            <option value="#story-134">134. Myths</option>
+            <option value="#story-135">135. Happiness</option>
+            <option value="#story-136">136. Doctrine</option>
+            <option value="#story-137">137. Meditation</option>
+            <option value="#story-138">138. Speech</option>
+            <option value="#story-139">139. Insight</option>
+            <option value="#story-140">140. Coercion</option>
+            <option value="#story-161">161. Gossip</option>
+            <option value="#story-162">162. Calculation</option>
+            <option value="#story-163">163. Flow</option>
+            <option value="#story-164">164. Discovery</option>
+            <option value="#story-165">165. Conversion</option>
+            <option value="#story-166">166. Discrimination</option>
+            <option value="#story-167">167. Irrelevance</option>
+            <option value="#story-168">168. Aloneness</option>
+            <option value="#story-169">169. Distinction</option>
+            <option value="#story-170">170. Universality</option>
+            <option value="#story-171">171. Mechanicalness</option>
+            <option value="#story-172">172. Reaction</option>
+            <option value="#story-173">173. Acceptance</option>
+            <option value="#story-174">174. Expansion</option>
+            <option value="#story-175">175. Philosophy</option>
+            <option value="#story-176">176. Thought</option>
+            <option value="#story-177">177. Blinkers</option>
+            <option value="#story-178">178. Mediation</option>
+            <option value="#story-179">179. Humility</option>
+            <option value="#story-180">180. Remote Control</option>
+            <option value="#story-181">181. Speechlessness</option>
+            <option value="#story-182">182. Dependence</option>
+            <option value="#story-183">183. Expression</option>
+            <option value="#story-184">184. Authenticity</option>
+            <option value="#story-185">185. Survival</option>
+            <option value="#story-186">186. Nature</option>
+            <option value="#story-187">187. Effortlessness</option>
+            <option value="#story-188">188. Revolution</option>
+            <option value="#story-189">189. Letting Go</option>
+            <option value="#story-190">190. Sleepwalking</option>
+            <option value="#story-191">191. Challenge</option>
+            <option value="#story-193">193. Benevolence</option>
+            <option value="#story-194">194. Morality</option>
+          </select>
+          <span class="story-count">172 stories</span>
+        </div>
+      </div>
+
+      <div class="intro mb-4">
+        <p>
+          These short wisdom stories are attributed to Anthony de Mello, the Jesuit priest from India 
+          who became famous for his spiritual conferences and books that blend Eastern and Western wisdom traditions.
+          Each story offers a glimpse of insight through the dialogue between a Master and his disciples.
+        </p>
+        <p>
+          The stories are followed by a "Morsel" - a related quote from various wisdom traditions 
+          that deepens or complements the story's message.
+        </p>
+      </div>
+
+
+      <article class="story" id="story-001">
+        <h3>001. Adulthood</h3>
+        <div class="story__content">
+          <p>To a disciple who was always at his prayers the Master<br>  said, "When will you stop leaning on God and stand on your own two<br>  feet"?</p><p>  The disciple was astonished. "But you are the one who taught us to look<br>  on God as Father"!</p><p>  "When will you learn that a father isn't someone you can lean on but<br>  someone who rids you of your tendency to lean"?</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>All I have seen teaches me to trust the Creator for all I have not seen. --<br>  Ralph Waldo Emerson (1803 - 1882)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-002">
+        <h3>002. Affirmation</h3>
+        <div class="story__content">
+          <p>A woman in great distress over the death of her son came<br>  to the Master for comfort. He listened to her patiently while she poured out<br>  her tale of woe.</p><p>  Then he said softly: "I can not wipe away your tears, my dear. I can<br>  only teach you how to make them holy".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>The mark of your ignorance is the depth of your belief in injustice and<br>  tragedy. What the caterpillar calls the end of the world, the master calls a<br>  butterfly. -- Richard Bach</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-003">
+        <h3>003. Aggression</h3>
+        <div class="story__content">
+          <p>A zealous disciple expressed a desire to teach others the<br>  Truth and asked the Master what he thought about this. The Master said,<br>  "Wait".</p><p>  Each year the disciple would return with the same request and each time the<br>  Master would give him the same reply: "Wait".</p><p>  One day he said to the Master, "When will I be ready to teach"?</p><p>  Said the Master, "When your excessive eagerness to teach has left<br>  you".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>You can preach a better sermon with your life than with your lips. -- Oliver<br>  Goldsmith</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-004">
+        <h3>004. Appearances</h3>
+        <div class="story__content">
+          <p>The Master always frowned on anything that seemed<br>  sensational. "The divine", he claimed, "is only found in the<br>  ordinary".</p><p>  To a disciple who was attempting forms of asceticism that bordered on the<br>  bizarre the Master was heard to say, "Holiness is a mysterious thing:<br>  The greater it is, the less it is noticed".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>God has no religion. -- Mohandas Karamchand Gandhi<br>  (1869-1948)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-005">
+        <h3>005. Arrival</h3>
+        <div class="story__content">
+          <p>"Is the path to Enlightenment difficult or easy?'</p><p>  "It is neither".</p><p>  "Why not"?</p><p>  "Because it isn't there".</p><p>  "Then how does one travel to the goal"?</p><p>  "One doesn't. This is a journey without distance.</p><p>  Stop traveling and you arrive".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>In the pursuit of learning, every day something is acquired. In the pursuit<br>  of Tao, every day something is dropped. </p><p>  -- Lao Tsu, Tao Te Ching</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-006">
+        <h3>006. Art</h3>
+        <div class="story__content">
+          <p>"Of what use is a Master"? someone<br>  asked.</p><p>  Said the disciple, "To teach you what you have always known, to show you<br>  what you are always looking at".</p><p>  When this confused the visitor, the disciple exclaimed:</p><p>  "An artist, by his paintings, taught me to see the sunset. The Master,<br>  by his teachings, taught me to see the reality of every moment".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>If you have knowledge, let others light their candles at it.</p><p>  -- Margaret Fuller</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-007">
+        <h3>007. At-One-Ment</h3>
+        <div class="story__content">
+          <p>When a man whose marriage was in trouble sought his<br>  advice, the Master said, "You must learn to listen to your wife".</p><p>  The man took this advice to heart and returned after a month to say that he<br>  had learned to listen to every word his wife was saying.</p><p>  Said the Master with a smile, "Now go home and listen to every word she<br>  isn't saying".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>A pair of good ears will drink dry a hundred tongues. </p><p>  -- Benjamin Franklin</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-008">
+        <h3>008. Atheism</h3>
+        <div class="story__content">
+          <p>To the disciples' delight the Master said he wanted a new<br>  shirt for his birthday. The finest cloth was bought. The village tailor came<br>  in to have the Master measured, and promised, by the will of God, to make the<br>  shirt within a week. A week went by and a disciple was dispatched to the<br>  tailor while the Master excitedly waited for his shirt. Said the tailor,<br>  "There has been a slight delay. But, by the will of God, it will be<br>  ready by tomorrow".</p><p>  Next day the tailor said, "I'm sorry it isn't done. Try again tomorrow<br>  and, if God so wills, it will certainly be ready".</p><p>  The following day the Master said, "Ask him how long it will take if he<br>  keeps God out of it".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Expectation is the greatest impediment to living. In anticipation of<br>  tomorrow, it loses today. -- Seneca</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-009">
+        <h3>009. Attachment</h3>
+        <div class="story__content">
+          <p>One disciple said:</p><p>  "I have no idea of what tomorrow will bring, so I wish to prepare for it".</p><p>  The master answered:</p><p>  "You fear tomorrow - not realizing that yesterday is just as<br>  dangerous".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Don't let yesterday use up too much of today. -- Will Rogers</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-010">
+        <h3>010. Autonomy</h3>
+        <div class="story__content">
+          <p>The Master seemed quite impervious to what people thought<br>  of him. When the disciples asked how he had attained this stage of inner<br>  freedom, he laughed aloud and said:</p><p>  "Till I was twenty I did not care what people<br>  thought of me. </p><p>  After twenty I worried endlessly about what my neighbors thought. </p><p>  Then one day after fifty I suddenly saw that they hardly ever thought of me<br>  at all".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>If you don't run your own life, somebody else will.</p><p>  -- John Atkinson</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-011">
+        <h3>011. Avoidance</h3>
+        <div class="story__content">
+          <p>A tourist looking at the portraits of former Masters in<br>  the temple said: "Are there any Masters left on earth"?</p><p>  "There is one", said the guide.</p><p>  The tourist solicited an audience with the Master and started with the<br>  question: "Where are the great Masters to be found today"?</p><p>  "Traveler"! Cried the Master.</p><p>  "Sir"! The tourist answered reverently.</p><p>  "Where are YOU"?</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>He who knows others is wise. He who knows himself is enlightened.</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-012">
+        <h3>012. Awareness</h3>
+        <div class="story__content">
+          <p>"Please tell me, is salvation obtained through action<br>  or through meditation"?</p><p>  "Through neither. Salvation comes from seeing".</p><p>  "Seeing what"?</p><p>  "That the gold necklace you wish to acquire is hanging round your neck.<br>  That the snake you are so frightened of is only a rope on the ground".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>All That Is - is the result of what we have thought. -- Buddha</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-013">
+        <h3>013. Being</h3>
+        <div class="story__content">
+          <p>"What must I do to attain holiness"? said a traveler.</p><p>  "Follow your heart", said the Master.</p><p>  That seemed to please the traveler.</p><p>  Before he left, however, the Master said to him in a whisper, "To follow<br>  your heart you are going to need a strong constitution".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>The intelligent man who is proud of his intelligence is like the condemned<br>  man who is proud of his large cell. </p><p>  -- Simone Weil</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-014">
+        <h3>014. Belief</h3>
+        <div class="story__content">
+          <p>The Master had quoted Aristotle: "In the quest of<br>  truth, it would seem better and indeed necessary to give up what is dearest<br>  to us". And he substituted the word "God" for<br>  "truth".</p><p>  Later a disciple said to him, "I am ready, in the quest for God, to give<br>  up anything: wealth, friends, family, country, life itself. What else can a<br>  person give up"?</p><p>  The Master calmly replied, "One's beliefs about God".</p><p>  The disciple went away sad, for he clung to his convictions. He feared<br>  "ignorance" more than death.</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Your vision will become clear </p><p>  only when you look into your heart ... </p><p>  Who looks outside, dreams. </p><p>  Who looks inside, awakens. -- Carl Jung</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-015">
+        <h3>015. Blindness</h3>
+        <div class="story__content">
+          <p>"May I become your disciple"?</p><p>  "You are only a disciple because your eyes are closed. The day you open<br>  them you will see there is nothing you can learn from me or anyone".</p><p>  "What then is a Master for"?</p><p>  "To make you see the uselessness of having one".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>The real voyage of discovery consists not in seeking new landscapes but in<br>  having new eyes. -- Marcel Proust</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-016">
+        <h3>016. Bondage</h3>
+        <div class="story__content">
+          <p>To a fearful religious visitor the Master said, "Why<br>  are you so anxious"?</p><p>  "Lest I fail to attain Salvation".</p><p>  "And what is Salvation"?</p><p>  "Moksha. Liberation. Freedom".</p><p>  The Master roared with laughter and said, "So you are forced to be free?<br>  You are bound to be liberated"?</p><p>  At that minute the visitor relaxed and lost his fear forever.</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>And when you have reached the mountain top, then you shall begin to climb. --<br>  Kahlil Gibran</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-017">
+        <h3>017. Celebration</h3>
+        <div class="story__content">
+          <p>An alcoholic said to the Master: </p><p>  "What would spirituality give me"? </p><p>  "Nonalcoholic intoxication", was the answer.</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Happiness is intrinsic, it's an internal thing. When you build it into<br>  yourself, no external circumstances can take it away. That kind of happiness<br>  is a twenty-four-hour thing. -- Leo F. Buscaglia</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-018">
+        <h3>018. Change</h3>
+        <div class="story__content">
+          <p>The visiting historian was disposed to be argumentative.<br>  "Do not our efforts change the course of human history"? he demanded.</p><p>  "Oh yes, they do", said the Master.</p><p>  "And have not our human labors changed the earth"?</p><p>  "They certainly have", said the Master.</p><p>  "Then why do you teach that human effort is of little consequence"?</p><p>  Said the Master, "Because when the wind subsides, the leaves still<br>  fall".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>While everything around me is ever changing, ever dying, there is underlying<br>  that change a living power that is changeless, that holds all together, that<br>  creates, dissolves and recreates....For I can see in the midst of death, life<br>  persists, in the midst of untruth, truth persists, in the midst of darkness<br>  light persists -- Mohandas K. Gandhi</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-019">
+        <h3>019. Charism</h3>
+        <div class="story__content">
+          <p>The disciple was a Jew. "What good work shall I do to<br>  be acceptable to God"?</p><p>  "How should I know"? said the Master.<br>  "</p><p>  "Your Bible says that Abraham practiced hospitality and God was with<br>  him. Elias loved to pray and God was with him. David ruled a kingdom and God<br>  was with him too".</p><p>  "Is there some way I can find my own allotted work"?</p><p>  "Yes. Search for the deepest inclination of your heart and follow<br>  it".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>All the fish needs to do is get lost in the water. </p><p>  All man needs to do is get lost in the Tao. -- Chuang Tzu</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-020">
+        <h3>020. Communion</h3>
+        <div class="story__content">
+          <p>When it was certain that the Master was going to die, his<br>  disciples wished to give him a worthy funeral. The Master heard of this and<br>  said, "With the sky and the earth for my coffin; the sun and moon and<br>  stars for my burial regalia; and all creation to escort me to the grave --<br>  could I desire anything more ceremonious and impressive"?</p><p>  He asked to be left unburied, but the disciples wouldn't hear of it,<br>  protesting that he would be eaten by the animals and birds.</p><p>  "Then make sure you place my staff near me that I might drive them<br>  away", said the Master with a smile.</p><p>  "How would you manage that? You will be unconscious".</p><p>  "In which case it will not matter, will it, that I be devoured by the<br>  birds and beasts".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>The free man is he who does not fear to go to the end of his thought. -- Leon<br>  Blum</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-021">
+        <h3>021. Comprehension</h3>
+        <div class="story__content">
+          <p>Every word, every image used for God is a distortion more<br>  than a description".</p><p>  "Then how does one speak of God"?</p><p>  "Through Silence".</p><p>  "Why, then, do you speak in words"?</p><p>  At that the Master laughed uproariously He said, "When I speak, you<br>  mustn't listen to the words, my dear. Listen to the Silence".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>It is not the answer that enlightens, but the question. -- Decouvertes</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-022">
+        <h3>022. Concealment</h3>
+        <div class="story__content">
+          <p>The Master once told the story of a priceless antique bowl<br>  that fetched a fortune at a public auction. It had been used by a tramp who ended his days in poverty, quite unaware of the value<br>  of the bowl with which he begged for pennies. When a disciple asked the<br>  Master what the bowl stood for, the Master said, "Your<br>  self"!</p><p>  Asked to elaborate, he said, "All your attention is focused on the penny<br>  knowledge you collect from books and teachers. You would do better to pay<br>  attention to the bowl in which you hold it".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Education is what survives when what has been learned has been forgotten.<br>  --B.F. Skinner</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-023">
+        <h3>023. Contemplation</h3>
+        <div class="story__content">
+          <p>The Master would often say that Silence alone brought<br>  transformation. But no one could get him to define what Silence was. When<br>  asked he would laugh, then hold his forefinger up against his tightened lips<br>  - which only increased the bewilderment of his disciples.</p><p>  One day there was a breakthrough when someone asked, "And how is one to<br>  arrive at this Silence that you speak of"?</p><p>  The Master said something so simple that his disciples studied his face for a<br>  sign that he might be joking. He wasn't. He said, "Wherever you may be,<br>  look when there is apparently nothing to see; listen when all is seemingly<br>  quiet".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>The act of contemplation creates the thing contemplated. -- Isaac D'Israeli (1766-1848)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-024">
+        <h3>024. Contradiction</h3>
+        <div class="story__content">
+          <p>"What action shall I perform to attain God"?</p><p>  "If you wish to attain God, there are two things you must know. The<br>  first is that all efforts to attain him are of no avail".</p><p>  "And the second"?</p><p>  "You must act as if you did not know the first".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Stillness is your essential nature. What is stillness? The inner space or<br>  awareness in which the words on this page are being perceived and become<br>  thoughts. Without this awareness, there would be no perception, no thoughts, no world. You are that awareness disguised as a person. --<br>  Eckhart Tolle, Stillness Speaks</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-025">
+        <h3>025. Creation</h3>
+        <div class="story__content">
+          <p>The Master was known to side with the revolutionaries,<br>  even at the risk of incurring the displeasure of the government. When someone<br>  asked him why he himself did not actively plunge into social revolution, he<br>  replied with this enigmatic proverb: "Sitting quietly doing nothing.<br>  Spring comes and the grass grows".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Serenity Isn't freedom from the storm, it is peace within the storm.</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-026">
+        <h3>026. Creativity</h3>
+        <div class="story__content">
+          <p>"What is the highest act a person can perform"?</p><p>  "Sitting in meditation".</p><p>  But the Master himself was rarely seen to sit in meditation. He was<br>  ceaselessly engaged in housework and fieldwork, in meeting people and writing<br>  books. He even took up the bookkeeping chores of the monastery.</p><p>  "Why then, do you spend all your time in work"?</p><p>  "When one works, one need not cease to sit in meditation".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>MORSEL: Whoever seeks God . . . has already found God.</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-027">
+        <h3>027. Cultivation</h3>
+        <div class="story__content">
+          <p>A traveler in quest of the divine asked the Master how to<br>  distinguish a true teacher from a false one when he got back to his own land.</p><p>  Said the Master, "A good teacher offers practice; a bad one offers<br>  theories".</p><p>  "But how shall I know good practice from bad"?</p><p>  "In the same way that the farmer knows good cultivation from bad".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Life is a quarry, out of which we are to mold and chisel and complete a<br>  character. -- Goethe (1749-1832)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-028">
+        <h3>028. Daring</h3>
+        <div class="story__content">
+          <p>Said a disappointed visitor, "Why has my stay here<br>  yielded no fruit"?</p><p>  "Could it be because you lacked the courage to shake the tree"? said the Master benignly.</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>"Don't be afraid to go out on a limb. . . That's where the fruit<br>  is".</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-029">
+        <h3>029. Deception</h3>
+        <div class="story__content">
+          <p>"How shall we distinguish the true mystic from the<br>  false"? asked the disciples who had an inordinate<br>  interest in the occult.</p><p>  "How do you distinguish the true sleeper from the one who is feigning<br>  sleep"? asked the Master.</p><p>  "There's no way. Only the sleeper knows when he is feigning", said<br>  the disciples.</p><p>  The Master smiled.</p><p>  Later he said, "The feigning sleeper can delude others - he cannot<br>  delude himself. The false mystic, unfortunately, can delude both others and<br>  himself.</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Nothing ever becomes real till it is experienced - even a proverb is no<br>  proverb to you till your life has illustrated it. -- John Keats (1795-1821)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-030">
+        <h3>030. Definitions</h3>
+        <div class="story__content">
+          <p>The Master had a childlike fascination for modern<br>  inventions. He could not get over his amazement at the pocket calculator when<br>  he saw one. </p><p>  Later he said, good-naturedly, "A lot of people seem to have those<br>  little pocket calculators, but nothing in their pockets worth<br>  calculating"!</p><p>  Weeks later, when a visitor asked him what he taught his disciples, he said, </p><p>  "To get their priorities right: Better have the money than calculate it;<br>  better have the experience than define it".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Ours is a society that has perfected its means yet neglected its meaning. --<br>  Albert Einstein</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-031">
+        <h3>031. Demonstration</h3>
+        <div class="story__content">
+          <p>"Does God exist"? said<br>  the Master one day.</p><p>  "Yes", said the disciples in chorus.</p><p>  "Wrong", said the Master.</p><p>  "No", said the disciples.</p><p>  "Wrong again", said the Master.</p><p>  "What's the answer"? asked the disciples.</p><p>  "There is no answer".</p><p>  "Why ever not"?</p><p>  "Because there is no question", said the Master.</p><p>  Later he explained: "If you cannot say anything about Him who is beyond<br>  thoughts and words, how can you ask anything about Him"?</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>A person desperately searching for God is like a fish desperately searching<br>  for water.</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-032">
+        <h3>032. Destiny</h3>
+        <div class="story__content">
+          <p>To a woman who complained about her destiny the Master<br>  said, "It is you who make your destiny".</p><p>  "But surely I am not responsible for being born a woman"?</p><p>  "Being born a woman isn't destiny. That is fate. Destiny is how you<br>  accept your womanhood and what you make of it".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Strange is our situation upon earth. </p><p>  Each of us comes for a short visit, </p><p>  Not knowing why, yet sometimes </p><p>  Seemingly to a divine purpose.-- Albert Einstein</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-033">
+        <h3>033. Destruction</h3>
+        <div class="story__content">
+          <p>For all his holiness, the Master seemed vaguely opposed to<br>  religion. This never ceased to puzzle the disciples who, unlike the Master,<br>  equated religion with spirituality.</p><p>  "Religion as practiced today deals in punishments and rewards. In other<br>  words, it breeds fear and greed - the two things most destructive of<br>  spirituality".</p><p>  Later he added ruefully, "It is like tackling a flood with water; or a<br>  burning barn with fire".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>If people are good only because they fear punishment, and hope for reward,<br>  then we are a sorry lot indeed. -- Albert Einstein</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-034">
+        <h3>034. Detachment</h3>
+        <div class="story__content">
+          <p>It intrigued the disciples that the Master who lived so simply<br>  would not condemn his wealthy followers. "It is rare but not impossible<br>  for someone to be rich and holy", he said one day.</p><p>  "How"?</p><p>  "When money has the effect on his heart that the shadow of that bamboo<br>  has on the courtyard".</p><p>  The disciples turned to watch the bamboo's shadow sweep the courtyard without<br>  stirring a single particle of dust.</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>The self-controlled soul, who moves amongst sense objects, free from either<br>  attachment or repulsion, he wins eternal Peace. -- Bhagavad<br>  Gita (c. B.C. 400)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-035">
+        <h3>035. Development</h3>
+        <div class="story__content">
+          <p>To a disciple who complained of his limitations the Master<br>  said, "You are limited indeed. But have you noticed you can do things<br>  today that you would have thought impossible fifteen years ago? What<br>  changed"?</p><p>  "My talents changed".</p><p>  "No. You changed".</p><p>  "Isn't that the same thing"?</p><p>  "No. You are what you think you are. When your thinking changed, you<br>  changed".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Destroying pride -- man becomes endearing; </p><p>  Destroying anger -- man gets rid of sorrow; </p><p>  Destroying desire -- man acquires peace; </p><p>  Destroying greed -- man achieves happiness.</p><p>  -- Satya Sai Baba</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-036">
+        <h3>036. Disappearance</h3>
+        <div class="story__content">
+          <p>To a disciple who strained after Enlightenment till he<br>  became physically weak the Master said, "A ray of light can be grasped<br>  -- but not with your hands. Enlightenment can be attained -- but not by your<br>  efforts".</p><p>  The puzzled disciple said, "But did you not tell me to strive to become<br>  empty? That is what I am attempting to do".</p><p>  "So now you are full of effort to be empty"! said<br>  the Master through his laughter.</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>All things in the world come from being. And being comes from non-being. --<br>  Lao-Tzu (fl. B.C. 600)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-037">
+        <h3>037. Discipleship</h3>
+        <div class="story__content">
+          <p>To a visitor who asked to become his disciple the Master<br>  said, "You may live with me, but don't become my follower".</p><p>  "Whom, then, shall I follow"?</p><p>  "No one. The day you follow someone you cease to follow Truth".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>If you use your mind to study reality, you won't understand either your mind<br>  or reality. If you study reality without using your mind, you'll understand<br>  both. People capable of true vision, know that the mind is empty. -- Bodhidharma</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-038">
+        <h3>038. Discipline</h3>
+        <div class="story__content">
+          <p>To the disciples who wanted to know what sort of<br>  meditation he practiced each morning in the garden the Master said,<br>  "When I look carefully, I see the rose bush in full bloom".</p><p>  "Why would one have to look carefully to see the rose bush"? they asked.</p><p>  "Lest one see not the rose bush", said the Master, "but one's<br>  preconception of it".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Those who are awake live in a state of constant amazement. -- Buddha</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-039">
+        <h3>039. Disclosure</h3>
+        <div class="story__content">
+          <p>The discussion among the disciples once centered on the<br>  usefulness of reading. Some thought it was a waste of time, others disagreed.<br>  When the Master was appealed to, he said, "Have you ever read one of<br>  those texts in which the notes scrawled in the margin by a reader prove to be<br>  as illuminating as the text itself"?</p><p>  The disciples nodded in agreement.</p><p>  "Life", said the Master, "is one such<br>  text".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Even with its hassles, life seems to be the best thing they've come up with<br>  yet. -- Alan Harris</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-040">
+        <h3>040. Distance</h3>
+        <div class="story__content">
+          <p>The owner of a Fun<br>   Park commented on the<br>  irony of the fact that while the kids had a great time at his park he himself<br>  was habitually depressed.</p><p>  "Would you rather own the park or have the fun"? said<br>  the Master.</p><p>  "I want both".</p><p>  The Master made no reply.</p><p>  When questioned about it later, the Master quoted the words of a tramp to a<br>  wealthy landowner: "You own the property. Others enjoy the<br>  landscape".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>The childlike innocence deep within you is God -- Ammachi<br>  ( The living saint )</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-041">
+        <h3>041. Distraction</h3>
+        <div class="story__content">
+          <p>A debate raged among the disciples as to which was the<br>  most difficult task of all: To write down what God revealed as Scripture, to<br>  understand what God had revealed in Scripture or to explain Scripture to<br>  others after one had understood it. Said the Master, when asked his opinion,<br>  "I know of a more difficult task than any of those three".</p><p>  "What is it"?</p><p>  "Trying to get you blockheads to see reality as it is".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Apprehend God in all things, for God is in all things. Every single creature<br>  is full of God and is a book about God. Every creature is a word of God! If I<br>  spent enough time with the tiniest creature - even a caterpillar -- I would<br>  never have to prepare a sermon, so full of God is every creature.</p><p>  -- Meister Eckhart</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-042">
+        <h3>042. Dreams</h3>
+        <div class="story__content">
+          <p>"When will I be Enlightened"?</p><p>  "When you see", the Master said</p><p>  "See what"?</p><p>  "Trees and flowers and moon and stars".</p><p>  "But I see these every day".</p><p>  "No. What you see is paper trees, paper flowers, paper moons and paper<br>  stars. For you live not in reality but in your words and thoughts".</p><p>  And for good measure, he added gently, "You live a paper life, alas, and<br>  will die a paper death".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>A man's true wealth is the good he does in the world. Beauty is eternity<br>  gazing at itself in a mirror. But you are eternity and you are the mirror. --<br>  Kahlil Gibran</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-043">
+        <h3>043. Emptiness</h3>
+        <div class="story__content">
+          <p>Sometimes there would be a rush of noisy visitors and the<br>  silence of the monastery would be shattered. This would upset the disciples;<br>  not the Master, who seemed just as content with the noise as with the<br>  silence. To his protesting disciples he said one day, "Silence is not<br>  the absence of sound, but the absence of self".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>He who lives in harmony with himself lives in harmony with the universe. --<br>  Marcus Aurelius</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-044">
+        <h3>044. Enlightenment</h3>
+        <div class="story__content">
+          <p>The Master was an advocate both of learning and of Wisdom.<br>  "Learning", he said when asked, "is gotten by reading books or<br>  listening to lectures".</p><p>  "And Wisdom"?</p><p>  "By reading the book that is you".</p><p>  He added as an afterthought: "Not an easy task at all, for every minute<br>  of the day brings a new edition of the book"!</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Your vision will become clear only when You can look into your own heart. Who<br>  looks outside, dreams; who looks inside, awakes. -- Carl Jung</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-045">
+        <h3>045. Enthusiasm</h3>
+        <div class="story__content">
+          <p>To the woman who complained that riches hadn't made her<br>  happy the Master said, "You speak as if luxury and comfort were<br>  ingredients of happiness; whereas all you need to be really happy, my dear,<br>  is something to be enthusiastic about".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>We are no longer happy as soon as we wish to be happier.</p><p>  -- Landor (1775-1864)</p>
+        </blockquote>
+
+        <blockquote class="story__bonus">
+          <p><em>Bonus:</em> Happiness is the absence of the striving for happiness.</p><p>  -- Chuang-tzu (fl. B.C. 350)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-046">
+        <h3>046. Escape</h3>
+        <div class="story__content">
+          <p>The Master became a legend in his lifetime. It was said<br>  that God once sought his advice: "I want to play a game of hide-and-seek<br>  with humankind. I've asked my Angels what the best place is to hide in. Some<br>  say the depth of the ocean. Others say the top of the highest mountain.<br>  Others still the far side of the moon or a distant star. What do you suggest"?<br>  Said the Master, "Hide in the human heart. That is the last place they<br>  will think of"!</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Looking for God is like seeking a path in a field of snow; if there is no<br>  path and you are looking for one, walk across it and there is your path. --<br>  Thomas Merton</p>
+        </blockquote>
+
+        <blockquote class="story__bonus">
+          <p><em>Bonus:</em> Go to your bosom; Knock there, and ask your heart what it doth know. --<br>  Shakespeare (1564-1616)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-047">
+        <h3>047. Evolution</h3>
+        <div class="story__content">
+          <p>The following day the Master said, "It is, alas,<br>  easier to travel than to stop".</p><p>  The disciples demanded to know why.</p><p>  "Because as long as you travel to a goal, you can hold on to a dream.<br>  When you stop, you face reality".</p><p>  "How shall we ever change if we have no goals or dreams"? asked the mystified disciples.</p><p>  "Change that is real is change that is not willed. Face reality and unwilled<br>  change will happen".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>The most beautiful thing we can experience is the mysterious. It is the<br>  source of all art and science. He to whom this emotion is a stranger, who can no longer pause to wonder and stand rapt in awe, is as<br>  good as dead; his eyes are closed. -- Einstein (1879-1955)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-048">
+        <h3>048. Exhibition</h3>
+        <div class="story__content">
+          <p>When one of the disciples announced his intention of<br>  teaching others Truth, the Master proposed a test: "Give a discourse<br>  that I myself shall be present at to judge if you are ready".</p><p>  The discourse was an inspiring one. At the end of it, a beggar came up to the<br>  speaker, who stood up and gave the man his cloak -- to the edification of the<br>  assembly.</p><p>  Later the Master said, "Your words were full of unction, son, but you<br>  are not yet ready".</p><p>  "Why not"? said the dispirited disciple.</p><p>  "For two reasons: You did not give the man a chance to voice his need.<br>  And you are not above impressing others with your virtue".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>At the feast of ego, everyone leaves hungry.</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-049">
+        <h3>049. Exposure</h3>
+        <div class="story__content">
+          <p>One day the Master asked, "What, in your opinion, is<br>  the most important of all religious questions"?</p><p>  He got many answers:</p><p>  "Does God exist"?</p><p>  "Who is God"?</p><p>  "What is the path to God"?</p><p>  "Is there a life after death"?</p><p>  "No", said the Master. "The most important question is: 'Who<br>  am I?'"</p><p>  The disciples got some idea of what he was hinting at when they overheard him<br>  talking to a preacher: Master: "So then, according to you, when you die<br>  your soul will be in heaven"?</p><p>  Preacher: "Yes".</p><p>  Master: "And your body will be in the grave"?</p><p>  Preacher: "Yes".</p><p>  Master: "And where, may I ask, will you be"?</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Master Tung Kwo asked Chuang: "Show me where<br>  the Tao is to be found". Chang Tzu replied, "There is nowhere it is<br>  not to be found". -- The Way of Chuang Tzu</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-050">
+        <h3>050. Fantasy</h3>
+        <div class="story__content">
+          <p>"What is the greatest enemy of Enlightenment"?</p><p>  "Fear".</p><p>  "And where does fear come from"?</p><p>  "Delusion".</p><p>  "And what is delusion"?</p><p>  "To think that the flowers around you are poisonous snakes".</p><p>  "How shall I attain Enlightenment"?</p><p>  "Open your eyes and see".</p><p>  "What"?</p><p>  "That there isn't a single snake around".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>The deeper that sorrow carves into your being the more joy you can contain.<br>  Is not the cup that holds your wine the very cup that was burned in the<br>  potter's oven? -- Kahlil Gibran, mystic, poet, and<br>  artist (1883-1931)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-051">
+        <h3>051. Fearlessness</h3>
+        <div class="story__content">
+          <p>"What is love"?</p><p>  "The total absence of fear", said the Master.</p><p>  "What is it we fear"?</p><p>  "Love", said the Master.</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>There are only two emotions: love - our natural inheritance, and fear - an<br>  invention of our minds which is illusory. </p><p>  -- Gerald G. Jampolsky, MD, [Teach Only Love]</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-052">
+        <h3>052. Formulations</h3>
+        <div class="story__content">
+          <p>"What is it you seek"? asked<br>  the Master of a scholar who came to him for guidance.</p><p>  "Life", was the reply.</p><p>  Said the Master, "If you are to live, words must die".</p><p>  When asked later what he meant, he said, "You are lost and forlorn<br>  because you dwell in a world of words. You feed on words,<br>  you are satisfied with words when what you need is substance. A menu will not<br>  satisfy your hunger. A formula will not slake your thirst".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>There is a tricycle in man. </p><p>  He knows, he feels and acts. </p><p>  He has emotion, intellect and will. </p><p>  He must develop head, heart and hand. </p><p>  -- Sivananda [born 1887]</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-053">
+        <h3>053. Friendliness</h3>
+        <div class="story__content">
+          <p>"What shall I do to love my neighbor"?</p><p>  "Stop hating yourself".</p><p>  The disciple pondered those words long and seriously and came back to say,<br>  "But I love myself too much, for I am selfish and self-centered. How do<br>  I get rid of that"?</p><p>  "Be friendly to yourself and your self will be contented and it will set<br>  you free to love your neighbor".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>The more faithfully you listen to the voice within you, the better you will<br>  hear what is sounding outside. And only she who listens can speak. -- Dag Hammerskjold</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-054">
+        <h3>054. Frustration</h3>
+        <div class="story__content">
+          <p>The disciples could not understand the seemingly arbitrary<br>  manner in which some people were accepted for discipleship and others were<br>  rejected. They got a clue one day when they heard the Master say, "Don't<br>  attempt to teach a pig to sing. It wastes your time -- and irritates the<br>  pig".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>I will not let anyone walk through my mind with their dirty feet. -- Mohandas<br>  K. Gandhi (1869-1948)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-055">
+        <h3>055. Genius</h3>
+        <div class="story__content">
+          <p>A writer arrived at the monastery to write a book about<br>  the Master.</p><p>  "People say you are a genius. Are you"? he<br>  asked.</p><p>  "You might say so", said the Master, none too modestly.</p><p>  "And what makes one a genius"?</p><p>  "The ability to recognize".</p><p>  "Recognize what"?</p><p>  "The butterfly in a caterpillar; the eagle in an egg; the saint in a<br>  selfish human being".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Sincerity is a transparent diamond through which the light of God shines in<br>  our lives.</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-056">
+        <h3>056. Grace</h3>
+        <div class="story__content">
+          <p>A young man came to the Master and said, "I wish to<br>  be Wise. How can I achieve my wish"?</p><p>  The Master sighed and said, "There was once a young man just like you.<br>  He wished to be Wise and his wish had great power to it. One day he found<br>  himself sitting exactly where I am. In front of him sat a young man on the<br>  exact spot where you are now. And the young man was saying, 'I wish to be<br>  Wise!'"</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Awakening is dynamic, </p><p>  Constantly evolving in accordance with life's realities; </p><p>  Unfolding from ego-self to compassionate self, </p><p>  From enclosed self to open self, </p><p>  From foolish self to enlightened self. -- Taitetsu Unno</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-057">
+        <h3>057. Greatness</h3>
+        <div class="story__content">
+          <p>"The trouble with the world", said the Master<br>  with a sigh, "is that human beings refuse to<br>  grow up".</p><p>  "When can a person be said to have grown up"? asked<br>  a disciple.</p><p>  "On the day he does not need to be lied to about anything".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>As long as a man stands in his own way, everything seems to be in his way. --<br>  Ralph Waldo Emerson (1803 -1882)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-058">
+        <h3>058. Harmony</h3>
+        <div class="story__content">
+          <p>For all his traditional ways, the Master has scant respect<br>  for rules and for traditions. A quarrel once broke out between a disciple and<br>  his daughter because the man kept insisting that the girl conform to the<br>  rules of their religion in the choice of her prospective husband. The Master<br>  openly sided with the girl. When the disciple expressed his surprise that the<br>  holy man would do this, the Master said, "You must understand that life<br>  is just like music, which is made more by feeling and by instinct than by<br>  rules".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Nothing is at last sacred but the integrity of your own mind. -- Ralph Waldo<br>  Emerson</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-059">
+        <h3>059. Healing</h3>
+        <div class="story__content">
+          <p>To a distressed person who came to him for help the Master<br>  said, "Do you really want a cure"</p><p>  "If I did not, would I bother to come to you"?</p><p>  "Oh yes Most people do".</p><p>  "What for"?</p><p>  "Not for a cure. That's painful. For relief".</p><p>  To his disciples the Master said, "People who want a cure, provided they<br>  can have it without pain, are like those who favor<br>  progress, provided they can have it without change".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>If you find yourself in a hole, the first thing to do is stop digging. --<br>  Will Rogers</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-060">
+        <h3>060. Heaven</h3>
+        <div class="story__content">
+          <p>To a disciple who was obsessed with the thought of life<br>  after death the Master said, "Why waste a single moment thinking of the<br>  hereafter"?</p><p>  "But is it possible not to"?</p><p>  "Yes".</p><p>  "How"? "By living in heaven here and now".</p><p>  "And where is this heaven"?</p><p>  "In the here and now".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Heaven means to be one with God. </p><p>  -- Confucius (B.C. 551-479)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-061">
+        <h3>061. Holiness</h3>
+        <div class="story__content">
+          <p>To a preacher who kept saying, </p><p>  "We must put God in our lives: " the Master said, </p><p>  "He is already there. Our business is to recognize this".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>God is singing and Creation is the melody. -- David Palmer</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-062">
+        <h3>062. Homecoming</h3>
+        <div class="story__content">
+          <p>"There are three stages in one's spiritual<br>  development", said the Master. "The carnal, the spiritual and the<br>  divine".</p><p>  "What is the carnal stage"? asked the<br>  eager disciples.</p><p>  "That's the stage when trees are seen as trees and mountains as<br>  mountains".</p><p>  "And the spiritual"?</p><p>  "That's when one looks more deeply into things -- then trees are no<br>  longer trees and mountains no longer<br>  mountains".</p><p>  "And the divine"?</p><p>  "Ah, that's Enlightenment", said the Master with a chuckle,<br>  "when trees become trees again and mountains, mountains".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>How wonderful! How wonderful! All things are perfect Exactly as they are! --<br>  Buddha</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-063">
+        <h3>063. Humanity</h3>
+        <div class="story__content">
+          <p>Much advance publicity was made for the address the Master<br>  would deliver on "The Destruction of the World" and a large crowd<br>  gathered at the monastery grounds to hear him. The address was over in less<br>  than a minute. </p><p>  All he said was;</p><p>  "These things will destroy the human race: </p><p>  politics without principle, progress without compassion, wealth without work,<br>  learning without silence, religion without fearlessness and worship without<br>  awareness".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>He who knows the precepts by heart, but fails to practice them, is like unto<br>  one who lights a lamp and then shuts his eyes. --Nagarjuna</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-064">
+        <h3>064. Identification</h3>
+        <div class="story__content">
+          <p>"I wish to see God".</p><p>  "You are looking at him right now", said the Master.</p><p>  "Then why do I not see him"?</p><p>  "Why does the eye not see itself"? said<br>  the Master.</p><p>  Later the Master explained: "As well ask a knife to cut itself or a<br>  tooth to bite itself as ask that God to reveal himself".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>I have a capacity in my soul for taking in God entirely. I am as sure as I<br>  live that nothing is so near to me as God. God is nearer to me than I am to<br>  myself; my existence depends on the nearness and the presence of God.</p><p>  -- Meister Eckhart (1260?-1327?)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-065">
+        <h3>065. Identity</h3>
+        <div class="story__content">
+          <p>"How does one seek union with God"?</p><p>  "The harder you seek, the more distance you create between Him and<br>  you".</p><p>  "So what does one do about the distance"?</p><p>  "Understand that it isn't there".</p><p>  "Does that mean that God and I are one"?</p><p>  "Not one. Not two".</p><p>  "How is that possible"?</p><p>  "The sun and its light, the ocean and the wave, the singer and his song<br>  -- not one. Not two".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>It is a puzzling thing. The truth knocks on the door and you say, 'Go away,<br>  I'm looking for the truth . . . and so it goes away. Puzzling. -- Robert M. Pirsig</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-066">
+        <h3>066. Ideology</h3>
+        <div class="story__content">
+          <p>A group of political activists were attempting to show the<br>  Master how their ideology would change the world. The Master listened<br>  carefully. The following day he said, "An ideology is as good or bad as<br>  the people who make use of it. If a million wolves were to organize for<br>  justice, would they cease to be a million wolves"?</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Each snowflake in an avalanche pleads not guilty. -- Stanislaw J. Lee</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-067">
+        <h3>067. Idolatry</h3>
+        <div class="story__content">
+          <p>The Master never wearied of warning his disciples about<br>  the dangers of religion. He loved to tell the story of the prophet who<br>  carried a flaming torch through the streets, saying he was going to set fire<br>  to the temple so that people would concern themselves more with the Lord than<br>  with the temple. Then he would add</p><p>  "Someday I shall carry a flaming torch myself to set fire to both the<br>  temple and the Lord"!</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>It's better to light one candle than to curse the darkness.</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-068">
+        <h3>068. Illusion</h3>
+        <div class="story__content">
+          <p>"How shall I attain Eternal Life"?</p><p>  "Eternal Life is now. Come into the present".</p><p>  "But I am in the present now, am I not"?</p><p>  "No".</p><p>  "Why not"?</p><p>  "Because you haven't dropped your past".</p><p>  "Why should I drop my past? Not all of it is bad".</p><p>  "The past is to be dropped not because it is bad but because it is<br>  dead".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Every man is his own ancestor, and every man is his own heir. He devises his<br>  own future, and he inherits his own past. -- Frederick Henry Hedge<br>  (1805-1890)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-069">
+        <h3>069. Imitation</h3>
+        <div class="story__content">
+          <p>After the Master attained Enlightenment, he took to living<br>  simply -- because he found simple living to his taste. He laughed at his<br>  disciples when they took to simple living in imitation of him. </p><p>  "Of what use is it to copy my behavior", he would say,<br>  "without my motivation. Or to adopt my motivation without the vision<br>  that produced it"?</p><p>  They understood him better when he said, "Does a goat become a rabbi<br>  because he grows a beard"?</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>One does not become enlightened by imagining figures of light, but by making<br>  the darkness conscious. -- C.G. Jung</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-070">
+        <h3>070. Impoverishment</h3>
+        <div class="story__content">
+          <p>When a disciple came from a faraway country, the Master<br>  asked, "What are you seeking"?</p><p>  "Enlightenment".</p><p>  "You have your own treasure house. Why do you search outside"?</p><p>  "Where is my treasure house"?</p><p>  "This seeking that has come upon you".</p><p>  At that moment the disciple was Enlightened. Years later he would say to his<br>  friends, "Open your own treasure house and enjoy your treasures".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>In all persons, all creatures, the Self is the innermost essence. And it is<br>  identical with Brahman: our real Self is not different from the ultimate<br>  Reality called God. The Upanishads -- As Translated by Eknath<br>  Easwaran</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-071">
+        <h3>071. Incompetence</h3>
+        <div class="story__content">
+          <p>The Master would insist that the final barrier to our<br>  attaining God was the word and concept "God". This so infuriated<br>  the local priest that he came in a huff to argue the matter out with the<br>  Master. "But surely the word 'God' can lead us to God"? said the priest. </p><p>  "It can", said the Master calmly.</p><p>  "How can something help and be a barrier"?</p><p>  Said the Master, "The donkey that brings you to the door is not the<br>  means by which you enter the house".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>It is impossible for a man to learn what he thinks he already knows. --<br>  Epictetus (50-138 A.D.)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-072">
+        <h3>072. Infinity</h3>
+        <div class="story__content">
+          <p>It was impossible to get the Master to speak of God or of<br>  things divine. "About God", he said, "we can only know that<br>  what we know is nothing".</p><p>  One day he told of a man who deliberated long and anxiously before embarking<br>  on discipleship. "He came to study under me, with the result that he<br>  learned nothing". Only a few of the disciples understood: What the<br>  Master had to teach could not be learned. Nor taught. So all one could really<br>  learn from him was nothing.</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>When you realize there is nothing lacking, the whole world belongs to you. --<br>  Tao Te Ching</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-073">
+        <h3>073. Inflexibility</h3>
+        <div class="story__content">
+          <p>"Heavens, how you've aged"! exclaimed<br>  the Master after speaking with a boyhood friend.</p><p>  "One cannot help growing old, can one"? said<br>  the friend.</p><p>  "No, one cannot", agreed the Master, "but one must avoid<br>  becoming aged".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>The minute a man ceases to grow, no matter what his years, that minute he<br>  begins to be old. -- William James</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-074">
+        <h3>074. Innocence</h3>
+        <div class="story__content">
+          <p>When out on a picnic, the Master said, "Do you want<br>  to know what the Enlightened is like? Look at those birds flying over the<br>  lake".</p><p>  While everyone watched, the Master exclaimed:</p><p>  "They cast a reflection on the water that they have no awareness of -<br>  and the lake has no attachment to".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Life's lessons are not taught in classrooms.</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-075">
+        <h3>075. Insanity</h3>
+        <div class="story__content">
+          <p>On the question of his own Enlightenment the Master always<br>  remained reticent, even though the disciples tried every means to get him to<br>  talk. All the information they had on this subject was what the Master once<br>  said to his youngest son who wanted to know what his father felt when he<br>  became Enlightened. The answer was: "A fool".</p><p>  When the boy asked why, the Master had replied, "Well, son, it was like<br>  going to great pains to break into a house by climbing a ladder and smashing<br>  a window -- and realizing later that the door of the house was open".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>He who knows Self as the enjoyer of </p><p>  The honey from the flowers of the senses, </p><p>  Ever present within, ruler of time, </p><p>  Goes beyond fear. For this Self is Supreme! </p><p>  -- Upanishads (c. B.C. 800)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-076">
+        <h3>076. Insinuation</h3>
+        <div class="story__content">
+          <p>The Master claimed he had a book that contained everything<br>  one could conceivably know about God. No one had ever seen the book till a<br>  visiting scholar, by dint of persistent entreaty, wrested it from the Master.<br>  He took it home and eagerly opened it - only to find that every one of its<br>  pages was blank.</p><p>  "But the book says nothing", wailed the scholar.</p><p>  "I know", said the Master contentedly. "But see how much it<br>  indicates"!</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Listen in the silence. </p><p>  Listen and you shall hear God speak. </p><p>  The chamber of silence is man's divine self. </p><p>  It is there that man meets man's God. -- Frater Achad</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-077">
+        <h3>077. Instrumentality</h3>
+        <div class="story__content">
+          <p>When a disciple came to take leave of the Master so that<br>  he could return to his family and business, he asked for something to carry<br>  away with him. Said the Master, "Ponder on these things: It is not the<br>  fire that is hot, but you who feel it so. It is not the eye that sees, but<br>  you. It is not the compass that makes the circle, but the draftsman".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Just as a picture is drawn by an artist, surroundings are created by the<br>  activities of the mind.</p><p>  -- Buddha (B.C. 568-488)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-078">
+        <h3>078. Investment</h3>
+        <div class="story__content">
+          <p>"How shall I rid myself of fear"?</p><p>  "How can you rid yourself of what you cling to"?</p><p>  "You mean I actually cling to my fears? I cannot agree to that".</p><p>  "Consider what your fear protects you from and you will agree! And you<br>  will see your folly".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Your pain is the breaking of the shell that encloses your understanding. -- Kahlil Gibran, (1883-1931)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-079">
+        <h3>079. Judgment</h3>
+        <div class="story__content">
+          <p>"How shall I forgive others"? </p><p>  "If you never condemned, you would never need to forgive".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Judgment and love are opposites. From one come all the sorrows of the world.<br>  But from the other comes the peace of God Himself. -- A Course In Miracles</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-080">
+        <h3>080. Lightheartedness</h3>
+        <div class="story__content">
+          <p>In keeping with his doctrine that nothing be taken too seriously, not even his own teachings, the<br>  Master loved to tell this story on himself:</p><p>  "My very first disciple was so weak that the exercises killed him. My<br>  second disciple drove himself crazy from his earnest practice of the exercises<br>  I gave him. My third disciple dulled his intellect through too much<br>  contemplation. But the fourth managed to keep his sanity".</p><p>  "Why was that"? someone would invariably<br>  ask.</p><p>  "Possibly because he was the only one who refused to do the<br>  exercises". The Master's words would be drowned in howls of laughter.</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>The teacher is like the candle which lights others in consuming itself. --<br>  Giovanni Ruffini (1807-1881)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-081">
+        <h3>081. Limitation</h3>
+        <div class="story__content">
+          <p>"Is there a God"? asked<br>  the Marxist.</p><p>  "Certainly not the kind people are thinking of", said the Master.</p><p>  "Whom are you referring to when you speak of people"?</p><p>  "Everyone".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>The seed of God is in us. Given an intelligent and hard-working farmer, it<br>  will thrive and grow up to God, whose seed it is; and accordingly its fruits<br>  will be God-nature. Pear seeds grow into pear trees, nut seeds into nut<br>  trees, and God seed into God. -- Meister Eckhart</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-082">
+        <h3>082. Manifestation</h3>
+        <div class="story__content">
+          <p>When a new disciple came to the Master, this is the<br>  catechism he was usually subjected to: "Do you know the one person who<br>  will never abandon you in the whole of your lifetime"?</p><p>  "Who is it"?</p><p>  "You".</p><p>  "And do you know the answer to every question you may have"?</p><p>  "What is it"?</p><p>  "You".</p><p>  "And can you guess the solution to every one of your problems"?</p><p>  "I give up".</p><p>  "You".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>The nature of God is a circle of which the center is everywhere and the<br>  circumference is nowhere. -- Empedocles</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-083">
+        <h3>083. Maya</h3>
+        <div class="story__content">
+          <p>This is how the Master once explained the fact that<br>  Enlightenment came not through effort but through understanding:<br>  "Imagine all of you are hypnotized to believe there is a tiger in this<br>  room. In your fear you will try to escape it, to fight it, to protect<br>  yourselves from it, to placate it. But once the spell is broken there is<br>  nothing to be done. And you are all radically changed:</p><p>  "So understanding breaks the spell, the broken spell brings change,<br>  change leads to inaction, inaction is power: You can<br>  do anything on earth, for it is no longer you who do it".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>To live a single day and hear a good teaching is better than to live a<br>  hundred years without knowing such teaching. </p><p>  -- Buddha (B.C. 568-488)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-084">
+        <h3>084. Meaning</h3>
+        <div class="story__content">
+          <p>Said a traveler to one of the disciples, "I have<br>  traveled a great distance to listen to the Master, but I find his words quite<br>  ordinary".</p><p>  "Don't listen to his words. Listen to his message".</p><p>  "How does one do that"?</p><p>  "Take hold of a sentence that he says. Shake it well till all the words drop off. What is left will set your heart<br>  on fire".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>In the depth of my soul there is a wordless song. -- Kahlil<br>  Gibran</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-085">
+        <h3>085. Miracles</h3>
+        <div class="story__content">
+          <p>A man traversed land and sea to check for himself the<br>  Master's extraordinary fame. "What miracles has your Master<br>  worked"? he said to a disciple.</p><p>  "Well, there are miracles and miracles. In your land it is regarded as a<br>  miracle if God does someone's will. In our country<br>  it is regarded as a miracle if someone does the will of God".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>The highest reward for a man's toil is not what he gets for it but what he<br>  becomes by it. -- John Ruskin</p>
+        </blockquote>
+
+        <blockquote class="story__bonus">
+          <p><em>Bonus:</em> There are two kinds of people: those who say to God, "Thy will be<br>  done", and those to whom God says, "All right, then, have it your<br>  way". -- C.S. Lewis</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-086">
+        <h3>086. Moderation</h3>
+        <div class="story__content">
+          <p>Again and again the Master would be seen to discourage his<br>  disciples from depending on him, for this would prevent them from contacting<br>  the inner Source. He was often heard to say:</p><p>  "Three things there are that when too close are harmful, when too far<br>  are useless and are best kept at middle distance: fire, the government and<br>  the guru".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>The more faithfully you listen to the voice within you, the better you hear<br>  what is sounding outside of you. -- Dag Hammarskjold</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-087">
+        <h3>087. Motion</h3>
+        <div class="story__content">
+          <p>To the disciples who were always asking for words of<br>  wisdom the Master said, "Wisdom is not expressed in words. It reveals<br>  itself in action".</p><p>  But when he saw them plunge headlong into activity, he laughed aloud and<br>  said, "That isn't action. That's motion".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Spirituality lies in regarding existence merely as a vehicle for<br>  contemplation, and contemplation merely a vehicle for joy. -- George<br>  Santayana, [Three Philosophical Poets]</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-088">
+        <h3>088. Noise</h3>
+        <div class="story__content">
+          <p>Each day the Master would be inundated with questions that<br>  he would reply to seriously, playfully, gently, firmly. One disciple always<br>  sat through each session in silence. When someone questioned her about it,<br>  she said, "I hardly hear a word he says. I am too distracted by his<br>  Silence".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Under all speech that is good for anything there lies a silence that is<br>  better, Silence is deep as Eternity; speech is shallow as Time. -- Carlyle<br>  (1795-1881)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-089">
+        <h3>089. Non-Experience</h3>
+        <div class="story__content">
+          <p>At a discussion on the God experience, the Master said,<br>  "When God is experienced, the self disappears. So who will do the<br>  experiencing"?</p><p>  "Is the God experience, then, a non-experience"?</p><p>  "It is like sleep", said the Master. "The sleep experience is<br>  only known when sleep is over".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>It is ever the invisible that is the object of our profoundest worship. With<br>  the lover it is not the seen but the unseen that he muses upon. -- Bovee (1820-1904)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-090">
+        <h3>090. Non-Instruction</h3>
+        <div class="story__content">
+          <p>"What does your Master teach"? asked a visitor.</p><p>  "Nothing", said the disciple.</p><p>  "Then why does he give discourses"?</p><p>  "He only points the way -- he teaches nothing".</p><p>  The visitor couldn't make sense out of this, so the disciple made it clearer:<br>  "If the Master were to teach, we would make beliefs out of his<br>  teachings.</p><p>  The Master is not concerned with what we believe - only with what we<br>  see".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Teachers open the door... You enter by yourself. </p><p>  -- Chinese Proverb</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-091">
+        <h3>091. Nonviolence</h3>
+        <div class="story__content">
+          <p>A snake in the village had bitten so many people that few<br>  dared go into the fields. Such was the Master's holiness that he was said to<br>  have tamed the snake and persuaded it to practice the discipline of<br>  nonviolence. It did not take long for the villager to discover that the snake<br>  had become harmless. They took to hurling stones at it and dragging it about<br>  by its tail. The badly battered snake crawled into the Master's house one<br>  night to complain. Said the Master, "Friend, you have stopped<br>  frightening people - that's bad"!</p><p>  "But it was you who taught me to practice the discipline of<br>  nonviolence"!</p><p>  "I told you to stop hurting - not to stop hissing"!</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>When the solution is simple, God is answering. </p><p>  -- Albert Einstein</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-092">
+        <h3>092. Openness</h3>
+        <div class="story__content">
+          <p>An anxious couple complained to the Master that their son<br>  had abandoned the religious traditions of the family and proclaimed himself a<br>  freethinker. Said the Master, "Not to worry. If the lad is really<br>  thinking for himself, the Mighty Wind is bound to arise that will carry him<br>  to the place where he belongs".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Do not fear the winds of adversity. Remember: A kite rises against the wind<br>  rather than with it.</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-093">
+        <h3>093. Opposition</h3>
+        <div class="story__content">
+          <p>To a pioneering spirit who was discouraged by frequent<br>  criticism the Master said, "Listen to the words of the critic. He<br>  reveals what your friends hide from you".</p><p>  But he also said, "Do not be weighed down by what the critic says. No<br>  statue was ever erected to honor a critic. Statues are for the<br>  criticized".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Happiness does not depend on outward things, but on the way we see them. --<br>  Leo Tolstoy</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-094">
+        <h3>094. Oppression</h3>
+        <div class="story__content">
+          <p>The Master always left you to grow at your own pace. He<br>  was never known to "push". He explained this with the following<br>  parable: "A man once saw a butterfly struggling to emerge from its<br>  cocoon, too slowly for his taste, so he began to blow on it gently. The<br>  warmth of his breath speeded up the process all right. But what emerged was<br>  not a butterfly but a creature with mangled wings.</p><p>  "In growth", the Master concluded, "you cannot speed the<br>  process up. All you can do is abort it".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>In the confrontation between the stream and the rock, the stream always wins<br>  - not through strength but by perseverance. -- H. Jackson Brown</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-095">
+        <h3>095. Origins</h3>
+        <div class="story__content">
+          <p>It was the disciple's birthday. "What do you want for<br>  a birthday gift"? said the Master.</p><p>  "Something that would bring me Enlightenment", she said.</p><p>  The Master smiled. "Tell me, my dear", he said, "when you were<br>  born, did you come into the world like a star from the sky or out of it like<br>  a leaf from a tree"?</p><p>  All day long she pondered that strange question of the Master. Then she<br>  suddenly saw the answer and fell into Enlightenment.</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>The most beautiful thing we can experience is the mysterious. It is the<br>  source of all art and science.</p><p>  -- Albert Einstein</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-096">
+        <h3>096. Persecution</h3>
+        <div class="story__content">
+          <p>A disciple was one day recalling how Buddha, Jesus, and<br>  Mohammed were branded as rebels and heretics by their contemporaries. Said<br>  the Master, </p><p>  "Nobody can be said to have attained the pinnacle of Truth until a<br>  thousand sincere people have denounced him for blasphemy".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Every great advance in natural knowledge has involved the absolute rejection<br>  of authority.</p><p>  -- Thomas Huxley (1825-1895)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-097">
+        <h3>097. Perspective</h3>
+        <div class="story__content">
+          <p>The Master was in a mellow mood and the disciples were<br>  inquisitive. Did he ever feel depressed? they asked.</p><p>  He did.</p><p>  Wasn't it also true that he was in a continual state of happiness? They<br>  persisted.</p><p>  It was.</p><p>  What was the secret? They wanted to know.</p><p>  Said the Master, "This: Everything is as good or as bad as one's opinion<br>  makes it".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Most folks are about as happy as they make up their minds to be. -- Abraham<br>  Lincoln</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-098">
+        <h3>098. Pragmatism</h3>
+        <div class="story__content">
+          <p>The disciple was planning her wedding banquet and declared<br>  that out of love for the poor she had gotten her family to go against<br>  convention by seating the poor guests at the head of the table and the rich<br>  guests at the door. She looked into the Master's eyes, expecting his<br>  approval. The Master stopped to think, then said, </p><p>  "That would be most unfortunate, my dear. No one would enjoy the<br>  wedding. Your family would be embarrassed, your rich guests insulted and your<br>  poor guests hungry, for they would be too self-conscious at the head of the<br>  table to eat their fill".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>There is no king who has not had a slave among his ancestors, and no slave<br>  who has not had a king among his. -- Helen Adams Keller (1880-1968)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-099">
+        <h3>099. Prayer</h3>
+        <div class="story__content">
+          <p>The Master never ceased to attack the notions about God<br>  that people entertain. "If your God comes to your rescue and gets you<br>  out of trouble", he would say, "it is time you started searching<br>  for the true God".</p><p>  When asked to elaborate, this is the story he told:</p><p>  "A man left a brand-new bicycle unattended at the marketplace while he<br>  went about his shopping. He only remembered the bicycle the following day and<br>  rushed to the marketplace, expecting it would have been stolen. The bicycle<br>  was exactly where he had left it. Overwhelmed with joy, he rushed to a nearby<br>  temple to thank God for having kept his bicycle safe only to find, when he<br>  got out of the temple, that the bicycle was goner"</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>The whole problem with the world is that fools and fanatics are always so<br>  certain of themselves, and wiser people so full of doubts. -- Bertrand<br>  Russell</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-100">
+        <h3>100. Precedence</h3>
+        <div class="story__content">
+          <p>The Master welcomed the advances of technology, but was<br>  keenly aware of its limitations.When an<br>  industrialist asked him what his occupation was, he replied, "I'm in the<br>  people industry".</p><p>  "And what, pray, would that be"? said the<br>  industrialist.</p><p>  "Take yourself", said the Master. "Your efforts produce better<br>  things; mine, better people".</p><p>  To his disciples he later said, "The aim of life is the flowering of<br>  persons. Nowadays people seem concerned mostly with the perfectioning<br>  of things".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>There is more to life than increasing its speed. </p><p>  -- Mohandas Karamchand Gandhi (1869-1948)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-101">
+        <h3>101. Prejudice</h3>
+        <div class="story__content">
+          <p>"Nothing is good or bad, but thinking makes it<br>  so", the Master said.</p><p>  When asked to explain he said, "A man cheerfully observed a religious<br>  fast seven days a week. His neighbor starved to death on the same diet".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>All that we are is the result of what we have thought. </p><p>  -- Buddha</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-102">
+        <h3>102. Presence</h3>
+        <div class="story__content">
+          <p>When the disciples asked for a model of spirituality that<br>  they could imitate, all that the Master said was: "Hush! Listen".<br>  And as they listened to the sounds of the night outside the monastery, the<br>  Master softly intoned the celebrated haiku: "Of an early death showing<br>  no awareness the cicada sings".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Silence at the proper season is wisdom, and better than any speech. --<br>  Plutarch (46-120 A.D.)</p>
+        </blockquote>
+
+        <blockquote class="story__bonus">
+          <p><em>Bonus:</em> Under all speech that is good for anything there lies a silence that is<br>  better, Silence is deep as Eternity; speech is shallow as Time. -- Carlyle<br>  (1795-1881)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-104">
+        <h3>104. Priorities</h3>
+        <div class="story__content">
+          <p>According to legend, God sent an Angel to the Master with<br>  this message:" Ask for a million years of life and they will be given<br>  you. Or a million million. How long do you wish to<br>  live"?</p><p>  "Eighty years", said the Master without the slightest hesitation.</p><p>  The disciples were dismayed. "But, Master, if you lived for a million<br>  years, think how many generations would profit by your wisdom".</p><p>  "If I lived for a million years, people would be more intent on<br>  lengthening their lives than on cultivating wisdom".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>And in the end, it's not the years in your life that count. It's the life in<br>  your years -- Abraham Lincoln</p>
+        </blockquote>
+
+        <blockquote class="story__bonus">
+          <p><em>Bonus:</em> Sometimes even to live is an act of courage. -- Seneca</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-105">
+        <h3>105. Projection</h3>
+        <div class="story__content">
+          <p>"Why is everyone here so happy except me"?</p><p>  "Because they have learned to see goodness and beauty everywhere",<br>  said the Master.</p><p>  "Why don't I see goodness and beauty everywhere"?</p><p>  "Because you cannot see outside of you what you fail to see<br>  inside".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>It is not easy to find happiness in ourselves, and impossible to find it<br>  elsewhere. -- Agnes Repplier</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-106">
+        <h3>106. Prophecy</h3>
+        <div class="story__content">
+          <p>"I wish to become a teacher of the Truth".</p><p>  "Are you prepared to be ridiculed, ignored and starving till you are<br>  forty-five"?</p><p>  "I am. But tell me: What will happen after I am forty-five"?</p><p>  "You will have grown accustomed to it".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Thousands of candles can be lighted from a single candle, and the life of the<br>  candle will not be shortened. Happiness never decreases by being shared.</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-107">
+        <h3>107. Proportion</h3>
+        <div class="story__content">
+          <p>A visitor who was full of expectations was unimpressed by<br>  the commonplace words the Master addressed to him. "I came here in quest<br>  of a Master", he said to a disciple. "All I find is a human being<br>  no different from the others".</p><p>  Said the disciple, "The Master is a shoemaker with an infinite supply of<br>  leather. But he does the cutting and stitching in accordance with the<br>  dimension of your foot".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Every man takes the limits of his own field of vision for the limits of the<br>  world. -- Arthur Schopenhauer, philosopher</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-108">
+        <h3>108. Purification</h3>
+        <div class="story__content">
+          <p>The Master insisted that what he taught was nothing, what<br>  he did was nothing. His disciples gradually discovered that Wisdom comes to<br>  those who learn nothing, unlearn everything. That transformation is the<br>  consequence not of something done but of something dropped.</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>In the pursuit of learning, every day something is acquired. In the pursuit<br>  of Tao, every day something is dropped. -- Lao Tsu,<br>  Tao Te Ching</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-109">
+        <h3>109. Realism</h3>
+        <div class="story__content">
+          <p>A gambler once said to the Master, "I was caught<br>  cheating at cards yesterday, so my partners beat me up and threw me out of<br>  the window. What would you advise me to do"?</p><p>  The Master looked straight through the man and said, "If I were you,<br>  from now on I would play on the ground floor".</p><p>  This startled the disciples. "Why didn't you tell him to stop<br>  gambling"? they demanded.</p><p>  "Because I knew he wouldn't", was the Master's simple and sagacious<br>  explanation.</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>We hang the petty thieves and appoint the great ones to public office. --<br>  Aesop, Greek fableist</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-110">
+        <h3>110. Reality</h3>
+        <div class="story__content">
+          <p>While the Master seemed to relish life and live it to the<br>  full, he was also known to take great risks, as when he condemned the tyranny<br>  of the government, thereby courting arrest and death; and when he led a group<br>  of his disciples to serve a plague-stricken village. "The wise have no<br>  fear of death", he would say.</p><p>  "Why would a man risk his life so easily"? he<br>  was once asked.</p><p>  "Why would a person care so little about a candle being extinguished<br>  when day has dawned"?</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>He who knows Self as the enjoyer of </p><p>  The honey from the flowers of the senses, </p><p>  Ever present within, ruler of time, </p><p>  Goes beyond fear. For this Self is Supreme! </p><p>  -- Upanishads (c. B.C. 800)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-111">
+        <h3>111. Realization</h3>
+        <div class="story__content">
+          <p>"What did Enlightenment bring you"?</p><p>  "Joy".</p><p>  "And what is Joy"?</p><p>  "The realization that when everything is lost you have only lost a<br>  toy".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>God is not found in the soul by adding anything, but by a process of<br>  subtraction. -- Meister Eckhart</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-112">
+        <h3>112. Rebirth</h3>
+        <div class="story__content">
+          <p>"Make a clean break with your past and you will be<br>  Enlightened", said the Master.</p><p>  "I am doing that by degrees".</p><p>  "Growth is achieved by degrees. </p><p>          Enlightenment is instantaneous".</p><p>  Later he said, "Take the leap! </p><p>          You cannot cross a chasm in little jumps".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>As long as a man stands in his own way, everything seems to be in his way.</p><p>  -- Ralph Waldo Emerson (1803 -1882)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-113">
+        <h3>113. Receptivity</h3>
+        <div class="story__content">
+          <p>"I wish to learn. Will you teach me"?</p><p>  "I do not think that you know how to learn", said the Master.</p><p>  "Can you teach me how to learn"?</p><p>  "Can you learn how to let me teach"?</p><p>  To his bewildered disciples the Master later said: "Teaching only takes place<br>  when learning does. Learning only takes place when you teach something to<br>  yourself:"</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>The day will come when, after harnessing space, the winds, the tides and<br>  gravitation, we shall harness for God the energies of love. And on that day,<br>  for the second time in the history of the world, we shall have discovered<br>  fire. </p><p>  -- Pierre Teilhard de Chardin</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-114">
+        <h3>114. Recklessness</h3>
+        <div class="story__content">
+          <p>The Master always insisted that we must learn by ourselves<br>  - teach ourselves - rather than depend on other people's authority. This had<br>  its limits, of course, as when a bright young fellow was convinced he ought<br>  to try drugs as a means to mysticism - and "take the risk, for one can<br>  only learn by trial and error".</p><p>  That moved the Master to tell the old story of the nail and the screw: "Here<br>  is one way to find out whether what you need in a plank is a nail or a screw:<br>  Drive the nail in. If it splits the plank, you know you needed the<br>  screw".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Mistakes live in the neighborhood of truth and therefore delude us. </p><p>  -- Rabindranath Tagore, Indian Poet (1861-1941)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-115">
+        <h3>115. Recognition</h3>
+        <div class="story__content">
+          <p>As the Master grew old and infirm, the disciples begged<br>  him not to die. Said the Master, "If I did not go, how would you ever<br>  see"?</p><p>  "What is it we fail to see when you are with us"? they asked.</p><p>  But the Master would not say.</p><p>  When the moment of his death was near, they said, "What is it we will<br>  see when you are gone"?</p><p>  With a twinkle in his eye, the Master said, "All I did was sit on the riverbank handing out river water. After I'm<br>  gone, I trust you will notice the river".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Better than power over all the earth, better than going to heaven and better<br>  than dominion over the worlds is the joy of the man who enters the river of<br>  life that leads to Non-Being. -- The Dhammapada (c.<br>  B.C. 300)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-116">
+        <h3>116. Rejection</h3>
+        <div class="story__content">
+          <p>"What kind of a person does Enlightenment<br>  produce"?</p><p>  The Master said: </p><p>  "To be public-spirited and belong to no party, </p><p>  to move without being bound to any given course, </p><p>  to take things as they come, </p><p>  have no remorse for the past, </p><p>  no anxiety for the future, </p><p>  to move when pushed, </p><p>  to come when dragged, </p><p>  to be like a mighty gale, </p><p>  like a feather in the wind, </p><p>  like weeds floating on a river, </p><p>  like a mill stone meekly grinding, </p><p>  to love all creation equally </p><p>  as heaven and earth are equal to all </p><p>  - such is the product of Enlightenment".</p><p>  On hearing these words, one of the younger disciples cried, "This sort<br>  of teaching is not for the living but for the dead", and walked away,<br>  never to return.</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>All Spiritual being is in man. A wise old proverb says, "God comes to<br>  see us without bell", that is, as there is no screen or ceiling between<br>  our heads and the infinite heavens, so is there no bar or wall in the soul<br>  where man, the effect, ceases, and God, the cause, begins. -- Ralph Waldo<br>  Emerson, Essays "The Over-Soul".</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-117">
+        <h3>117. Religion</h3>
+        <div class="story__content">
+          <p>The governor on his travels stepped in to pay homage to<br>  the Master. "Affairs of state leave me no time for lengthy<br>  dissertations", he said. "Could you put the essence of religion<br>  into a paragraph or two for a busy man like me"?</p><p>  "I shall put it into a single word for the benefit of your<br>  highness".</p><p>  "Incredible! What is this most unusual word"?</p><p>  "Silence".</p><p>  "And what is the way to silence"?</p><p>  "Meditation".</p><p>  "And what, may I ask, is meditation"?</p><p>  "Silence".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Silence is the great revelation. -- Lao Tzu</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-118">
+        <h3>118. Repression</h3>
+        <div class="story__content">
+          <p>The Master had been on his deathbed in a coma for weeks.<br>  One day he suddenly opened his eyes to find his favorite disciple there.<br>  "You never leave my bedside, do you"? he<br>  said softly.</p><p>  "No, Master. I cannot".</p><p>  Why?</p><p>  "Because you are the light of my life.''</p><p>  The Master sighed. "Have I so dazzled you, my son,<br>  that you still refuse to see the light in you"?</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Within man is the soul of the whole; </p><p>  the wise silence; the universal beauty; </p><p>  to which every part and every particle </p><p>  is equally related; the eternal One.</p><p>  -- Ralph Waldo Emerson</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-119">
+        <h3>119. Responsibility</h3>
+        <div class="story__content">
+          <p>The Master set out on a journey with one of his disciples.<br>  At the outskirts of the village they ran into the governor, who, mistakenly<br>  thinking they had come to welcome him to the village, said, "You really<br>  didn't have to go to all this trouble to welcome me".</p><p>  "You are mistaken, your highness", said the disciple. "We're<br>  on a journey, but had we known you were coming we would have gone to even<br>  greater pains to welcome you".</p><p>  The Master did not say a word. Toward evening he said, "Did you have to<br>  tell him that we had not come to welcome him? Did you see how foolish he<br>  felt"?</p><p>  "But had we not told him the truth, would we not have been guilty of<br>  deceiving him"?</p><p>  "We would not have deceived him at all", said the Master. "He<br>  would have deceived himself".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Our minds are like crows. They pick up everything that glitters, no matter<br>  how uncomfortable our nests get with all that metal in them. -- Thomas Merton</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-120">
+        <h3>120. Restriction</h3>
+        <div class="story__content">
+          <p>The Master was exceedingly gracious to university dons who<br>  visited him, but he would never reply to their questions or be drawn into<br>  their theological speculations. To his disciples, who marveled at this, he<br>  said, </p><p>  "Can one talk about the ocean to a frog in a well - or about the divine<br>  to people who are restricted by their concepts"?</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>MORSEL: The soul is created in a place between Time and Eternity: with its<br>  highest powers it touches Eternity, with its lower Time. -- Meister Eckhart<br>  (1260-1327)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-121">
+        <h3>121. Transience</h3>
+        <div class="story__content">
+          <p>The Master had an allergy for people who protracted their<br>  stay at the monastery. Sooner or later each disciple would hear the difficult<br>  words: "The time has come for you to go. If you do not get away, the<br>  Spirit will not come".</p><p>  What was this "Spirit",</p><p>  one particularly smitten disciple wished to know.</p><p>  Said the Master: </p><p>  "Water remains alive and free by flowing. You will remain alive and free<br>  by going. If you do not get away from me, you will stagnate and die - and be<br>  contaminated".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Loyalty to a petrified opinion never yet broke a chain or freed a human soul.<br>  - Mark Twain, (1835-1910)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-122">
+        <h3>122. Tribulation</h3>
+        <div class="story__content">
+          <p>"Calamities can bring growth and Enlightenment",<br>  said the Master. And he explained it thus:</p><p>  "Each day a bird would shelter in the withered branches of a tree that<br>  stood in the middle of a vast deserted plain. One day a whirlwind uprooted<br>  the tree, forcing the poor bird to fly a hundred miles in search of shelter -<br>  til it finally came to a forest of fruit-laden<br>  trees".</p><p>  And he concluded: "If the withered tree had survived, nothing would have<br>  induced the bird to give up its security and fly".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Life can only be understood backwards It must be lived forwards. -- Soren Kierkegaard</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-123">
+        <h3>123. Trust</h3>
+        <div class="story__content">
+          <p>The Master would frequently assert that holiness was less<br>  a matter of what one did than of what one allowed to happen. To a group of<br>  disciples who had difficulty understanding that - he told the following story:</p><p>  There was once a one-legged dragon who said to the centipede, "How do<br>  you manage all those legs? It is all I can do to manage one".</p><p>  "To tell you the truth", said the centipede, "I do not manage<br>  them at all. "</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>What a curious phenomenon it is that you can get men to die for the liberty<br>  of the world who will not make the little sacrifice that is needed to free<br>  themselves from their own individual bondage. -- Bruce Barton (1886-1967)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-124">
+        <h3>124. Understanding</h3>
+        <div class="story__content">
+          <p>"How shall I get the grace of never judging my<br>  neighbor"?</p><p>  "Through prayer".</p><p>  "Then why have I not found it yet"?</p><p>  "Because you haven't prayed in the right place".</p><p>  "Where is that"?</p><p>  "In the heart of God".</p><p>  "And how do I get there"?</p><p>  "Understand that anyone who sins does not know what he is doing and<br>  deserves to be forgiven".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Forgiveness is the answer to the child's dream of a miracle by which what is<br>  broken is made whole again, what is soiled is made clean again. -- Dag Hammarskjöld</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-125">
+        <h3>125. Unobtrusiveness</h3>
+        <div class="story__content">
+          <p>A man of spiritual repute came to the Master and said,<br>  "I cannot pray, I cannot understand the Scriptures, I cannot do the<br>  exercises that I prescribe to others.</p><p>  "Then give it all up", said the Master cheerfully.</p><p>  "But how can I? I am supposed to be a holy man and have a following in<br>  these parts".</p><p>  Later the Master said with a sigh: "Holiness today is a name without a<br>  reality. It is only genuine when it is a reality without a name".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>I believe in God -- this is a fine, praiseworthy thing to say, but to<br>  acknowledge God wherever and however he manifest Himself, that in truth is<br>  heavenly bliss on earth. -- Johann Wolfgang von Goethe</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-126">
+        <h3>126. Vanity</h3>
+        <div class="story__content">
+          <p>The Master frequently reminded his disciples that holiness,<br>  like beauty, is only genuine when unselfconscious. He loved to quote the<br>  verse:</p><p>  "She blooms because she blooms,</p><p>  the Rose: </p><p>  Does not ask why, </p><p>  nor does she preen herself </p><p>  to catch my eye". </p><p>  And the saying: </p><p>  "A saint is a saint until he knows that he is one".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>It is not what we do that makes us holy, but we ought to make holy what we<br>  do. -- Meister Eckhart</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-127">
+        <h3>127. Violence</h3>
+        <div class="story__content">
+          <p>The Master was always teaching that guilt is an evil<br>  emotion to be avoided like the very devil -- all guilt.</p><p>  "But are we not to hate our sins"? a<br>  disciple said one day.</p><p>  "When you are guilty, it is not your sins you hate but yourself".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Fear is the tax that conscience pays to guilt.</p><p>  -- George Sewell</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-128">
+        <h3>128. Wisdom</h3>
+        <div class="story__content">
+          <p>It always pleased the Master to hear people recognize<br>  their ignorance.</p><p>  "Wisdom tends to grow in proportion to one's awareness of one's<br>  ignorance", he claimed.</p><p>  When asked for an explanation, he said, "When you come to see you are<br>  not as wise today as you thought you were yesterday, you are wiser<br>  today".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>The significant problems we face can never be solved at the level of thinking<br>  that created them. -- Albert Einstein</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-129">
+        <h3>129. Withdrawal</h3>
+        <div class="story__content">
+          <p>"How shall I help the world"?</p><p>  "By understanding it", said the Master.</p><p>  "And how shall I understand it"?</p><p>  "By turning away from it".</p><p>  "How then shall I serve humanity"?</p><p>  "By understanding yourself".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>I am not what I ought to be. </p><p>  I am not what I want to be. </p><p>  I am not what I hope to be. </p><p>  But still, I am not what I used to be. </p><p>  And by the grace of God, I am what I am.</p><p>  John Newton (1725-1807)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-130">
+        <h3>130. Wonder</h3>
+        <div class="story__content">
+          <p>The Haji who lived at the<br>  outskirts of the town was said to perform miracles, so his home was a center<br>  of pilgrimage for large crowds of sick people. The Master, who was known to<br>  be quite uninterested in the miraculous, would never reply to questions on<br>  the Haji. When asked point-blank why he was opposed<br>  to miracles, he replied,</p><p>  "How can one be opposed to what is taking place<br>  before one's eyes each moment of the day"?</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Look! Here am I right within you. </p><p>  Not in temple, nor in mosque, </p><p>  Not in Kaaba nor Kailas, </p><p>  But here right within you am I. -- Kabir</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-131">
+        <h3>131. Words</h3>
+        <div class="story__content">
+          <p>The disciples were absorbed in a discussion of Lao-tzu's dictum: </p><p>  "Those who know do not say; </p><p>  Those who say do not know".</p><p>  When the Master entered, they asked him exactly what the words meant. Said<br>  the Master, "Which of you knows the fragrance of a rose"? All of<br>  them knew. Then he said, "Put it into words". All of them were<br>  silent.</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Though we are God's sons and daughters, we do not realize it yet. -- Meister<br>  Eckhart</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-132">
+        <h3>132. Improvement</h3>
+        <div class="story__content">
+          <p>A young man squandered all his inherited wealth. As<br>  generally happens in such cases, the moment he was penniless he found that he<br>  was friendless too. At his wit's end, he sought the Master out and said,<br>  "What is to become of me? I have no money and no friends".</p><p>  "Don't worry, son. Mark my words: All will be well with you again".</p><p>  Hope shone in the young man's eyes. "Will I be rich again"?</p><p>  "No. You will get used to being penniless and lonely".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Superfluous wealth can buy superfluities only. Money is not required to buy<br>  one necessity of the soul. -- Henry David Thoreau</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-133">
+        <h3>133. Ignorance</h3>
+        <div class="story__content">
+          <p>The young disciple was such a prodigy that scholars from<br>  everywhere sought his advice and marveled at his learning. When the governor<br>  was looking for an adviser, he came to the Master and said, "Tell me, is<br>  it true that the young man knows as much as they say he does"?</p><p>  "Truth to tell", said the Master wryly, "the fellow reads so<br>  much I don't see how he could ever find the time to know anything".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>The heart is wiser than the intellect.</p><p>  -- Josiah Holland (1819-1881)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-134">
+        <h3>134. Myths</h3>
+        <div class="story__content">
+          <p>The Master gave his teaching in parables and stories,<br>  which his disciples listened to with pleasure - and occasional frustration,<br>  for they longed for something deeper. The Master was unmoved. To all their<br>  objections he would say, "You have yet to understand, my dears, that the<br>  shortest distance between a human being and Truth is a story".</p><p>  Another time he said, "Do not despise the story. A lost gold coin is<br>  found by means of a penny candle; the deepest truth is found by means of a<br>  simple story".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>People travel to wonder at the height of the mountains, at the huge waves of<br>  the seas, at the long course of the rivers, at the vast compass of the ocean,<br>  at the circular motion of the stars, and yet they pass by themselves without<br>  wondering. -- St. Augustine<br>  of Hippo</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-135">
+        <h3>135. Happiness</h3>
+        <div class="story__content">
+          <p>"I am in desperate need of help - or I'll go crazy.<br>  We're living in a single room - my wife, my children and my in-laws. So our<br>  nerves are on edge, we yell and scream at one another. The room is a<br>  hell".</p><p>  "Do you promise to do whatever I tell you"? said<br>  the Master gravely.</p><p>  "I swear I shall do anything".</p><p>  "Very well. How many animals do you have"?</p><p>  "A cow, a goat and six chickens".</p><p>  "Take them all into the room with you. Then come back after a<br>  week".</p><p>  The disciple was appalled. But he had promised to obey! So he took the<br>  animals in. A week later he came back, a pitiable figure, moaning, "I'm<br>  a nervous wreck. The dirt! The stench! The noise! We're all on the verge of<br>  madness"! "Go back", said the Master, "and put the<br>  animals out".</p><p>  The man ran all the way home. And came back the following day, his eyes<br>  sparkling with joy. "How sweet life is! The animals are out. The home is<br>  a Paradise, so quiet and clean and<br>  roomy"!</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Most of us are just about as happy as we make up our minds to be. -- Abraham<br>  Lincoln (1809-1865)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-136">
+        <h3>136. Doctrine</h3>
+        <div class="story__content">
+          <p>To a visitor who claimed he had no need to search for<br>  Truth because he found it in the beliefs of his religion the Master said:<br>  "There was once a student who never became a mathematician because he<br>  blindly believed the answers he found at the back of his math textbook -and, ironically, the answers were correct".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Half of what I say is meaningless; but I say it so that the other half may<br>  reach you. -- Kahlil Gibran (1883-1931)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-137">
+        <h3>137. Meditation</h3>
+        <div class="story__content">
+          <p>A disciple fell asleep and dreamed that he had entered Paradise. To his astonishment he found his Master and<br>  the other disciples sitting there, absorbed in meditation.</p><p>  "Is this the reward of Paradise"? he cried. "Why, this is exactly the sort of thing we<br>  did on earth"!</p><p>  He heard a Voice exclaim, "Fool - You think those meditators are in Paradise? It is just the opposite Paradise<br>  is in the meditators".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Enlightenment is understanding that there is nowhere to go, nothing to do,<br>  and nobody you have to be except exactly who you're being right now. -- Neale<br>  Donald Walsch</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-138">
+        <h3>138. Speech</h3>
+        <div class="story__content">
+          <p>The disciple couldn't wait to tell the Master the rumor he<br>  had heard in the marketplace.</p><p>  "Wait a minute", said the Master. "What you plan to tell us,<br>  is it true"?</p><p>  "I don't think it is".</p><p>  "Is it useful"?</p><p>  "No, it isn't".</p><p>  "Is it funny"?</p><p>  "No".</p><p>  "Then why should we be hearing it"?</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Rather than love, than money, than fame, give me truth. -- Henry David<br>  Thoreau</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-139">
+        <h3>139. Insight</h3>
+        <div class="story__content">
+          <p>The disciples were involved in a heated discussion on the<br>  cause of human suffering. Some said it came from selfishness. Others, from<br>  delusion. Yet others, from the inability to distinguish the real from the<br>  unreal.</p><p>  When the Master was consulted, he said, </p><p>  "All suffering comes from a person's inability to sit still and be<br>  alone".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Happiness is permanent. It is always there. </p><p>  What comes and goes is unhappiness. </p><p>  If you identify with what comes and goes, you will be unhappy. If you<br>  identify with what is permanent and always there, you are happiness itself.<br>  -- Poonjaji</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-140">
+        <h3>140. Coercion</h3>
+        <div class="story__content">
+          <p>The Master demanded seriousness of purpose from those who<br>  sought discipleship. But he chided his disciples when they strained<br>  themselves in spiritual endeavor.</p><p>  What he proposed was lighthearted seriousness or serious lightheartedness --<br>  like that of a sportsman in a game or an actor in a play.</p><p>  And much, much patience. "Forced flowers have no fragrance", he<br>  would say, "Forced fruit will lose its taste".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>People cannot live gracefully or peacefully, joyfully or justly, without<br>  celebration in their lives, . . . without awe.</p><p>  -- Matthew Fox</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-161">
+        <h3>161. Gossip</h3>
+        <div class="story__content">
+          <p>A disciple confessed his bad habit of repeating gossip.</p><p>  Said the Master wickedly, "Repeating it wouldn't be so bad if you did<br>  not improve on it".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>To attain Knowledge, add things every day. </p><p>  To attain Wisdom, remove things every day. -- Lao Tzu</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-162">
+        <h3>162. Calculation</h3>
+        <div class="story__content">
+          <p>The Master would laugh at those of his disciples who<br>  deliberated endlessly before making up their mind.</p><p>  The way he put it was:</p><p>  "People who deliberate FULLY before they take a step will spend their<br>  lives on one leg".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Where fear is present, wisdom cannot be. </p><p>  -- Lactantius (260-340 A.D.)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-163">
+        <h3>163. Flow</h3>
+        <div class="story__content">
+          <p>When it became clear that the Master was going to die, the<br>  disciples were depressed.</p><p>  Said the Master smilingly,</p><p>  "Don't you see that death gives loveliness to life"?</p><p>  "No. We'd much rather you never died".</p><p>  "Whatever is truly alive must die. </p><p>  Look at the flowers; only plastic flowers never die".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>For certain is death for the born, </p><p>  And certain is birth for the dead; </p><p>  Therefore over the inevitable </p><p>  Thou shouldst not grieve. -- The Bhagavad Gita</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-164">
+        <h3>164. Discovery</h3>
+        <div class="story__content">
+          <p>"Help us to find God".</p><p>  "No one can help you there".</p><p>  "Why not"?</p><p>  "For the same reason that no one can help the fish to find the<br>  ocean".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Nothing hath separated us from God but our own will, or rather our own will<br>  is our separation from God.</p><p>  -- William Law</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-165">
+        <h3>165. Conversion</h3>
+        <div class="story__content">
+          <p>To a group of his disciples whose hearts were set on a<br>  pilgrimage the Master said: "Take this bitter gourd along. Make sure you<br>  dip it into all the holy rivers and bring it into all the holy shrines".</p><p>  When the disciples returned, the bitter gourd was cooked and served as<br>  sacramental food.</p><p>  "Strange", said the Master slyly after he had tasted it.</p><p>  "The holy water and the shrines have failed to sweeten it"!</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>God is not found in the soul by adding anything, but by a process of<br>  subtraction. -- Meister Eckhart</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-166">
+        <h3>166. Discrimination</h3>
+        <div class="story__content">
+          <p>Said the jilted lover, "I have burned my fingers<br>  once. I shall never fall in love again".</p><p>  Said the Master, </p><p>  "You are like the cat who, having burned itself<br>  from sitting on a stove, refused to sit again".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>The eye sees only what the mind is prepared to comprehend. -- Henri L.<br>  Bergson</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-167">
+        <h3>167. Irrelevance</h3>
+        <div class="story__content">
+          <p>All questions at the public meeting that day were about<br>  life beyond the grave. The Master only laughed and did not give a single<br>  answer. To his disciples, who demanded to know the reason for his<br>  evasiveness, he later said, "Have you observed that it is precisely<br>  those who do not know what to do with this life who want<br>  another life that will last forever"?</p><p>  "But is there life after death or is there not"? persisted<br>  a disciple.</p><p>  "Is there life before death? - that is the question"! said<br>  the Master enigmatically.</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Rest not! Life is sweeping by; go and dare before you die. Something mighty<br>  and sublime, leave behind to conquer time. -- Goethe (1749-1832)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-168">
+        <h3>168. Aloneness</h3>
+        <div class="story__content">
+          <p>To a disciple who was always seeking answers from him the<br>  Master said, "You have within yourself the answer to every question you<br>  propose -- if you only knew how to look for it".</p><p>  And another day he said, "In the Land of the spirit, you cannot walk by<br>  the light of someone else's lamp. You want to borrow mine. I'd rather teach<br>  you how to make your own".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>The Way isn't something that can be put into words. </p><p>  You have to practice before you can understand. </p><p>  You can't force things, including practice. </p><p>  Understanding is something that happens naturally. </p><p>  It's different for everyone. </p><p>  The main thing is to reduce your desires and quiet your mind. -- Master Hsueh</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-169">
+        <h3>169. Distinction</h3>
+        <div class="story__content">
+          <p>The Master was strolling with some of his disciples along<br>  the bank of a river. He said, "See how the fish keep darting about<br>  wherever they please. That's what they really enjoy".</p><p>  A stranger overhearing that remark said, "How do you know what fish<br>  enjoy? You're not a fish".</p><p>  The disciples gasped at what they took for impudence. The Master smiled at<br>  what he recognized as a fearless spirit of inquiry. He replied affably,<br>  "And you, my friend, how do you know I am not a fish? You are not<br>  I".</p><p>  The disciples laughed, taking this to be a well-deserved rebuff. Only the<br>  stranger was struck by its depth. All day he pondered it, then<br>  came to the monastery to say, "Maybe you are not as different from the<br>  fish as I thought. Or I from you".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>No man desires anything so eagerly as God desires to bring men to the<br>  knowledge of Himself. God is always ready, but we are very unready. God is<br>  near us, but we are far from Him. God is within, and we are without. God is<br>  friendly - we are estranged.</p><p>  -- Meister Eckhart (1260?-1327?)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-170">
+        <h3>170. Universality</h3>
+        <div class="story__content">
+          <p>The Master ordinarily dissuaded people from living in a<br>  monastery.</p><p>  "To profit from books you don't have to live in a library", he<br>  would say.</p><p>  Or, even more forcefully, "You can read books without ever stepping into<br>  a library; and practice spirituality without ever going to a temple".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Teachers open the door . . . You enter by yourself. </p><p>  -- Chinese Proverb</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-171">
+        <h3>171. Mechanicalness</h3>
+        <div class="story__content">
+          <p>The Master once asked his disciples which was more<br>  important: wisdom or action.</p><p>  The disciples were unanimous: "Action, of course. Of what use is wisdom<br>  that does not show itself in action"?</p><p>  Said the Master, "And of what use is action that proceeds from an<br>  unenlightened heart"?</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>The heart is wiser than the intellect. -- Josiah Holland (1819-1881)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-172">
+        <h3>172. Reaction</h3>
+        <div class="story__content">
+          <p>The Master was asked by what criterion he selected his<br>  disciples.</p><p>  He said, "I act in a submissive and humble manner. Those who become<br>  haughty in response to my humility I immediately reject. Those who revere me<br>  because of my humble demeanor I reject with equal speed".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>I will not let anyone walk through my mind with their dirty feet. -- Mohandas<br>  K. Gandhi (1869-1948)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-173">
+        <h3>173. Acceptance</h3>
+        <div class="story__content">
+          <p>"How can I be a great man - like you"?</p><p>  "Why be a great man"? said<br>  the Master. </p><p>  "Being a man is a great enough achievement".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>The wisdom of Enlightenment is inherent in every one of us. It is because of<br>  the delusion under which our mind works that we fail to realize it ourselves,<br>  and we seek the advice and the guidance of enlightened ones. -- Hui-neng</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-174">
+        <h3>174. Expansion</h3>
+        <div class="story__content">
+          <p>The Master sat in rapt attention as the renowned economist<br>  explained his blueprint for development. "Should growth be the only<br>  consideration in an economic theory"? he asked.<br>  "Yes. All growth is good in itself". "Isn't that the thinking<br>  of the cancer cell"? said the Master.</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>All change is not growth, as all movement is not forward. </p><p>  -- Ellen Glasgow</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-175">
+        <h3>175. Philosophy</h3>
+        <div class="story__content">
+          <p>Before the visitor embarked upon discipleship, he wanted<br>  assurance from the Master.</p><p>  "Can you teach me the goal of human life"?</p><p>  "I cannot".</p><p>  "Or at least its meaning"?</p><p>  "I cannot".</p><p>  "Can you indicate to me the nature of death and of life beyond the<br>  grave"?</p><p>  "I cannot".</p><p>  The visitor walked away in scorn. The disciples were dismayed that their<br>  Master had been shown up in a poor light. Said the Master soothingly,<br>  "Of what is it to comprehend life's nature and life's meaning if you<br>  have never tasted it? I'd rather you ate your pudding than speculated on<br>  it".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Life is a romantic business. It is painting a picture, not doing a sum -- but<br>  you have to make the romance, and it will come to the question how much fire<br>  you have in your belly. -- Oliver Wendell Holmes, Jr.</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-176">
+        <h3>176. Thought</h3>
+        <div class="story__content">
+          <p>"Why are you so wary of thought"? said the philosopher. Thought is the one tool we have for<br>  organizing the world".</p><p>  "True. But thought can organize the world so well that you are no longer<br>  able to see it".</p><p>  To his disciples he later said, "A thought is a screen, not a mirror;<br>  that is why you live in a thought envelope, untouched by Reality".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>We understand why children are afraid of darkness, but why are men afraid of<br>  light? -- Plato</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-177">
+        <h3>177. Blinkers</h3>
+        <div class="story__content">
+          <p>"If you make me your authority", said the Master<br>  to a starry-eyed disciple, "you harm yourself because you refuse to see<br>  things for yourself". </p><p>  And, after a pause, he added gently, "You harm me too, because you<br>  refuse to see me as I am".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Self-trust is the first secret to success.</p><p>  -- Ralph Waldo Emerson (1803 - 1882)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-178">
+        <h3>178. Mediation</h3>
+        <div class="story__content">
+          <p>"Why do you need a Master"? asked<br>  a visitor of one of the disciples. "If water must be heated, it needs a<br>  vessel as an intermediary between the fire and itself", was the answer.</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Fire transforms all things it touches into its own nature. The wood does not<br>  change the fire into itself; but the fire changes the wood into itself. In<br>  the same way, we are transformed into God, so that we may know him as he is.<br>  Acting and becoming are one. God and I are one in this work; he acts, and I<br>  become. -- Meister Eckhart, 1260-1327</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-179">
+        <h3>179. Humility</h3>
+        <div class="story__content">
+          <p>To a visitor who described himself as a seeker after Truth<br>  the Master said, "If what you seek is Truth, there is one thing you must<br>  have above all else".</p><p>  "I know. An overwhelming passion for it".</p><p>  "No. An unremitting readiness to admit you may be wrong".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Your vision will become clear </p><p>  only when you look into your heart ... </p><p>  Who looks outside, dreams.</p><p>  Who looks inside, awakens. -- Carl Jung</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-180">
+        <h3>180. Remote Control</h3>
+        <div class="story__content">
+          <p>To a shy disciple who wanted to become self-confident the<br>  Master said, "You look for certainty in the eyes of others and you think<br>  that is self-confidence".</p><p>  "Shall I give no weight to the opinion of others, then"?</p><p>  "On the contrary. Weigh everything they say, but do not be controlled by<br>  it".</p><p>  "How does one break the control"?</p><p>  "How does one break a delusion"?</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>The eye sees only what the mind is prepared to comprehend. -- Henri L.<br>  Bergson</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-181">
+        <h3>181. Speechlessness</h3>
+        <div class="story__content">
+          <p>"Of what use is your learning and your devotions?<br>  Does a donkey become wise through living in a library or a<br>  mouse acquire holiness from living in a church"?</p><p>  "What is it, then, we need"?</p><p>  "A heart".</p><p>  "How does one get that"?</p><p>  The Master would not say. What could he say that they wouldn't turn into a<br>  subject to be learned or an object of devotion?</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>There is in each of us a God-shaped vacuum that only God can fill. -- Blaise Pascal</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-182">
+        <h3>182. Dependence</h3>
+        <div class="story__content">
+          <p>To a disciple who depended overmuch on books the Master<br>  said:</p><p>  "A man came to the market with a shopping list and lost it. When to his<br>  great joy he found it again, he read it eagerly, held on to it till he had<br>  done his shopping -- then threw it away as a useless scrap of paper".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Wisdom is not in words.</p><p>  Wisdom is meaning within words. -- Khalil Gibran</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-183">
+        <h3>183. Expression</h3>
+        <div class="story__content">
+          <p>He was a religious writer and interested in the Master's<br>  views. "How does one discover God"?</p><p>  Said the Master sharply, "Through making the heart white with silent<br>  meditation, not making paper black with religious composition".</p><p>  And, turning to his scholarly disciples, he teasingly added, "Or making<br>  the air thick with learned conversation".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>The sage wears clothes of coarse cloth but carries jewels in his bosom; He<br>  knows himself but does not display himself; He loves himself but does not<br>  hold himself in high esteem. -- Lao-Tzu (fl. B.C. 600)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-184">
+        <h3>184. Authenticity</h3>
+        <div class="story__content">
+          <p>The Master was never impressed by diplomas or degrees. He<br>  scrutinized the person, not the certificate.</p><p>  He was once heard to say, </p><p>  "When you have ears to hear a bird in song, you don't need to look at<br>  its credentials".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Far too many people spend their lives reading the menu instead of enjoying<br>  the banquet.</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-185">
+        <h3>185. Survival</h3>
+        <div class="story__content">
+          <p>Each day the disciple would ask the same question:<br>  "How shall I find God"? </p><p>  And each day he would get the same mysterious answer: "Through<br>  desire". </p><p>  "But I desire God with all my heart, don't I? Then why have I not found<br>  him"? </p><p>  One day the Master happened to be bathing in the river with the disciple. He<br>  pushed the man's head underwater and held it there while the poor fellow struggled<br>  desperately to break loose. </p><p>  Next day it was the Master who began the conversation. "Why did you<br>  struggle so when I held your head under water"? </p><p>  "Because I was gasping for air".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>"When you are given the grace to gasp for God the way you gasped for<br>  air, you will have found him.' When the pond dries up and the fish are lying<br>  on the parched earth, to moisten them with one's breath or damp them with<br>  spittle is no substitute for flinging them back into the lake. Don't enliven<br>  people with doctrines; throw them back into Reality. For the secret of life<br>  is to be found in life itself - not in doctrines about it. </p><p>  -- Anthony de Mello, S.J. [from Song Of The Bird]</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-186">
+        <h3>186. Nature</h3>
+        <div class="story__content">
+          <p>A lecturer explained how a fraction of the enormous sums<br>  spent on arms in the modern world would solve all the material problems of<br>  every member of the human race.</p><p>  The inevitable reaction of the disciples after the lecture was: "But why<br>  are human beings so stupid"?</p><p>  "Because", said the Master solemnly, "people have learned to<br>  read printed books. They have forgotten the art of reading unprinted<br>  ones".</p><p>  "Give us an example of an unprinted book".</p><p>  But the Master wouldn't give one.</p><p>  One day, in response to their persistence, he said: "The songs of birds,<br>  the sounds of insects are all trumpeting forth the Truth. The grasses and the<br>  flowers are all pointing out the Way. Listen! Look! That is the way to<br>  read"!</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>We see but dimly through the mists and vapors; </p><p>  Amid these earthly damps </p><p>  What seem to us but sad, funeral tapers </p><p>  May be heaven's distant lamps.</p><p>  -- Longfellow (1819-1892)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-187">
+        <h3>187. Effortlessness</h3>
+        <div class="story__content">
+          <p>To a man who hesitated to embark on the spiritual quest<br>  for fear of the effort and renunciation the Master said: "How much<br>  effort and renunciation does it take to open one's eyes and see"?</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>There is not enough darkness in all the world to put out the light of even<br>  one small candle. -- Robert Alden</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-188">
+        <h3>188. Revolution</h3>
+        <div class="story__content">
+          <p>There were rules in the monastery, but the Master always<br>  warned against the tyranny of the law. "Obedience keeps the rules",<br>  he would say. "Love knows when to break them".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>God is at home, </p><p>  We are in the far country. -- Meister Eckhart</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-189">
+        <h3>189. Letting Go</h3>
+        <div class="story__content">
+          <p>"What must I do for Enlightenment? "</p><p>  "Nothing".</p><p>  "Why not"?</p><p>  "Enlightenment doesn't come from doing - it happens".</p><p>  "Then can it never be attained"?</p><p>  "Oh yes it can".</p><p>  "How"?</p><p>  "Through non doing".</p><p>  "And what does one do to attain non doing"?</p><p>  "What does one do to go to sleep or to wake up"?</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>It is not the mountain we conquer but ourselves. </p><p>  -- Sir Edmund Hillary</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-190">
+        <h3>190. Sleepwalking</h3>
+        <div class="story__content">
+          <p>The Master's expansive mood emboldened his disciples to<br>  say, "Tell us what you got from Enlightenment. Did you become<br>  divine"?</p><p>  "No".</p><p>  "Did you become a saint"?</p><p>  "No".</p><p>  "Then what did you become"?</p><p>  "Awake".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Wisdom is perishable. Unlike information or knowledge, it cannot be stored in<br>  a computer or recorded in a book. It expires with each passing generation. --<br>  Sid Taylor</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-191">
+        <h3>191. Challenge</h3>
+        <div class="story__content">
+          <p>An easygoing disciple complained that he had never<br>  experienced the Silence that the Master frequently commended.</p><p>  Said the Master, "Silence only comes to active people".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>Grace strikes us when we are in great pain and restlessness. . . Sometimes at<br>  that moment a wave of light breaks into our darkness, and it is as though a<br>  voice were saying: "You are accepted". -- Paul Tillich</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-193">
+        <h3>193. Benevolence</h3>
+        <div class="story__content">
+          <p>A grocer came to the Master in great distress to say that<br>  across the way from his shop they had opened a large chain store that would<br>  drive him out of business. His family had owned his shop for a century - and<br>  to lose it now would be his undoing, for there was nothing else he was<br>  skilled at.</p><p>  Said the Master, "If you fear the owner of the chain store, you will<br>  hate him. And hatred will be your undoing".</p><p>  "What shall I do"? said the distraught<br>  grocer.</p><p>  "Each morning walk out of your shop onto the sidewalk and bless your<br>  shop, wishing it prosperity. Then turn to face the chain store and bless it<br>  too".</p><p>  "What? Bless my competitor and destroyer"?</p><p>  "Any blessing you give him will rebound to your good. Any evil you wish<br>  him will destroy you".</p><p>  After six months the grocer returned to report that he had had to close down<br>  his shop as he had feared, but he was now in charge of the chain store and<br>  his affairs were in better shape than ever before.</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>A tree is known by its fruit; a man by his deeds. A good deed is never lost;<br>  he who sows courtesy reaps friendship, and he who plants kindness gathers<br>  love. </p><p>  -- Basil (329-379 A.D.)</p>
+        </blockquote>
+      </article>
+
+      <article class="story" id="story-194">
+        <h3>194. Morality</h3>
+        <div class="story__content">
+          <p>The disciples would frequently be absorbed in questions of<br>  right and wrong. Sometimes the answer would be evident enough. Sometimes it<br>  was elusive.</p><p>  The Master, if he happened to be present at such discussions, would take no<br>  part in them.</p><p>  Once he was confronted with this question: "Is it right to kill someone<br>  who seeks to kill me? Or is it wrong"?</p><p>  He said, "How should I know"?</p><p>  The shocked disciples answered, "Then how would we tell right from<br>  wrong"?</p><p>  The Master said, "While alive, be dead to yourself, be totally dead.<br>  Then act as you will and your action will be right".</p>
+        </div>
+
+        <blockquote class="story__morsel">
+          <p>If a man will begin in certainties he shall end in doubts; but if he will be<br>  content to begin in doubts he shall end in certainties. -- Francis Bacon<br>  (1561-1626)</p>
+        </blockquote>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container container--narrow">
+      <h2>More from Anthony de Mello</h2>
+      <div class="document-list mt-2">
+        <a href="demello.html" class="document-item">
+          <div class="document-item__icon">HTML</div>
+          <div class="document-item__info">
+            <div class="document-item__title">Anthony de Mello - Main Page</div>
+            <div class="document-item__meta">Biography, videos, and resources</div>
+          </div>
+        </a>
+        <a href="Anthony de Mello - Awareness.pdf" class="document-item">
+          <div class="document-item__icon">PDF</div>
+          <div class="document-item__info">
+            <div class="document-item__title">Awareness - The Book</div>
+            <div class="document-item__meta">Full book in English</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__section">
+          <h4>Spirituality</h4>
+          <ul class="footer__links">
+            <li><a href="../../spiritual.html#krishnamurti">Krishnamurti</a></li>
+            <li><a href="../../spiritual.html#watts">Alan Watts</a></li>
+            <li><a href="../../spiritual.html#demello">Anthony de Mello</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h4>Travels</h4>
+          <ul class="footer__links">
+            <li><a href="../../travel.html#india">Light of India</a></li>
+            <li><a href="../../travel.html#burma">Myanmar</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h4>More</h4>
+          <ul class="footer__links">
+            <li><a href="../../living.html">Living at Peace with Money</a></li>
+            <li><a href="../../archive.html">Archive</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>Efi Paz</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav__toggle').addEventListener('click', function() {
+      document.querySelector('.nav__list').classList.toggle('is-open');
+    });
+  </script>
+
+</body>
+</html>
