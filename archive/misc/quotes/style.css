@@ -1,0 +1,74 @@
+/* 
+========================================
+QuoteMe v4.0 (PHP)
+by Scott Clark / Clark Consulting
+http://www.clarksco.com
+
+Style Sheet - Last Updated 06/13/2007
+======================================== 
+*/
+
+body{
+  font-family: sans-serif;
+}
+table.view{
+	border-collapse: collapse;
+}
+
+.login td
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+.view td
+{
+	border: 1px solid silver;
+	font-family: sans-serif;
+	font-size: 12px;
+	padding: 1px;
+}
+.view th
+{
+	border: 1px solid silver;
+	font-family: sans-serif;
+	font-size: 12px;
+	padding: 1px;
+}
+.header{
+	padding: 4px;
+	background-color: #E7E7E7;
+	border: 1px solid silver;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.footer{
+	padding: 4px;
+	background-color: #E7E7E7;
+	border: 1px solid silver;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}
+.dbFileNames{
+  padding: 4px;
+  background-color: #ffeedd;
+  border: 1px solid #b39b8f;
+  font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+.whichDatabase{
+      font-size: 12px;
+      color: #666666;
+      font-style: italic;
+}
+.addBtn{
+	border: 1px solid orange;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.addBtn{
+	padding: 2px;
+	background-color: #FFFFCC;
+	font-family: sans-serif;
+}

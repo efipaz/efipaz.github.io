@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="קישורים שימושיים - תכנית החונכות של משרד התמ&quot;ת">
+  <title>קישורים - אפ.אי. יעוץ עסקי</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">אפ.אי. יעוץ עסקי</a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">ראשי</a></li>
+          <li><a href="services.html" class="nav__link">שירותים</a></li>
+          <li><a href="projects.html" class="nav__link">פרויקטים</a></li>
+          <li><a href="customers.html" class="nav__link">לקוחות</a></li>
+          <li><a href="About.html" class="nav__link">אודות</a></li>
+          <li><a href="contact.html" class="nav__link">צור קשר</a></li>
+        </ul>
+        <div class="lang-switch">
+          <a href="../index.html">לאתר הראשי</a>
+        </div>
+        <button class="nav__toggle" aria-label="תפריט">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>קישורים</h1>
+      <p class="page-header__subtitle">קישורים שימושיים לעסקים</p>
+    </div>
+  </section>
+
+  <!-- Links Content -->
+  <section class="section">
+    <div class="container container--narrow">
+      <h2 class="mb-3">תכנית החונכות - משרד התמ"ת</h2>
+
+      <p class="mb-3">
+        אפי פז הוא יועץ מוסמך של תכנית החונכות של משרד המסחר התעשייה והתעסוקה.
+      </p>
+
+      <div class="document-list">
+        <a href="http://www.moit.gov.il/NR/exeres/453CEE48-3FA0-4AF4-82EF-09DA2BE6017A.htm" target="_blank" rel="noopener" class="document-item">
+          <div class="document-item__icon">WWW</div>
+          <div>
+            <div class="document-item__title">משרד התמ"ת - תכנית החונכות</div>
+            <div class="document-item__meta">מידע על תכנית החונכות העסקית</div>
+          </div>
+        </a>
+
+        <a href="http://www.moit.gov.il/NR/exeres/5C596A92-EE4C-4CD3-8CED-28D2FD08FEB5.htm" target="_blank" rel="noopener" class="document-item">
+          <div class="document-item__icon">WWW</div>
+          <div>
+            <div class="document-item__title">תנאים לחונכות זעירה</div>
+            <div class="document-item__meta">1 עד 4 עובדים</div>
+          </div>
+        </a>
+
+        <a href="http://www.moit.gov.il/NR/exeres/8029370A-EF77-446E-A988-F62156BDA55F.htm" target="_blank" rel="noopener" class="document-item">
+          <div class="document-item__icon">WWW</div>
+          <div>
+            <div class="document-item__title">תנאים לחונכות רגילה</div>
+            <div class="document-item__meta">5 עובדים ומעלה</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--alt">
+    <div class="container text-center">
+      <h2 class="mb-2">מעוניינים בחונכות עסקית?</h2>
+      <p class="mb-3">נשמח לספר עוד על השירות ולבדוק התאמה.</p>
+      <a href="contact.html" class="btn btn--accent">צרו קשר</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__section">
+          <h4>ניווט</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">ראשי</a></li>
+            <li><a href="services.html">שירותים</a></li>
+            <li><a href="projects.html">פרויקטים</a></li>
+            <li><a href="customers.html">לקוחות</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h4>מידע</h4>
+          <ul class="footer__links">
+            <li><a href="About.html">אודות אפי פז</a></li>
+            <li><a href="links.html">קישורים</a></li>
+            <li><a href="contact.html">צור קשר</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h4>קשר</h4>
+          <ul class="footer__links">
+            <li><a href="mailto:efipaz@gmail.com">efipaz@gmail.com</a></li>
+            <li>054-451-4502</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p><a href="../index.html">אפי פז</a> - אתר אישי</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile navigation toggle
+    document.querySelector('.nav__toggle').addEventListener('click', function() {
+      document.querySelector('.nav__list').classList.toggle('is-open');
+    });
+  </script>
+
+</body>
+</html>

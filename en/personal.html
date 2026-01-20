@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Art and Personal - Drawings and personal moments">
+  <title>Personal & Art | Efi Paz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <style>
+    body { font-family: var(--font-english); direction: ltr; }
+    h1, h2, h3, h4, h5, h6 { font-family: var(--font-english); }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">Efi Paz</a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="spiritual.html" class="nav__link">Spirituality</a></li>
+          <li><a href="travel.html" class="nav__link">Travel</a></li>
+          <li><a href="personal.html" class="nav__link nav__link--active">Personal</a></li>
+          <li><a href="archive.html" class="nav__link">Archive</a></li>
+          <li><a href="living.html" class="nav__link">Living</a></li>
+        </ul>
+        <div class="lang-switch">
+          <a href="../personal.html">עב</a>
+          <a href="personal.html" class="active">EN</a>
+        </div>
+        <button class="nav__toggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <div class="container">
+      <h1>Personal & Art</h1>
+      <p class="page-header__subtitle">Artwork, drawings, and personal moments</p>
+    </div>
+  </div>
+
+  <section id="drawings" class="section">
+    <div class="container">
+      <h2 class="mb-3">Drawings</h2>
+      <p class="mb-3">A collection of artwork and illustrations.</p>
+
+      <div class="gallery-categories">
+        <a href="../personal/drawings/Danielle/Danielle_index.html" class="gallery-category">
+          <img src="../personal/drawings/Danielle/Belle.jpg" alt="Danielle Drawings">
+          <div class="gallery-category__overlay">
+            <span class="gallery-category__title">Danielle Gallery</span>
+          </div>
+        </a>
+        <a href="../personal/drawings/parker.html" class="gallery-category">
+          <img src="../personal/drawings/Danielle/Belle.jpg" alt="Parker">
+          <div class="gallery-category__overlay">
+            <span class="gallery-category__title">Parker</span>
+          </div>
+        </a>
+        <a href="../personal/drawings/huxley.html" class="gallery-category">
+          <img src="../personal/drawings/Danielle/Belle.jpg" alt="Huxley">
+          <div class="gallery-category__overlay">
+            <span class="gallery-category__title">Huxley</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="family" class="section section--alt">
+    <div class="container">
+      <h2 class="mb-3">Family</h2>
+      <p class="mb-3">Personal and family moments.</p>
+
+      <div class="gallery-categories">
+        <a href="../personal/evyatar/Evyatar_index.html" class="gallery-category">
+          <img src="../travel/india/pictures/Children/Children/Alchi-025.jpg" alt="Evyatar">
+          <div class="gallery-category__overlay">
+            <span class="gallery-category__title">Evyatar</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__section">
+          <h4>Spirituality</h4>
+          <ul class="footer__links">
+            <li><a href="spiritual.html#krishnamurti">Krishnamurti</a></li>
+            <li><a href="spiritual.html#watts">Alan Watts</a></li>
+            <li><a href="spiritual.html#demello">Anthony de Mello</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h4>Travel</h4>
+          <ul class="footer__links">
+            <li><a href="travel.html#india">Light of India</a></li>
+            <li><a href="travel.html#burma">Myanmar</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h4>More</h4>
+          <ul class="footer__links">
+            <li><a href="living.html">Living with Money</a></li>
+            <li><a href="#drawings">Drawings</a></li>
+            <li><a href="archive.html">Archive</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h4>Language</h4>
+          <ul class="footer__links">
+            <li><a href="../index.html">Hebrew</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>Efi Paz</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav__toggle').addEventListener('click', function() {
+      document.querySelector('.nav__list').classList.toggle('is-open');
+    });
+  </script>
+
+</body>
+</html>

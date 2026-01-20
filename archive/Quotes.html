@@ -1,0 +1,58 @@
+<?php
+/*
+    Random Quote v1.00
+
+    Copyright (c) 2004 Sabre Web Design (http://www.sabrewebdesign.com/)
+    All rights reserved.
+
+    If you like this script, we would appreciate a link back to Sabre Web Design (http://www.sabrewebdesign.com/).
+
+    Redistribution and use in source and binary forms, with or without
+    modification, are permitted provided that the following conditions
+    are met:
+
+    *    Redistributions of source code must retain the above copyright
+     notice, this list of conditions and the following disclaimer.
+    *    Redistributions in binary form must reproduce the above
+     copyright notice, this list of conditions and the following
+     disclaimer in the documentation and/or other materials
+     provided with the distribution.
+    *    Redistributions of this script is free for Non-Commercial use ONLY!
+    *    Neither the name of Sabre Web Design nor the names of its
+     contributors may be used to endorse or promote products
+     derived from this software without specific prior
+     written permission.
+
+    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND
+    CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+    MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+    DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+    BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+    EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+    TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+    DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+    ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+    OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+    OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+    POSSIBILITY OF SUCH DAMAGE.
+
+    HOW TO INSTALL THE SCRIPT:
+    *    Copy and paste this whole script into your page where you would like your random quotes to be displayed.
+    *    Edit the below code by adding the quotes you wish to display.
+    *    Upload to your server and enjoy!
+
+*/
+
+// Quote selection (Edit to include your quotes)
+  $quotes[jjjjj] = 'Your first quote';
+  $quotes[] = 'Your second quote';
+  $quotes[] = 'etc...';
+
+// Display random quote
+  srand ((double) microtime() * 1000000);
+  $random_number = rand(0,count($quotes)-1);
+  echo ($quotes[$random_number]);
+
+?>
+  

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jeff Parker - Rudyard Kipling illustration">
+  <title>Jeff Parker - Rudyard Kipling | Efi Paz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="../../index.html" class="header__logo">Efi Paz</a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="../../index.html" class="nav__link">Home</a></li>
+          <li><a href="../../spiritual.html" class="nav__link">Spiritual</a></li>
+          <li><a href="../../travel.html" class="nav__link">Travel</a></li>
+          <li><a href="../../personal.html" class="nav__link nav__link--active">Personal</a></li>
+          <li><a href="../../archive.html" class="nav__link">Archive</a></li>
+        </ul>
+        <button class="nav__toggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../../personal.html">Personal</a> / <a href="../../personal.html#drawings">Drawings</a> / Jeff Parker
+      </div>
+      <h1>Jeff Parker - Rudyard Kipling</h1>
+      <p class="page-header__subtitle">Comic artist tribute to the legendary author</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <div class="text-center mb-3">
+        <img src="parker_files/kipling_parker.jpg" alt="Jeff Parker illustration of Rudyard Kipling" style="max-width: 100%; height: auto;">
+      </div>
+
+      <article class="article">
+        <h2>About Jeff Parker</h2>
+        <p><strong>Selected bibliography:</strong> Marvel Adventures Fantastic Four, The Avengers, The Interman, Spiderman Adventures, Starbrand</p>
+        <p><strong>More information:</strong> <a href="http://parkerspace.com/" target="_blank" rel="noopener">parkerspace.com</a></p>
+
+        <h2>About Rudyard Kipling</h2>
+        <p><strong>Selected bibliography:</strong> Captains Courageous, Kim, The Jungle Book</p>
+        <p><strong>More information:</strong> <a href="http://www.kipling.org.uk/kip_fra.htm" target="_blank" rel="noopener">kipling.org.uk</a></p>
+      </article>
+
+      <div class="text-center mt-3">
+        <img src="parker_files/art_bottom.jpg" alt="Art bottom decoration" style="max-width: 150px;">
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__section">
+          <h4>Spiritual</h4>
+          <ul class="footer__links">
+            <li><a href="../../spiritual.html#krishnamurti">Krishnamurti</a></li>
+            <li><a href="../../spiritual.html#watts">Alan Watts</a></li>
+            <li><a href="../../spiritual.html#demello">Anthony de Mello</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h4>Travel</h4>
+          <ul class="footer__links">
+            <li><a href="../../travel.html#india">India</a></li>
+            <li><a href="../../travel.html#burma">Myanmar</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h4>More</h4>
+          <ul class="footer__links">
+            <li><a href="../../living.html">Living in Peace with Money</a></li>
+            <li><a href="../../personal.html#drawings">Drawings</a></li>
+            <li><a href="../../archive.html">Archive</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>Efi Paz</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav__toggle').addEventListener('click', function() {
+      document.querySelector('.nav__list').classList.toggle('is-open');
+    });
+  </script>
+
+</body>
+</html>
