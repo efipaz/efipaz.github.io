@@ -1,0 +1,100 @@
+============================================================
+QuoteMe v4.0 (PHP)
+by Scott Clark / Clark Consulting
+http://www.clarksco.com
+
+Installation Instructions
+============================================================
+
+Thank you for downloading and installing QuoteMe v4.0.  I have tried to detail the installation steps as best I can.  If you have any questions, please email me at comm@clarksco.com.
+
+If you would like a more specialized version of this script to fit your personal needs, I am happy to assist you.  My rates are very reasonable and I can typically get the work done quickly.  Email me at comm@clarksco.com.
+
+Features available in version 4.0:
+      1.) Flat File Database
+      2.) Quote Administration/Management Interface with Login security
+      3.) Multiple database support for both display and admin
+
+Files contained in this package:
+	1.) index.php - Login
+	2.) view.php - Shows you a table of your quotes.
+	3.) manage.php - Accessed via view.php.  Allows you to edit your quotes.
+	4.) quotes.txt - Your quote database.
+	5.) inc.php - The functions and includes.  This is the file you will edit
+	6.) style.css - Style sheet
+	7.) logout.php - Logs you out of the admin area.
+	8.) images/ folder - contains images used in the admin interface.
+	9.) sampleQuotes.txt - Some sample quotes.  No need to upload this file.
+	
+BEFORE YOU BEGIN:
+If you are new to editing PHP it is important that you get a text editing program.  Windows NotePad is ok, but there are so many text editors that are better and free of charge.  I like PSPad.  It has an FTP component that allows you to work on the file on your webserver, in pesudo-real time.  You can download it for free here: http://www.pspad.com/
+
+DO NOT USE Microsoft Word or WordPad or any other rich text editor when editing these files.
+
+Installation Instructions:
+
+# Step One:
+Create a folder on your web server.  You can name it anything, but I suggest you keep it simple.  Name the folder "quotes" or something similar.  Upload all the files contained in this package to that folder.  You must first unzip the package.  It is not necessary to upload the .zip file, just the contents.  And as mentioned above, you can skip uploading "sampleQuotes.txt".  When done, the folder should look like this:
+      /..
+      display.php
+      inc.php
+      index.php
+      logout.php
+      manage.php
+      quotes.txt
+      style.css
+      view.php
+      images/
+            add.gif
+            list.png
+            logout.gif
+            quote.gif
+
+# Step Two:
+CHMOD or set the permission for "quotes.txt" to 766.  This allows you to read and write to the file from the web server.  You will notice that the "quotes.txt" file is empty.  You will add your quotes later from the web interface.
+
+# Step Three:
+Open the "inc.php" file and change/personalize the Username and Password.  
+      $myUsername = "YOURUSERNAME";
+      $myPassword = "YOURPASSWORD";
+Save and close.
+
+# Step Four:
+Open your browser and browse to the QuoteMe "index.php" page on your website.  
+
+For example, if you uploaded the files to a directory named 'quotes' you will browse to:  http://www.YOURDOMAIN.com/quotes/index.php
+
+You will be prompted for a username and password.  Enter the ones you created in the "inc.php" file.
+
+# Step Five:
+Login to the admin interface.  Once in, click the "Add Record" button and add your first quote.  If the first is successful, add a few more (but not all of them.  You want to test a few before you spend the time adding them all).  Once finished, click the "View Quotes" button and verify that the quotes you have added show in the list.  If you don't want to use links, just leave them blank.  The Quote and the Reference, however, are required fields.
+
+# Step Six:
+Browse to "display.php" in your web browser.  Refresh the page and you should see it cycle through the quotes you have added.  The more quotes you add the more random the script will be.
+
+==========
+STOP HERE!
+If the script is not working yet, you should email me.  From this point forward the instructions are for using the advanced features of QuoteMe.
+==========
+
+#Step Seven:
+Adding the QuoteMe 4 output to your existing web page.  
+1. Your web site must be parsed by the PHP interpreter.  This sounds complicated, but typically all you have to do is change the extension of the page from .html, .htm, etc to .php.  Once your home page or the page on which you want to display the quote is .php, you will add the following code to the page in the location at which you want the quote.
+
+<?php
+include('quotes/display.php');
+?> 
+
+"quotes/" being the name of the folder in which the display.php file lives.  If the page you want the quote on is down one level you will enter "..quotes/" just as you would with HTML relative links.
+
+#Step Eight
+Advanced features:
+
+Can I pull quotes from multiple databases?
+Yes you can.  Just add the additional quote file(s) to your webserver and then add them to the $dbFileName array located in the "inc.php" file.  There are instructions there for how to do that.  MAKE SURE to CHMOD the new quote datbase file to 766.
+
+Can I manage multiple quote databases from the admin area?
+Yes you can.  Once you have added another quote database file to you webserver and to the $dbFileName array (as described in above), the other quote database will automatically show up in the admin area.
+
+Can I set the duration that a quote will be displayed?
+Yes you can.  You will find a variable in the "display.php" file named $quoteType.  There are instructions just below that variable for how to set it.  You can set it to show a new quote once per hour, once per day, once per week. 

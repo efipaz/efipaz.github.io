@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="צור קשר עם אפ.אי. יעוץ עסקי - טלפון ודואר אלקטרוני">
+  <title>צור קשר - אפ.אי. יעוץ עסקי</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">אפ.אי. יעוץ עסקי</a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">ראשי</a></li>
+          <li><a href="services.html" class="nav__link">שירותים</a></li>
+          <li><a href="projects.html" class="nav__link">פרויקטים</a></li>
+          <li><a href="customers.html" class="nav__link">לקוחות</a></li>
+          <li><a href="About.html" class="nav__link">אודות</a></li>
+          <li><a href="contact.html" class="nav__link nav__link--active">צור קשר</a></li>
+        </ul>
+        <div class="lang-switch">
+          <a href="../index.html">לאתר הראשי</a>
+        </div>
+        <button class="nav__toggle" aria-label="תפריט">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>צור קשר</h1>
+      <p class="page-header__subtitle">נשמח לעמוד לשירותכם</p>
+    </div>
+  </section>
+
+  <!-- Contact Info -->
+  <section class="section">
+    <div class="container container--narrow">
+      <p class="mb-4">
+        נשמח לעמוד לשירותכם, לשאלות, הבהרות או מתן מידע נוסף, וכן לקביעת פגישה ראשונית ללא כל התחייבות מצדכם. אנא שלחו דואר אלקטרוני לכתובת הבאה, או צלצלו אל המספרים הבאים:
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <div class="card__content text-center">
+            <h3 class="card__title">טלפון</h3>
+            <p class="card__text" style="font-size: 1.25rem; font-weight: 500;">
+              054-451-4502
+            </p>
+            <p class="card__text" style="font-size: 1.25rem; font-weight: 500;">
+              077-327-9627
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__content text-center">
+            <h3 class="card__title">דואר אלקטרוני</h3>
+            <p class="card__text">
+              <a href="mailto:efipaz@gmail.com" style="font-size: 1.25rem;">efipaz@gmail.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Info -->
+  <section class="section section--alt">
+    <div class="container text-center">
+      <h2 class="mb-2">מעוניינים לדעת עוד?</h2>
+      <p class="mb-3">בקרו בעמודים נוספים באתר:</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="services.html" class="btn">שירותים</a>
+        <a href="projects.html" class="btn">פרויקטים</a>
+        <a href="About.html" class="btn">אודות אפי פז</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__section">
+          <h4>ניווט</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">ראשי</a></li>
+            <li><a href="services.html">שירותים</a></li>
+            <li><a href="projects.html">פרויקטים</a></li>
+            <li><a href="customers.html">לקוחות</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h4>מידע</h4>
+          <ul class="footer__links">
+            <li><a href="About.html">אודות אפי פז</a></li>
+            <li><a href="links.html">קישורים</a></li>
+            <li><a href="contact.html">צור קשר</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h4>קשר</h4>
+          <ul class="footer__links">
+            <li><a href="mailto:efipaz@gmail.com">efipaz@gmail.com</a></li>
+            <li>054-451-4502</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p><a href="../index.html">אפי פז</a> - אתר אישי</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile navigation toggle
+    document.querySelector('.nav__toggle').addEventListener('click', function() {
+      document.querySelector('.nav__list').classList.toggle('is-open');
+    });
+  </script>
+
+</body>
+</html>

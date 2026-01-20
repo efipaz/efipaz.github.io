@@ -1,0 +1,1557 @@
+; Copyright 2012 Samsung. ALL right reserved.
+
+[Version]
+Signature="$Windows NT$"
+Class=Printer
+Provider=%PROVIDER%
+CatalogFile = spd__.cat
+DriverVer=05/01/2012, 2.03.06.00
+ClassGUID={4D36E979-E325-11CE-BFC1-08002BE10318}
+
+;
+; The Manufacturer section lists all of the manufacturers that we will
+; display in the Dialog box
+
+[Manufacturer]
+%PROVIDER% = MODEL,NTx86,NTx86.5.1,NTx86.6.0,NTamd64,NTamd64.6.0
+
+; Model section for Windows 2000 and XP
+[MODEL]
+;; PCL 6
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-21500EDE
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-6x45_Seri402B
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-6x55_SeriD226
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-5835_5935A385
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-5635_Seri1761
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4x28_SeriC3CA
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4x24_Seri96CA
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-4050_SerieF4B1
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-3470_Serie1673
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2855_Serie4BEF
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2850_SerieB5AE
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-8380_SeriE5E1
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-6240_SeriC8D1
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-6200_Seri08E3
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-770_Serie92C3
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-66021EB
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-61011E9
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-350_Serie2799
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-4550_SerieE4A1
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4725_SeriBE39
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-6x22_Seri0441
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2570_SerieEEA7
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-8x00_Serie2833
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-5x30_SeriC963
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-3050328E
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4x20_SeriA56A
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-5x15_Seri361A
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-6x20_Seri1D61
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungMFP_830_Serie0AEF
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-620_Serie07AF
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-670_Serie5790
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-8385_SeriDA21
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-6250_SeriBADD
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-6220_Seri08FB
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2580_Serie1EE6
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-6545_Seri6CB8
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4x25_Seri5A0B
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-8540_SeriFA54
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-9250_93501897
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-4055_SerieCB71
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-4555_SerieDB61
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-3475_SerieE832
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2853_Serie616F
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-8030_8040F03D
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-8385X_SerAAA6
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-8540X_Ser4D45
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-5835_5935D05F
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-6x55X_Ser68EF
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-6545X_Ser22D1
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-8850_8950_127C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-371x_SerieEE2C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-483x_5x3x14E2
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-551x_651x_AD53
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-451x_501x_8B8C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-775_SerieAD03
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2950_SerieB17E
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-472x_SeriD67D
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-680_Serie8651
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-6260_SeriA8C8
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-410_Serie3D1A
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-4190_Seri4F0A
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-92x1_93x1E1C8
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-8123_812813A0
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-375x_Serie2E1E
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-3300_Seri01A3
+
+;; SPL
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-310_SerieE7AB
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-3170_Seri3B5D
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-20100E8D
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-216x_SeriC151
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-3160_SeriAB50
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-30082F8
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-650D1EB
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-60083E8
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-550D11B
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-5101119
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-5008318
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4500W_Ser0234
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4500_SeriC942
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4300_Seri1721
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1630W_SeriBD18
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1630_Serie656A
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2245_SerieFBC0
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2240_SerieC400
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1640_Serie554C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-3560C39E
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2510_Serie4E8C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-16104B6D
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4200_SeriD388
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4x21_SeriA90A
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2550CF9F
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2550S55CF
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-22500E2E
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1520BB9D
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1740DB3F
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-17108B3C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1510_700B569
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-17504B3E
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4214F6A17
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4x16_SeriBF5F
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4100_Seri1C03
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungMFP_560_SerieA043
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SAMSUNGMFP_750_SERIE9AF4
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSF-555PF819
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCF-555PF971
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-10104A8D
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1020M50BA
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-12108A2C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1220ME8BB
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2000DE6
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2109DE7
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-60406E8F
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSF-530_Series3FD8
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCF-530_SeriesD66C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SAMSUNGML-4300167C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SAMSUNGML-4500179C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SAMSUNGML-50802A8A
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SAMSUNGCF-5100P2902
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SAMSUNGSF-5100PC702
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1430EBCD
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1440DBCF
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-14504BCE
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-60709E8F
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-60806E8A
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSF-6800078B
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCF-680006E3
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SAMSUNGMSYS_5150AND5C730
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SAMSUNGSF5800P0728
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SAMSUNGCF5800P0642
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-191x_252x_495D
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2525W_Seri087C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4600_SeriC6B0
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4623_Seri9191
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungMFP_65x_SerieB100
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-3180_SeriCB1C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-320_Serie17BF
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1660_Serie3555
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-3200_Seri4793
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4623FW_Se1F41
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1865W_Seri7500
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-331x_Serie3B6D
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1860_SerieC034 
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1670_SerieA558
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2540_Serie1EB3
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-331x_Serie3B6D
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2160_Serie6B92
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-3400_Seri9A0A
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSF-760_SeriesA544
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-360_SerieD78D
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4650_4x21EC2D
+
+[MODEL.NTx86]
+;; PCL 6
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-6x45_Seri402B
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-6x55_SeriD226
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-5835_5935A385
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-5635_Seri1761
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4x28_SeriC3CA
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4x24_Seri96CA
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-4050_SerieF4B1
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-3470_Serie1673
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2855_Serie4BEF
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2850_SerieB5AE
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-8380_SeriE5E1
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-6240_SeriC8D1
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-6200_Seri08E3
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-770_Serie92C3
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-66021EB
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-61011E9
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-350_Serie2799
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-4550_SerieE4A1
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4725_SeriBE39
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-6x22_Seri0441
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2570_SerieEEA7
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-8x00_Serie2833
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-5x30_SeriC963
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-3050328E
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4x20_SeriA56A
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-5x15_Seri361A
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-6x20_Seri1D61
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungMFP_830_Serie0AEF
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-620_Serie07AF
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-670_Serie5790
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-8385_SeriDA21
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-6250_SeriBADD
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-6220_Seri08FB
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2580_Serie1EE6
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-6545_Seri6CB8
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4x25_Seri5A0B
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-8540_SeriFA54
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-9250_93501897
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-4055_SerieCB71
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-4555_SerieDB61
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-3475_SerieE832
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2853_Serie616F
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-8030_8040F03D
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-8385X_SerAAA6
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-8540X_Ser4D45
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-5835_5935D05F
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-6x55X_Ser68EF
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-6545X_Ser22D1
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-8850_8950_127C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-371x_SerieEE2C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-483x_5x3x14E2
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-551x_651x_AD53
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-451x_501x_8B8C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-775_SerieAD03
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2950_SerieB17E
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-472x_SeriD67D
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-680_Serie8651
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-6260_SeriA8C8
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-410_Serie3D1A
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-4190_Seri4F0A
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-92x1_93x1E1C8
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-8123_812813A0
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-375x_Serie2E1E
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-3300_Seri01A3
+
+;; SPL
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-310_SerieE7AB
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-3170_Seri3B5D
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-20100E8D
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-216x_SeriC151
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-3160_SeriAB50
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-30082F8
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-650D1EB
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-60083E8
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-550D11B
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-5101119
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-5008318
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4500W_Ser0234
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4500_SeriC942
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4300_Seri1721
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1630W_SeriBD18
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1630_Serie656A
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2245_SerieFBC0
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2240_SerieC400
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1640_Serie554C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-3560C39E
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2510_Serie4E8C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-16104B6D
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4200_SeriD388
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4x21_SeriA90A
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-21500EDE
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2550CF9F
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2550S55CF
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-22500E2E
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1520BB9D
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1740DB3F
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-17108B3C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1510_700B569
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-17504B3E
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4214F6A17
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4x16_SeriBF5F
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4100_Seri1C03
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungMFP_560_SerieA043
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SAMSUNGMFP_750_SERIE9AF4
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSF-555PF819
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCF-555PF971
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-10104A8D
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1020M50BA
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-12108A2C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1220ME8BB
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2000DE6
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2109DE7
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-60406E8F
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSF-530_Series3FD8
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCF-530_SeriesD66C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SAMSUNGML-4300167C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SAMSUNGML-4500179C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SAMSUNGML-50802A8A
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SAMSUNGCF-5100P2902
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SAMSUNGSF-5100PC702
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1430EBCD
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1440DBCF
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-14504BCE
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-60709E8F
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-60806E8A
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSF-6800078B
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCF-680006E3
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SAMSUNGMSYS_5150AND5C730
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SAMSUNGSF5800P0728
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SAMSUNGCF5800P0642
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-191x_252x_495D
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2525W_Seri087C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4600_SeriC6B0
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4623_Seri9191
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungMFP_65x_SerieB100
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-3180_SeriCB1C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-320_Serie17BF
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1660_Serie3555
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-3200_Seri4793
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4623FW_Se1F41
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1865W_Seri7500
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-331x_Serie3B6D
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1860_SerieC034 
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1670_SerieA558
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2540_Serie1EB3
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-331x_Serie3B6D
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2160_Serie6B92
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-3400_Seri9A0A
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSF-760_SeriesA544
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-360_SerieD78D
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4650_4x21EC2D
+
+[MODEL.NTx86.5.1]
+;; PCL 6
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-21500EDE
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSCX-6x45_Seri402B
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSCX-6x55_SeriD226
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSCX-5835_5935A385
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSCX-5635_Seri1761
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSCX-4x28_SeriC3CA
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSCX-4x24_Seri96CA
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-4050_SerieF4B1
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-3470_Serie1673
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-2855_Serie4BEF
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-2850_SerieB5AE
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLX-8380_SeriE5E1
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLX-6240_SeriC8D1
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLX-6200_Seri08E3
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLP-770_Serie92C3
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLP-66021EB
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLP-61011E9
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLP-350_Serie2799
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-4550_SerieE4A1
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSCX-4725_SeriBE39
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSCX-6x22_Seri0441
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-2570_SerieEEA7
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-8x00_Serie2833
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSCX-5x30_SeriC963
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-3050328E
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSCX-4x20_SeriA56A
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSCX-5x15_Seri361A
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSCX-6x20_Seri1D61
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungMFP_830_Serie0AEF
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLP-620_Serie07AF
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLP-670_Serie5790
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLX-8385_SeriDA21
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLX-6250_SeriBADD
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLX-6220_Seri08FB
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-2580_Serie1EE6
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSCX-6545_Seri6CB8
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSCX-4x25_Seri5A0B
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLX-8540_SeriFA54
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLX-9250_93501897
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-4055_SerieCB71
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-4555_SerieDB61
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-3475_SerieE832
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-2853_Serie616F
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSCX-8030_8040F03D
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLX-8385X_SerAAA6
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLX-8540X_Ser4D45
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSCX-5835_5935D05F
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSCX-6x55X_Ser68EF
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSCX-6545X_Ser22D1
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-8850_8950_127C
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-371x_SerieEE2C
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSCX-483x_5x3x14E2
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-551x_651x_AD53
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-451x_501x_8B8C
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLP-775_SerieAD03
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-2950_SerieB17E
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSCX-472x_SeriD67D
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLP-680_Serie8651
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLX-6260_SeriA8C8
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLP-410_Serie3D1A
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLX-4190_Seri4F0A
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLX-92x1_93x1E1C8
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSCX-8123_812813A0
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-375x_Serie2E1E
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLX-3300_Seri01A3
+
+;; SPL
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLP-310_SerieE7AB
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLX-3170_Seri3B5D
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-20100E8D
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLX-216x_SeriC151
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLX-3160_SeriAB50
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLP-30082F8
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLP-650D1EB
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLP-60083E8
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLP-550D11B
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLP-5101119
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLP-5008318
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSCX-4500W_Ser0234
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSCX-4500_SeriC942
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSCX-4300_Seri1721
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-1630W_SeriBD18
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-1630_Serie656A
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-2245_SerieFBC0
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-2240_SerieC400
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-1640_Serie554C
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-3560C39E
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-2510_Serie4E8C
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-16104B6D
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSCX-4200_SeriD388
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSCX-4x21_SeriA90A
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-2550CF9F
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-2550S55CF
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-22500E2E
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-1520BB9D
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-1740DB3F
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-17108B3C
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-1510_700B569
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-17504B3E
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSCX-4214F6A17
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSCX-4x16_SeriBF5F
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSCX-4100_Seri1C03
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungMFP_560_SerieA043
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SAMSUNGMFP_750_SERIE9AF4
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSF-555PF819
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCF-555PF971
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-10104A8D
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-1020M50BA
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-12108A2C
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-1220ME8BB
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-2000DE6
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-2109DE7
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-60406E8F
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSF-530_Series3FD8
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCF-530_SeriesD66C
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SAMSUNGML-4300167C
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SAMSUNGML-4500179C
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SAMSUNGML-50802A8A
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SAMSUNGCF-5100P2902
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SAMSUNGSF-5100PC702
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-1430EBCD
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-1440DBCF
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-14504BCE
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-60709E8F
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-60806E8A
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSF-6800078B
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCF-680006E3
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SAMSUNGMSYS_5150AND5C730
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SAMSUNGSF5800P0728
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SAMSUNGCF5800P0642
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-191x_252x_495D
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-2525W_Seri087C
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSCX-4600_SeriC6B0
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSCX-4623_Seri9191
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungMFP_65x_SerieB100
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLX-3180_SeriCB1C
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLP-320_Serie17BF
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-1660_Serie3555
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSCX-3200_Seri4793
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSCX-4623FW_Se1F41
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-1865W_Seri7500
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-331x_Serie3B6D
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-1860_SerieC034 
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-1670_SerieA558
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-2540_Serie1EB3
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-331x_Serie3B6D
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungML-2160_Serie6B92
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSCX-3400_Seri9A0A
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSF-760_SeriesA544
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungCLP-360_SerieD78D
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.5.1, USBPRINT\SamsungSCX-4650_4x21EC2D
+
+[MODEL.NTx86.6.0]
+;; PCL 6
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-21500EDE
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSCX-6x45_Seri402B
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSCX-6x55_SeriD226
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSCX-5835_5935A385
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSCX-5635_Seri1761
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSCX-4x28_SeriC3CA
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSCX-4x24_Seri96CA
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-4050_SerieF4B1
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-3470_Serie1673
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-2855_Serie4BEF
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-2850_SerieB5AE
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLX-8380_SeriE5E1
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLX-6240_SeriC8D1
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLX-6200_Seri08E3
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLP-770_Serie92C3
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLP-66021EB
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLP-61011E9
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLP-350_Serie2799
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-4550_SerieE4A1
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSCX-4725_SeriBE39
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSCX-6x22_Seri0441
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-2570_SerieEEA7
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-8x00_Serie2833
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSCX-5x30_SeriC963
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-3050328E
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSCX-4x20_SeriA56A
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSCX-5x15_Seri361A
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSCX-6x20_Seri1D61
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungMFP_830_Serie0AEF
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLP-620_Serie07AF
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLP-670_Serie5790
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLX-8385_SeriDA21
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLX-6250_SeriBADD
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLX-6220_Seri08FB
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-2580_Serie1EE6
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSCX-6545_Seri6CB8
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSCX-4x25_Seri5A0B
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLX-8540_SeriFA54
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLX-9250_93501897
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-4055_SerieCB71
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-4555_SerieDB61
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-3475_SerieE832
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-2853_Serie616F
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSCX-8030_8040F03D
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLX-8385X_SerAAA6
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLX-8540X_Ser4D45
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSCX-5835_5935D05F
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSCX-6x55X_Ser68EF
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSCX-6545X_Ser22D1
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-8850_8950_127C
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-371x_SerieEE2C
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSCX-483x_5x3x14E2
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-551x_651x_AD53
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-451x_501x_8B8C
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLP-775_SerieAD03
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-2950_SerieB17E
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSCX-472x_SeriD67D
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLP-680_Serie8651
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLX-6260_SeriA8C8
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLP-410_Serie3D1A
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLX-4190_Seri4F0A
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLX-92x1_93x1E1C8
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSCX-8123_812813A0
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-375x_Serie2E1E
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLX-3300_Seri01A3
+
+;; SPL
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLP-310_SerieE7AB
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLX-3170_Seri3B5D
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-20100E8D
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLX-216x_SeriC151
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLX-3160_SeriAB50
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLP-30082F8
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLP-650D1EB
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLP-60083E8
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLP-550D11B
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLP-5101119
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLP-5008318
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSCX-4500W_Ser0234
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSCX-4500_SeriC942
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSCX-4300_Seri1721
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-1630W_SeriBD18
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-1630_Serie656A
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-2245_SerieFBC0
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-2240_SerieC400
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-1640_Serie554C
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-3560C39E
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-2510_Serie4E8C
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-16104B6D
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSCX-4200_SeriD388
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSCX-4x21_SeriA90A
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-2550CF9F
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-2550S55CF
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-22500E2E
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-1520BB9D
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-1740DB3F
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-17108B3C
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-1510_700B569
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-17504B3E
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSCX-4214F6A17
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSCX-4x16_SeriBF5F
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSCX-4100_Seri1C03
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungMFP_560_SerieA043
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SAMSUNGMFP_750_SERIE9AF4
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSF-555PF819
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCF-555PF971
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-10104A8D
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-1020M50BA
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-12108A2C
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-1220ME8BB
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-2000DE6
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-2109DE7
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-60406E8F
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSF-530_Series3FD8
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCF-530_SeriesD66C
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SAMSUNGML-4300167C
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SAMSUNGML-4500179C
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SAMSUNGML-50802A8A
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SAMSUNGCF-5100P2902
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SAMSUNGSF-5100PC702
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-1430EBCD
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-1440DBCF
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-14504BCE
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-60709E8F
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-60806E8A
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSF-6800078B
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCF-680006E3
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SAMSUNGMSYS_5150AND5C730
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SAMSUNGSF5800P0728
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SAMSUNGCF5800P0642
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-191x_252x_495D
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-2525W_Seri087C
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSCX-4600_SeriC6B0
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSCX-4623_Seri9191
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungMFP_65x_SerieB100
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLX-3180_SeriCB1C
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLP-320_Serie17BF
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-1660_Serie3555
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSCX-3200_Seri4793
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSCX-4623FW_Se1F41
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-1865W_Seri7500
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-331x_Serie3B6D
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-1860_SerieC034 
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-1670_SerieA558
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-2540_Serie1EB3
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-331x_Serie3B6D
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungML-2160_Serie6B92
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSCX-3400_Seri9A0A
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSF-760_SeriesA544
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungCLP-360_SerieD78D
+"Samsung Universal Print Driver" = DRVINSTALL.NTx86.6.0, USBPRINT\SamsungSCX-4650_4x21EC2D
+
+[MODEL.ntamd64]
+;; PCL 6
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-6x45_Seri402B
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-6x55_SeriD226
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-5835_5935A385
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-5635_Seri1761
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4x28_SeriC3CA
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4x24_Seri96CA
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-4050_SerieF4B1
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-3470_Serie1673
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2855_Serie4BEF
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2850_SerieB5AE
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-8380_SeriE5E1
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-6240_SeriC8D1
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-6200_Seri08E3
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-770_Serie92C3
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-66021EB
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-61011E9
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-350_Serie2799
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-4550_SerieE4A1
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4725_SeriBE39
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-6x22_Seri0441
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2570_SerieEEA7
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-8x00_Serie2833
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-5x30_SeriC963
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-3050328E
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4x20_SeriA56A
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-5x15_Seri361A
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-6x20_Seri1D61
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungMFP_830_Serie0AEF
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-620_Serie07AF
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-670_Serie5790
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-8385_SeriDA21
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-6250_SeriBADD
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-6220_Seri08FB
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2580_Serie1EE6
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-6545_Seri6CB8
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4x25_Seri5A0B
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-8540_SeriFA54
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-9250_93501897
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-4055_SerieCB71
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-4555_SerieDB61
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-3475_SerieE832
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2853_Serie616F
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-8030_8040F03D
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-8385X_SerAAA6
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-8540X_Ser4D45
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-5835_5935D05F
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-6x55X_Ser68EF
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-6545X_Ser22D1
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-8850_8950_127C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-371x_SerieEE2C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-483x_5x3x14E2
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-551x_651x_AD53
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-451x_501x_8B8C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-775_SerieAD03
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2950_SerieB17E
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-472x_SeriD67D
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-680_Serie8651
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-6260_SeriA8C8
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-410_Serie3D1A
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-4190_Seri4F0A
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-92x1_93x1E1C8
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-8123_812813A0
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-375x_Serie2E1E
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-3300_Seri01A3
+
+;; SPL
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-310_SerieE7AB
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-3170_Seri3B5D
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-20100E8D
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-216x_SeriC151
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-3160_SeriAB50
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-30082F8
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-650D1EB
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-60083E8
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-550D11B
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-5101119
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-5008318
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4500W_Ser0234
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4500_SeriC942
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4300_Seri1721
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1630W_SeriBD18
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1630_Serie656A
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2245_SerieFBC0
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2240_SerieC400
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1640_Serie554C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-3560C39E
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2510_Serie4E8C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-16104B6D
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4200_SeriD388
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4x21_SeriA90A
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-21500EDE
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2550CF9F
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2550S55CF
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-22500E2E
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1520BB9D
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1740DB3F
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-17108B3C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1510_700B569
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-17504B3E
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4214F6A17
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4x16_SeriBF5F
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4100_Seri1C03
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungMFP_560_SerieA043
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SAMSUNGMFP_750_SERIE9AF4
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSF-555PF819
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCF-555PF971
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-10104A8D
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1020M50BA
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-12108A2C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1220ME8BB
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2000DE6
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2109DE7
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-60406E8F
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSF-530_Series3FD8
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCF-530_SeriesD66C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SAMSUNGML-4300167C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SAMSUNGML-4500179C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SAMSUNGML-50802A8A
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SAMSUNGCF-5100P2902
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SAMSUNGSF-5100PC702
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1430EBCD
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1440DBCF
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-14504BCE
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-60709E8F
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-60806E8A
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSF-6800078B
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCF-680006E3
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SAMSUNGMSYS_5150AND5C730
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SAMSUNGSF5800P0728
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SAMSUNGCF5800P0642
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-191x_252x_495D
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2525W_Seri087C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4600_SeriC6B0
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4623_Seri9191
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungMFP_65x_SerieB100
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLX-3180_SeriCB1C
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-320_Serie17BF
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1660_Serie3555
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-3200_Seri4793
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4623FW_Se1F41
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1865W_Seri7500
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-331x_Serie3B6D
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1860_SerieC034 
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-1670_SerieA558
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2540_Serie1EB3
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-331x_Serie3B6D
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungML-2160_Serie6B92
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-3400_Seri9A0A
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSF-760_SeriesA544
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungCLP-360_SerieD78D
+"Samsung Universal Print Driver" = DRVINSTALL, USBPRINT\SamsungSCX-4650_4x21EC2D
+
+[MODEL.NTamd64.6.0]
+;; PCL 6
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-21500EDE
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSCX-6x45_Seri402B
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSCX-6x55_SeriD226
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSCX-5835_5935A385
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSCX-5635_Seri1761
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSCX-4x28_SeriC3CA
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSCX-4x24_Seri96CA
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-4050_SerieF4B1
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-3470_Serie1673
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-2855_Serie4BEF
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-2850_SerieB5AE
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLX-8380_SeriE5E1
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLX-6240_SeriC8D1
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLX-6200_Seri08E3
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLP-770_Serie92C3
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLP-66021EB
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLP-61011E9
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLP-350_Serie2799
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-4550_SerieE4A1
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSCX-4725_SeriBE39
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSCX-6x22_Seri0441
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-2570_SerieEEA7
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-8x00_Serie2833
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSCX-5x30_SeriC963
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-3050328E
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSCX-4x20_SeriA56A
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSCX-5x15_Seri361A
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSCX-6x20_Seri1D61
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungMFP_830_Serie0AEF
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLP-620_Serie07AF
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLP-670_Serie5790
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLX-8385_SeriDA21
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLX-6250_SeriBADD
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLX-6220_Seri08FB
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-2580_Serie1EE6
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSCX-6545_Seri6CB8
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSCX-4x25_Seri5A0B
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLX-8540_SeriFA54
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLX-9250_93501897
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-4055_SerieCB71
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-4555_SerieDB61
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-3475_SerieE832
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-2853_Serie616F
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSCX-8030_8040F03D
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLX-8385X_SerAAA6
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLX-8540X_Ser4D45
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSCX-5835_5935D05F
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSCX-6x55X_Ser68EF
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSCX-6545X_Ser22D1
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-8850_8950_127C
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-371x_SerieEE2C
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSCX-483x_5x3x14E2
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-551x_651x_AD53
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-451x_501x_8B8C
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLP-775_SerieAD03
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-2950_SerieB17E
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSCX-472x_SeriD67D
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLP-680_Serie8651
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLX-6260_SeriA8C8
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLP-410_Serie3D1A
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLX-4190_Seri4F0A
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLX-92x1_93x1E1C8
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSCX-8123_812813A0
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-375x_Serie2E1E
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLX-3300_Seri01A3
+
+;; SPL
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLP-310_SerieE7AB
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLX-3170_Seri3B5D
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-20100E8D
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLX-216x_SeriC151
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLX-3160_SeriAB50
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLP-30082F8
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLP-650D1EB
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLP-60083E8
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLP-550D11B
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLP-5101119
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLP-5008318
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSCX-4500W_Ser0234
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSCX-4500_SeriC942
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSCX-4300_Seri1721
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-1630W_SeriBD18
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-1630_Serie656A
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-2245_SerieFBC0
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-2240_SerieC400
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-1640_Serie554C
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-3560C39E
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-2510_Serie4E8C
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-16104B6D
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSCX-4200_SeriD388
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSCX-4x21_SeriA90A
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-2550CF9F
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-2550S55CF
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-22500E2E
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-1520BB9D
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-1740DB3F
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-17108B3C
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-1510_700B569
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-17504B3E
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSCX-4214F6A17
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSCX-4x16_SeriBF5F
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSCX-4100_Seri1C03
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungMFP_560_SerieA043
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SAMSUNGMFP_750_SERIE9AF4
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSF-555PF819
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCF-555PF971
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-10104A8D
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-1020M50BA
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-12108A2C
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-1220ME8BB
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-2000DE6
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-2109DE7
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-60406E8F
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSF-530_Series3FD8
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCF-530_SeriesD66C
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SAMSUNGML-4300167C
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SAMSUNGML-4500179C
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SAMSUNGML-50802A8A
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SAMSUNGCF-5100P2902
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SAMSUNGSF-5100PC702
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-1430EBCD
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-1440DBCF
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-14504BCE
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-60709E8F
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-60806E8A
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSF-6800078B
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCF-680006E3
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SAMSUNGMSYS_5150AND5C730
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SAMSUNGSF5800P0728
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SAMSUNGCF5800P0642
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-191x_252x_495D
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-2525W_Seri087C
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSCX-4600_SeriC6B0
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSCX-4623_Seri9191
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungMFP_65x_SerieB100
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLX-3180_SeriCB1C
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLP-320_Serie17BF
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-1660_Serie3555
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSCX-3200_Seri4793
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSCX-4623FW_Se1F41
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-1865W_Seri7500
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-331x_Serie3B6D
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-1860_SerieC034 
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-1670_SerieA558
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-2540_Serie1EB3
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-331x_Serie3B6D
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungML-2160_Serie6B92
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSCX-3400_Seri9A0A
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSF-760_SeriesA544
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungCLP-360_SerieD78D
+"Samsung Universal Print Driver" = DRVINSTALL.NTamd64.6.0, USBPRINT\SamsungSCX-4650_4x21EC2D
+
+[OEM URLS]
+%PROVIDER% = "http://www.samsungelectronics.com/printer/support/index.html"
+
+;
+; Installer Sections
+;
+; These sections control file installation, and reference all files that
+; need to be copied. If the section name will be assumed to be the driver
+; file, unless there is an explicit DriverFile section listed.
+;
+
+; Installation section for Win2000 and XP
+[DRVINSTALL]
+CopyFiles=DRVFILES,LANGMONFILES,COINSTFILES,PRPROCFILES,UPDFILES,UPDAGENT,PPL_X_FILES
+DataSection=DRVCONFIG
+DataFile=spd__pp.dll
+
+[DRVINSTALL.NTx86.5.1]
+CopyFiles=DRVFILES,LANGMONFILES,COINSTFILES,PRPROCFILES,UPDFILES,UPDAGENT,PPL_O_FILES
+DataSection=DRVCONFIG
+DataFile=spd__pp.dll
+
+[DRVINSTALL.NTx86.6.0]
+CopyFiles=DRVFILES,LANGMONFILES,COINSTFILES,PRPROCFILES,UPDFILES,UPDAGENT,PPL_O_FILES
+DataSection=DRVCONFIG
+DataFile=spd__pp.dll
+AddReg = DRVINSTALL.NTx86.6.0.AddReg
+
+[DRVINSTALL.NTx86.6.0.AddReg]
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Low Rights\ElevationPolicy\%GUIDSM%",AppName,0x00000000,spd__sm.exe
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Low Rights\ElevationPolicy\%GUIDSM%",AppPath,0x00000000,"%51%\drivers\w32x86\3"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Low Rights\ElevationPolicy\%GUIDSM%",Policy,0x00010001,3
+
+[DRVINSTALL.NTamd64.6.0]
+CopyFiles=DRVFILES,LANGMONFILES,COINSTFILES,PRPROCFILES,UPDFILES,UPDAGENT,PPL_O_FILES
+DataSection=DRVCONFIG
+DataFile=spd__pp.dll
+AddReg = DRVINSTALL.NTamd64.6.0.AddReg
+
+[DRVINSTALL.NTamd64.6.0.AddReg]
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Low Rights\ElevationPolicy\%GUIDSM%",AppName,0x00000000,spd__sm.exe
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Low Rights\ElevationPolicy\%GUIDSM%",AppPath,0x00000000,"%51%\drivers\x64\3"
+HKLM,"SOFTWARE\Microsoft\Internet Explorer\Low Rights\ElevationPolicy\%GUIDSM%",Policy,0x00010001,3
+
+;
+; Data Sections
+;
+; These sections contain data that is shared between devices.
+;
+[DRVCONFIG]
+DriverFile=spd__.dll
+ConfigFile=spd__du.dll
+HelpFile=spd__en.chm
+LanguageMonitor="spd__ Langmon,spd__l.dll"
+PrintProcessor="spd__PC,spd__pc.dll"
+
+[DRVINSTALL.CoInstallers] 
+AddReg=COINST.AddReg 
+CopyFiles=COINSTFILES
+
+[DRVINSTALL.CoInstallers] 
+AddReg=COINST.AddReg 
+CopyFiles=COINSTFILES
+
+[DRVINSTALL.NTx86.5.1.CoInstallers] 
+AddReg=COINST.AddReg 
+CopyFiles=COINSTFILES
+
+[DRVINSTALL.NTx86.6.0.CoInstallers] 
+AddReg=COINST.AddReg 
+CopyFiles=COINSTFILES
+
+[DRVINSTALL.NTamd64.6.0.CoInstallers] 
+AddReg=COINST.AddReg 
+CopyFiles=COINSTFILES
+
+[COINST.AddReg]
+HKR,,CoInstallers32,0x10000,"spd__ci.dll,CoDeviceInstall"
+
+;------------------------------------------------------
+
+; Copy Sections
+;
+; Lists of files that are actually copied. These sections are referenced
+; from the installer sections, above. Only create a section if it contains
+; two or more files (if we only copy a single file, identify it in the
+; installer section, using the @filename notation)
+;
+[LANGMONFILES]
+spd__l.dll,      itdrvl.dll
+spd__l.smt,	  	 itdrvl.smt
+
+[PRPROCFILES]
+spd__pc.dll,  itdrvpc.dll
+
+[COINSTFILES] 
+spd__ci.dll,  coinst.dll
+spd__ci.exe,  coinst.exe
+
+[PPL_X_FILES]
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; FrameBuffer files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+spd__lf.dll,  itdrvlf.dll
+spd__um.dll,  itdrvums.dll
+spd__um.xml,  itdrvum.xml
+
+[PPL_O_FILES]
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; FrameBuffer files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+spd__lf.dll,  itdrvlf.dll
+spd__um.dll,  itdrvum.dll
+spd__um.xml,  itdrvum.xml
+
+[UPDFILES]
+UPDIO2.dll,,,0x00000020
+SUPDSvc2.exe,,,0x00000020
+SUPDSvcA2.dll,,,0x00000020
+SUPDRun.exe,,,0x00000020
+
+[UPDAGENT]
+spd__a.dll, itdrva.dll
+spd__sm.zip,  itdrvsm.zip
+spd__a__.xml, itdrva__.xml
+spd__aab.chm,  itdrvaab.chm 
+spd__abp.chm,  itdrvabp.chm 
+spd__acp.chm,  itdrvacp.chm
+spd__act.chm,  itdrvact.chm
+spd__acz.chm,  itdrvacz.chm
+spd__adn.chm,  itdrvadn.chm 
+spd__adt.chm,  itdrvadt.chm 
+spd__ael.chm,  itdrvael.chm 
+spd__aen.chm,  itdrvaen.chm 
+spd__afi.chm,  itdrvafi.chm 
+spd__afn.chm,  itdrvafn.chm 
+spd__agr.chm,  itdrvagr.chm 
+spd__ahb.chm,  itdrvahb.chm 
+spd__ahu.chm,  itdrvahu.chm
+spd__ait.chm,  itdrvait.chm 
+spd__akr.chm,  itdrvakr.chm 
+spd__anr.chm,  itdrvanr.chm 
+spd__apo.chm,  itdrvapo.chm 
+spd__apt.chm,  itdrvapt.chm 
+spd__aru.chm,  itdrvaru.chm 
+spd__asp.chm,  itdrvasp.chm 
+spd__asw.chm,  itdrvasw.chm 
+spd__atk.chm,  itdrvatk.chm 
+spd__auk.chm,  itdrvauk.chm 
+
+[DRVFILES]
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Driver Core files and DLLs and Other files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+spd__cu.dll,  itdrvcu.dll
+spd__.dll,    itdrv.dll
+spd__du.dll,  itdrvdu.dll
+spd__uc.dll,  itdrvuc.dll
+spd__ur.dll,  itdrvur.dll
+spd__pp.dll,  itdrvpp.dll
+spd__o.dll,   itdrvo.dll
+spd__mu.dll,  itdrvmu.dll
+spd__f.xml, itdrvf.xml
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; ; Smart Unsupported List
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+spd__sm.txt,  itdrvsm.txt
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Smart Panel files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+spd__sm.dll,  itdrvsm.dll
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Lite Status Monitor files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+spd__sm.exe,    itdrvsm.exe
+spd__sm.trs,	itdrvsm.trs
+spd__sm.xml,	itdrvsm.xml
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; SmartCMS files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+spd__sc.cts
+spd__sc.dll,   itdrvsc.dll
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Model specific SmartCMS files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Manual Duplex files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Common script files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+spd__c.xml
+spdm_c.xml
+spdc_c.xml
+spd__p.xml
+spd__pp.ver
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Model specific script files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Bmp files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+spd__lc.bmp,  itdrvlc.bmp
+spd__yc.bmp, itdrvyc.bmp
+spd__xc.bmp, itdrvxc.bmp
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Color bitmap
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+spd__zc.bmp, itdrvzc.bmp
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Model dependent bitmap
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; SNMP files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+spd__io.dll,  itdrvio.dll
+spd__n.dll,   itdrvn.dll
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Confirm files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+spd__xu.dll,	itdrvxu.dll
+spd__an.dll,	itdrvan.dll
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; CrAL files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+spd__al.dll, itdrval.dll
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Smart Panel TRS files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+spd__smab.trs,  panel_AB.trs
+;spd__smbg.trs,	panel_BG.trs
+spd__smbp.trs,	panel_BP.trs
+spd__smcp.trs,	panel_CP.trs
+spd__smct.trs,  panel_CT.trs
+spd__smcz.trs,  panel_CZ.trs
+spd__smdn.trs,  panel_DN.trs
+spd__smdt.trs,  panel_DT.trs
+spd__smel.trs,  panel_EL.trs
+spd__smen.trs,  panel_EN.trs
+spd__smfi.trs,  panel_FI.trs
+spd__smfn.trs,  panel_FN.trs
+spd__smgr.trs,  panel_GR.trs
+spd__smhb.trs,  panel_HB.trs
+spd__smhu.trs,  panel_HU.trs
+spd__smit.trs,  panel_IT.trs
+spd__smkr.trs,  panel_KR.trs
+spd__smnr.trs,  panel_NR.trs
+spd__smpo.trs,  panel_PO.trs
+spd__smpt.trs,  panel_PT.trs
+;spd__smro.trs,  panel_RO.trs
+spd__smru.trs,  panel_RU.trs
+spd__smsp.trs,  panel_SP.trs
+spd__smsw.trs,  panel_SW.trs
+spd__smtk.trs,  panel_TK.trs
+spd__smuk.trs,  panel_UK.trs
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Localized XML files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+spd__ab.xml,  itdrvab.xml 
+spd__bp.xml,  itdrvbp.xml 
+spd__cp.xml,  itdrvcp.xml
+spd__ct.xml,  itdrvct.xml
+spd__cz.xml,  itdrvcz.xml
+spd__dn.xml,  itdrvdn.xml 
+spd__dt.xml,  itdrvdt.xml 
+spd__el.xml,  itdrvel.xml 
+spd__en.xml,  itdrven.xml 
+spd__fi.xml,  itdrvfi.xml 
+spd__fn.xml,  itdrvfn.xml 
+spd__gr.xml,  itdrvgr.xml 
+spd__hb.xml,  itdrvhb.xml 
+spd__hu.xml,  itdrvhu.xml
+spd__it.xml,  itdrvit.xml 
+spd__kr.xml,  itdrvkr.xml 
+spd__nr.xml,  itdrvnr.xml 
+spd__po.xml,  itdrvpo.xml 
+spd__pt.xml,  itdrvpt.xml 
+spd__ru.xml,  itdrvru.xml 
+spd__sp.xml,  itdrvsp.xml 
+spd__sw.xml,  itdrvsw.xml 
+spd__tk.xml,  itdrvtk.xml 
+spd__uk.xml,  itdrvuk.xml 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Help files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+spd__ab.chm,  itdrvab.chm 
+spd__bp.chm,  itdrvbp.chm 
+spd__cp.chm,  itdrvcp.chm
+spd__ct.chm,  itdrvct.chm
+spd__cz.chm,  itdrvcz.chm
+spd__dn.chm,  itdrvdn.chm 
+spd__dt.chm,  itdrvdt.chm 
+spd__el.chm,  itdrvel.chm 
+spd__en.chm,  itdrven.chm 
+spd__fi.chm,  itdrvfi.chm 
+spd__fn.chm,  itdrvfn.chm 
+spd__gr.chm,  itdrvgr.chm 
+spd__hb.chm,  itdrvhb.chm 
+spd__hu.chm,  itdrvhu.chm
+spd__it.chm,  itdrvit.chm 
+spd__kr.chm,  itdrvkr.chm 
+spd__nr.chm,  itdrvnr.chm 
+spd__po.chm,  itdrvpo.chm 
+spd__pt.chm,  itdrvpt.chm 
+spd__ru.chm,  itdrvru.chm 
+spd__sp.chm,  itdrvsp.chm 
+spd__sw.chm,  itdrvsw.chm 
+spd__tk.chm,  itdrvtk.chm 
+spd__uk.chm,  itdrvuk.chm 
+
+;
+; Color profiles go to the colors directory.  All other files to the the
+; system directory
+;
+
+[DestinationDirs]
+DefaultDestDir=66000
+LANGMONFILES=66002
+COINSTFILES=66002
+PRPROCFILES=66001
+UPDFILES=66002
+UPDAGENT=66000
+
+[SourceDisksNames]
+7 = %DISK_NAME%,ITDRVLS.CAB,,
+6 = %DISK_NAME%,,,"i386"
+5 = %DISK_NAME%,,,"Common"
+4 = %DISK_NAME%,ITDRVAH.CAB,,
+3 = %DISK_NAME%,ITDRVH.CAB,,
+2 = %DISK_NAME%,ITDRVS.CAB,,
+1 = %DISK_NAME%,,,
+
+[SourceDisksNames.amd64]
+7 = %DISK_NAME%,ITDRVLS.CAB,,
+6 = %DISK_NAME%,,,"amd64"
+5 = %DISK_NAME%,,,"Common"
+4 = %DISK_NAME%,ITDRVAH.CAB,,
+3 = %DISK_NAME%,ITDRVH.CAB,,
+2 = %DISK_NAME%,ITDRVS.CAB,,
+1 = %DISK_NAME%,,,
+
+[SourceDisksFiles]
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Driver Core files and DLLs and Other files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+itdrvcu.dll		= 6
+itdrv.dll       = 6
+itdrvdu.dll     = 6
+itdrvuc.dll     = 6
+itdrvur.dll     = 6
+itdrvpp.dll     = 6
+itdrvo.dll      = 6
+itdrvmu.dll		= 6
+itdrvf.xml      = 5	
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Smart Unsupported List
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+itdrvsm.txt = 5
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Lite Status Monitor files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+itdrvsm.dll 	= 6
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; SML 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+itdrvsm.zip     = 5
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; FrameBuffer files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+itdrvlf.dll     = 6
+itdrvum.dll     = 6
+itdrvums.dll    = 6
+itdrvum.xml     = 5
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; SmartCMS files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+spd__sc.cts     = 1
+itdrvsc.dll     = 6
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Model specific SmartCMS files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Common script files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+spd__c.xml	= 1
+spdm_c.xml  = 1
+spdc_c.xml	= 1
+spd__p.xml	= 5
+spd__pp.ver	= 1
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Model specific script files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Bmp files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+itdrvlc.bmp     = 5
+itdrvyc.bmp    = 5
+itdrvxc.bmp    = 5
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Color bitmap
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+itdrvzc.bmp    = 5
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Model dependent bitmap
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; SNMP files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+itdrvio.dll     = 6
+itdrvn.dll      = 6
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Confirm files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+itdrvxu.dll     = 6
+itdrvan.dll     = 6
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; CrAL files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+itdrval.dll	    = 6
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Smart Panel TRS files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+panel_AB.trs	= 7
+;panel_BG.trs	= 7
+panel_BP.trs	= 7
+panel_CP.trs	= 7
+panel_CT.trs	= 7
+panel_CZ.trs	= 7
+panel_DN.trs	= 7
+panel_DT.trs	= 7
+panel_EL.trs	= 7
+panel_EN.trs	= 7
+panel_FI.trs	= 7
+panel_FN.trs	= 7
+panel_GR.trs	= 7
+panel_HB.trs	= 7
+panel_HU.trs	= 7
+panel_IT.trs	= 7
+panel_KR.trs	= 7
+panel_NR.trs	= 7
+panel_PO.trs	= 7
+panel_PT.trs	= 7
+;panel_RO.trs	= 7
+panel_RU.trs	= 7
+panel_SP.trs	= 7
+panel_SW.trs	= 7
+panel_TK.trs	= 7
+panel_UK.trs	= 7
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Localized XML files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+itdrvab.xml 	= 2
+itdrvbp.xml 	= 2
+itdrvcp.xml 	= 2
+itdrvct.xml 	= 2
+itdrvcz.xml 	= 2
+itdrvdn.xml 	= 2
+itdrvdt.xml 	= 2
+itdrvel.xml 	= 2
+itdrven.xml 	= 2
+itdrvfi.xml 	= 2
+itdrvfn.xml 	= 2
+itdrvgr.xml 	= 2
+itdrvhb.xml 	= 2
+itdrvhu.xml 	= 2
+itdrvit.xml 	= 2
+itdrvkr.xml 	= 2
+itdrvnr.xml 	= 2
+itdrvpo.xml 	= 2
+itdrvpt.xml 	= 2
+itdrvru.xml 	= 2
+itdrvsp.xml 	= 2
+itdrvsw.xml 	= 2
+itdrvtk.xml 	= 2
+itdrvuk.xml 	= 2
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Help files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+itdrvab.chm 	= 3
+itdrvbp.chm 	= 3
+itdrvcp.chm 	= 3
+itdrvct.chm 	= 3
+itdrvcz.chm 	= 3
+itdrvdn.chm 	= 3
+itdrvdt.chm 	= 3
+itdrvel.chm 	= 3
+itdrven.chm 	= 3
+itdrvfi.chm 	= 3
+itdrvfn.chm 	= 3
+itdrvgr.chm 	= 3
+itdrvhb.chm 	= 3
+itdrvhu.chm 	= 3
+itdrvit.chm 	= 3
+itdrvkr.chm 	= 3
+itdrvnr.chm 	= 3
+itdrvpo.chm 	= 3
+itdrvpt.chm 	= 3
+itdrvru.chm 	= 3
+itdrvsp.chm 	= 3
+itdrvsw.chm 	= 3
+itdrvtk.chm 	= 3
+itdrvuk.chm 	= 3
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; UPD files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+UPDIO2.dll	= 6
+SUPDSvc2.exe	= 6
+SUPDSvcA2.dll	= 6
+SUPDRun.exe = 6
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Lite Status Monitor files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+itdrvsm.exe     = 5
+itdrvsm.trs     = 5
+itdrvsm.xml     = 5
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Supported model list 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; UPD agent file
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+itdrva.dll	= 6
+itdrva__.xml	= 5
+itdrvaab.chm 	= 4
+itdrvabp.chm 	= 4
+itdrvacp.chm 	= 4
+itdrvact.chm 	= 4
+itdrvacz.chm 	= 4
+itdrvadn.chm 	= 4
+itdrvadt.chm 	= 4
+itdrvael.chm 	= 4
+itdrvaen.chm 	= 4
+itdrvafi.chm 	= 4
+itdrvafn.chm 	= 4
+itdrvagr.chm 	= 4
+itdrvahb.chm 	= 4
+itdrvahu.chm 	= 4
+itdrvait.chm 	= 4
+itdrvakr.chm 	= 4
+itdrvanr.chm 	= 4
+itdrvapo.chm 	= 4
+itdrvapt.chm 	= 4
+itdrvaru.chm 	= 4
+itdrvasp.chm 	= 4
+itdrvasw.chm 	= 4
+itdrvatk.chm 	= 4
+itdrvauk.chm 	= 4
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; COINSTFILES
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+coinst.dll      = 6
+coinst.exe      = 5 
+ 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; LANGMONFILES
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+itdrvl.dll     = 6
+itdrvl.smt     = 6
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; PRPROCFILES
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+itdrvpc.dll     = 6
+
+[PrinterPackageInstallation.x86]
+PackageAware=TRUE
+
+[PrinterPackageInstallation.amd64]
+PackageAware=TRUE
+
+[Strings]
+PROVIDER = "Samsung"
+DISK_NAME = "Samsung Printer Driver Installation CD"
+GUIDSM = "{4E4F55C7-1B5E-448d-97DD-78B719829E0D}"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
