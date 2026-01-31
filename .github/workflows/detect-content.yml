@@ -1,0 +1,46 @@
+# GitHub Action to detect new content on push
+# Runs automatically when files are added to books/ or travel/
+
+name: Detect New Content
+
+on:
+  push:
+    paths:
+      - 'books/**'
+      - 'travel/**'
+    branches:
+      - main
+
+jobs:
+  detect:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils python3
+
+      - name: Run content detection
+        run: bash scripts/detect-new-content.sh
+
+      - name: Create issue if new content found
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { execSync } = require('child_process');
+            const output = execSync('bash scripts/detect-new-content.sh 2>&1', { encoding: 'utf-8' });
+
+            if (output.includes('NEW BOOK:') || output.includes('NEW GALLERY:')) {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: '📚 New content detected - action needed',
+                body: `## Auto-detected new content\n\n\`\`\`\n${output}\n\`\`\`\n\n### Next steps:\n1. Run \`bash scripts/process-new-books.sh\` for new books\n2. Run \`bash scripts/generate-gallery.sh\` for new galleries\n3. Update the relevant HTML pages\n4. Commit and push`,
+                labels: ['content', 'automation']
+              });
+            }
