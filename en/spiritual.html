@@ -173,26 +173,44 @@
     <div class="container">
       <h2 class="mb-3">Books & Resources</h2>
       <p class="mb-3">Books, translations, and writings on spirituality and consciousness.</p>
-      <div class="cards">
-        <a href="../%D7%A1%D7%A4%D7%A8%D7%99%D7%9D%20%D7%97%D7%93%D7%A9%D7%99%D7%9D/%D7%94%D7%A1%D7%A4%D7%A8%20%D7%A2%D7%9C%20%D7%94%D7%98%D7%90%D7%91%D7%95%20%D7%A4%D7%AA%D7%95%D7%97.pdf" class="card">
+
+      <!-- Dynamic content loaded from books/manifest.json -->
+      <div id="books-container" class="cards">
+        <a href="../books/%D7%94%D7%A1%D7%A4%D7%A8%20%D7%A2%D7%9C%20%D7%94%D7%98%D7%90%D7%91%D7%95%20%D7%A4%D7%AA%D7%95%D7%97.pdf" class="card card--with-image">
+          <div class="card__image">
+            <img src="../books/covers/taboo-book.png" alt="The Book: On the Taboo - Alan Watts" loading="lazy">
+          </div>
           <div class="card__content">
             <h3 class="card__title">The Book: On the Taboo</h3>
             <p class="card__text">Hebrew translation of Alan Watts' "The Book: On the Taboo Against Knowing Who You Are".</p>
             <span class="card__link">Read (PDF)</span>
           </div>
         </a>
-        <a href="../%D7%A1%D7%A4%D7%A8%D7%99%D7%9D%20%D7%97%D7%93%D7%A9%D7%99%D7%9D/%D7%94%D7%95%D7%93%D7%95%20%D7%91%D7%A9%D7%99%D7%A2%D7%A8%20%D7%A9%D7%99%D7%91%D7%94%20%D7%A2%D7%9D%20%D7%A9%D7%A2%D7%A8.doc" class="card">
+        <a href="../books/%D7%90%D7%99%D7%9A%20%D7%9C%D7%A6%D7%90%D7%AA%20%D7%9E%D7%93%D7%A2%D7%AA%D7%9A%20%D7%91%D7%A4%D7%97%D7%95%D7%AA%20%D7%9E%D7%A9%D7%A2%D7%94.pdf" class="card card--with-image">
+          <div class="card__image">
+            <img src="../books/covers/lose-mind.png" alt="How to Lose Your Mind in Less Than an Hour" loading="lazy">
+          </div>
+          <div class="card__content">
+            <h3 class="card__title">Losing Your Mind</h3>
+            <p class="card__text">How to lose your mind in less than an hour - on releasing identification with thought and ego.</p>
+            <span class="card__link">Read (PDF)</span>
+          </div>
+        </a>
+        <a href="../books/%D7%A9%D7%99%D7%97%D7%95%D7%AA%20%D7%90%D7%AA%D7%99%20%D7%94%D7%99%D7%9C%D7%A1%D7%95%D7%9D.pdf" class="card card--with-image">
+          <div class="card__image">
+            <img src="../books/covers/etty-hillesum.png" alt="Conversations with Etty Hillesum" loading="lazy">
+          </div>
+          <div class="card__content">
+            <h3 class="card__title">Etty Hillesum Conversations</h3>
+            <p class="card__text">Conversations about Etty Hillesum's diary - as a journey to enlightenment.</p>
+            <span class="card__link">Read (PDF)</span>
+          </div>
+        </a>
+        <a href="../books/%D7%94%D7%95%D7%93%D7%95%20%D7%91%D7%A9%D7%99%D7%A2%D7%A8%20%D7%A9%D7%99%D7%91%D7%94%20%D7%A2%D7%9D%20%D7%A9%D7%A2%D7%A8.doc" class="card">
           <div class="card__content">
             <h3 class="card__title">India with Gray Hair</h3>
             <p class="card__text">Reflections and impressions from travels to India after many years. A different perspective through wiser eyes.</p>
             <span class="card__link">Read (DOC)</span>
-          </div>
-        </a>
-        <a href="https://efipaz.wordpress.com/" target="_blank" rel="noopener noreferrer" class="card">
-          <div class="card__content">
-            <h3 class="card__title">Spirituality Blog</h3>
-            <p class="card__text">Articles and reflections on spirituality, awareness, and consciousness.</p>
-            <span class="card__link">Visit Blog</span>
           </div>
         </a>
       </div>
@@ -281,6 +299,7 @@
     </div>
   </footer>
 
+  <script src="../assets/js/dynamic-books.js"></script>
   <script>
     document.querySelector('.nav__toggle').addEventListener('click', function() {
       document.querySelector('.nav__list').classList.toggle('is-open');

@@ -2,13 +2,21 @@
  * Dynamic Books Loader
  * Automatically displays books from books/manifest.json
  * No manual HTML editing needed - just upload files to books/
+ * Supports both Hebrew (root) and English (en/) pages
  */
 
 (function() {
   'use strict';
 
-  const MANIFEST_URL = 'books/manifest.json';
   const BOOKS_CONTAINER_ID = 'books-container';
+
+  // Detect if we're in a subdirectory (like en/)
+  const isSubdir = window.location.pathname.includes('/en/');
+  const basePath = isSubdir ? '../' : '';
+  const MANIFEST_URL = basePath + 'books/manifest.json';
+
+  // Detect language from HTML lang attribute
+  const isEnglish = document.documentElement.lang === 'en';
 
   // Load and display books when DOM is ready
   document.addEventListener('DOMContentLoaded', function() {
@@ -32,7 +40,6 @@
       }
 
       // Replace container content with dynamic books
-      // Container already has class="cards", just replace inner content
       container.innerHTML = '';
 
       manifest.books.forEach(book => {
@@ -47,7 +54,8 @@
 
   function createBookCard(book) {
     const card = document.createElement('a');
-    card.href = book.path;
+    // Adjust path for subdirectory
+    card.href = basePath + book.path;
     card.className = book.cover ? 'card card--with-image' : 'card';
 
     let html = '';
@@ -55,16 +63,19 @@
     if (book.cover) {
       html += `
         <div class="card__image">
-          <img src="${book.cover}" alt="${book.title}" loading="lazy">
+          <img src="${basePath}${book.cover}" alt="${book.title}" loading="lazy">
         </div>
       `;
     }
+
+    // Use appropriate language for link text
+    const linkText = isEnglish ? `Read (${book.type})` : `לספר (${book.type})`;
 
     html += `
       <div class="card__content">
         <h3 class="card__title">${book.title}</h3>
         <p class="card__text">${book.description || ''}</p>
-        <span class="card__link">לספר (${book.type})</span>
+        <span class="card__link">${linkText}</span>
       </div>
     `;
 
