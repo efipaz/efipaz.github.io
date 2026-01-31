@@ -49,7 +49,8 @@
       <h2 class="mb-3">ספרים</h2>
       <p class="mb-3">ספרים ותרגומים בנושאי רוחניות, תודעה ויציאה מהדעת.</p>
 
-      <div class="cards">
+      <!-- Dynamic content loaded from books/manifest.json -->
+      <div id="books-container" class="cards">
         <a href="books/%D7%94%D7%A1%D7%A4%D7%A8%20%D7%A2%D7%9C%20%D7%94%D7%98%D7%90%D7%91%D7%95%20%D7%A4%D7%AA%D7%95%D7%97.pdf" class="card card--with-image">
           <div class="card__image">
             <img src="books/covers/taboo-book.png" alt="הספר אודות הטאבו - אלן ואטס" loading="lazy">
@@ -271,6 +272,7 @@
     </div>
   </footer>
 
+  <script src="assets/js/dynamic-books.js"></script>
   <script>
     document.querySelector('.nav__toggle').addEventListener('click', function() {
       document.querySelector('.nav__list').classList.toggle('is-open');

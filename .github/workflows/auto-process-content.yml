@@ -1,0 +1,126 @@
+# Fully automatic content processing
+# When Efi uploads files, this action processes them and updates the site
+
+name: Auto Process Content
+
+on:
+  push:
+    paths:
+      - 'books/**'
+      - 'travel/**'
+    branches:
+      - main
+
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  process-content:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils python3
+
+      - name: Process books and generate manifest
+        run: |
+          echo "Processing books..."
+
+          BOOKS_DIR="books"
+          COVERS_DIR="$BOOKS_DIR/covers"
+          MANIFEST_FILE="$BOOKS_DIR/manifest.json"
+
+          mkdir -p "$COVERS_DIR"
+
+          # Start JSON
+          echo '{"generated":"'$(date -Iseconds)'","books":[' > "$MANIFEST_FILE"
+
+          first=true
+
+          # Process each PDF
+          for pdf in "$BOOKS_DIR"/*.pdf; do
+            [ -f "$pdf" ] || continue
+
+            filename=$(basename "$pdf")
+            basename="${filename%.pdf}"
+
+            # Create safe cover name
+            safe_name=$(echo "$basename" | md5sum | cut -c1-8)
+            cover_path="$COVERS_DIR/$safe_name.png"
+
+            # Extract cover if doesn't exist
+            if [ ! -f "$cover_path" ]; then
+              echo "Extracting cover for: $filename"
+              pdftoppm -png -f 1 -l 1 -scale-to 400 "$pdf" "$COVERS_DIR/${safe_name}_tmp" 2>/dev/null || true
+              # Rename (pdftoppm adds page number)
+              for f in "$COVERS_DIR/${safe_name}_tmp"*.png; do
+                [ -f "$f" ] && mv "$f" "$cover_path" && break
+              done
+            fi
+
+            # Add to manifest
+            [ "$first" = true ] && first=false || echo ',' >> "$MANIFEST_FILE"
+
+            # URL encode the path
+            encoded_path=$(python3 -c "import urllib.parse; print(urllib.parse.quote('$filename'))")
+
+            cat >> "$MANIFEST_FILE" << BOOK_JSON
+          {
+            "title": "$basename",
+            "path": "books/$encoded_path",
+            "type": "PDF",
+            "cover": $([ -f "$cover_path" ] && echo "\"books/covers/$safe_name.png\"" || echo "null"),
+            "description": ""
+          }
+          BOOK_JSON
+          done
+
+          # Process DOC files
+          for doc in "$BOOKS_DIR"/*.doc "$BOOKS_DIR"/*.docx; do
+            [ -f "$doc" ] || continue
+
+            filename=$(basename "$doc")
+            ext="${filename##*.}"
+            basename="${filename%.*}"
+
+            [ "$first" = true ] && first=false || echo ',' >> "$MANIFEST_FILE"
+
+            encoded_path=$(python3 -c "import urllib.parse; print(urllib.parse.quote('$filename'))")
+
+            cat >> "$MANIFEST_FILE" << BOOK_JSON
+          {
+            "title": "$basename",
+            "path": "books/$encoded_path",
+            "type": "${ext^^}",
+            "cover": null,
+            "description": ""
+          }
+          BOOK_JSON
+          done
+
+          # Close JSON
+          echo ']}' >> "$MANIFEST_FILE"
+
+          echo "Manifest generated:"
+          cat "$MANIFEST_FILE"
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+
+          git add books/covers/ books/manifest.json || true
+
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto-process: update book covers and manifest"
+            git push
+          fi
