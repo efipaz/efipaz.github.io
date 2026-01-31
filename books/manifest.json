@@ -1,4 +1,4 @@
-{"generated":"2026-01-31T11:33:24+00:00","books":[
+{"generated":"2026-01-31T12:15:45+00:00","books":[
 {
   "title": "איך לצאת מדעתך בפחות משעה",
   "path": "books/%D7%90%D7%99%D7%9A%20%D7%9C%D7%A6%D7%90%D7%AA%20%D7%9E%D7%93%D7%A2%D7%AA%D7%9A%20%D7%91%D7%A4%D7%97%D7%95%D7%AA%20%D7%9E%D7%A9%D7%A2%D7%94.pdf",
@@ -12,6 +12,14 @@
   "path": "books/%D7%94%D7%A1%D7%A4%D7%A8%20%D7%A2%D7%9C%20%D7%94%D7%98%D7%90%D7%91%D7%95%20%D7%A4%D7%AA%D7%95%D7%97.pdf",
   "type": "PDF",
   "cover": "books/covers/ae939e85.png",
+  "description": ""
+}
+,
+{
+  "title": "להיות מודעות",
+  "path": "books/%D7%9C%D7%94%D7%99%D7%95%D7%AA%20%D7%9E%D7%95%D7%93%D7%A2%D7%95%D7%AA.pdf",
+  "type": "PDF",
+  "cover": "books/covers/4f6faec5.png",
   "description": ""
 }
 ,
