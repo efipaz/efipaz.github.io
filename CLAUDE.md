@@ -36,11 +36,49 @@ efipaz/
 │       ├── index.html      # גלריית מיאנמר
 │       └── pictures/       # 369 תמונות
 │
+├── books/                  # ספרים (מערכת אוטומטית!)
+│   ├── manifest.json       # רשימת ספרים - נוצר אוטומטית
+│   └── covers/             # שערי ספרים - נוצרים אוטומטית
+│
 ├── teachers/               # דפי מורים רוחניים
-├── assets/                 # לוגו ותמונות שירות
+├── assets/
+│   ├── img/                # לוגו ותמונות שירות
+│   └── js/
+│       ├── gallery.js      # Lightbox לגלריות
+│       └── dynamic-books.js # טוען ספרים אוטומטית
+│
 ├── scripts/                # סקריפטי תחזוקה
+├── .github/workflows/      # GitHub Actions - אוטומציה
 └── archive/                # קבצים ישנים (לא לגעת!)
 ```
+
+---
+
+## מערכת תוכן אוטומטית (חשוב!)
+
+### איך אפי מוסיף ספרים חדשים
+
+**אפס עבודה ידנית נדרשת מאפי.** הזרימה:
+
+1. אפי מעלה קובץ PDF לתיקיית `books/`
+2. GitHub Action רץ אוטומטית
+3. מחלץ שער מעמוד ראשון → `books/covers/`
+4. מעדכן `books/manifest.json`
+5. האתר מציג את הספר החדש עם שער
+
+### קבצים מעורבים
+
+| קובץ | תפקיד |
+|------|-------|
+| `books/manifest.json` | רשימת כל הספרים (נוצר אוטומטית) |
+| `assets/js/dynamic-books.js` | טוען ומציג ספרים מה-manifest |
+| `.github/workflows/auto-process-content.yml` | מעבד קבצים חדשים |
+
+### לסוכני AI: אל תערוך ידנית!
+
+- **אין לערוך את `books/manifest.json` ידנית** - הוא נוצר אוטומטית
+- **אין להוסיף ספרים ל-HTML ידנית** - הם נטענים דינמית
+- אם צריך לתקן משהו, תקן את הסקריפטים או את `dynamic-books.js`
 
 ---
 
@@ -106,6 +144,16 @@ bash scripts/validate-all.sh
 bash scripts/cleanup-dead-code.sh --dry-run  # לבדיקה בלבד
 bash scripts/cleanup-dead-code.sh            # למחיקה בפועל
 ```
+
+### scripts/check-lang-sync.sh
+**חשוב!** בודק סנכרון בין גרסה עברית לאנגלית.
+```bash
+bash scripts/check-lang-sync.sh
+```
+מוודא ש:
+- כל עמוד עברי יש לו עמוד אנגלי מקביל
+- מספר הסקציות והכרטיסים תואם
+- שני הגרסאות מעודכנות
 
 ---
 
@@ -188,12 +236,14 @@ travel/india/pictures/
 ## רשימת בדיקות לפני Commit
 
 - [ ] הרצת `scripts/validate-all.sh` עברה בהצלחה
+- [ ] הרצת `scripts/check-lang-sync.sh` - עברית ואנגלית מסונכרנות
 - [ ] כל קובץ HTML חדש מכיל `charset=UTF-8`
 - [ ] עברית נראית תקינה
 - [ ] נתיבי תמונות עובדים
 - [ ] האתר רספונסיבי (בדוק גם במובייל)
 - [ ] עיצוב שומר על 3 צבעים בלבד
 - [ ] לא נגעת ב-archive/ ללא סיבה
+- [ ] לא ערכת `books/manifest.json` ידנית
 
 ---
 
