@@ -35,6 +35,7 @@ jobs:
       - name: Process books and generate manifest
         run: |
           echo "Processing books..."
+          shopt -s nullglob
 
           BOOKS_DIR="books"
           COVERS_DIR="$BOOKS_DIR/covers"
@@ -51,7 +52,7 @@ jobs:
             local filepath="$1"
             local category="$2"
 
-            [ -f "$filepath" ] || return
+            [ -f "$filepath" ] || return 0
 
             filename=$(basename "$filepath")
             ext="${filename##*.}"
