@@ -1,5 +1,7 @@
 # Fully automatic content processing
 # When Efi uploads files, this action processes them and updates the site
+# Supports: PDF, DOC, DOCX, MHT files
+# Supports: Categories (subdirectories), info.txt for descriptions
 
 name: Auto Process Content
 
@@ -7,7 +9,7 @@ on:
   push:
     paths:
       - 'books/**'
-      - 'travel/**'
+      - 'galleries/**'
     branches:
       - main
 
@@ -39,70 +41,113 @@ jobs:
 
           mkdir -p "$COVERS_DIR"
 
-          # Start JSON
-          echo '{"generated":"'$(date -Iseconds)'","books":[' > "$MANIFEST_FILE"
+          # Function to process a single book file
+          process_book() {
+            local filepath="$1"
+            local category="$2"
+            local first="$3"
 
-          first=true
+            [ -f "$filepath" ] || return 1
 
-          # Process each PDF
-          for pdf in "$BOOKS_DIR"/*.pdf; do
-            [ -f "$pdf" ] || continue
+            filename=$(basename "$filepath")
+            ext="${filename##*.}"
+            basename="${filename%.*}"
+            dirpath=$(dirname "$filepath")
 
-            filename=$(basename "$pdf")
-            basename="${filename%.pdf}"
+            # Check for info.txt in same directory
+            description=""
+            if [ -f "$dirpath/info.txt" ]; then
+              description=$(cat "$dirpath/info.txt" | tr '\n' ' ' | sed 's/"/\\"/g')
+            fi
 
             # Create safe cover name
             safe_name=$(echo "$basename" | md5sum | cut -c1-8)
             cover_path="$COVERS_DIR/$safe_name.png"
 
-            # Extract cover if doesn't exist
-            if [ ! -f "$cover_path" ]; then
+            # Extract cover for PDF only
+            if [ "${ext,,}" = "pdf" ] && [ ! -f "$cover_path" ]; then
               echo "Extracting cover for: $filename"
-              pdftoppm -png -f 1 -l 1 -scale-to 400 "$pdf" "$COVERS_DIR/${safe_name}_tmp" 2>/dev/null || true
-              # Rename (pdftoppm adds page number)
+              pdftoppm -png -f 1 -l 1 -scale-to 400 "$filepath" "$COVERS_DIR/${safe_name}_tmp" 2>/dev/null || true
               for f in "$COVERS_DIR/${safe_name}_tmp"*.png; do
                 [ -f "$f" ] && mv "$f" "$cover_path" && break
               done
             fi
 
-            # Add to manifest
-            [ "$first" = true ] && first=false || echo ',' >> "$MANIFEST_FILE"
-
             # URL encode the path
-            encoded_path=$(python3 -c "import urllib.parse; print(urllib.parse.quote('$filename'))")
+            encoded_path=$(python3 -c "import urllib.parse; print(urllib.parse.quote('$filepath'))")
 
-            cat >> "$MANIFEST_FILE" << BOOK_JSON
+            # Determine type
+            case "${ext,,}" in
+              pdf) type="PDF" ;;
+              doc) type="DOC" ;;
+              docx) type="DOCX" ;;
+              mht|mhtml) type="MHT" ;;
+              *) type="${ext^^}" ;;
+            esac
+
+            # Output JSON
+            [ "$first" = "false" ] && echo ','
+            cat << BOOK_JSON
           {
             "title": "$basename",
-            "path": "books/$encoded_path",
-            "type": "PDF",
+            "path": "$encoded_path",
+            "type": "$type",
+            "category": "$category",
             "cover": $([ -f "$cover_path" ] && echo "\"books/covers/$safe_name.png\"" || echo "null"),
-            "description": ""
+            "description": "$description"
           }
-          BOOK_JSON
+BOOK_JSON
+            return 0
+          }
+
+          # Start JSON
+          echo '{"generated":"'$(date -Iseconds)'","books":[' > "$MANIFEST_FILE"
+
+          first=true
+
+          # 1. Process files in root (backwards compatible)
+          for file in "$BOOKS_DIR"/*.pdf "$BOOKS_DIR"/*.doc "$BOOKS_DIR"/*.docx "$BOOKS_DIR"/*.mht "$BOOKS_DIR"/*.mhtml; do
+            if [ -f "$file" ]; then
+              result=$(process_book "$file" "" "$first")
+              if [ -n "$result" ]; then
+                echo "$result" >> "$MANIFEST_FILE"
+                first=false
+              fi
+            fi
           done
 
-          # Process DOC files
-          for doc in "$BOOKS_DIR"/*.doc "$BOOKS_DIR"/*.docx; do
-            [ -f "$doc" ] || continue
+          # 2. Process category directories (new feature)
+          for category_dir in "$BOOKS_DIR"/*/; do
+            [ -d "$category_dir" ] || continue
+            category_name=$(basename "$category_dir")
 
-            filename=$(basename "$doc")
-            ext="${filename##*.}"
-            basename="${filename%.*}"
+            # Skip covers directory
+            [ "$category_name" = "covers" ] && continue
 
-            [ "$first" = true ] && first=false || echo ',' >> "$MANIFEST_FILE"
+            # Process files directly in category
+            for file in "$category_dir"*.pdf "$category_dir"*.doc "$category_dir"*.docx "$category_dir"*.mht "$category_dir"*.mhtml; do
+              if [ -f "$file" ]; then
+                result=$(process_book "$file" "$category_name" "$first")
+                if [ -n "$result" ]; then
+                  echo "$result" >> "$MANIFEST_FILE"
+                  first=false
+                fi
+              fi
+            done
 
-            encoded_path=$(python3 -c "import urllib.parse; print(urllib.parse.quote('$filename'))")
-
-            cat >> "$MANIFEST_FILE" << BOOK_JSON
-          {
-            "title": "$basename",
-            "path": "books/$encoded_path",
-            "type": "${ext^^}",
-            "cover": null,
-            "description": ""
-          }
-          BOOK_JSON
+            # Process book subdirectories (book in its own folder)
+            for book_dir in "$category_dir"/*/; do
+              [ -d "$book_dir" ] || continue
+              for file in "$book_dir"*.pdf "$book_dir"*.doc "$book_dir"*.docx "$book_dir"*.mht "$book_dir"*.mhtml; do
+                if [ -f "$file" ]; then
+                  result=$(process_book "$file" "$category_name" "$first")
+                  if [ -n "$result" ]; then
+                    echo "$result" >> "$MANIFEST_FILE"
+                    first=false
+                  fi
+                fi
+              done
+            done
           done
 
           # Close JSON
@@ -111,12 +156,92 @@ jobs:
           echo "Manifest generated:"
           cat "$MANIFEST_FILE"
 
+      - name: Process galleries
+        run: |
+          echo "Processing galleries..."
+
+          GALLERIES_DIR="galleries"
+          MANIFEST_FILE="$GALLERIES_DIR/manifest.json"
+
+          # Skip if no galleries directory
+          [ -d "$GALLERIES_DIR" ] || exit 0
+
+          # Start JSON
+          echo '{"generated":"'$(date -Iseconds)'","galleries":[' > "$MANIFEST_FILE"
+
+          first=true
+
+          for gallery_dir in "$GALLERIES_DIR"/*/; do
+            [ -d "$gallery_dir" ] || continue
+            gallery_name=$(basename "$gallery_dir")
+
+            # Read description from info.txt
+            description=""
+            if [ -f "$gallery_dir/info.txt" ]; then
+              description=$(cat "$gallery_dir/info.txt" | tr '\n' ' ' | sed 's/"/\\"/g')
+            fi
+
+            # Find cover image
+            cover="null"
+            if [ -f "$gallery_dir/cover.jpg" ]; then
+              cover="\"galleries/$gallery_name/cover.jpg\""
+            elif [ -f "$gallery_dir/cover.png" ]; then
+              cover="\"galleries/$gallery_name/cover.png\""
+            else
+              # Use first image as cover
+              first_img=$(find "$gallery_dir" -maxdepth 2 -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) | head -1)
+              if [ -n "$first_img" ]; then
+                cover="\"$first_img\""
+              fi
+            fi
+
+            # Count images
+            total_images=$(find "$gallery_dir" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) | wc -l)
+
+            # Build categories (subdirectories)
+            categories="["
+            cat_first=true
+            for cat_dir in "$gallery_dir"/*/; do
+              [ -d "$cat_dir" ] || continue
+              cat_name=$(basename "$cat_dir")
+
+              # Get images in category
+              images=$(find "$cat_dir" -maxdepth 1 -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) -printf '"%f",' | sed 's/,$//')
+
+              [ -z "$images" ] && continue
+
+              [ "$cat_first" = "true" ] && cat_first=false || categories="$categories,"
+              categories="$categories{\"name\":\"$cat_name\",\"images\":[$images]}"
+            done
+            categories="$categories]"
+
+            # Output gallery JSON
+            [ "$first" = "true" ] && first=false || echo ',' >> "$MANIFEST_FILE"
+
+            cat >> "$MANIFEST_FILE" << GALLERY_JSON
+          {
+            "id": "$gallery_name",
+            "name": "$gallery_name",
+            "description": "$description",
+            "cover": $cover,
+            "categories": $categories,
+            "totalImages": $total_images
+          }
+GALLERY_JSON
+          done
+
+          # Close JSON
+          echo ']}' >> "$MANIFEST_FILE"
+
+          echo "Gallery manifest generated:"
+          cat "$MANIFEST_FILE"
+
       - name: Commit and push changes
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
 
-          git add books/covers/ books/manifest.json || true
+          git add books/covers/ books/manifest.json galleries/manifest.json 2>/dev/null || true
 
           if git diff --staged --quiet; then
             echo "No changes to commit"

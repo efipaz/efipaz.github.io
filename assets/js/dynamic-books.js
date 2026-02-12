@@ -3,6 +3,7 @@
  * Automatically displays books from books/manifest.json
  * No manual HTML editing needed - just upload files to books/
  * Supports both Hebrew (root) and English (en/) pages
+ * Supports categories (books with category field are grouped)
  */
 
 (function() {
@@ -39,12 +40,42 @@
         return;
       }
 
+      // Check if we have categories
+      const hasCategories = manifest.books.some(book => book.category && book.category.trim() !== '');
+
       // Replace container content with dynamic books
       container.innerHTML = '';
 
-      manifest.books.forEach(book => {
-        container.appendChild(createBookCard(book));
-      });
+      if (hasCategories) {
+        // Group books by category
+        const categories = groupByCategory(manifest.books);
+
+        // Render each category
+        for (const [categoryName, books] of Object.entries(categories)) {
+          if (categoryName) {
+            // Add category header
+            const header = document.createElement('h3');
+            header.className = 'books-category-title';
+            header.textContent = categoryName;
+            container.appendChild(header);
+          }
+
+          // Add books grid for this category
+          const grid = document.createElement('div');
+          grid.className = 'cards books-category-grid';
+
+          books.forEach(book => {
+            grid.appendChild(createBookCard(book));
+          });
+
+          container.appendChild(grid);
+        }
+      } else {
+        // No categories - flat list (backwards compatible)
+        manifest.books.forEach(book => {
+          container.appendChild(createBookCard(book));
+        });
+      }
 
     } catch (error) {
       console.warn('Could not load books manifest:', error);
@@ -52,11 +83,43 @@
     }
   }
 
+  function groupByCategory(books) {
+    const categories = {};
+
+    books.forEach(book => {
+      const category = book.category || '';
+      if (!categories[category]) {
+        categories[category] = [];
+      }
+      categories[category].push(book);
+    });
+
+    // Sort: uncategorized first, then alphabetically
+    const sorted = {};
+    if (categories['']) {
+      sorted[''] = categories[''];
+    }
+    Object.keys(categories)
+      .filter(k => k !== '')
+      .sort()
+      .forEach(k => {
+        sorted[k] = categories[k];
+      });
+
+    return sorted;
+  }
+
   function createBookCard(book) {
     const card = document.createElement('a');
     // Adjust path for subdirectory
     card.href = basePath + book.path;
-    card.className = book.cover ? 'card card--with-image' : 'card';
+
+    // Add card--book class for proper cover display (no cropping)
+    if (book.cover) {
+      card.className = 'card card--with-image card--book';
+    } else {
+      card.className = 'card';
+    }
 
     let html = '';
 
