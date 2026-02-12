@@ -41,27 +41,30 @@ jobs:
 
           mkdir -p "$COVERS_DIR"
 
-          # Function to process a single book file
-          process_book() {
+          # Start JSON
+          echo '{"generated":"'$(date -Iseconds)'","books":[' > "$MANIFEST_FILE"
+
+          first=true
+
+          process_file() {
             local filepath="$1"
             local category="$2"
-            local first="$3"
 
-            [ -f "$filepath" ] || return 1
+            [ -f "$filepath" ] || return
 
             filename=$(basename "$filepath")
             ext="${filename##*.}"
-            basename="${filename%.*}"
+            bookname="${filename%.*}"
             dirpath=$(dirname "$filepath")
 
             # Check for info.txt in same directory
             description=""
             if [ -f "$dirpath/info.txt" ]; then
-              description=$(cat "$dirpath/info.txt" | tr '\n' ' ' | sed 's/"/\\"/g')
+              description=$(cat "$dirpath/info.txt" | tr '\n' ' ' | sed 's/"/\\"/g' | sed "s/'/\\'/g")
             fi
 
             # Create safe cover name
-            safe_name=$(echo "$basename" | md5sum | cut -c1-8)
+            safe_name=$(echo "$bookname" | md5sum | cut -c1-8)
             cover_path="$COVERS_DIR/$safe_name.png"
 
             # Extract cover for PDF only
@@ -85,35 +88,26 @@ jobs:
               *) type="${ext^^}" ;;
             esac
 
+            # Determine cover
+            if [ -f "$cover_path" ]; then
+              cover_json="\"books/covers/$safe_name.png\""
+            else
+              cover_json="null"
+            fi
+
             # Output JSON
-            [ "$first" = "false" ] && echo ','
-            cat << BOOK_JSON
-          {
-            "title": "$basename",
-            "path": "$encoded_path",
-            "type": "$type",
-            "category": "$category",
-            "cover": $([ -f "$cover_path" ] && echo "\"books/covers/$safe_name.png\"" || echo "null"),
-            "description": "$description"
-          }
-BOOK_JSON
-            return 0
-          }
+            if [ "$first" = "true" ]; then
+              first=false
+            else
+              echo ',' >> "$MANIFEST_FILE"
+            fi
 
-          # Start JSON
-          echo '{"generated":"'$(date -Iseconds)'","books":[' > "$MANIFEST_FILE"
-
-          first=true
+            echo "{\"title\":\"$bookname\",\"path\":\"$encoded_path\",\"type\":\"$type\",\"category\":\"$category\",\"cover\":$cover_json,\"description\":\"$description\"}" >> "$MANIFEST_FILE"
+          }
 
           # 1. Process files in root (backwards compatible)
           for file in "$BOOKS_DIR"/*.pdf "$BOOKS_DIR"/*.doc "$BOOKS_DIR"/*.docx "$BOOKS_DIR"/*.mht "$BOOKS_DIR"/*.mhtml; do
-            if [ -f "$file" ]; then
-              result=$(process_book "$file" "" "$first")
-              if [ -n "$result" ]; then
-                echo "$result" >> "$MANIFEST_FILE"
-                first=false
-              fi
-            fi
+            process_file "$file" ""
           done
 
           # 2. Process category directories (new feature)
@@ -126,26 +120,14 @@ BOOK_JSON
 
             # Process files directly in category
             for file in "$category_dir"*.pdf "$category_dir"*.doc "$category_dir"*.docx "$category_dir"*.mht "$category_dir"*.mhtml; do
-              if [ -f "$file" ]; then
-                result=$(process_book "$file" "$category_name" "$first")
-                if [ -n "$result" ]; then
-                  echo "$result" >> "$MANIFEST_FILE"
-                  first=false
-                fi
-              fi
+              process_file "$file" "$category_name"
             done
 
             # Process book subdirectories (book in its own folder)
             for book_dir in "$category_dir"/*/; do
               [ -d "$book_dir" ] || continue
               for file in "$book_dir"*.pdf "$book_dir"*.doc "$book_dir"*.docx "$book_dir"*.mht "$book_dir"*.mhtml; do
-                if [ -f "$file" ]; then
-                  result=$(process_book "$file" "$category_name" "$first")
-                  if [ -n "$result" ]; then
-                    echo "$result" >> "$MANIFEST_FILE"
-                    first=false
-                  fi
-                fi
+                process_file "$file" "$category_name"
               done
             done
           done
@@ -216,18 +198,13 @@ BOOK_JSON
             categories="$categories]"
 
             # Output gallery JSON
-            [ "$first" = "true" ] && first=false || echo ',' >> "$MANIFEST_FILE"
+            if [ "$first" = "true" ]; then
+              first=false
+            else
+              echo ',' >> "$MANIFEST_FILE"
+            fi
 
-            cat >> "$MANIFEST_FILE" << GALLERY_JSON
-          {
-            "id": "$gallery_name",
-            "name": "$gallery_name",
-            "description": "$description",
-            "cover": $cover,
-            "categories": $categories,
-            "totalImages": $total_images
-          }
-GALLERY_JSON
+            echo "{\"id\":\"$gallery_name\",\"name\":\"$gallery_name\",\"description\":\"$description\",\"cover\":$cover,\"categories\":$categories,\"totalImages\":$total_images}" >> "$MANIFEST_FILE"
           done
 
           # Close JSON
