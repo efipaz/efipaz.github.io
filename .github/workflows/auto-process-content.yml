@@ -9,7 +9,7 @@ on:
   push:
     paths:
       - 'books/**'
-      - 'galleries/**'
+      - 'travel/**'
     branches:
       - main
 
@@ -141,87 +141,12 @@ jobs:
           echo "Manifest generated:"
           cat "$MANIFEST_FILE"
 
-      - name: Process galleries
-        run: |
-          echo "Processing galleries..."
-
-          GALLERIES_DIR="galleries"
-          MANIFEST_FILE="$GALLERIES_DIR/manifest.json"
-
-          # Skip if no galleries directory
-          [ -d "$GALLERIES_DIR" ] || exit 0
-
-          # Start JSON
-          echo '{"generated":"'$(date -Iseconds)'","galleries":[' > "$MANIFEST_FILE"
-
-          first=true
-
-          for gallery_dir in "$GALLERIES_DIR"/*/; do
-            [ -d "$gallery_dir" ] || continue
-            gallery_name=$(basename "$gallery_dir")
-
-            # Read description from info.txt
-            description=""
-            if [ -f "$gallery_dir/info.txt" ]; then
-              description=$(cat "$gallery_dir/info.txt" | tr '\n' ' ' | sed 's/"/\\"/g')
-            fi
-
-            # Find cover image
-            cover="null"
-            if [ -f "$gallery_dir/cover.jpg" ]; then
-              cover="\"galleries/$gallery_name/cover.jpg\""
-            elif [ -f "$gallery_dir/cover.png" ]; then
-              cover="\"galleries/$gallery_name/cover.png\""
-            else
-              # Use first image as cover
-              first_img=$(find "$gallery_dir" -maxdepth 2 -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) | head -1)
-              if [ -n "$first_img" ]; then
-                cover="\"$first_img\""
-              fi
-            fi
-
-            # Count images
-            total_images=$(find "$gallery_dir" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) | wc -l)
-
-            # Build categories (subdirectories)
-            categories="["
-            cat_first=true
-            for cat_dir in "$gallery_dir"/*/; do
-              [ -d "$cat_dir" ] || continue
-              cat_name=$(basename "$cat_dir")
-
-              # Get images in category
-              images=$(find "$cat_dir" -maxdepth 1 -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) -printf '"%f",' | sed 's/,$//')
-
-              [ -z "$images" ] && continue
-
-              [ "$cat_first" = "true" ] && cat_first=false || categories="$categories,"
-              categories="$categories{\"name\":\"$cat_name\",\"images\":[$images]}"
-            done
-            categories="$categories]"
-
-            # Output gallery JSON
-            if [ "$first" = "true" ]; then
-              first=false
-            else
-              echo ',' >> "$MANIFEST_FILE"
-            fi
-
-            echo "{\"id\":\"$gallery_name\",\"name\":\"$gallery_name\",\"description\":\"$description\",\"cover\":$cover,\"categories\":$categories,\"totalImages\":$total_images}" >> "$MANIFEST_FILE"
-          done
-
-          # Close JSON
-          echo ']}' >> "$MANIFEST_FILE"
-
-          echo "Gallery manifest generated:"
-          cat "$MANIFEST_FILE"
-
       - name: Commit and push changes
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
 
-          git add books/covers/ books/manifest.json galleries/manifest.json 2>/dev/null || true
+          git add books/covers/ books/manifest.json
 
           if git diff --staged --quiet; then
             echo "No changes to commit"
