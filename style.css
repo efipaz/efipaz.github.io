@@ -372,6 +372,12 @@ a:hover {
   transform: scale(1.02);
 }
 
+/* Book covers - don't crop */
+.card--book .card__image img {
+  object-fit: contain;
+  background-color: var(--color-bg);
+}
+
 .card__content {
   padding: var(--space-md);
 }
