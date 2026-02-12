@@ -10,6 +10,7 @@ on:
     paths:
       - 'books/**'
       - 'travel/**'
+      - 'teachers/**'
     branches:
       - main
 
@@ -141,16 +142,247 @@ jobs:
           echo "Manifest generated:"
           cat "$MANIFEST_FILE"
 
+      - name: Process galleries and generate manifest
+        run: |
+          echo "Processing galleries..."
+
+          TRAVEL_DIR="travel"
+          MANIFEST_FILE="$TRAVEL_DIR/gallery-manifest.json"
+
+          # Start JSON
+          echo '{"generated":"'$(date -Iseconds)'","galleries":[' > "$MANIFEST_FILE"
+
+          first=true
+
+          for gallery_dir in "$TRAVEL_DIR"/*/; do
+            [ -d "$gallery_dir" ] || continue
+
+            gallery_name=$(basename "$gallery_dir")
+
+            # Only process directories with info.txt (opt-in signal)
+            [ -f "$gallery_dir/info.txt" ] || continue
+
+            # Skip if no images found
+            image_count=$(find "$gallery_dir" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) | wc -l)
+            [ "$image_count" -eq 0 ] && continue
+
+            echo "Found gallery: $gallery_name ($image_count images)"
+
+            # Read info.txt: line 1 = title, line 2 = description (optional)
+            title=$(head -1 "$gallery_dir/info.txt" | tr -d '\r')
+            description=$(sed -n '2p' "$gallery_dir/info.txt" | tr -d '\r')
+
+            # Find first image as cover
+            cover=$(find "$gallery_dir" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) | sort | head -1)
+            encoded_cover=$(echo "$cover" | python3 -c "import sys, urllib.parse; print(urllib.parse.quote(sys.stdin.read().strip()))")
+
+            # Generate index.html if it doesn't exist
+            if [ ! -f "$gallery_dir/index.html" ]; then
+              echo "Generating index.html for $gallery_name"
+
+              # Collect all image paths for the HTML
+              gallery_html="$gallery_dir/index.html"
+              safe_title_html=$(echo "$title" | sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g')
+
+              cat > "$gallery_html" << 'GALLERY_TOP'
+          <!DOCTYPE html>
+          <html lang="he" dir="rtl">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          GALLERY_TOP
+
+              echo "  <title>$safe_title_html | אפי פז</title>" >> "$gallery_html"
+
+              cat >> "$gallery_html" << 'GALLERY_HEAD'
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="../../style.css">
+            <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+          </head>
+          <body>
+
+            <header class="header">
+              <div class="container header__inner">
+                <a href="../../index.html" class="header__logo">אפי פז</a>
+                <nav class="nav">
+                  <ul class="nav__list">
+                    <li><a href="../../index.html" class="nav__link">בית</a></li>
+                    <li><a href="../../spiritual.html" class="nav__link">רוחניות ודעת</a></li>
+                    <li><a href="../../travel.html" class="nav__link nav__link--active">מסעות</a></li>
+                    <li><a href="../../archive.html" class="nav__link">ארכיון</a></li>
+                  </ul>
+                  <button class="nav__toggle" aria-label="תפריט">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </button>
+                </nav>
+              </div>
+            </header>
+
+            <div class="page-header">
+              <div class="container">
+                <nav class="breadcrumb">
+                  <a href="../../travel.html">מסעות</a> /
+          GALLERY_HEAD
+
+              echo "        $safe_title_html" >> "$gallery_html"
+              echo '      </nav>' >> "$gallery_html"
+              echo "      <h1>$safe_title_html</h1>" >> "$gallery_html"
+              echo "      <p class=\"page-header__subtitle\">$image_count צילומים</p>" >> "$gallery_html"
+
+              cat >> "$gallery_html" << 'GALLERY_MID'
+              </div>
+            </div>
+
+            <section class="section">
+              <div class="container">
+                <div class="gallery gallery--full" id="gallery">
+          GALLERY_MID
+
+              # Add each image
+              find "$gallery_dir" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) | sort | while read -r img; do
+                # Make path relative to gallery dir
+                rel_path=$(echo "$img" | sed "s|^$gallery_dir||")
+                encoded_rel=$(echo "$rel_path" | python3 -c "import sys, urllib.parse; print(urllib.parse.quote(sys.stdin.read().strip()))")
+                img_alt=$(basename "$rel_path" | sed 's/\.[^.]*$//')
+
+                echo "            <a href=\"$encoded_rel\" class=\"gallery__item\" data-lightbox>" >> "$gallery_html"
+                echo "              <img src=\"$encoded_rel\" alt=\"$img_alt\" loading=\"lazy\">" >> "$gallery_html"
+                echo "            </a>" >> "$gallery_html"
+              done
+
+              cat >> "$gallery_html" << 'GALLERY_BOTTOM'
+                </div>
+              </div>
+            </section>
+
+            <footer class="footer">
+              <div class="container">
+                <div class="footer__inner">
+                  <div class="footer__section">
+                    <h4>ניווט</h4>
+                    <ul class="footer__links">
+                      <li><a href="../../index.html">דף הבית</a></li>
+                      <li><a href="../../spiritual.html">רוחניות</a></li>
+                      <li><a href="../../travel.html">מסעות</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="footer__bottom">
+                  <p>אפי פז</p>
+                </div>
+              </div>
+            </footer>
+
+            <script src="../../assets/js/gallery.js"></script>
+            <script>
+              document.querySelector('.nav__toggle').addEventListener('click', function() {
+                document.querySelector('.nav__list').classList.toggle('is-open');
+              });
+            </script>
+
+          </body>
+          </html>
+          GALLERY_BOTTOM
+
+              echo "Generated: $gallery_html"
+            fi
+
+            # Add to manifest
+            if [ "$first" = "true" ]; then
+              first=false
+            else
+              echo ',' >> "$MANIFEST_FILE"
+            fi
+
+            safe_title=$(echo "$title" | sed 's/"/\\"/g')
+            safe_desc=$(echo "$description" | sed 's/"/\\"/g')
+
+            echo "{\"id\":\"$(echo "$gallery_name" | python3 -c "import sys, urllib.parse; print(urllib.parse.quote(sys.stdin.read().strip()))")\",\"title\":\"$safe_title\",\"description\":\"$safe_desc\",\"cover\":\"$encoded_cover\",\"imageCount\":$image_count}" >> "$MANIFEST_FILE"
+          done
+
+          # Close JSON
+          echo ']}' >> "$MANIFEST_FILE"
+
+          echo "Gallery manifest:"
+          cat "$MANIFEST_FILE"
+
+      - name: Process teachers and generate manifest
+        run: |
+          echo "Processing teachers..."
+
+          TEACHERS_DIR="teachers"
+          MANIFEST_FILE="$TEACHERS_DIR/manifest.json"
+
+          # Start JSON
+          echo '{"generated":"'$(date -Iseconds)'","teachers":[' > "$MANIFEST_FILE"
+
+          first=true
+
+          for teacher_dir in "$TEACHERS_DIR"/*/; do
+            [ -d "$teacher_dir" ] || continue
+
+            teacher_id=$(basename "$teacher_dir")
+
+            # Only process directories with info.json (opt-in)
+            [ -f "$teacher_dir/info.json" ] || continue
+
+            echo "Found teacher: $teacher_id"
+
+            # Read info.json using python3
+            teacher_json=$(python3 -c "
+          import json, sys
+          with open('${teacher_dir}info.json', 'r', encoding='utf-8') as f:
+              data = json.load(f)
+          # Add id
+          data['id'] = '$teacher_id'
+          # Check for portrait
+          import os
+          for ext in ['jpg', 'jpeg', 'png']:
+              path = '${teacher_dir}portrait.' + ext
+              if os.path.exists(path):
+                  data['portrait'] = path
+                  break
+          # Output as JSON string (single entry)
+          print(json.dumps(data, ensure_ascii=False))
+          " 2>/dev/null)
+
+            if [ -z "$teacher_json" ]; then
+              echo "  Warning: Could not parse info.json for $teacher_id"
+              continue
+            fi
+
+            if [ "$first" = "true" ]; then
+              first=false
+            else
+              echo ',' >> "$MANIFEST_FILE"
+            fi
+
+            echo "$teacher_json" >> "$MANIFEST_FILE"
+          done
+
+          # Close JSON
+          echo ']}' >> "$MANIFEST_FILE"
+
+          echo "Teachers manifest:"
+          cat "$MANIFEST_FILE"
+
       - name: Commit and push changes
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
 
           git add books/covers/ books/manifest.json
+          git add travel/gallery-manifest.json
+          git add travel/*/index.html
+          git add teachers/manifest.json
 
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Auto-process: update book covers and manifest"
+            git commit -m "Auto-process: update books, galleries and teachers"
             git push
           fi

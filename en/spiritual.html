@@ -166,6 +166,10 @@
           </div>
         </a>
       </div>
+
+      <!-- Dynamic teachers loaded automatically from teachers/manifest.json -->
+      <div id="dynamic-teachers"></div>
+
     </div>
   </section>
 
@@ -303,6 +307,7 @@
   </footer>
 
   <script src="../assets/js/dynamic-books.js"></script>
+  <script src="../assets/js/dynamic-teachers.js"></script>
   <script>
     document.querySelector('.nav__toggle').addEventListener('click', function() {
       document.querySelector('.nav__list').classList.toggle('is-open');

@@ -173,36 +173,6 @@
         </div>
       </div>
 
-      <!-- ניזרגדטה מהראג' -->
-      <div id="nisargadatta" class="person-card mb-4">
-        <div class="person-card__image">
-          <img src="teachers/krishnamurti/Krishnamurti.jpg" alt="ניזרגדטה מהראג'">
-        </div>
-        <div>
-          <h3 class="person-card__name">ניזרגדטה מהראג'</h3>
-          <p class="person-card__dates">1897-1981 | מורה רוחני הודי</p>
-          <p class="person-card__bio">
-            ניזרגדטה מהראג' היה מורה אדוואיטה (אי-שניות) מבומביי.
-            ספרו "אני זה" (I Am That) נחשב לאחד הטקסטים החשובים ברוחניות המודרנית.
-          </p>
-        </div>
-      </div>
-
-      <!-- אטמאננדה קרישנה מנון -->
-      <div id="atmananda" class="person-card mb-4">
-        <div class="person-card__image">
-          <img src="teachers/krishnamurti/Krishnamurti.jpg" alt="אטמאננדה">
-        </div>
-        <div>
-          <h3 class="person-card__name">אטמאננדה קרישנה מנון</h3>
-          <p class="person-card__dates">1883-1959 | מורה אדוואיטה</p>
-          <p class="person-card__bio">
-            אטמאננדה היה מורה אדוואיטה מקראלה, הודו.
-            שיטתו הישירה והמודרנית השפיעה על דורות של מחפשים רוחניים.
-          </p>
-        </div>
-      </div>
-
       <!-- אנתוני דה מלו -->
       <div id="demello" class="person-card mb-4">
         <div class="person-card__image">
@@ -219,20 +189,9 @@
         </div>
       </div>
 
-      <!-- שפינוזה -->
-      <div id="spinoza" class="person-card mb-4">
-        <div class="person-card__image">
-          <img src="teachers/krishnamurti/Krishnamurti.jpg" alt="שפינוזה">
-        </div>
-        <div>
-          <h3 class="person-card__name">ברוך שפינוזה</h3>
-          <p class="person-card__dates">1632-1677 | פילוסוף יהודי-הולנדי</p>
-          <p class="person-card__bio">
-            שפינוזה היה אחד הפילוסופים החשובים של העת החדשה.
-            תורתו על האל כטבע עצמו ועל חופש המחשבה השפיעה על הוגים רבים.
-          </p>
-        </div>
-      </div>
+      <!-- מורים נוספים נטענים כאן אוטומטית מ-teachers/manifest.json -->
+      <div id="dynamic-teachers"></div>
+
     </div>
   </section>
 
@@ -277,6 +236,7 @@
   </footer>
 
   <script src="assets/js/dynamic-books.js"></script>
+  <script src="assets/js/dynamic-teachers.js"></script>
   <script>
     document.querySelector('.nav__toggle').addEventListener('click', function() {
       document.querySelector('.nav__list').classList.toggle('is-open');
