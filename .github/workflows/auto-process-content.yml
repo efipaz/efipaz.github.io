@@ -70,14 +70,17 @@ jobs:
             # Extract cover for PDF only
             if [ "${ext,,}" = "pdf" ] && [ ! -f "$cover_path" ]; then
               echo "Extracting cover for: $filename"
-              pdftoppm -png -f 1 -l 1 -scale-to 400 "$filepath" "$COVERS_DIR/${safe_name}_tmp" 2>/dev/null || true
-              for f in "$COVERS_DIR/${safe_name}_tmp"*.png; do
-                [ -f "$f" ] && mv "$f" "$cover_path" && break
-              done
+              if pdftoppm -png -f 1 -l 1 -scale-to 400 "$filepath" "$COVERS_DIR/${safe_name}_tmp" 2>/dev/null; then
+                for f in "$COVERS_DIR/${safe_name}_tmp"*.png; do
+                  [ -f "$f" ] && mv "$f" "$cover_path" && break
+                done
+              else
+                echo "  Warning: Could not extract cover (pdftoppm failed)"
+              fi
             fi
 
-            # URL encode the path
-            encoded_path=$(python3 -c "import urllib.parse; print(urllib.parse.quote('$filepath'))")
+            # URL encode the path (using stdin to avoid quoting issues)
+            encoded_path=$(echo "$filepath" | python3 -c "import sys, urllib.parse; print(urllib.parse.quote(sys.stdin.read().strip()))")
 
             # Determine type
             case "${ext,,}" in
