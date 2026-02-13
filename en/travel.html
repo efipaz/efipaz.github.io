@@ -161,6 +161,13 @@
     </div>
   </section>
 
+  <!-- Dynamic galleries loaded automatically from gallery-manifest.json -->
+  <section id="more-galleries" class="section section--alt">
+    <div class="container">
+      <div id="dynamic-galleries" class="cards"></div>
+    </div>
+  </section>
+
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
@@ -200,6 +207,7 @@
     </div>
   </footer>
 
+  <script src="../assets/js/dynamic-gallery.js"></script>
   <script>
     document.querySelector('.nav__toggle').addEventListener('click', function() {
       document.querySelector('.nav__list').classList.toggle('is-open');

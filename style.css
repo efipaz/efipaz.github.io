@@ -372,6 +372,31 @@ a:hover {
   transform: scale(1.02);
 }
 
+/* Book covers - don't crop */
+.card--book .card__image img {
+  object-fit: contain;
+  background-color: var(--color-bg);
+}
+
+/* Book and gallery categories */
+.books-category-title,
+.gallery-category-title {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: var(--space-lg) 0 var(--space-md) 0;
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.books-category-title:first-child,
+.gallery-category-title:first-child {
+  margin-top: 0;
+}
+
+.books-category-grid {
+  margin-bottom: var(--space-lg);
+}
+
 .card__content {
   padding: var(--space-md);
 }

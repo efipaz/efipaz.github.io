@@ -166,6 +166,10 @@
           </div>
         </a>
       </div>
+
+      <!-- Dynamic teachers loaded automatically from teachers/manifest.json -->
+      <div id="dynamic-teachers"></div>
+
     </div>
   </section>
 
@@ -176,7 +180,7 @@
 
       <!-- Dynamic content loaded from books/manifest.json -->
       <div id="books-container" class="cards">
-        <a href="../books/%D7%94%D7%A1%D7%A4%D7%A8%20%D7%A2%D7%9C%20%D7%94%D7%98%D7%90%D7%91%D7%95%20%D7%A4%D7%AA%D7%95%D7%97.pdf" class="card card--with-image">
+        <a href="../books/%D7%94%D7%A1%D7%A4%D7%A8%20%D7%A2%D7%9C%20%D7%94%D7%98%D7%90%D7%91%D7%95%20%D7%A4%D7%AA%D7%95%D7%97.pdf" class="card card--with-image card--book">
           <div class="card__image">
             <img src="../books/covers/taboo-book.png" alt="The Book: On the Taboo - Alan Watts" loading="lazy">
           </div>
@@ -186,9 +190,9 @@
             <span class="card__link">Read (PDF)</span>
           </div>
         </a>
-        <a href="../books/%D7%90%D7%99%D7%9A%20%D7%9C%D7%A6%D7%90%D7%AA%20%D7%9E%D7%93%D7%A2%D7%AA%D7%9A%20%D7%91%D7%A4%D7%97%D7%95%D7%AA%20%D7%9E%D7%A9%D7%A2%D7%94.pdf" class="card card--with-image">
+        <a href="../books/%D7%90%D7%99%D7%9A%20%D7%9C%D7%A6%D7%90%D7%AA%20%D7%9E%D7%93%D7%A2%D7%AA%D7%9A%20%D7%91%D7%A4%D7%97%D7%95%D7%AA%20%D7%9E%D7%A9%D7%A2%D7%94.pdf" class="card card--with-image card--book">
           <div class="card__image">
-            <img src="../books/covers/lose-mind.png" alt="How to Lose Your Mind in Less Than an Hour" loading="lazy">
+            <img src="../books/covers/34567a59.png" alt="How to Lose Your Mind in Less Than an Hour" loading="lazy">
           </div>
           <div class="card__content">
             <h3 class="card__title">Losing Your Mind</h3>
@@ -196,7 +200,7 @@
             <span class="card__link">Read (PDF)</span>
           </div>
         </a>
-        <a href="../books/%D7%A9%D7%99%D7%97%D7%95%D7%AA%20%D7%90%D7%AA%D7%99%20%D7%94%D7%99%D7%9C%D7%A1%D7%95%D7%9D.pdf" class="card card--with-image">
+        <a href="../books/%D7%A9%D7%99%D7%97%D7%95%D7%AA%20%D7%90%D7%AA%D7%99%20%D7%94%D7%99%D7%9C%D7%A1%D7%95%D7%9D.pdf" class="card card--with-image card--book">
           <div class="card__image">
             <img src="../books/covers/etty-hillesum.png" alt="Conversations with Etty Hillesum" loading="lazy">
           </div>
@@ -206,11 +210,14 @@
             <span class="card__link">Read (PDF)</span>
           </div>
         </a>
-        <a href="../books/%D7%94%D7%95%D7%93%D7%95%20%D7%91%D7%A9%D7%99%D7%A2%D7%A8%20%D7%A9%D7%99%D7%91%D7%94%20%D7%A2%D7%9D%20%D7%A9%D7%A2%D7%A8.doc" class="card">
+        <a href="../books/%D7%94%D7%95%D7%93%D7%95%20%D7%91%D7%A9%D7%99%D7%A2%D7%A8%20%D7%A9%D7%99%D7%91%D7%94%20%D7%A2%D7%9D%20%D7%A9%D7%A2%D7%A8.pdf" class="card card--with-image card--book">
+          <div class="card__image">
+            <img src="../books/covers/7b23aca7.png" alt="India with Gray Hair" loading="lazy">
+          </div>
           <div class="card__content">
             <h3 class="card__title">India with Gray Hair</h3>
             <p class="card__text">Reflections and impressions from travels to India after many years. A different perspective through wiser eyes.</p>
-            <span class="card__link">Read (DOC)</span>
+            <span class="card__link">Read (PDF)</span>
           </div>
         </a>
       </div>
@@ -300,6 +307,7 @@
   </footer>
 
   <script src="../assets/js/dynamic-books.js"></script>
+  <script src="../assets/js/dynamic-teachers.js"></script>
   <script>
     document.querySelector('.nav__toggle').addEventListener('click', function() {
       document.querySelector('.nav__list').classList.toggle('is-open');

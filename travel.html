@@ -111,6 +111,9 @@
         </div>
       </div>
 
+      <!-- גלריות חדשות נטענות כאן אוטומטית מ-gallery-manifest.json -->
+      <div id="dynamic-galleries" class="cards mt-3"></div>
+
       <p class="mt-3 text-center" style="color: var(--color-text); opacity: 0.7;">ועוד יעדים נוספים...</p>
     </div>
   </section>
@@ -160,7 +163,33 @@
         פחות חיפוש ויותר נוכחות, פחות ציפיות ויותר קבלה.
       </p>
       <div class="mt-3">
-        <a href="https://efipaz.blogspot.com/" target="_blank" rel="noopener noreferrer" class="btn">לבלוג המסעות</a>
+        <a href="books/%D7%94%D7%95%D7%93%D7%95%20%D7%91%D7%A9%D7%99%D7%A2%D7%A8%20%D7%A9%D7%99%D7%91%D7%94%20%D7%A2%D7%9D%20%D7%A9%D7%A2%D7%A8.pdf" class="btn">לספר (PDF)</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- בלוג המסעות -->
+  <section id="blog" class="section section--alt">
+    <div class="container container--narrow">
+      <h2 class="mb-3">Travelling Mates</h2>
+      <p class="mb-3">
+        בלוג המסעות - סיפורים, תמונות והרהורים מטיולים ברחבי העולם.
+      </p>
+      <div class="mt-3">
+        <a href="https://efipaz.blogspot.com/" target="_blank" rel="noopener noreferrer" class="btn">לבלוג</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- פליקר -->
+  <section id="flickr" class="section">
+    <div class="container container--narrow">
+      <h2 class="mb-3">Flickr</h2>
+      <p class="mb-3">
+        אוסף תמונות נוסף בפליקר.
+      </p>
+      <div class="mt-3">
+        <a href="https://www.flickr.com/photos/efipaz/" target="_blank" rel="noopener noreferrer" class="btn">לפליקר</a>
       </div>
     </div>
   </section>
@@ -205,6 +234,7 @@
     </div>
   </footer>
 
+  <script src="assets/js/dynamic-gallery.js"></script>
   <script>
     document.querySelector('.nav__toggle').addEventListener('click', function() {
       document.querySelector('.nav__list').classList.toggle('is-open');
