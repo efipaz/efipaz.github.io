@@ -3,31 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ארכיון - לחיות בשלום עם הכסף, אתיקה ומשפחה">
+  <meta name="description" content="ארכיון – לחיות בשלום עם הכסף, אתיקה, משפחה והאתר הישן">
   <title>ארכיון | אפי פז</title>
+  <link rel="canonical" href="https://www.efipaz.com/archive.html">
+  <meta property="og:url" content="https://www.efipaz.com/archive.html">
+  <link rel="alternate" hreflang="he" href="https://www.efipaz.com/archive.html">
+  <link rel="alternate" hreflang="en" href="https://www.efipaz.com/en/archive.html">
+  <meta property="og:title" content="ארכיון | אפי פז">
+  <meta property="og:description" content="ארכיון – לחיות בשלום עם הכסף, אתיקה, משפחה והאתר הישן">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="אפי פז">
+  <meta property="og:locale" content="he_IL">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=a039e7ee">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-
+  <a class="skip-link" href="#main">דלג לתוכן</a>
   <header class="header">
     <div class="container header__inner">
       <a href="index.html" class="header__logo">אפי פז</a>
-      <nav class="nav">
-        <ul class="nav__list">
+      <nav class="nav" aria-label="תפריט">
+        <ul class="nav__list" id="nav-list">
           <li><a href="index.html" class="nav__link">בית</a></li>
           <li><a href="spiritual.html" class="nav__link">תבונה, מודעות והרחבת הדעת</a></li>
           <li><a href="travel.html" class="nav__link">מסעות</a></li>
           <li><a href="archive.html" class="nav__link nav__link--active">ארכיון</a></li>
         </ul>
         <div class="lang-switch">
-          <a href="archive.html" class="active">עב</a>
-          <a href="en/archive.html">EN</a>
+          <a href="#" class="active" aria-current="page">עב</a>
+          <a href="en/archive.html" lang="en" hreflang="en">EN</a>
         </div>
-        <button class="nav__toggle" aria-label="Menu">
+        <button class="nav__toggle" aria-label="תפריט" aria-expanded="false" aria-controls="nav-list">
           <span></span>
           <span></span>
           <span></span>
@@ -36,191 +45,215 @@
     </div>
   </header>
 
-  <div class="page-header">
-    <div class="container">
-      <h1>ארכיון</h1>
-      <p class="page-header__subtitle">לחיות בשלום עם הכסף, אתיקה ומשפחה</p>
+  <main id="main">
+
+    <div class="page-header">
+      <div class="container">
+        <h1>ארכיון</h1>
+        <nav class="page-header__links" aria-label="בעמוד זה"><a href="#living">לחיות בשלום עם הכסף</a> · <a href="#ethics">אתיקה</a> · <a href="#family">משפחה</a> · <a href="#old-site">האתר הישן</a></nav>
+      </div>
     </div>
-  </div>
 
-  <!-- לחיות בשלום עם הכסף -->
-  <section id="living" class="section">
-    <div class="container">
-      <h2 class="mb-3">לחיות בשלום עם הכסף</h2>
-      <p class="mb-3">קורס ייחודי המגשר בין העולם החומרי לעולם הרוחני.</p>
-
-      <div class="two-col">
-        <div>
-          <p>
-            איך אפשר לחיות חיים של שלום פנימי ועדיין להתמודד עם הצרכים הכלכליים של החיים המודרניים?
-            הקורס מציע כלים מעשיים לניהול כספי מודע, תוך שמירה על איזון פנימי ושלווה.
-          </p>
-          <blockquote class="mt-2">
-            <p>הכסף אינו האויב. היחס שלנו אליו הוא מה שקובע את איכות חיינו.</p>
-          </blockquote>
-        </div>
-        <div>
-          <div class="document-list">
-            <a href="living/About.html" class="document-item">
-              <div class="document-item__icon">WEB</div>
-              <div class="document-item__info">
-                <div class="document-item__title">אודות הקורס</div>
-                <div class="document-item__meta">מידע מפורט</div>
-              </div>
-            </a>
-            <a href="living/Workshop.html" class="document-item">
-              <div class="document-item__icon">WEB</div>
-              <div class="document-item__info">
-                <div class="document-item__title">סדנאות</div>
-                <div class="document-item__meta">מידע על סדנאות</div>
-              </div>
-            </a>
-            <a href="living/Living_Bro_3.pdf" class="document-item">
-              <div class="document-item__icon">PDF</div>
-              <div class="document-item__info">
-                <div class="document-item__title">חוברת הקורס</div>
-                <div class="document-item__meta">מידע מלא על הקורס</div>
-              </div>
-            </a>
+    <section id="living" class="section">
+      <div class="container">
+        <h2 class="mb-3">לחיות בשלום עם הכסף</h2>
+        <p class="mb-3">מתודה לבחינה ושינוי של אופן חשיבה, המבוססת על הדרך הבודהיסטית.</p>
+        <div class="document-list container--narrow">
+        <a href="living/index.html" class="document-item">
+          <div class="document-item__icon">WEB</div>
+          <div class="document-item__info">
+            <div class="document-item__title">האתר המקורי של הקורס</div>
+            <div class="document-item__meta">כל העמודים</div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- אתיקה -->
-  <section id="ethics" class="section section--alt">
-    <div class="container">
-      <h2 class="mb-3">אתיקה</h2>
-      <p class="mb-3">חומרים בנושא אתיקה וערכים ארגוניים.</p>
-
-      <div class="two-col">
-        <div>
-          <p>
-            אתיקה ארגונית אינה רק עניין של חוקים ותקנות - היא עניין של תרבות, ערכים והתנהגות יומיומית.
-            ארגון אתי הוא ארגון שבו העובדים יודעים לא רק מה לעשות, אלא גם למה ואיך.
-          </p>
-        </div>
-        <div>
-          <div class="document-list">
-            <a href="personal/ethics/index.html" class="document-item">
-              <div class="document-item__icon">WEB</div>
-              <div class="document-item__info">
-                <div class="document-item__title">אתיקה ארגונית</div>
-                <div class="document-item__meta">מידע כללי</div>
-              </div>
-            </a>
-            <a href="personal/ethics/Coach.html" class="document-item">
-              <div class="document-item__icon">WEB</div>
-              <div class="document-item__info">
-                <div class="document-item__title">אימון ערכי</div>
-                <div class="document-item__meta">על אימון ערכים בארגון</div>
-              </div>
-            </a>
-            <a href="personal/ethics/Org.html" class="document-item">
-              <div class="document-item__icon">WEB</div>
-              <div class="document-item__info">
-                <div class="document-item__title">הארגון האתי</div>
-                <div class="document-item__meta">עקרונות ומסגרות</div>
-              </div>
-            </a>
+        </a>
+        <a href="living/Process/Process.html" class="document-item">
+          <div class="document-item__icon">WEB</div>
+          <div class="document-item__info">
+            <div class="document-item__title">שלבי התהליך</div>
+            <div class="document-item__meta">שבעה שלבים</div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- משפחה -->
-  <section id="family" class="section">
-    <div class="container">
-      <h2 class="mb-3">משפחה</h2>
-      <p class="mb-3">שורשים והיסטוריה משפחתית.</p>
-
-      <div class="two-col">
-        <div>
-          <h3>משפחת רוז'אני</h3>
-          <p>
-            משפחת רוז'אני היא משפחה רבנית עם שורשים עמוקים בהיסטוריה היהודית.
-            הרב יוסף צבי הלוי רוז'אני היה דמות מרכזית בקהילה היהודית של אוסטרובייץ, פולין.
-          </p>
-        </div>
-        <div>
-          <div class="document-list">
-            <a href="https://jewsofostrowiec.com/rabbi-yosef-zvi-halevi-rozani/" target="_blank" rel="noopener noreferrer" class="document-item">
-              <div class="document-item__icon">WEB</div>
-              <div class="document-item__info">
-                <div class="document-item__title">הרב יוסף צבי הלוי רוז'אני</div>
-                <div class="document-item__meta">Jews of Ostrowiec</div>
-              </div>
-            </a>
+        </a>
+        <a href="viewer.html?file=living%2FLiving_Bro_3.pdf" class="document-item">
+          <div class="document-item__icon">PDF</div>
+          <div class="document-item__info">
+            <div class="document-item__title">חוברת הקורס</div>
+            <div class="document-item__meta">PDF</div>
           </div>
+        </a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- אודות -->
-  <section id="about" class="section section--alt">
-    <div class="container container--narrow">
-      <h2>אודות אפי פז</h2>
-      <p>
-        אפי פז מאחד תחומי עניין מגוונים: רוחניות ודעת, צילום מסעות וחקירת התודעה.
-      </p>
-      <p>
-        עם עניין עמוק בפילוסופיה מזרחית - קרישנמורטי, אלן ואטס, ניזרגדטה, אטמאננדה, דה מלו ושפינוזה -
-        אתר זה משמש כפלטפורמה לשיתוף ספרים, הקלטות, תמונות ותובנות.
-      </p>
-      <div class="mt-3">
-        <a href="business/About.html" class="btn">קורות חיים מקצועיים</a>
-        <a href="business/contact.html" class="btn" style="margin-right: 1rem;">יצירת קשר</a>
+    </section>
+    <section id="ethics" class="section section--alt">
+      <div class="container">
+        <h2 class="mb-3">אתיקה</h2>
+        <p class="mb-3">אתיקה לעסקים – ייעוץ ואימון בנושאי אתיקה ארגונית. הפעילות הסתיימה והחומרים נשמרים כאן.</p>
+        <div class="document-list container--narrow">
+        <a href="personal/ethics/index.html" class="document-item">
+          <div class="document-item__icon">WEB</div>
+          <div class="document-item__info">
+            <div class="document-item__title">אתר האתיקה המקורי</div>
+            <div class="document-item__meta">כל העמודים</div>
+          </div>
+        </a>
+        <a href="personal/ethics/Org.html" class="document-item">
+          <div class="document-item__icon">WEB</div>
+          <div class="document-item__info">
+            <div class="document-item__title">הארגון האתי</div>
+            <div class="document-item__meta">עקרונות</div>
+          </div>
+        </a>
+        <a href="personal/ethics/Coach.html" class="document-item">
+          <div class="document-item__icon">WEB</div>
+          <div class="document-item__info">
+            <div class="document-item__title">אימון ערכי</div>
+            <div class="document-item__meta">אימון ערכים בארגון</div>
+          </div>
+        </a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+    <section id="business" class="section">
+      <div class="container">
+        <h2 class="mb-3">ייעוץ עסקי</h2>
+        <p class="mb-3">חומרים מעולם הייעוץ העסקי. הפעילות הסתיימה והחומרים נשמרים לעיון.</p>
+        <div class="document-list container--narrow">
+        <a href="business/index.html" class="document-item">
+          <div class="document-item__icon">WEB</div>
+          <div class="document-item__info">
+            <div class="document-item__title">אתר הייעוץ העסקי</div>
+            <div class="document-item__meta">האתר המקורי</div>
+          </div>
+        </a>
+        <a href="business/services.html" class="document-item">
+          <div class="document-item__icon">WEB</div>
+          <div class="document-item__info">
+            <div class="document-item__title">שירותים</div>
+            <div class="document-item__meta">פירוט</div>
+          </div>
+        </a>
+        <a href="archive/courses/index.html" class="document-item">
+          <div class="document-item__icon">WEB</div>
+          <div class="document-item__info">
+            <div class="document-item__title">קורסים עסקיים</div>
+            <div class="document-item__meta">חומרי הדרכה</div>
+          </div>
+        </a>
+        <a href="archive/Personal_Training.html" class="document-item">
+          <div class="document-item__icon">WEB</div>
+          <div class="document-item__info">
+            <div class="document-item__title">אימון אישי</div>
+            <div class="document-item__meta">מתודולוגיה</div>
+          </div>
+        </a>
+        </div>
+      </div>
+    </section>
+    <section id="family" class="section section--alt">
+      <div class="container">
+        <h2 class="mb-3">משפחה</h2>
+        <p class="mb-3">משפחת רוז'אני היא משפחה רבנית עם שורשים עמוקים בהיסטוריה היהודית. הרב יוסף צבי הלוי רוז'אני היה דמות מרכזית בקהילה היהודית של אוסטרובייץ.</p>
+        <div class="document-list container--narrow">
+        <a href="https://jewsofostrowiec.com/rabbi-yosef-zvi-halevi-rozani/" class="document-item" target="_blank" rel="noopener">
+          <div class="document-item__icon">WEB</div>
+          <div class="document-item__info">
+            <div class="document-item__title">הרב יוסף צבי הלוי רוז'אני</div>
+            <div class="document-item__meta">Jews of Ostrowiec</div>
+          </div>
+        </a>
+        <a href="personal/evyatar/Evyatar_index.html" class="document-item">
+          <div class="document-item__icon">WEB</div>
+          <div class="document-item__info">
+            <div class="document-item__title">דף מיוחד לאביתר</div>
+            <div class="document-item__meta">ליום הולדת 5</div>
+          </div>
+        </a>
+        <a href="personal/drawings/Danielle/Danielle_index.html" class="document-item">
+          <div class="document-item__icon">WEB</div>
+          <div class="document-item__info">
+            <div class="document-item__title">גלריית דניאל</div>
+            <div class="document-item__meta">דף מיוחד לדניאל</div>
+          </div>
+        </a>
+        </div>
+      </div>
+    </section>
 
-  <!-- פרויקטים חיצוניים -->
-  <section id="external" class="section">
-    <div class="container">
-      <h2 class="mb-3">פרויקטים נוספים</h2>
-      <p class="mb-3">קישורים לפלטפורמות נוספות.</p>
+    <section id="about" class="section">
+      <div class="container container--narrow">
+        <h2>אודות אפי פז</h2>
+        <p>אפי פז מאחד תחומי עניין מגוונים: תבונה, מודעות והרחבת הדעת, צילום מסעות וחקירת התודעה.</p>
+        <p>עם עניין עמוק בפילוסופיה מזרחית – קרישנמורטי, אלן ואטס, ניזרגדטה, אטמאננדה, דה מלו ושפינוזה – אתר זה משמש כפלטפורמה לשיתוף ספרים, הקלטות, תמונות ותובנות.</p>
+        <p class="mt-3 card__actions"><a href="business/About.html" class="btn">קורות חיים מקצועיים</a></p>
+      </div>
+    </section>
 
-      <div class="document-list container--narrow">
-        <a href="https://archive.org/details/@efipaz" target="_blank" rel="noopener noreferrer" class="document-item">
+    <section id="external" class="section section--alt">
+      <div class="container">
+        <h2 class="mb-3">פרויקטים נוספים</h2>
+        <p class="mb-3">קישורים לפלטפורמות נוספות.</p>
+        <div class="document-list container--narrow">
+        <a href="https://archive.org/details/@efipaz" class="document-item" target="_blank" rel="noopener">
           <div class="document-item__icon">WEB</div>
           <div class="document-item__info">
             <div class="document-item__title">Internet Archive</div>
-            <div class="document-item__meta">ארכיון האינטרנט</div>
+            <div class="document-item__meta">הקלטות ותכנים</div>
           </div>
         </a>
-        <a href="https://soundcloud.com/efipaz" target="_blank" rel="noopener noreferrer" class="document-item">
+        <a href="https://soundcloud.com/efipaz" class="document-item" target="_blank" rel="noopener">
           <div class="document-item__icon">WEB</div>
           <div class="document-item__info">
             <div class="document-item__title">SoundCloud</div>
             <div class="document-item__meta">הקלטות שמע</div>
           </div>
         </a>
-        <a href="https://www.flickr.com/photos/elirazraz/" target="_blank" rel="noopener noreferrer" class="document-item">
+        <a href="https://www.flickr.com/photos/elirazraz/" class="document-item" target="_blank" rel="noopener">
           <div class="document-item__icon">WEB</div>
           <div class="document-item__info">
             <div class="document-item__title">Flickr</div>
             <div class="document-item__meta">גלריית תמונות</div>
           </div>
         </a>
-        <a href="https://efipaz.wordpress.com/" target="_blank" rel="noopener noreferrer" class="document-item">
+        <a href="https://efipaz.wordpress.com/" class="document-item" target="_blank" rel="noopener">
           <div class="document-item__icon">WEB</div>
           <div class="document-item__info">
             <div class="document-item__title">WordPress</div>
             <div class="document-item__meta">בלוג</div>
           </div>
         </a>
+        <a href="https://efipaz.blogspot.com/" class="document-item" target="_blank" rel="noopener">
+          <div class="document-item__icon">WEB</div>
+          <div class="document-item__info">
+            <div class="document-item__title">Travelling Mates</div>
+            <div class="document-item__meta">בלוג המסעות</div>
+          </div>
+        </a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section id="old-site" class="section">
+      <div class="container container--narrow">
+        <h2 class="mb-3">האתר הישן (2006–2025)</h2>
+        <p class="mb-3">העמודים המקוריים של האתר, כפי שהיו. נשמרים כאן ללא שינוי.</p>
+        <ul class="content-list old-site-list" lang="he" dir="rtl">
+          <li><a href="archive/old-site/Living/index.html">לחיות בשלום עם הכסף – האתר המקורי</a></li>
+          <li><a href="archive/old-site/Ethics/index.html">אתיקה לעסקים – האתר המקורי</a></li>
+          <li><a href="archive/old-site/BC/index.html">ייעוץ עסקי – האתר המקורי</a></li>
+          <li><a href="archive/old-site/KM/km_index.html">קרישנמורטי – העמוד המקורי</a></li>
+          <li><a href="archive/old-site/WATTS/index.html">אלן ואטס – העמוד המקורי</a></li>
+          <li><a href="archive/old-site/DeMello/demello.html">אנתוני דה מלו – העמוד המקורי</a></li>
+          <li><a href="archive/old-site/hadas/index.html">הדס פז</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
 
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
         <div class="footer__section">
-          <h4>רוחניות ודעת</h4>
+          <p class="footer__title">תבונה, מודעות והרחבת הדעת</p>
           <ul class="footer__links">
             <li><a href="spiritual.html#books">ספרים</a></li>
             <li><a href="spiritual.html#groups">קבוצות</a></li>
@@ -228,7 +261,7 @@
           </ul>
         </div>
         <div class="footer__section">
-          <h4>מסעות</h4>
+          <p class="footer__title">מסעות</p>
           <ul class="footer__links">
             <li><a href="travel.html#photography">צילומים</a></li>
             <li><a href="travel.html#drawings">ציורים</a></li>
@@ -236,15 +269,16 @@
           </ul>
         </div>
         <div class="footer__section">
-          <h4>ארכיון</h4>
+          <p class="footer__title">ארכיון</p>
           <ul class="footer__links">
-            <li><a href="#living">לחיות בשלום עם הכסף</a></li>
-            <li><a href="#ethics">אתיקה</a></li>
-            <li><a href="#family">משפחה</a></li>
+            <li><a href="archive.html#living">לחיות בשלום עם הכסף</a></li>
+            <li><a href="archive.html#ethics">אתיקה</a></li>
+            <li><a href="archive.html#family">משפחה</a></li>
+            <li><a href="archive.html#old-site">האתר הישן</a></li>
           </ul>
         </div>
         <div class="footer__section">
-          <h4>שפה</h4>
+          <p class="footer__title">עוד</p>
           <ul class="footer__links">
             <li><a href="en/index.html">English</a></li>
           </ul>
@@ -257,11 +291,15 @@
   </footer>
 
   <script>
-    document.querySelector('.nav__toggle').addEventListener('click', function() {
-      document.querySelector('.nav__list').classList.toggle('is-open');
-    });
+    (function () {
+      var t = document.querySelector('.nav__toggle');
+      var l = document.querySelector('.nav__list');
+      if (!t || !l) return;
+      t.addEventListener('click', function () {
+        var open = l.classList.toggle('is-open');
+        t.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    })();
   </script>
-
 </body>
 </html>
-

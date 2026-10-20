@@ -1,7 +1,205 @@
-{"generated":"2026-06-15T18:35:43+00:00","teachers":[
-{"name": "אטמאננדה קרישנה מנון", "name_en": "Atmananda Krishna Menon", "dates": "1883-1959", "role": "מורה אדוואיטה", "bio": "אטמאננדה היה מורה אדוואיטה מקראלה, הודו. שיטתו הישירה והמודרנית השפיעה על דורות של מחפשים רוחניים.", "id": "atmananda"}
-,
-{"name": "ניזרגדטה מהראג'", "name_en": "Nisargadatta Maharaj", "dates": "1897-1981", "role": "מורה רוחני הודי", "bio": "ניזרגדטה מהראג' היה מורה אדוואיטה (אי-שניות) מבומביי. ספרו \"אני זה\" (I Am That) נחשב לאחד הטקסטים החשובים ברוחניות המודרנית.", "id": "nisargadatta"}
-,
-{"name": "ברוך שפינוזה", "name_en": "Baruch Spinoza", "dates": "1632-1677", "role": "פילוסוף יהודי-הולנדי", "bio": "שפינוזה היה אחד הפילוסופים החשובים של העת החדשה. תורתו על האל כטבע עצמו ועל חופש המחשבה השפיעה על הוגים רבים.", "id": "spinoza"}
-]}
+{
+ "teachers": [
+  {
+   "id": "krishnamurti",
+   "name": "ג'ידו קרישנמורטי",
+   "name_en": "Jiddu Krishnamurti",
+   "dates": "1895-1986",
+   "role": "פילוסוף הודי",
+   "role_en": "Indian philosopher",
+   "bio": "קרישנמורטי היה פילוסוף ונואם שהדגיש שהאמת היא ארץ ללא שבילים. תורתו מתמקדת בטבע המחשבה, מדיטציה ללא שיטה וחופש פסיכולוגי.",
+   "bio_en": "Krishnamurti was a philosopher and speaker who spent decades traveling and speaking about the need for radical transformation in humanity. He emphasized that truth is a pathless land and that no organization, belief or dogma can lead a person to truth.\nHis teachings focus on the nature of thought, meditation without method, psychological freedom and self-knowledge through direct observation.",
+   "wiki": "https://he.wikipedia.org/wiki/ג'ידו_קרישנמורטי",
+   "wiki_en": "https://en.wikipedia.org/wiki/Jiddu_Krishnamurti",
+   "links": "",
+   "links_en": "",
+   "pages_intro": "ארבעה פרקים מתורגמים לעברית מספרו של Dhopeshwarkar על קרישנמורטי (בתרגום שמוליק).",
+   "pages_intro_en": "Four chapters from Dhopeshwarkar's book on Krishnamurti, translated into Hebrew (by Shmulik).",
+   "portrait": "teachers/krishnamurti/Krishnamurti.jpg",
+   "order": "1",
+   "link": "teachers/krishnamurti/index.html",
+   "link_en": "teachers/krishnamurti/index.en.html",
+   "files": {
+    "pdf": [
+     "teachers/krishnamurti/Awareness_in_Action_Intro.pdf",
+     "teachers/krishnamurti/LIFE, DEATH AND SURVIVAL.pdf"
+    ],
+    "audio": [],
+    "html": [
+     "teachers/krishnamurti/1.html",
+     "teachers/krishnamurti/2.html",
+     "teachers/krishnamurti/3.html",
+     "teachers/krishnamurti/4.html"
+    ],
+    "image": [
+     "teachers/krishnamurti/Krishnamurti.jpg",
+     "teachers/krishnamurti/Madras_KMF_005.jpg",
+     "teachers/krishnamurti/Madras_KMF_007a.jpg",
+     "teachers/krishnamurti/Madras_KMF_008.jpg",
+     "teachers/krishnamurti/Madras_KMF_014.jpg",
+     "teachers/krishnamurti/Madras_KMF_020.jpg",
+     "teachers/krishnamurti/Madras_KMF_021.jpg",
+     "teachers/krishnamurti/Madras_KMF_026.jpg",
+     "teachers/krishnamurti/Madras_KMF_029.jpg",
+     "teachers/krishnamurti/Madras_KMF_035.jpg"
+    ],
+    "video": []
+   }
+  },
+  {
+   "id": "watts",
+   "name": "אלן ואטס",
+   "name_en": "Alan Watts",
+   "dates": "1915-1973",
+   "role": "פילוסוף בריטי",
+   "role_en": "British philosopher",
+   "bio": "אלן וילסון ואטס היה פילוסוף, סופר ודובר בריטי-אמריקאי שנודע בפירוש והצגת הפילוסופיה והרוחניות המזרחית לקהל המערבי.\nנולד בצ'יזלהרסט, אנגליה ב-1915, וגילה עניין בתרבויות המזרח הרחוק בגיל צעיר. הוא החל לכתוב על בודהיזם זן כבר בגיל העשרה, והיה לאחד מהפרשנים המשפיעים ביותר של הפילוסופיה המזרחית במאה ה-20.\nעבודתו חוקרת את האשליה של האגו הנפרד, את חוכמת חוסר הביטחון, את הטאבו נגד לדעת מי אתה ואת אמנות החיים ברגע הנוכחי.",
+   "bio_en": "Alan Watts was a British philosopher who interpreted Eastern philosophy for Western audiences. He made Zen Buddhism, Taoism and Hindu philosophy accessible and understandable to many readers.\nHis work explores the illusion of the separate ego, the wisdom of insecurity, the taboo against knowing who you are, and the art of living in the present moment.",
+   "wiki": "https://he.wikipedia.org/wiki/אלן_ווטס",
+   "wiki_en": "https://en.wikipedia.org/wiki/Alan_Watts",
+   "links": "",
+   "links_en": "",
+   "pages_intro": "",
+   "pages_intro_en": "",
+   "portrait": "teachers/watts/watts_brey-729056_resize1.jpg",
+   "order": "2",
+   "link": "teachers/watts/index.html",
+   "link_en": "teachers/watts/index.en.html",
+   "files": {
+    "pdf": [
+     "teachers/watts/1_inner.pdf",
+     "teachers/watts/2_bw.pdf",
+     "teachers/watts/Instincts_heb_watts.pdf",
+     "teachers/watts/MEDITATION_HEB.pdf",
+     "teachers/watts/ZEN_CONTROL_HEB.pdf"
+    ],
+    "audio": [],
+    "html": [],
+    "image": [
+     "teachers/watts/watts_brey-729056_resize1.jpg"
+    ],
+    "video": []
+   }
+  },
+  {
+   "id": "demello",
+   "name": "אנתוני דה מלו",
+   "name_en": "Anthony de Mello",
+   "dates": "1931-1987",
+   "role": "כומר ישועי הודי",
+   "role_en": "Indian Jesuit priest",
+   "bio": "אנתוני דה מלו שילב מסורות רוחניות מזרחיות ומערביות. עבודתו מדגישה מודעות, התעוררות מאשליות ומציאת אושר דרך הבנה.",
+   "bio_en": "Anthony de Mello was an Indian Jesuit priest and psychotherapist known for his books on spirituality. His teachings blend Eastern and Western spiritual traditions: Christianity, Buddhism and Taoism.\nHis work emphasizes awareness, awakening from the illusions that cause suffering, and finding happiness through understanding rather than acquisition.",
+   "wiki": "https://he.wikipedia.org/wiki/אנתוני_דה_מלו",
+   "wiki_en": "https://en.wikipedia.org/wiki/Anthony_de_Mello",
+   "links": "האתר המוקדש לאנתוני דה מלו | http://www.demello.org/\nהודעת הוותיקן על כתבי דה מלו (1998) | http://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19980624_demello_en.html\nDe Mello censure reflects Vatican misgivings about Eastern thinking | http://www.natcath.com/NCR_Online/archives/090498/090498k.htm\nThe Prayer of the Frog Called into Question | http://findarticles.com/p/articles/mi_m1252/is_n18_v125/ai_21273527/print\nDr. Seuss condemned: grinches go after de Mello | http://findarticles.com/p/articles/mi_m2065/is_2_51/ai_56063940/print",
+   "links_en": "The Anthony de Mello website | http://www.demello.org/\nThe Vatican notification on de Mello's writings (1998) | http://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19980624_demello_en.html\nDe Mello censure reflects Vatican misgivings about Eastern thinking | http://www.natcath.com/NCR_Online/archives/090498/090498k.htm\nThe Prayer of the Frog Called into Question | http://findarticles.com/p/articles/mi_m1252/is_n18_v125/ai_21273527/print\nDr. Seuss condemned: grinches go after de Mello | http://findarticles.com/p/articles/mi_m2065/is_2_51/ai_56063940/print",
+   "pages_intro": "מאמר של אפי פז על דה מלו, קטע מתורגם מתוך \"מודעות\", ו-194 סיפורי חוכמה קצרים (אנגלית).",
+   "pages_intro_en": "An article by Efi Paz about de Mello, a translated excerpt from \"Awareness\" (Hebrew), and 194 short wisdom stories.",
+   "portrait": "teachers/demello/demello1.jpg",
+   "order": "3",
+   "link": "teachers/demello/index.html",
+   "link_en": "teachers/demello/index.en.html",
+   "files": {
+    "pdf": [
+     "teachers/demello/Anthony de Mello - Awareness.pdf",
+     "teachers/demello/How to Lose Your Mind.pdf",
+     "teachers/demello/How_to_Lose_Your_Mind_in_Under_an_Hour.heb.pdf"
+    ],
+    "audio": [
+     "teachers/demello/AWAR_01.MP3"
+    ],
+    "html": [
+     "teachers/demello/demelloAboutHeb.html",
+     "teachers/demello/DeMelloEn1.html",
+     "teachers/demello/ShortWisdomStories.html"
+    ],
+    "image": [
+     "teachers/demello/demello1.jpg"
+    ],
+    "video": []
+   }
+  },
+  {
+   "id": "nisargadatta",
+   "name": "ניזרגדטה מהראג'",
+   "name_en": "Nisargadatta Maharaj",
+   "dates": "1897-1981",
+   "role": "מורה אדוואיטה",
+   "role_en": "Advaita teacher",
+   "bio": "ניזרגדטה מהראג' היה מורה אדוואיטה (אי-שניות) מבומביי. ספרו \"אני זה\" (I Am That) נחשב לאחד הטקסטים החשובים ברוחניות המודרנית.",
+   "bio_en": "Nisargadatta Maharaj was an Advaita (non-duality) teacher from Bombay. His book \"I Am That\" is considered one of the most important texts of modern spirituality.",
+   "wiki": "",
+   "wiki_en": "https://en.wikipedia.org/wiki/Nisargadatta_Maharaj",
+   "links": "",
+   "links_en": "",
+   "pages_intro": "",
+   "pages_intro_en": "",
+   "portrait": null,
+   "order": "4",
+   "link": "teachers/nisargadatta/index.html",
+   "link_en": "teachers/nisargadatta/index.en.html",
+   "files": {
+    "pdf": [],
+    "audio": [],
+    "html": [],
+    "image": [],
+    "video": []
+   }
+  },
+  {
+   "id": "atmananda",
+   "name": "אטמאננדה קרישנה מנון",
+   "name_en": "Atmananda Krishna Menon",
+   "dates": "1883-1959",
+   "role": "מורה אדוואיטה",
+   "role_en": "Advaita teacher",
+   "bio": "אטמאננדה היה מורה אדוואיטה מקראלה, הודו. שיטתו הישירה והמודרנית השפיעה על דורות של מחפשים רוחניים.",
+   "bio_en": "Atmananda was an Advaita teacher from Kerala, India. His direct, modern approach influenced generations of spiritual seekers.",
+   "wiki": "",
+   "wiki_en": "https://en.wikipedia.org/wiki/Atmananda_Krishna_Menon",
+   "links": "",
+   "links_en": "",
+   "pages_intro": "",
+   "pages_intro_en": "",
+   "portrait": null,
+   "order": "5",
+   "link": "teachers/atmananda/index.html",
+   "link_en": "teachers/atmananda/index.en.html",
+   "files": {
+    "pdf": [],
+    "audio": [],
+    "html": [],
+    "image": [],
+    "video": []
+   }
+  },
+  {
+   "id": "spinoza",
+   "name": "ברוך שפינוזה",
+   "name_en": "Baruch Spinoza",
+   "dates": "1632-1677",
+   "role": "פילוסוף יהודי-הולנדי",
+   "role_en": "Dutch-Jewish philosopher",
+   "bio": "שפינוזה היה אחד הפילוסופים החשובים של העת החדשה. תורתו על האל כטבע עצמו ועל חופש המחשבה השפיעה על הוגים רבים.",
+   "bio_en": "Spinoza was one of the most important philosophers of the early modern period. His teaching of God as nature itself and his defense of freedom of thought influenced many thinkers.",
+   "wiki": "https://he.wikipedia.org/wiki/ברוך_שפינוזה",
+   "wiki_en": "https://en.wikipedia.org/wiki/Baruch_Spinoza",
+   "links": "",
+   "links_en": "",
+   "pages_intro": "",
+   "pages_intro_en": "",
+   "portrait": null,
+   "order": "6",
+   "link": "teachers/spinoza/index.html",
+   "link_en": "teachers/spinoza/index.en.html",
+   "files": {
+    "pdf": [],
+    "audio": [],
+    "html": [],
+    "image": [],
+    "video": []
+   }
+  }
+ ]
+}

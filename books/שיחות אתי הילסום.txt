@@ -1,0 +1,5 @@
+כותרת: שיחות אתי הילסום
+תיאור: שיחות על יומנה של אתי הילסום – כמסע להארה.
+title_en: Conversations on Etty Hillesum
+description_en: Conversations about Etty Hillesum's diary – as a journey to enlightenment.
+סדר: 3

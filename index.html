@@ -3,32 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="אפי פז - תבונה, פילוסופיה, צילום מסעות וחיים מודעים">
+  <meta name="description" content="אפי פז – תבונה, מודעות והרחבת הדעת, צילום מסעות וחיים מודעים">
   <title>אפי פז</title>
+  <meta property="og:title" content="אפי פז">
+  <meta property="og:description" content="אפי פז – תבונה, מודעות והרחבת הדעת, צילום מסעות וחיים מודעים">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="אפי פז">
+  <meta property="og:locale" content="he_IL">
+  <meta property="og:image" content="https://www.efipaz.com/travel/india/thumbs/cover.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=a039e7ee">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-
-  <!-- Header -->
+  <a class="skip-link" href="#main">דלג לתוכן</a>
   <header class="header">
     <div class="container header__inner">
       <a href="index.html" class="header__logo">אפי פז</a>
-      <nav class="nav">
-        <ul class="nav__list">
+      <nav class="nav" aria-label="תפריט">
+        <ul class="nav__list" id="nav-list">
           <li><a href="index.html" class="nav__link nav__link--active">בית</a></li>
           <li><a href="spiritual.html" class="nav__link">תבונה, מודעות והרחבת הדעת</a></li>
           <li><a href="travel.html" class="nav__link">מסעות</a></li>
           <li><a href="archive.html" class="nav__link">ארכיון</a></li>
         </ul>
         <div class="lang-switch">
-          <a href="index.html" class="active">עב</a>
-          <a href="en/index.html">EN</a>
+          <a href="#" class="active" aria-current="page">עב</a>
+          <a href="en/index.html" lang="en" hreflang="en">EN</a>
         </div>
-        <button class="nav__toggle" aria-label="תפריט">
+        <button class="nav__toggle" aria-label="תפריט" aria-expanded="false" aria-controls="nav-list">
           <span></span>
           <span></span>
           <span></span>
@@ -37,80 +42,62 @@
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero hero--with-image" style="background-image: url('travel/india/pictures/Religion/Buddhist_monks/Alchi_063.jpg');">
-    <div class="container text-center">
-      <h1>אפי פז</h1>
-      <p class="hero__subtitle">מודעות · פילוסופיה · צילום</p>
-    </div>
-  </section>
+  <main id="main">
 
-  <!-- Areas of Interest -->
-  <section class="section">
-    <div class="container">
-      <h2 class="text-center mb-4">תחומי עניין</h2>
-
-      <div class="cards">
-        <!-- Spirituality -->
-        <a href="spiritual.html" class="card">
-          <div class="card__image">
-            <img src="teachers/krishnamurti/Krishnamurti.jpg" alt="תבונה, מודעות והרחבת הדעת">
-          </div>
-          <div class="card__content">
-            <h3 class="card__title">תבונה, מודעות והרחבת הדעת</h3>
-            <p class="card__text">ספרים, קבוצות ומורים רוחניים. קרישנמורטי, אלן ואטס, ניזרגדטה, דה מלו ועוד.</p>
-            <span class="card__link">לתכנים</span>
-          </div>
-        </a>
-
-        <!-- Travel -->
-        <a href="travel.html" class="card">
-          <div class="card__image">
-            <img src="travel/india/pictures/People/At_Work/Anjuna-005.jpg" alt="מסעות">
-          </div>
-          <div class="card__content">
-            <h3 class="card__title">מסעות</h3>
-            <p class="card__text">צילומים מהודו, בורמה ומקומות נוספים. ציורים והודו בשיער שיבה.</p>
-            <span class="card__link">לגלריות</span>
-          </div>
-        </a>
-
-        <!-- Archive -->
-        <a href="archive.html" class="card">
-          <div class="card__image">
-            <img src="travel/india/pictures/Landscape/Fields/Allapuza-Backwater-170.jpg" alt="ארכיון">
-          </div>
-          <div class="card__content">
-            <h3 class="card__title">ארכיון</h3>
-            <p class="card__text">לחיות בשלום עם הכסף, אתיקה ומשפחה.</p>
-            <span class="card__link">לארכיון</span>
-          </div>
-        </a>
+    <section class="hero hero--with-image" style="background-image: url('travel/india/thumbs/cover.jpg');">
+      <div class="container text-center">
+        <h1>אפי פז</h1>
+        <p class="hero__subtitle">מודעות · פילוסופיה · צילום</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- About -->
-  <section class="section section--alt">
-    <div class="container container--narrow text-center">
-      <h2 class="mb-3">אודות</h2>
-      <p>
-        אפי פז מאחד תחומי עניין מגוונים: תבונה, מודעות והרחבת הדעת, צילום מסעות וחקירת התודעה.
-        עם עניין עמוק בפילוסופיה מזרחית - קרישנמורטי, אלן ואטס, ניזרגדטה, אטמאננדה, דה מלו ושפינוזה -
-        אתר זה משמש כפלטפורמה לשיתוף ספרים, הקלטות, תמונות ותובנות.
-      </p>
-      <div class="mt-3">
-        <a href="archive.html#about" class="btn">עוד עליי</a>
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center mb-4">תחומי עניין</h2>
+        <div class="cards">
+    <a href="spiritual.html" class="card">
+      <div class="card__image"><img src="teachers/krishnamurti/Krishnamurti.jpg" alt="" loading="lazy"></div>
+      <div class="card__content">
+        <h3 class="card__title">תבונה, מודעות והרחבת הדעת</h3>
+        <p class="card__text">ספרים, קבוצות ומורים. קרישנמורטי, אלן ואטס, ניזרגדטה, אטמאננדה, דה מלו ושפינוזה.</p>
+        <span class="card__link">לתכנים</span>
       </div>
-    </div>
-  </section>
+    </a>
+    <a href="travel.html" class="card">
+      <div class="card__image"><img src="travel/india/pictures/People/At_Work/Anjuna-005.jpg" alt="" loading="lazy"></div>
+      <div class="card__content">
+        <h3 class="card__title">מסעות</h3>
+        <p class="card__text">צילומים מהודו, בורמה, יפן ומקומות נוספים. ציורים והודו בשיער שיבה.</p>
+        <span class="card__link">לגלריות</span>
+      </div>
+    </a>
+    <a href="archive.html" class="card">
+      <div class="card__image"><img src="travel/india/pictures/Landscape/Fields/Allapuza-Backwater-170.jpg" alt="" loading="lazy"></div>
+      <div class="card__content">
+        <h3 class="card__title">ארכיון</h3>
+        <p class="card__text">לחיות בשלום עם הכסף, אתיקה, משפחה והאתר הישן.</p>
+        <span class="card__link">לארכיון</span>
+      </div>
+    </a>
+        </div>
+      </div>
+    </section>
 
-  <!-- Footer -->
+    <section class="section section--alt">
+      <div class="container container--narrow text-center">
+        <h2 class="mb-3">אודות</h2>
+        <p>אפי פז מאחד תחומי עניין מגוונים: תבונה, מודעות והרחבת הדעת, צילום מסעות וחקירת התודעה. עם עניין עמוק בפילוסופיה מזרחית – קרישנמורטי, אלן ואטס, ניזרגדטה, אטמאננדה, דה מלו ושפינוזה – אתר זה משמש כפלטפורמה לשיתוף ספרים, הקלטות, תמונות ותובנות.</p>
+        <div class="mt-3"><a href="archive.html#about" class="btn">עוד עליי</a></div>
+      </div>
+    </section>
+
+  </main>
+
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
         <div class="footer__section">
-          <h4>תבונה, מודעות והרחבת הדעת</h4>
+          <p class="footer__title">תבונה, מודעות והרחבת הדעת</p>
           <ul class="footer__links">
             <li><a href="spiritual.html#books">ספרים</a></li>
             <li><a href="spiritual.html#groups">קבוצות</a></li>
@@ -118,7 +105,7 @@
           </ul>
         </div>
         <div class="footer__section">
-          <h4>מסעות</h4>
+          <p class="footer__title">מסעות</p>
           <ul class="footer__links">
             <li><a href="travel.html#photography">צילומים</a></li>
             <li><a href="travel.html#drawings">ציורים</a></li>
@@ -126,15 +113,16 @@
           </ul>
         </div>
         <div class="footer__section">
-          <h4>ארכיון</h4>
+          <p class="footer__title">ארכיון</p>
           <ul class="footer__links">
             <li><a href="archive.html#living">לחיות בשלום עם הכסף</a></li>
             <li><a href="archive.html#ethics">אתיקה</a></li>
             <li><a href="archive.html#family">משפחה</a></li>
+            <li><a href="archive.html#old-site">האתר הישן</a></li>
           </ul>
         </div>
         <div class="footer__section">
-          <h4>שפה</h4>
+          <p class="footer__title">עוד</p>
           <ul class="footer__links">
             <li><a href="en/index.html">English</a></li>
           </ul>
@@ -146,14 +134,16 @@
     </div>
   </footer>
 
-  <!-- Mobile menu script -->
   <script>
-    document.querySelector('.nav__toggle').addEventListener('click', function() {
-      document.querySelector('.nav__list').classList.toggle('is-open');
-    });
+    (function () {
+      var t = document.querySelector('.nav__toggle');
+      var l = document.querySelector('.nav__list');
+      if (!t || !l) return;
+      t.addEventListener('click', function () {
+        var open = l.classList.toggle('is-open');
+        t.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    })();
   </script>
-
 </body>
 </html>
-
-

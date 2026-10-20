@@ -1,0 +1,24 @@
+שם: אנתוני דה מלו
+name_en: Anthony de Mello
+שנים: 1931-1987
+תפקיד: כומר ישועי הודי
+role_en: Indian Jesuit priest
+ויקיפדיה: https://he.wikipedia.org/wiki/אנתוני_דה_מלו
+wiki_en: https://en.wikipedia.org/wiki/Anthony_de_Mello
+תמונה: demello1.jpg
+סדר: 3
+ביוגרפיה: אנתוני דה מלו שילב מסורות רוחניות מזרחיות ומערביות. עבודתו מדגישה מודעות, התעוררות מאשליות ומציאת אושר דרך הבנה.
+bio_en: Anthony de Mello was an Indian Jesuit priest and psychotherapist known for his books on spirituality. His teachings blend Eastern and Western spiritual traditions: Christianity, Buddhism and Taoism.
+His work emphasizes awareness, awakening from the illusions that cause suffering, and finding happiness through understanding rather than acquisition.
+עמודים: מאמר של אפי פז על דה מלו, קטע מתורגם מתוך "מודעות", ו-194 סיפורי חוכמה קצרים (אנגלית).
+קישורים: האתר המוקדש לאנתוני דה מלו | http://www.demello.org/
+הודעת הוותיקן על כתבי דה מלו (1998) | http://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19980624_demello_en.html
+De Mello censure reflects Vatican misgivings about Eastern thinking | http://www.natcath.com/NCR_Online/archives/090498/090498k.htm
+The Prayer of the Frog Called into Question | http://findarticles.com/p/articles/mi_m1252/is_n18_v125/ai_21273527/print
+Dr. Seuss condemned: grinches go after de Mello | http://findarticles.com/p/articles/mi_m2065/is_2_51/ai_56063940/print
+pages_intro_en: An article by Efi Paz about de Mello, a translated excerpt from "Awareness" (Hebrew), and 194 short wisdom stories.
+links_en: The Anthony de Mello website | http://www.demello.org/
+The Vatican notification on de Mello's writings (1998) | http://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19980624_demello_en.html
+De Mello censure reflects Vatican misgivings about Eastern thinking | http://www.natcath.com/NCR_Online/archives/090498/090498k.htm
+The Prayer of the Frog Called into Question | http://findarticles.com/p/articles/mi_m1252/is_n18_v125/ai_21273527/print
+Dr. Seuss condemned: grinches go after de Mello | http://findarticles.com/p/articles/mi_m2065/is_2_51/ai_56063940/print

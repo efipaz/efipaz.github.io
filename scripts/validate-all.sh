@@ -1,36 +1,13 @@
-#!/bin/bash
-# Master validation script - runs all checks
-
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-
-echo "========================================"
-echo "       WEBSITE VALIDATION SUITE        "
-echo "========================================"
-echo ""
-
-TOTAL_ISSUES=0
-
-# Run encoding check
-echo "Running encoding check..."
-echo "----------------------------------------"
-bash "$SCRIPT_DIR/check-encoding.sh"
-TOTAL_ISSUES=$((TOTAL_ISSUES + $?))
-echo ""
-
-# Run broken links check
-echo "Running broken links check..."
-echo "----------------------------------------"
-bash "$SCRIPT_DIR/check-links.sh"
-TOTAL_ISSUES=$((TOTAL_ISSUES + $?))
-echo ""
-
-echo "========================================"
-echo "          FINAL SUMMARY                "
-echo "========================================"
-if [ $TOTAL_ISSUES -eq 0 ]; then
-    echo "All checks passed!"
-    exit 0
-else
-    echo "Total issues found: $TOTAL_ISSUES"
-    exit 1
-fi
+#!/usr/bin/env bash
+# Run every check before a commit. Exit 1 on any problem.
+set -u
+cd "$(dirname "$0")/.."
+status=0
+echo "== build_content.py --dry-run --no-network"
+python3 scripts/build_content.py --dry-run --no-network >/dev/null || status=1
+echo "== apply_chrome.py --check"
+python3 scripts/apply_chrome.py --check || status=1
+echo "== check_site.py"
+python3 scripts/check_site.py || status=1
+if [ "$status" -eq 0 ]; then echo "ALL CHECKS PASSED"; else echo "CHECKS FAILED"; fi
+exit $status

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="העמוד לא נמצא">
+  <title>העמוד לא נמצא | אפי פז</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:title" content="העמוד לא נמצא | אפי פז">
+  <meta property="og:description" content="העמוד לא נמצא">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="אפי פז">
+  <meta property="og:locale" content="he_IL">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <a class="skip-link" href="#main">דלג לתוכן</a>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">אפי פז</a>
+      <nav class="nav" aria-label="תפריט">
+        <ul class="nav__list" id="nav-list">
+          <li><a href="index.html" class="nav__link nav__link--active">בית</a></li>
+          <li><a href="spiritual.html" class="nav__link">תבונה, מודעות והרחבת הדעת</a></li>
+          <li><a href="travel.html" class="nav__link">מסעות</a></li>
+          <li><a href="archive.html" class="nav__link">ארכיון</a></li>
+        </ul>
+        <div class="lang-switch">
+          <a href="#" class="active" aria-current="page">עב</a>
+          <a href="/en/index.html" lang="en" hreflang="en">EN</a>
+        </div>
+        <button class="nav__toggle" aria-label="תפריט" aria-expanded="false" aria-controls="nav-list">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <div class="page-header">
+      <div class="container">
+        <h1>העמוד לא נמצא</h1>
+        <p class="page-header__subtitle">הכתובת שביקשת לא קיימת או שהעמוד עבר למקום אחר.</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="container container--narrow text-center">
+        <p class="card__actions" style="justify-content: center;">
+          <a href="/index.html" class="btn">לדף הבית</a>
+          <a href="/archive.html#old-site" class="btn">לאתר הישן</a>
+        </p>
+        <p lang="en" dir="ltr" class="mt-3">Page not found. <a href="/en/index.html">Home (English)</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__section">
+          <p class="footer__title">תבונה, מודעות והרחבת הדעת</p>
+          <ul class="footer__links">
+            <li><a href="spiritual.html#books">ספרים</a></li>
+            <li><a href="spiritual.html#groups">קבוצות</a></li>
+            <li><a href="spiritual.html#teachers">מורים</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <p class="footer__title">מסעות</p>
+          <ul class="footer__links">
+            <li><a href="travel.html#photography">צילומים</a></li>
+            <li><a href="travel.html#drawings">ציורים</a></li>
+            <li><a href="travel.html#greyhair">הודו בשיער שיבה</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <p class="footer__title">ארכיון</p>
+          <ul class="footer__links">
+            <li><a href="archive.html#living">לחיות בשלום עם הכסף</a></li>
+            <li><a href="archive.html#ethics">אתיקה</a></li>
+            <li><a href="archive.html#family">משפחה</a></li>
+            <li><a href="archive.html#old-site">האתר הישן</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <p class="footer__title">עוד</p>
+          <ul class="footer__links">
+            <li><a href="en/index.html">English</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>אפי פז</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var t = document.querySelector('.nav__toggle');
+      var l = document.querySelector('.nav__list');
+      if (!t || !l) return;
+      t.addEventListener('click', function () {
+        var open = l.classList.toggle('is-open');
+        t.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    })();
+  </script>
+</body>
+</html>

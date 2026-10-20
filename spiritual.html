@@ -3,31 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="תבונה, מודעות והרחבת הדעת - ספרים, קבוצות ומורים ">
+  <meta name="description" content="תבונה, מודעות והרחבת הדעת – ספרים, קבוצות ומורים">
   <title>תבונה, מודעות והרחבת הדעת | אפי פז</title>
+  <link rel="canonical" href="https://www.efipaz.com/spiritual.html">
+  <meta property="og:url" content="https://www.efipaz.com/spiritual.html">
+  <link rel="alternate" hreflang="he" href="https://www.efipaz.com/spiritual.html">
+  <link rel="alternate" hreflang="en" href="https://www.efipaz.com/en/spiritual.html">
+  <meta property="og:title" content="תבונה, מודעות והרחבת הדעת | אפי פז">
+  <meta property="og:description" content="תבונה, מודעות והרחבת הדעת – ספרים, קבוצות ומורים">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="אפי פז">
+  <meta property="og:locale" content="he_IL">
+  <meta property="og:image" content="https://www.efipaz.com/teachers/krishnamurti/Krishnamurti.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=a039e7ee">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-
+  <a class="skip-link" href="#main">דלג לתוכן</a>
   <header class="header">
     <div class="container header__inner">
       <a href="index.html" class="header__logo">אפי פז</a>
-      <nav class="nav">
-        <ul class="nav__list">
+      <nav class="nav" aria-label="תפריט">
+        <ul class="nav__list" id="nav-list">
           <li><a href="index.html" class="nav__link">בית</a></li>
           <li><a href="spiritual.html" class="nav__link nav__link--active">תבונה, מודעות והרחבת הדעת</a></li>
           <li><a href="travel.html" class="nav__link">מסעות</a></li>
           <li><a href="archive.html" class="nav__link">ארכיון</a></li>
         </ul>
         <div class="lang-switch">
-          <a href="spiritual.html" class="active">עב</a>
-          <a href="en/spiritual.html">EN</a>
+          <a href="#" class="active" aria-current="page">עב</a>
+          <a href="en/spiritual.html" lang="en" hreflang="en">EN</a>
         </div>
-        <button class="nav__toggle" aria-label="Menu">
+        <button class="nav__toggle" aria-label="תפריט" aria-expanded="false" aria-controls="nav-list">
           <span></span>
           <span></span>
           <span></span>
@@ -36,178 +46,351 @@
     </div>
   </header>
 
-  <div class="page-header">
-    <div class="container">
-      <h1>תבונה, מודעות והרחבת הדעת</h1>
-      <p class="page-header__subtitle">ספרים, קבוצות ומורים </p>
-    </div>
-  </div>
+  <main id="main">
 
-  <!-- ספרים -->
-  <section id="books" class="section">
-    <div class="container">
-      <h2 class="mb-3">ספרים</h2>
-      <p class="mb-3">ספרים ותרגומים בנושאי תבונה, מודעות הרחבת הדעת ויציאה מהדעת.</p>
-
-      <!-- Dynamic content loaded from books/manifest.json -->
-      <div id="books-container" class="cards">
-        <a href="books/%D7%94%D7%A1%D7%A4%D7%A8%20%D7%A2%D7%9C%20%D7%94%D7%98%D7%90%D7%91%D7%95%20%D7%A4%D7%AA%D7%95%D7%97.pdf" class="card card--with-image card--book">
-          <div class="card__image">
-            <img src="books/covers/taboo-book.png" alt="הספר אודות הטאבו - אלן ואטס" loading="lazy">
-          </div>
-          <div class="card__content">
-            <h3 class="card__title">הספר אודות הטאבו</h3>
-            <p class="card__text">תרגום הספר "The Book: On the Taboo Against Knowing Who You Are" מאת אלן ואטס.</p>
-            <span class="card__link">לספר (PDF)</span>
-          </div>
-        </a>
-        <a href="books/%D7%90%D7%99%D7%9A%20%D7%9C%D7%A6%D7%90%D7%AA%20%D7%9E%D7%93%D7%A2%D7%AA%D7%9A%20%D7%91%D7%A4%D7%97%D7%95%D7%AA%20%D7%9E%D7%A9%D7%A2%D7%94.pdf" class="card card--with-image card--book">
-          <div class="card__image">
-            <img src="books/covers/34567a59.png" alt="איך לצאת מדעתך בפחות משעה" loading="lazy">
-          </div>
-          <div class="card__content">
-            <h3 class="card__title">לצאת מן הדעת</h3>
-            <p class="card__text">איך לצאת מדעתך בפחות משעה - על שחרור מהזדהות עם המחשבה והאגו.</p>
-            <span class="card__link">לספר (PDF)</span>
-          </div>
-        </a>
-        <a href="books/%D7%A9%D7%99%D7%97%D7%95%D7%AA%20%D7%90%D7%AA%D7%99%20%D7%94%D7%99%D7%9C%D7%A1%D7%95%D7%9D.pdf" class="card card--with-image card--book">
-          <div class="card__image">
-            <img src="books/covers/etty-hillesum.png" alt="שיחות אתי הילסום" loading="lazy">
-          </div>
-          <div class="card__content">
-            <h3 class="card__title">שיחות אתי הילסום</h3>
-            <p class="card__text">שיחות על יומנה של אתי הילסום - כמסע להארה.</p>
-            <span class="card__link">לספר (PDF)</span>
-          </div>
-        </a>
-        <a href="books/%D7%94%D7%95%D7%93%D7%95%20%D7%91%D7%A9%D7%99%D7%A2%D7%A8%20%D7%A9%D7%99%D7%91%D7%94%20%D7%A2%D7%9D%20%D7%A9%D7%A2%D7%A8.pdf" class="card card--with-image card--book">
-          <div class="card__image">
-            <img src="books/covers/7b23aca7.png" alt="הודו בשיער שיבה" loading="lazy">
-          </div>
-          <div class="card__content">
-            <h3 class="card__title">הודו בשיער שיבה</h3>
-            <p class="card__text">רשמים והרהורים ממסעות להודו לאחר שנים רבות. מבט אחר דרך עיניים שנצברה בהן חוכמה.</p>
-            <span class="card__link">לספר (PDF)</span>
-          </div>
-        </a>
-        <a href="books/%D7%97%D7%95%D7%9B%D7%9E%D7%94%20%D7%9E%D7%9C%D7%90%D7%94%20%D7%A9%D7%9E%D7%97%D7%94.pdf" class="card">
-          <div class="card__content">
-            <h3 class="card__title">חוכמה מלאה שמחה</h3>
-            <p class="card__text">מאת אלן ואטס - על החוכמה שבחוסר הביטחון והשמחה שבקבלת הרגע.</p>
-            <span class="card__link">לספר (PDF)</span>
-          </div>
-        </a>
+    <div class="page-header">
+      <div class="container">
+        <h1>תבונה, מודעות והרחבת הדעת</h1>
+        <nav class="page-header__links" aria-label="בעמוד זה"><a href="#books">ספרים</a> · <a href="#groups">קבוצות</a> · <a href="#teachers">מורים</a></nav>
       </div>
     </div>
-  </section>
 
-  <!-- קבוצות -->
-  <section id="groups" class="section section--alt">
-    <div class="container">
-      <h2 class="mb-3">קבוצות</h2>
-      <p class="mb-3">הקלטות, תמלולים וחומרים מפגישות קבוצתיות.</p>
-
-      <div class="cards">
-        <a href="https://soundcloud.com/efipaz" target="_blank" rel="noopener noreferrer" class="card">
-          <div class="card__content">
-            <h3 class="card__title">הקלטות</h3>
-            <p class="card__text">קטעי מלל של מורים שונים. זמין ב-SoundCloud.</p>
-            <span class="card__link">להקלטות</span>
-          </div>
-        </a>
-        <a href="https://archive.org/details/@efipaz" target="_blank" rel="noopener noreferrer" class="card">
-          <div class="card__content">
-            <h3 class="card__title">הקלטות מנהריה</h3>
-            <p class="card__text">הקלטות של שיעורים מנהריה בארכיב האינטרנט.</p>
-            <span class="card__link">להקלטות</span>
-          </div>
-        </a>
-        <!-- בודהא והרמב"ם - ממתין לספר "כשהבודהא פגש את הרמב"ם" -->
-        <a href="https://efipaz.wordpress.com/" target="_blank" rel="noopener noreferrer" class="card">
-          <div class="card__content">
-            <h3 class="card__title">בלוג רוחניות</h3>
-            <p class="card__text">מאמרים והגיגים על מודעות ותודעה.</p>
-            <span class="card__link">לבלוג</span>
-          </div>
-        </a>
+    <section id="books" class="section">
+      <div class="container">
+        <h2 class="mb-3">ספרים</h2>
+        <p class="mb-3">ספרים ותרגומים בנושאי תבונה, מודעות, הרחבת הדעת ויציאה מהדעת.</p>
+        <!-- auto:books -->
+    <div class="cards">
+    <div class="card card--book card--with-image" lang="he">
+      <a class="card__image" href="viewer.html?file=books%2F%D7%94%D7%A1%D7%A4%D7%A8%20%D7%A2%D7%9C%20%D7%94%D7%98%D7%90%D7%91%D7%95%20%D7%A4%D7%AA%D7%95%D7%97.pdf" aria-label="הספר אודות הטאבו">
+        <img src="books/covers/543829128d.jpg" alt="" loading="lazy" width="600">
+      </a>
+      <div class="card__content">
+        <h3 class="card__title"><a href="viewer.html?file=books%2F%D7%94%D7%A1%D7%A4%D7%A8%20%D7%A2%D7%9C%20%D7%94%D7%98%D7%90%D7%91%D7%95%20%D7%A4%D7%AA%D7%95%D7%97.pdf">הספר אודות הטאבו</a></h3>
+        <p class="card__text">תרגום הספר &quot;The Book: On the Taboo Against Knowing Who You Are&quot; מאת אלן ואטס.</p>
+        <p class="card__actions">
+          <a class="card__link" href="viewer.html?file=books%2F%D7%94%D7%A1%D7%A4%D7%A8%20%D7%A2%D7%9C%20%D7%94%D7%98%D7%90%D7%91%D7%95%20%D7%A4%D7%AA%D7%95%D7%97.pdf">לקריאה</a>
+          <a class="card__link card__link--plain" href="books/%D7%94%D7%A1%D7%A4%D7%A8%20%D7%A2%D7%9C%20%D7%94%D7%98%D7%90%D7%91%D7%95%20%D7%A4%D7%AA%D7%95%D7%97.pdf" download>להורדה (PDF)</a>
+        </p>
       </div>
     </div>
-  </section>
-
-  <!-- מורים -->
-  <section id="teachers" class="section">
-    <div class="container">
-      <h2 class="mb-3">מורים</h2>
-      <p class="mb-3">מורים שתורתם השפיעה עלי.</p>
-
-      <!-- קרישנמורטי -->
-      <div id="krishnamurti" class="person-card mb-4">
-        <div class="person-card__image">
-          <img src="teachers/krishnamurti/Krishnamurti.jpg" alt="קרישנמורטי">
-        </div>
-        <div>
-          <h3 class="person-card__name">ג'ידו קרישנמורטי</h3>
-          <p class="person-card__dates">1895-1986 | פילוסוף הודי</p>
-          <p class="person-card__bio">
-            קרישנמורטי היה פילוסוף ונואם שהדגיש שהאמת היא ארץ ללא שבילים.
-            תורתו מתמקדת בטבע המחשבה, מדיטציה ללא שיטה וחופש פסיכולוגי.
-          </p>
-          <a href="teachers/krishnamurti/km_index.html" class="btn mt-2">לתכנים</a>
-        </div>
+    <div class="card card--book card--with-image" lang="he">
+      <a class="card__image" href="viewer.html?file=books%2F%D7%90%D7%99%D7%9A%20%D7%9C%D7%A6%D7%90%D7%AA%20%D7%9E%D7%93%D7%A2%D7%AA%D7%9A%20%D7%91%D7%A4%D7%97%D7%95%D7%AA%20%D7%9E%D7%A9%D7%A2%D7%94.pdf" aria-label="לצאת מן הדעת">
+        <img src="books/covers/fc0daa6465.jpg" alt="" loading="lazy" width="600">
+      </a>
+      <div class="card__content">
+        <h3 class="card__title"><a href="viewer.html?file=books%2F%D7%90%D7%99%D7%9A%20%D7%9C%D7%A6%D7%90%D7%AA%20%D7%9E%D7%93%D7%A2%D7%AA%D7%9A%20%D7%91%D7%A4%D7%97%D7%95%D7%AA%20%D7%9E%D7%A9%D7%A2%D7%94.pdf">לצאת מן הדעת</a></h3>
+        <p class="card__text">איך לצאת מדעתך בפחות משעה – על שחרור מהזדהות עם המחשבה והאגו.</p>
+        <p class="card__actions">
+          <a class="card__link" href="viewer.html?file=books%2F%D7%90%D7%99%D7%9A%20%D7%9C%D7%A6%D7%90%D7%AA%20%D7%9E%D7%93%D7%A2%D7%AA%D7%9A%20%D7%91%D7%A4%D7%97%D7%95%D7%AA%20%D7%9E%D7%A9%D7%A2%D7%94.pdf">לקריאה</a>
+          <a class="card__link card__link--plain" href="books/%D7%90%D7%99%D7%9A%20%D7%9C%D7%A6%D7%90%D7%AA%20%D7%9E%D7%93%D7%A2%D7%AA%D7%9A%20%D7%91%D7%A4%D7%97%D7%95%D7%AA%20%D7%9E%D7%A9%D7%A2%D7%94.pdf" download>להורדה (PDF)</a>
+        </p>
       </div>
-
-      <!-- אלן ואטס -->
-      <div id="watts" class="person-card mb-4">
-        <div class="person-card__image">
-          <img src="teachers/watts/watts_brey-729056_resize1.jpg" alt="אלן ואטס">
-        </div>
-        <div>
-          <h3 class="person-card__name">אלן ואטס</h3>
-          <p class="person-card__dates">1915-1973 | פילוסוף בריטי</p>
-          <p class="person-card__bio">
-            אלן ואטס פירש פילוסופיה מזרחית לקהל המערבי.
-            עבודתו חוקרת את האשליה של האגו הנפרד והטאבו נגד לדעת מי אתה.
-          </p>
-          <a href="teachers/watts/index.html" class="btn mt-2">לתכנים</a>
-        </div>
-      </div>
-
-      <!-- אנתוני דה מלו -->
-      <div id="demello" class="person-card mb-4">
-        <div class="person-card__image">
-          <img src="assets/img/demello1.jpg" alt="אנתוני דה מלו">
-        </div>
-        <div>
-          <h3 class="person-card__name">אנתוני דה מלו</h3>
-          <p class="person-card__dates">1931-1987 | כומר ישועי הודי</p>
-          <p class="person-card__bio">
-            אנתוני דה מלו שילב מסורות רוחניות מזרחיות ומערביות.
-            עבודתו מדגישה מודעות, התעוררות מאשליות ומציאת אושר דרך הבנה.
-          </p>
-          <a href="teachers/demello/demello.html" class="btn mt-2">לתכנים</a>
-        </div>
-      </div>
-
-      <!-- מורים נוספים נטענים כאן אוטומטית מ-teachers/manifest.json -->
-      <div id="dynamic-teachers"></div>
-
     </div>
-  </section>
+    <div class="card card--book card--with-image" lang="he">
+      <a class="card__image" href="viewer.html?file=books%2F%D7%A9%D7%99%D7%97%D7%95%D7%AA%20%D7%90%D7%AA%D7%99%20%D7%94%D7%99%D7%9C%D7%A1%D7%95%D7%9D.pdf" aria-label="שיחות אתי הילסום">
+        <img src="books/covers/3ce0e46cf2.jpg" alt="" loading="lazy" width="600">
+      </a>
+      <div class="card__content">
+        <h3 class="card__title"><a href="viewer.html?file=books%2F%D7%A9%D7%99%D7%97%D7%95%D7%AA%20%D7%90%D7%AA%D7%99%20%D7%94%D7%99%D7%9C%D7%A1%D7%95%D7%9D.pdf">שיחות אתי הילסום</a></h3>
+        <p class="card__text">שיחות על יומנה של אתי הילסום – כמסע להארה.</p>
+        <p class="card__actions">
+          <a class="card__link" href="viewer.html?file=books%2F%D7%A9%D7%99%D7%97%D7%95%D7%AA%20%D7%90%D7%AA%D7%99%20%D7%94%D7%99%D7%9C%D7%A1%D7%95%D7%9D.pdf">לקריאה</a>
+          <a class="card__link card__link--plain" href="books/%D7%A9%D7%99%D7%97%D7%95%D7%AA%20%D7%90%D7%AA%D7%99%20%D7%94%D7%99%D7%9C%D7%A1%D7%95%D7%9D.pdf" download>להורדה (PDF)</a>
+        </p>
+      </div>
+    </div>
+    <div class="card card--book card--with-image" lang="he">
+      <a class="card__image" href="viewer.html?file=books%2F%D7%94%D7%95%D7%93%D7%95%20%D7%91%D7%A9%D7%99%D7%A2%D7%A8%20%D7%A9%D7%99%D7%91%D7%94%20%D7%A2%D7%9D%20%D7%A9%D7%A2%D7%A8.pdf" aria-label="הודו בשיער שיבה">
+        <img src="books/covers/692d88d66d.jpg" alt="" loading="lazy" width="600">
+      </a>
+      <div class="card__content">
+        <h3 class="card__title"><a href="viewer.html?file=books%2F%D7%94%D7%95%D7%93%D7%95%20%D7%91%D7%A9%D7%99%D7%A2%D7%A8%20%D7%A9%D7%99%D7%91%D7%94%20%D7%A2%D7%9D%20%D7%A9%D7%A2%D7%A8.pdf">הודו בשיער שיבה</a></h3>
+        <p class="card__text">רשמים והרהורים ממסעות להודו לאחר שנים רבות. מבט אחר דרך עיניים שנצברה בהן חוכמה.</p>
+        <p class="card__actions">
+          <a class="card__link" href="viewer.html?file=books%2F%D7%94%D7%95%D7%93%D7%95%20%D7%91%D7%A9%D7%99%D7%A2%D7%A8%20%D7%A9%D7%99%D7%91%D7%94%20%D7%A2%D7%9D%20%D7%A9%D7%A2%D7%A8.pdf">לקריאה</a>
+          <a class="card__link card__link--plain" href="books/%D7%94%D7%95%D7%93%D7%95%20%D7%91%D7%A9%D7%99%D7%A2%D7%A8%20%D7%A9%D7%99%D7%91%D7%94%20%D7%A2%D7%9D%20%D7%A9%D7%A2%D7%A8.pdf" download>להורדה (PDF)</a>
+        </p>
+      </div>
+    </div>
+    <div class="card card--book card--with-image" lang="he">
+      <a class="card__image" href="viewer.html?file=books%2F%D7%97%D7%95%D7%9B%D7%9E%D7%94%20%D7%9E%D7%9C%D7%90%D7%94%20%D7%A9%D7%9E%D7%97%D7%94.pdf" aria-label="חוכמה מלאה שמחה">
+        <img src="books/covers/4a10e886dd.jpg" alt="" loading="lazy" width="600">
+      </a>
+      <div class="card__content">
+        <h3 class="card__title"><a href="viewer.html?file=books%2F%D7%97%D7%95%D7%9B%D7%9E%D7%94%20%D7%9E%D7%9C%D7%90%D7%94%20%D7%A9%D7%9E%D7%97%D7%94.pdf">חוכמה מלאה שמחה</a></h3>
+        <p class="card__text">מאת אלן ואטס – על החוכמה שבחוסר הביטחון והשמחה שבקבלת הרגע.</p>
+        <p class="card__actions">
+          <a class="card__link" href="viewer.html?file=books%2F%D7%97%D7%95%D7%9B%D7%9E%D7%94%20%D7%9E%D7%9C%D7%90%D7%94%20%D7%A9%D7%9E%D7%97%D7%94.pdf">לקריאה</a>
+          <a class="card__link card__link--plain" href="books/%D7%97%D7%95%D7%9B%D7%9E%D7%94%20%D7%9E%D7%9C%D7%90%D7%94%20%D7%A9%D7%9E%D7%97%D7%94.pdf" download>להורדה (PDF)</a>
+        </p>
+      </div>
+    </div>
+    <div class="card card--book card--with-image" lang="he">
+      <a class="card__image" href="viewer.html?file=books%2F%D7%9C%D7%94%D7%99%D7%95%D7%AA%20%D7%9E%D7%95%D7%93%D7%A2%D7%95%D7%AA.pdf" aria-label="להיות מודעות">
+        <img src="books/covers/052f625cd8.jpg" alt="" loading="lazy" width="600">
+      </a>
+      <div class="card__content">
+        <h3 class="card__title"><a href="viewer.html?file=books%2F%D7%9C%D7%94%D7%99%D7%95%D7%AA%20%D7%9E%D7%95%D7%93%D7%A2%D7%95%D7%AA.pdf">להיות מודעות</a></h3>
+        <p class="card__actions">
+          <a class="card__link" href="viewer.html?file=books%2F%D7%9C%D7%94%D7%99%D7%95%D7%AA%20%D7%9E%D7%95%D7%93%D7%A2%D7%95%D7%AA.pdf">לקריאה</a>
+          <a class="card__link card__link--plain" href="books/%D7%9C%D7%94%D7%99%D7%95%D7%AA%20%D7%9E%D7%95%D7%93%D7%A2%D7%95%D7%AA.pdf" download>להורדה (PDF)</a>
+        </p>
+      </div>
+    </div>
+    <div class="card card--book card--with-image" lang="he">
+      <a class="card__image" href="viewer.html?file=books%2F%D7%A4%D7%A8%D7%95%D7%99%D7%93%20%D7%99%D7%95%D7%A0%D7%92%20%D7%95%D7%A0%D7%95%D7%99%D7%9E%D7%9F.pdf" aria-label="פרויד יונג ונוימן">
+        <img src="books/covers/ee1b1f1f08.jpg" alt="" loading="lazy" width="600">
+      </a>
+      <div class="card__content">
+        <h3 class="card__title"><a href="viewer.html?file=books%2F%D7%A4%D7%A8%D7%95%D7%99%D7%93%20%D7%99%D7%95%D7%A0%D7%92%20%D7%95%D7%A0%D7%95%D7%99%D7%9E%D7%9F.pdf">פרויד יונג ונוימן</a></h3>
+        <p class="card__actions">
+          <a class="card__link" href="viewer.html?file=books%2F%D7%A4%D7%A8%D7%95%D7%99%D7%93%20%D7%99%D7%95%D7%A0%D7%92%20%D7%95%D7%A0%D7%95%D7%99%D7%9E%D7%9F.pdf">לקריאה</a>
+          <a class="card__link card__link--plain" href="books/%D7%A4%D7%A8%D7%95%D7%99%D7%93%20%D7%99%D7%95%D7%A0%D7%92%20%D7%95%D7%A0%D7%95%D7%99%D7%9E%D7%9F.pdf" download>להורדה (PDF)</a>
+        </p>
+      </div>
+    </div>
+    <div class="card card--book card--with-image" lang="he">
+      <a class="card__image" href="viewer.html?file=books%2F%D7%A9%D7%9C%D7%95%D7%A9%D7%AA%20%D7%9E%D7%90%D7%A4%D7%99%D7%99%D7%A0%D7%99%20%D7%94%D7%A7%D7%99%D7%95%D7%9D.pdf" aria-label="שלושת מאפייני הקיום">
+        <img src="books/covers/85e13df297.jpg" alt="" loading="lazy" width="600">
+      </a>
+      <div class="card__content">
+        <h3 class="card__title"><a href="viewer.html?file=books%2F%D7%A9%D7%9C%D7%95%D7%A9%D7%AA%20%D7%9E%D7%90%D7%A4%D7%99%D7%99%D7%A0%D7%99%20%D7%94%D7%A7%D7%99%D7%95%D7%9D.pdf">שלושת מאפייני הקיום</a></h3>
+        <p class="card__actions">
+          <a class="card__link" href="viewer.html?file=books%2F%D7%A9%D7%9C%D7%95%D7%A9%D7%AA%20%D7%9E%D7%90%D7%A4%D7%99%D7%99%D7%A0%D7%99%20%D7%94%D7%A7%D7%99%D7%95%D7%9D.pdf">לקריאה</a>
+          <a class="card__link card__link--plain" href="books/%D7%A9%D7%9C%D7%95%D7%A9%D7%AA%20%D7%9E%D7%90%D7%A4%D7%99%D7%99%D7%A0%D7%99%20%D7%94%D7%A7%D7%99%D7%95%D7%9D.pdf" download>להורדה (PDF)</a>
+        </p>
+      </div>
+    </div>
+    <div class="card card--book card--with-image" lang="he">
+      <a class="card__image" href="viewer.html?file=books%2F%D7%A9%D7%A0%D7%99%20%D7%93%D7%95%D7%91%D7%99%D7%9D%20%D7%97%D7%A4%D7%99%D7%96%20%D7%A2%D7%91%D7%A8%D7%99%D7%AA.pdf" aria-label="שני דובים חפיז עברית">
+        <img src="books/covers/2dd28773a7.jpg" alt="" loading="lazy" width="600">
+      </a>
+      <div class="card__content">
+        <h3 class="card__title"><a href="viewer.html?file=books%2F%D7%A9%D7%A0%D7%99%20%D7%93%D7%95%D7%91%D7%99%D7%9D%20%D7%97%D7%A4%D7%99%D7%96%20%D7%A2%D7%91%D7%A8%D7%99%D7%AA.pdf">שני דובים חפיז עברית</a></h3>
+        <p class="card__actions">
+          <a class="card__link" href="viewer.html?file=books%2F%D7%A9%D7%A0%D7%99%20%D7%93%D7%95%D7%91%D7%99%D7%9D%20%D7%97%D7%A4%D7%99%D7%96%20%D7%A2%D7%91%D7%A8%D7%99%D7%AA.pdf">לקריאה</a>
+          <a class="card__link card__link--plain" href="books/%D7%A9%D7%A0%D7%99%20%D7%93%D7%95%D7%91%D7%99%D7%9D%20%D7%97%D7%A4%D7%99%D7%96%20%D7%A2%D7%91%D7%A8%D7%99%D7%AA.pdf" download>להורדה (PDF)</a>
+        </p>
+      </div>
+    </div>
+    </div>
+<!-- /auto:books -->
+      </div>
+    </section>
+
+    <section id="groups" class="section section--alt">
+      <div class="container">
+        <h2 class="mb-3">קבוצות</h2>
+        <p class="mb-3">הקלטות, תמלולים וחומרים מפגישות קבוצתיות.</p>
+
+        <h3 id="recordings" class="mb-2">הקלטות</h3>
+        <!-- auto:recordings -->
+    <div class="cards">
+    <div class="card recording" data-embed="https://archive.org/embed/aldous-huxley-the-divine-within-selected-writings-on-enlightenment">
+      <div class="card__content">
+        <h3 class="card__title" lang="he">Aldous Huxley The Divine Within Selected Writings On Enlightenment</h3>
+        <p class="card__text">2020 · הקלטה</p>
+        <div class="recording__player"></div>
+        <p class="card__actions">
+          <button type="button" class="btn btn--small recording__play">נגן</button>
+          <a class="card__link card__link--plain" href="https://archive.org/details/aldous-huxley-the-divine-within-selected-writings-on-enlightenment" target="_blank" rel="noopener">בארכיב האינטרנט</a>
+        </p>
+      </div>
+    </div>
+    <div class="card recording" data-embed="https://archive.org/embed/20190210feb">
+      <div class="card__content">
+        <h3 class="card__title" lang="he">פגישות בודהיזם בנהריה אפי פז 2019</h3>
+        <p class="card__text">2019 · הקלטה</p>
+        <div class="recording__player"></div>
+        <p class="card__actions">
+          <button type="button" class="btn btn--small recording__play">נגן</button>
+          <a class="card__link card__link--plain" href="https://archive.org/details/20190210feb" target="_blank" rel="noopener">בארכיב האינטרנט</a>
+        </p>
+      </div>
+    </div>
+    <div class="card recording" data-embed="https://archive.org/embed/25nov_202002">
+      <div class="card__content">
+        <h3 class="card__title" lang="he">פגישות בודהיזם בנהריה אפי פז 2018</h3>
+        <p class="card__text">2018 · הקלטה</p>
+        <div class="recording__player"></div>
+        <p class="card__actions">
+          <button type="button" class="btn btn--small recording__play">נגן</button>
+          <a class="card__link card__link--plain" href="https://archive.org/details/25nov_202002" target="_blank" rel="noopener">בארכיב האינטרנט</a>
+        </p>
+      </div>
+    </div>
+    <div class="card recording" data-embed="https://archive.org/embed/2018062626jun1">
+      <div class="card__content">
+        <h3 class="card__title" lang="he">פגישות בודהיזם בתל אביב אפי פז 2018</h3>
+        <p class="card__text">2018 · הקלטה</p>
+        <div class="recording__player"></div>
+        <p class="card__actions">
+          <button type="button" class="btn btn--small recording__play">נגן</button>
+          <a class="card__link card__link--plain" href="https://archive.org/details/2018062626jun1" target="_blank" rel="noopener">בארכיב האינטרנט</a>
+        </p>
+      </div>
+    </div>
+    <div class="card recording" data-embed="https://archive.org/embed/20170903_202002">
+      <div class="card__content">
+        <h3 class="card__title" lang="he">פגישות בודהיזם בנהריה אפי פז 2017</h3>
+        <p class="card__text">2017 · הקלטה</p>
+        <div class="recording__player"></div>
+        <p class="card__actions">
+          <button type="button" class="btn btn--small recording__play">נגן</button>
+          <a class="card__link card__link--plain" href="https://archive.org/details/20170903_202002" target="_blank" rel="noopener">בארכיב האינטרנט</a>
+        </p>
+      </div>
+    </div>
+    <div class="card recording" data-embed="https://archive.org/embed/201708083">
+      <div class="card__content">
+        <h3 class="card__title" lang="he">פגישות בודהיזם בתל אביב אפי פז 2017</h3>
+        <p class="card__text">2017 · הקלטה</p>
+        <div class="recording__player"></div>
+        <p class="card__actions">
+          <button type="button" class="btn btn--small recording__play">נגן</button>
+          <a class="card__link card__link--plain" href="https://archive.org/details/201708083" target="_blank" rel="noopener">בארכיב האינטרנט</a>
+        </p>
+      </div>
+    </div>
+    <div class="card recording" data-embed="https://archive.org/embed/20161220_202002">
+      <div class="card__content">
+        <h3 class="card__title" lang="he">פגישות בודהיזם בתל אביב אפי פז 2016</h3>
+        <p class="card__text">2016 · הקלטה</p>
+        <div class="recording__player"></div>
+        <p class="card__actions">
+          <button type="button" class="btn btn--small recording__play">נגן</button>
+          <a class="card__link card__link--plain" href="https://archive.org/details/20161220_202002" target="_blank" rel="noopener">בארכיב האינטרנט</a>
+        </p>
+      </div>
+    </div>
+    </div>
+<!-- /auto:recordings -->
+
+        <h3 id="transcripts" class="mb-2 mt-4">תמלולים</h3>
+        <!-- auto:transcripts -->
+    <div class="cards">
+    <div class="card card--book card--with-image" lang="he">
+      <a class="card__image" href="viewer.html?file=transcripts%2F%D7%9E%D7%90%D7%9E%D7%A5%20%D7%A0%D7%9B%D7%95%D7%9F%20119.pdf" aria-label="מאמץ נכון (שיחה 119)">
+        <img src="transcripts/covers/59e22e7140.jpg" alt="" loading="lazy" width="600">
+      </a>
+      <div class="card__content">
+        <h4 class="card__title"><a href="viewer.html?file=transcripts%2F%D7%9E%D7%90%D7%9E%D7%A5%20%D7%A0%D7%9B%D7%95%D7%9F%20119.pdf">מאמץ נכון (שיחה 119)</a></h4>
+        <p class="card__text">תמלול שיחה מפגישת הקבוצה, 12.2.2024.</p>
+        <p class="card__actions">
+          <a class="card__link" href="viewer.html?file=transcripts%2F%D7%9E%D7%90%D7%9E%D7%A5%20%D7%A0%D7%9B%D7%95%D7%9F%20119.pdf">לקריאה</a>
+          <a class="card__link card__link--plain" href="transcripts/%D7%9E%D7%90%D7%9E%D7%A5%20%D7%A0%D7%9B%D7%95%D7%9F%20119.pdf" download>להורדה (PDF)</a>
+        </p>
+      </div>
+    </div>
+    </div>
+<!-- /auto:transcripts -->
+
+        <h3 class="mb-2 mt-4">עוד</h3>
+        <div class="document-list">
+        <a href="https://archive.org/details/@efipaz" class="document-item" target="_blank" rel="noopener">
+          <div class="document-item__icon">WEB</div>
+          <div class="document-item__info">
+            <div class="document-item__title">ארכיב האינטרנט</div>
+            <div class="document-item__meta">כל ההקלטות בחשבון של אפי</div>
+          </div>
+        </a>
+        <a href="https://soundcloud.com/efipaz" class="document-item" target="_blank" rel="noopener">
+          <div class="document-item__icon">WEB</div>
+          <div class="document-item__info">
+            <div class="document-item__title">SoundCloud</div>
+            <div class="document-item__meta">קטעי מלל של מורים שונים</div>
+          </div>
+        </a>
+        <a href="https://efipaz.wordpress.com/" class="document-item" target="_blank" rel="noopener">
+          <div class="document-item__icon">WEB</div>
+          <div class="document-item__info">
+            <div class="document-item__title">בלוג</div>
+            <div class="document-item__meta">מאמרים והגיגים על מודעות ותודעה</div>
+          </div>
+        </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="teachers" class="section">
+      <div class="container">
+        <h2 class="mb-3">מורים</h2>
+        <p class="mb-3">מורים שתורתם השפיעה עלי.</p>
+        <!-- auto:teachers -->
+    <div id="krishnamurti" class="person-card mb-4">
+      <div class="person-card__image"><img src="teachers/krishnamurti/Krishnamurti.jpg" alt="" width="120" height="120"></div>
+      <div>
+        <h3 class="person-card__name"><a href="teachers/krishnamurti/index.html">ג&#x27;ידו קרישנמורטי</a></h3>
+        <p class="person-card__dates">1895-1986 | פילוסוף הודי</p>
+        <p class="person-card__bio" lang="he">קרישנמורטי היה פילוסוף ונואם שהדגיש שהאמת היא ארץ ללא שבילים. תורתו מתמקדת בטבע המחשבה, מדיטציה ללא שיטה וחופש פסיכולוגי.</p>
+        <a href="teachers/krishnamurti/index.html" class="btn mt-2">לתכנים</a>
+      </div>
+    </div>
+    <div id="watts" class="person-card mb-4">
+      <div class="person-card__image"><img src="teachers/watts/watts_brey-729056_resize1.jpg" alt="" width="120" height="120"></div>
+      <div>
+        <h3 class="person-card__name"><a href="teachers/watts/index.html">אלן ואטס</a></h3>
+        <p class="person-card__dates">1915-1973 | פילוסוף בריטי</p>
+        <p class="person-card__bio" lang="he">אלן וילסון ואטס היה פילוסוף, סופר ודובר בריטי-אמריקאי שנודע בפירוש והצגת הפילוסופיה והרוחניות המזרחית לקהל המערבי.</p>
+        <a href="teachers/watts/index.html" class="btn mt-2">לתכנים</a>
+      </div>
+    </div>
+    <div id="demello" class="person-card mb-4">
+      <div class="person-card__image"><img src="teachers/demello/demello1.jpg" alt="" width="120" height="120"></div>
+      <div>
+        <h3 class="person-card__name"><a href="teachers/demello/index.html">אנתוני דה מלו</a></h3>
+        <p class="person-card__dates">1931-1987 | כומר ישועי הודי</p>
+        <p class="person-card__bio" lang="he">אנתוני דה מלו שילב מסורות רוחניות מזרחיות ומערביות. עבודתו מדגישה מודעות, התעוררות מאשליות ומציאת אושר דרך הבנה.</p>
+        <a href="teachers/demello/index.html" class="btn mt-2">לתכנים</a>
+      </div>
+    </div>
+    <div id="nisargadatta" class="person-card mb-4">
+      <div class="person-card__image"><span class="person-card__initial" aria-hidden="true">נ</span></div>
+      <div>
+        <h3 class="person-card__name"><a href="teachers/nisargadatta/index.html">ניזרגדטה מהראג&#x27;</a></h3>
+        <p class="person-card__dates">1897-1981 | מורה אדוואיטה</p>
+        <p class="person-card__bio" lang="he">ניזרגדטה מהראג&#x27; היה מורה אדוואיטה (אי-שניות) מבומביי. ספרו &quot;אני זה&quot; (I Am That) נחשב לאחד הטקסטים החשובים ברוחניות המודרנית.</p>
+        <a href="teachers/nisargadatta/index.html" class="btn mt-2">לתכנים</a>
+      </div>
+    </div>
+    <div id="atmananda" class="person-card mb-4">
+      <div class="person-card__image"><span class="person-card__initial" aria-hidden="true">א</span></div>
+      <div>
+        <h3 class="person-card__name"><a href="teachers/atmananda/index.html">אטמאננדה קרישנה מנון</a></h3>
+        <p class="person-card__dates">1883-1959 | מורה אדוואיטה</p>
+        <p class="person-card__bio" lang="he">אטמאננדה היה מורה אדוואיטה מקראלה, הודו. שיטתו הישירה והמודרנית השפיעה על דורות של מחפשים רוחניים.</p>
+        <a href="teachers/atmananda/index.html" class="btn mt-2">לתכנים</a>
+      </div>
+    </div>
+    <div id="spinoza" class="person-card mb-4">
+      <div class="person-card__image"><span class="person-card__initial" aria-hidden="true">ב</span></div>
+      <div>
+        <h3 class="person-card__name"><a href="teachers/spinoza/index.html">ברוך שפינוזה</a></h3>
+        <p class="person-card__dates">1632-1677 | פילוסוף יהודי-הולנדי</p>
+        <p class="person-card__bio" lang="he">שפינוזה היה אחד הפילוסופים החשובים של העת החדשה. תורתו על האל כטבע עצמו ועל חופש המחשבה השפיעה על הוגים רבים.</p>
+        <a href="teachers/spinoza/index.html" class="btn mt-2">לתכנים</a>
+      </div>
+    </div>
+<!-- /auto:teachers -->
+      </div>
+    </section>
+
+  </main>
 
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
         <div class="footer__section">
-          <h4>רוחניות ודעת</h4>
+          <p class="footer__title">תבונה, מודעות והרחבת הדעת</p>
           <ul class="footer__links">
-            <li><a href="#books">ספרים</a></li>
-            <li><a href="#groups">קבוצות</a></li>
-            <li><a href="#teachers">מורים</a></li>
+            <li><a href="spiritual.html#books">ספרים</a></li>
+            <li><a href="spiritual.html#groups">קבוצות</a></li>
+            <li><a href="spiritual.html#teachers">מורים</a></li>
           </ul>
         </div>
         <div class="footer__section">
-          <h4>מסעות</h4>
+          <p class="footer__title">מסעות</p>
           <ul class="footer__links">
             <li><a href="travel.html#photography">צילומים</a></li>
             <li><a href="travel.html#drawings">ציורים</a></li>
@@ -215,15 +398,16 @@
           </ul>
         </div>
         <div class="footer__section">
-          <h4>ארכיון</h4>
+          <p class="footer__title">ארכיון</p>
           <ul class="footer__links">
             <li><a href="archive.html#living">לחיות בשלום עם הכסף</a></li>
             <li><a href="archive.html#ethics">אתיקה</a></li>
             <li><a href="archive.html#family">משפחה</a></li>
+            <li><a href="archive.html#old-site">האתר הישן</a></li>
           </ul>
         </div>
         <div class="footer__section">
-          <h4>שפה</h4>
+          <p class="footer__title">עוד</p>
           <ul class="footer__links">
             <li><a href="en/index.html">English</a></li>
           </ul>
@@ -235,15 +419,17 @@
     </div>
   </footer>
 
-  <script src="assets/js/dynamic-books.js"></script>
-  <script src="assets/js/dynamic-teachers.js"></script>
+  <script src="assets/js/gallery.js?v=849eee17"></script>
   <script>
-    document.querySelector('.nav__toggle').addEventListener('click', function() {
-      document.querySelector('.nav__list').classList.toggle('is-open');
-    });
+    (function () {
+      var t = document.querySelector('.nav__toggle');
+      var l = document.querySelector('.nav__list');
+      if (!t || !l) return;
+      t.addEventListener('click', function () {
+        var open = l.classList.toggle('is-open');
+        t.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    })();
   </script>
-
 </body>
 </html>
-
-

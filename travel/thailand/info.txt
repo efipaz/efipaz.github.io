@@ -1,0 +1,4 @@
+כותרת: תאילנד
+תיאור: צילומים מתאילנד – בקרוב.
+title_en: Thailand
+description_en: Photos from Thailand – coming soon.

@@ -8,26 +8,27 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../style.css?v=a039e7ee">
   <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 </head>
 <body>
 
+  <a class="skip-link" href="#main">דלג לתוכן</a>
   <header class="header">
     <div class="container header__inner">
       <a href="../../index.html" class="header__logo">אפי פז</a>
-      <nav class="nav">
-        <ul class="nav__list">
+      <nav class="nav" aria-label="תפריט">
+        <ul class="nav__list" id="nav-list">
           <li><a href="../../index.html" class="nav__link">בית</a></li>
-          <li><a href="../../spiritual.html" class="nav__link">רוחניות ודעת</a></li>
+          <li><a href="../../spiritual.html" class="nav__link">תבונה, מודעות והרחבת הדעת</a></li>
           <li><a href="../../travel.html" class="nav__link nav__link--active">מסעות</a></li>
           <li><a href="../../archive.html" class="nav__link">ארכיון</a></li>
         </ul>
         <div class="lang-switch">
-          <a href="animals.html" class="active">עב</a>
-          <a href="../../en/travel.html">EN</a>
+          <a href="#" class="active" aria-current="page">עב</a>
+          <a href="../../en/travel.html" lang="en" hreflang="en">EN</a>
         </div>
-        <button class="nav__toggle" aria-label="תפריט">
+        <button class="nav__toggle" aria-label="תפריט" aria-expanded="false" aria-controls="nav-list">
           <span></span>
           <span></span>
           <span></span>
@@ -35,6 +36,8 @@
       </nav>
     </div>
   </header>
+
+  <main id="main">
 
   <div class="page-header">
     <div class="container">
@@ -49,26 +52,11 @@
   <section class="section">
     <div class="container">
       <div class="gallery gallery--full" id="gallery">
-        <a href="pictures/Animals/Birds/@Paleolim-Creatures-010.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Animals/Birds/@Paleolim-Creatures-010.jpg" alt="@Paleolim-Creatures-010.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Animals/Birds/Benaulim-031.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Animals/Birds/Benaulim-031.jpg" alt="Benaulim-031.jpg" loading="lazy">
-        </a>
         <a href="pictures/Animals/Birds/Benaulim-063.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Animals/Birds/Benaulim-063.jpg" alt="Benaulim-063.jpg" loading="lazy">
         </a>
         <a href="pictures/Animals/Birds/Fateh-Sagar-19.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Animals/Birds/Fateh-Sagar-19.jpg" alt="Fateh-Sagar-19.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Animals/Birds/Ganga-Rafting-057.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Animals/Birds/Ganga-Rafting-057.jpg" alt="Ganga-Rafting-057.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Animals/Birds/Jaislamar-Haveli-&-Fort-063a.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Animals/Birds/Jaislamar-Haveli-&-Fort-063a.jpg" alt="Jaislamar-Haveli-&-Fort-063a.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Animals/Birds/Jaislamar-Haveli-&-Fort-171.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Animals/Birds/Jaislamar-Haveli-&-Fort-171.jpg" alt="Jaislamar-Haveli-&-Fort-171.jpg" loading="lazy">
         </a>
         <a href="pictures/Animals/Birds/Jaislamar-Haveli-&-Fort-208a.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Animals/Birds/Jaislamar-Haveli-&-Fort-208a.jpg" alt="Jaislamar-Haveli-&-Fort-208a.jpg" loading="lazy">
@@ -76,23 +64,14 @@
         <a href="pictures/Animals/Birds/Jaislamar-Palace-&-Lake-067.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Animals/Birds/Jaislamar-Palace-&-Lake-067.jpg" alt="Jaislamar-Palace-&-Lake-067.jpg" loading="lazy">
         </a>
-        <a href="pictures/Animals/Birds/Jaislamar-Palace-&-Lake-069.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Animals/Birds/Jaislamar-Palace-&-Lake-069.jpg" alt="Jaislamar-Palace-&-Lake-069.jpg" loading="lazy">
-        </a>
         <a href="pictures/Animals/Birds/Jaislamar-Palace-&-Lake-100.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Animals/Birds/Jaislamar-Palace-&-Lake-100.jpg" alt="Jaislamar-Palace-&-Lake-100.jpg" loading="lazy">
         </a>
         <a href="pictures/Animals/Birds/LeilaSeder-11.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Animals/Birds/LeilaSeder-11.jpg" alt="LeilaSeder-11.jpg" loading="lazy">
         </a>
-        <a href="pictures/Animals/Birds/Munar-Top-Point-020.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Animals/Birds/Munar-Top-Point-020.jpg" alt="Munar-Top-Point-020.jpg" loading="lazy">
-        </a>
         <a href="pictures/Animals/Birds/Nanad%20Devi-Old-Manali-007.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Animals/Birds/Nanad%20Devi-Old-Manali-007.jpg" alt="Nanad Devi-Old-Manali-007.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Animals/Birds/Pondicherry-045.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Animals/Birds/Pondicherry-045.jpg" alt="Pondicherry-045.jpg" loading="lazy">
         </a>
         <a href="pictures/Animals/Birds/Pondicherry-in-the-Sun-035.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Animals/Birds/Pondicherry-in-the-Sun-035.jpg" alt="Pondicherry-in-the-Sun-035.jpg" loading="lazy">
@@ -103,32 +82,11 @@
         <a href="pictures/Animals/Birds/Rishikesh-one-26.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Animals/Birds/Rishikesh-one-26.jpg" alt="Rishikesh-one-26.jpg" loading="lazy">
         </a>
-        <a href="pictures/Animals/Birds/Vypeen-017.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Animals/Birds/Vypeen-017.jpg" alt="Vypeen-017.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Animals/Butterflies/@Pondicherry-in-the-Sun-043.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Animals/Butterflies/@Pondicherry-in-the-Sun-043.jpg" alt="@Pondicherry-in-the-Sun-043.jpg" loading="lazy">
-        </a>
         <a href="pictures/Animals/Butterflies/Cabo-de-Rama-042.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Animals/Butterflies/Cabo-de-Rama-042.jpg" alt="Cabo-de-Rama-042.jpg" loading="lazy">
         </a>
-        <a href="pictures/Animals/Butterflies/Nagar-Castle-004a.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Animals/Butterflies/Nagar-Castle-004a.jpg" alt="Nagar-Castle-004a.jpg" loading="lazy">
-        </a>
         <a href="pictures/Animals/Butterflies/Nanad-Devi,-Old-Manali-072b.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Animals/Butterflies/Nanad-Devi,-Old-Manali-072b.jpg" alt="Nanad-Devi,-Old-Manali-072b.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Animals/Butterflies/Nanad-Devi,-Old-Manali-094.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Animals/Butterflies/Nanad-Devi,-Old-Manali-094.jpg" alt="Nanad-Devi,-Old-Manali-094.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Animals/Butterflies/Pondicherry-in-the-Sun-049.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Animals/Butterflies/Pondicherry-in-the-Sun-049.jpg" alt="Pondicherry-in-the-Sun-049.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Animals/Butterflies/Sarnath-122.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Animals/Butterflies/Sarnath-122.jpg" alt="Sarnath-122.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Animals/Butterflies/St.-John-in-the-Wilderness-096.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Animals/Butterflies/St.-John-in-the-Wilderness-096.jpg" alt="St.-John-in-the-Wilderness-096.jpg" loading="lazy">
         </a>
         <a href="pictures/Animals/Cows_and_Goats/@Haridwar-083.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Animals/Cows_and_Goats/@Haridwar-083.jpg" alt="@Haridwar-083.jpg" loading="lazy">
@@ -145,17 +103,8 @@
         <a href="pictures/Animals/Cows_and_Goats/Leh-023.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Animals/Cows_and_Goats/Leh-023.jpg" alt="Leh-023.jpg" loading="lazy">
         </a>
-        <a href="pictures/Animals/Cows_and_Goats/Likir-035.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Animals/Cows_and_Goats/Likir-035.jpg" alt="Likir-035.jpg" loading="lazy">
-        </a>
         <a href="pictures/Animals/Cows_and_Goats/Madurai-18.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Animals/Cows_and_Goats/Madurai-18.jpg" alt="Madurai-18.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Animals/Cows_and_Goats/Mandu-035.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Animals/Cows_and_Goats/Mandu-035.jpg" alt="Mandu-035.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Animals/Cows_and_Goats/Nurba-Valley-027.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Animals/Cows_and_Goats/Nurba-Valley-027.jpg" alt="Nurba-Valley-027.jpg" loading="lazy">
         </a>
         <a href="pictures/Animals/Cows_and_Goats/Polo-in-Leh-045.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Animals/Cows_and_Goats/Polo-in-Leh-045.jpg" alt="Polo-in-Leh-045.jpg" loading="lazy">
@@ -187,12 +136,6 @@
         <a href="pictures/Animals/Insect_and_snakes/Munar-Nature-Reserve-026.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Animals/Insect_and_snakes/Munar-Nature-Reserve-026.jpg" alt="Munar-Nature-Reserve-026.jpg" loading="lazy">
         </a>
-        <a href="pictures/Animals/Insect_and_snakes/Paleolim-Creatures-222.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Animals/Insect_and_snakes/Paleolim-Creatures-222.jpg" alt="Paleolim-Creatures-222.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Animals/Insect_and_snakes/Sanchi-136.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Animals/Insect_and_snakes/Sanchi-136.jpg" alt="Sanchi-136.jpg" loading="lazy">
-        </a>
         <a href="pictures/Animals/Insect_and_snakes/Sarnath-100.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Animals/Insect_and_snakes/Sarnath-100.jpg" alt="Sarnath-100.jpg" loading="lazy">
         </a>
@@ -204,9 +147,6 @@
         </a>
         <a href="pictures/Animals/Misc/@Lodi-Gardens-06.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Animals/Misc/@Lodi-Gardens-06.jpg" alt="@Lodi-Gardens-06.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Animals/Misc/Cabo-de-Rama-076.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Animals/Misc/Cabo-de-Rama-076.jpg" alt="Cabo-de-Rama-076.jpg" loading="lazy">
         </a>
         <a href="pictures/Animals/Monkeys/@Haridwar-058.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Animals/Monkeys/@Haridwar-058.jpg" alt="@Haridwar-058.jpg" loading="lazy">
@@ -229,23 +169,11 @@
         <a href="pictures/Animals/Monkeys/Shiva-025.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Animals/Monkeys/Shiva-025.jpg" alt="Shiva-025.jpg" loading="lazy">
         </a>
-        <a href="pictures/Animals/Wild/@Corbet-Tiger-Reserve-177.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Animals/Wild/@Corbet-Tiger-Reserve-177.jpg" alt="@Corbet-Tiger-Reserve-177.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Animals/Wild/Around-Fort-Kotchin-067.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Animals/Wild/Around-Fort-Kotchin-067.jpg" alt="Around-Fort-Kotchin-067.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Animals/Wild/Cabo-de-Rama-083.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Animals/Wild/Cabo-de-Rama-083.jpg" alt="Cabo-de-Rama-083.jpg" loading="lazy">
-        </a>
         <a href="pictures/Animals/Wild/Corbet-Tiger-Reserve-018.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Animals/Wild/Corbet-Tiger-Reserve-018.jpg" alt="Corbet-Tiger-Reserve-018.jpg" loading="lazy">
         </a>
         <a href="pictures/Animals/Wild/Corbet-Tiger-Reserve-042.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Animals/Wild/Corbet-Tiger-Reserve-042.jpg" alt="Corbet-Tiger-Reserve-042.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Animals/Wild/Corbet-Tiger-Reserve-143.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Animals/Wild/Corbet-Tiger-Reserve-143.jpg" alt="Corbet-Tiger-Reserve-143.jpg" loading="lazy">
         </a>
         <a href="pictures/Animals/Wild/Corbet-Tiger-Reserve-217.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Animals/Wild/Corbet-Tiger-Reserve-217.jpg" alt="Corbet-Tiger-Reserve-217.jpg" loading="lazy">
@@ -256,12 +184,6 @@
         <a href="pictures/Animals/Wild/Munar-Nature-Reserve-010.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Animals/Wild/Munar-Nature-Reserve-010.jpg" alt="Munar-Nature-Reserve-010.jpg" loading="lazy">
         </a>
-        <a href="pictures/Animals/Wild/Munar-Top-Point-082.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Animals/Wild/Munar-Top-Point-082.jpg" alt="Munar-Top-Point-082.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Animals/Wild/Tsumoriri-Lake-160.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Animals/Wild/Tsumoriri-Lake-160.jpg" alt="Tsumoriri-Lake-160.jpg" loading="lazy">
-        </a>
         <a href="pictures/Animals/Wild/Zoo-127.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Animals/Wild/Zoo-127.jpg" alt="Zoo-127.jpg" loading="lazy">
         </a>
@@ -269,14 +191,40 @@
     </div>
   </section>
 
+  </main>
+
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
         <div class="footer__section">
-          <h4>ניווט</h4>
+          <p class="footer__title">תבונה, מודעות והרחבת הדעת</p>
           <ul class="footer__links">
-            <li><a href="../../index.html">דף הבית</a></li>
-            <li><a href="index.html">חזרה לגלריה</a></li>
+            <li><a href="../../spiritual.html#books">ספרים</a></li>
+            <li><a href="../../spiritual.html#groups">קבוצות</a></li>
+            <li><a href="../../spiritual.html#teachers">מורים</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <p class="footer__title">מסעות</p>
+          <ul class="footer__links">
+            <li><a href="../../travel.html#photography">צילומים</a></li>
+            <li><a href="../../travel.html#drawings">ציורים</a></li>
+            <li><a href="../../travel.html#greyhair">הודו בשיער שיבה</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <p class="footer__title">ארכיון</p>
+          <ul class="footer__links">
+            <li><a href="../../archive.html#living">לחיות בשלום עם הכסף</a></li>
+            <li><a href="../../archive.html#ethics">אתיקה</a></li>
+            <li><a href="../../archive.html#family">משפחה</a></li>
+            <li><a href="../../archive.html#old-site">האתר הישן</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <p class="footer__title">עוד</p>
+          <ul class="footer__links">
+            <li><a href="../../en/index.html">English</a></li>
           </ul>
         </div>
       </div>
@@ -300,11 +248,6 @@
   </div>
 
   <script>
-    // Mobile menu
-    document.querySelector('.nav__toggle').addEventListener('click', function() {
-      document.querySelector('.nav__list').classList.toggle('is-open');
-    });
-
     // Lightbox
     (function() {
       const lightbox = document.getElementById('lightbox');
@@ -372,5 +315,16 @@
     })();
   </script>
 
+  <script>
+    (function () {
+      var t = document.querySelector('.nav__toggle');
+      var l = document.querySelector('.nav__list');
+      if (!t || !l) return;
+      t.addEventListener('click', function () {
+        var open = l.classList.toggle('is-open');
+        t.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    })();
+  </script>
 </body>
 </html>

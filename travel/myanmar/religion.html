@@ -3,31 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="מיאנמר - דת">
-  <title>דת | מיאנמר | אפי פז</title>
+  <meta name="description" content="בורמה - דת">
+  <title>דת | בורמה | אפי פז</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../style.css?v=a039e7ee">
   <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 </head>
 <body>
 
+  <a class="skip-link" href="#main">דלג לתוכן</a>
   <header class="header">
     <div class="container header__inner">
       <a href="../../index.html" class="header__logo">אפי פז</a>
-      <nav class="nav">
-        <ul class="nav__list">
+      <nav class="nav" aria-label="תפריט">
+        <ul class="nav__list" id="nav-list">
           <li><a href="../../index.html" class="nav__link">בית</a></li>
-          <li><a href="../../spiritual.html" class="nav__link">רוחניות ודעת</a></li>
+          <li><a href="../../spiritual.html" class="nav__link">תבונה, מודעות והרחבת הדעת</a></li>
           <li><a href="../../travel.html" class="nav__link nav__link--active">מסעות</a></li>
           <li><a href="../../archive.html" class="nav__link">ארכיון</a></li>
         </ul>
         <div class="lang-switch">
-          <a href="religion.html" class="active">עב</a>
-          <a href="../../en/travel.html">EN</a>
+          <a href="#" class="active" aria-current="page">עב</a>
+          <a href="../../en/travel.html" lang="en" hreflang="en">EN</a>
         </div>
-        <button class="nav__toggle" aria-label="תפריט">
+        <button class="nav__toggle" aria-label="תפריט" aria-expanded="false" aria-controls="nav-list">
           <span></span>
           <span></span>
           <span></span>
@@ -36,10 +37,12 @@
     </div>
   </header>
 
+  <main id="main">
+
   <div class="page-header">
     <div class="container">
       <nav class="breadcrumb">
-        <a href="index.html">מיאנמר</a> / דת
+        <a href="index.html">בורמה</a> / דת
       </nav>
       <h1>דת</h1>
       <p class="page-header__subtitle">107 צילומים</p>
@@ -115,9 +118,6 @@
         <a href="pictures/Religion/Devotion/@Pa-Ya%20to%20Yangoon%20019.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Religion/Devotion/@Pa-Ya%20to%20Yangoon%20019.jpg" alt="@Pa-Ya to Yangoon 019.jpg" loading="lazy">
         </a>
-        <a href="pictures/Religion/Devotion/Bagan%201%20228.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Religion/Devotion/Bagan%201%20228.jpg" alt="Bagan 1 228.jpg" loading="lazy">
-        </a>
         <a href="pictures/Religion/Devotion/Mandalay%201%20094.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Religion/Devotion/Mandalay%201%20094.jpg" alt="Mandalay 1 094.jpg" loading="lazy">
         </a>
@@ -157,9 +157,6 @@
         <a href="pictures/Religion/Monks/Inle%20to%20Mandalay%20001.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Religion/Monks/Inle%20to%20Mandalay%20001.jpg" alt="Inle to Mandalay 001.jpg" loading="lazy">
         </a>
-        <a href="pictures/Religion/Monks/Inle%20to%20Mandalay%20003.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Religion/Monks/Inle%20to%20Mandalay%20003.jpg" alt="Inle to Mandalay 003.jpg" loading="lazy">
-        </a>
         <a href="pictures/Religion/Monks/Inle%20to%20Mandalay%20008.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Religion/Monks/Inle%20to%20Mandalay%20008.jpg" alt="Inle to Mandalay 008.jpg" loading="lazy">
         </a>
@@ -168,9 +165,6 @@
         </a>
         <a href="pictures/Religion/Monks/Mandalay%20-%20Mingon%20029.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Religion/Monks/Mandalay%20-%20Mingon%20029.jpg" alt="Mandalay - Mingon 029.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Religion/Monks/Mandalay%20-%20Mingon%20125.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Religion/Monks/Mandalay%20-%20Mingon%20125.jpg" alt="Mandalay - Mingon 125.jpg" loading="lazy">
         </a>
         <a href="pictures/Religion/Monks/Mandalay%201%20026.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Religion/Monks/Mandalay%201%20026.jpg" alt="Mandalay 1 026.jpg" loading="lazy">
@@ -183,9 +177,6 @@
         </a>
         <a href="pictures/Religion/Monks/Mandalay%201%20038.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Religion/Monks/Mandalay%201%20038.jpg" alt="Mandalay 1 038.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Religion/Monks/Mandalay%201%20042.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Religion/Monks/Mandalay%201%20042.jpg" alt="Mandalay 1 042.jpg" loading="lazy">
         </a>
         <a href="pictures/Religion/Monks/Mandalay%201%20043.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Religion/Monks/Mandalay%201%20043.jpg" alt="Mandalay 1 043.jpg" loading="lazy">
@@ -217,41 +208,17 @@
         <a href="pictures/Religion/Monks/Pindia%20cave%20022.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Religion/Monks/Pindia%20cave%20022.jpg" alt="Pindia cave 022.jpg" loading="lazy">
         </a>
-        <a href="pictures/Religion/Monks/Pindia%20cave%20028.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Religion/Monks/Pindia%20cave%20028.jpg" alt="Pindia cave 028.jpg" loading="lazy">
-        </a>
         <a href="pictures/Religion/Monks/Pindia%20cave%20141.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Religion/Monks/Pindia%20cave%20141.jpg" alt="Pindia cave 141.jpg" loading="lazy">
         </a>
         <a href="pictures/Religion/Monks/Pindia%20cave%20143.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Religion/Monks/Pindia%20cave%20143.jpg" alt="Pindia cave 143.jpg" loading="lazy">
         </a>
-        <a href="pictures/Religion/Monks/Yangon%20022.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Religion/Monks/Yangon%20022.jpg" alt="Yangon 022.jpg" loading="lazy">
-        </a>
         <a href="pictures/Religion/Monks/Yangon-Bagoo%20033.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Religion/Monks/Yangon-Bagoo%20033.jpg" alt="Yangon-Bagoo 033.jpg" loading="lazy">
         </a>
-        <a href="pictures/Religion/Monks/Yangon-Bagoo%20097.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Religion/Monks/Yangon-Bagoo%20097.jpg" alt="Yangon-Bagoo 097.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Religion/Nuns/@Bagoo-Kalaw%20052.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Religion/Nuns/@Bagoo-Kalaw%20052.jpg" alt="@Bagoo-Kalaw 052.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Religion/Nuns/Bagan%20to%20Pa-Ya%2053.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Religion/Nuns/Bagan%20to%20Pa-Ya%2053.jpg" alt="Bagan to Pa-Ya 53.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Religion/Nuns/Mandalay%20-%20Mingon%20093.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Religion/Nuns/Mandalay%20-%20Mingon%20093.jpg" alt="Mandalay - Mingon 093.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Religion/Nuns/Mandalay%201%20051.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Religion/Nuns/Mandalay%201%20051.jpg" alt="Mandalay 1 051.jpg" loading="lazy">
-        </a>
         <a href="pictures/Religion/Nuns/Mandalay%201%20052.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Religion/Nuns/Mandalay%201%20052.jpg" alt="Mandalay 1 052.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Religion/Nuns/Mandalay%201%20054.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Religion/Nuns/Mandalay%201%20054.jpg" alt="Mandalay 1 054.jpg" loading="lazy">
         </a>
         <a href="pictures/Religion/Nuns/Mandalay%201%20060.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Religion/Nuns/Mandalay%201%20060.jpg" alt="Mandalay 1 060.jpg" loading="lazy">
@@ -271,14 +238,8 @@
         <a href="pictures/Religion/Nuns/Yangon%20051.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Religion/Nuns/Yangon%20051.jpg" alt="Yangon 051.jpg" loading="lazy">
         </a>
-        <a href="pictures/Religion/Temples/@Bagan%202%20090.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Religion/Temples/@Bagan%202%20090.jpg" alt="@Bagan 2 090.jpg" loading="lazy">
-        </a>
         <a href="pictures/Religion/Temples/Bagan%201%20003.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Religion/Temples/Bagan%201%20003.jpg" alt="Bagan 1 003.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Religion/Temples/Bagan%201%20038.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Religion/Temples/Bagan%201%20038.jpg" alt="Bagan 1 038.jpg" loading="lazy">
         </a>
         <a href="pictures/Religion/Temples/Bagan%201%20040.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Religion/Temples/Bagan%201%20040.jpg" alt="Bagan 1 040.jpg" loading="lazy">
@@ -295,32 +256,8 @@
         <a href="pictures/Religion/Temples/Bagan%201%20187.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Religion/Temples/Bagan%201%20187.jpg" alt="Bagan 1 187.jpg" loading="lazy">
         </a>
-        <a href="pictures/Religion/Temples/Bagan%202%20036.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Religion/Temples/Bagan%202%20036.jpg" alt="Bagan 2 036.jpg" loading="lazy">
-        </a>
         <a href="pictures/Religion/Temples/Bagan%202%20072.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Religion/Temples/Bagan%202%20072.jpg" alt="Bagan 2 072.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Religion/Temples/Bagan%202%20112.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Religion/Temples/Bagan%202%20112.jpg" alt="Bagan 2 112.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Religion/Temples/Mandalay%20-%20Mingon%20016.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Religion/Temples/Mandalay%20-%20Mingon%20016.jpg" alt="Mandalay - Mingon 016.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Religion/Temples/Mandalay%20-%20Mingon%20072.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Religion/Temples/Mandalay%20-%20Mingon%20072.jpg" alt="Mandalay - Mingon 072.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Religion/Temples/Mandalay%20-%20Mingon%20082.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Religion/Temples/Mandalay%20-%20Mingon%20082.jpg" alt="Mandalay - Mingon 082.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Religion/Temples/Mandalay%20-%20Mingon%20088.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Religion/Temples/Mandalay%20-%20Mingon%20088.jpg" alt="Mandalay - Mingon 088.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Religion/Temples/Mandalay%20-%20Mingon%20108.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Religion/Temples/Mandalay%20-%20Mingon%20108.jpg" alt="Mandalay - Mingon 108.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Religion/Temples/Monsoon%20and%20Poppa%2057.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Religion/Temples/Monsoon%20and%20Poppa%2057.jpg" alt="Monsoon and Poppa 57.jpg" loading="lazy">
         </a>
         <a href="pictures/Religion/Temples/Monsoon%20and%20Poppa%2062.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Religion/Temples/Monsoon%20and%20Poppa%2062.jpg" alt="Monsoon and Poppa 62.jpg" loading="lazy">
@@ -374,14 +311,40 @@
     </div>
   </section>
 
+  </main>
+
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
         <div class="footer__section">
-          <h4>ניווט</h4>
+          <p class="footer__title">תבונה, מודעות והרחבת הדעת</p>
           <ul class="footer__links">
-            <li><a href="../../index.html">דף הבית</a></li>
-            <li><a href="index.html">חזרה לגלריה</a></li>
+            <li><a href="../../spiritual.html#books">ספרים</a></li>
+            <li><a href="../../spiritual.html#groups">קבוצות</a></li>
+            <li><a href="../../spiritual.html#teachers">מורים</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <p class="footer__title">מסעות</p>
+          <ul class="footer__links">
+            <li><a href="../../travel.html#photography">צילומים</a></li>
+            <li><a href="../../travel.html#drawings">ציורים</a></li>
+            <li><a href="../../travel.html#greyhair">הודו בשיער שיבה</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <p class="footer__title">ארכיון</p>
+          <ul class="footer__links">
+            <li><a href="../../archive.html#living">לחיות בשלום עם הכסף</a></li>
+            <li><a href="../../archive.html#ethics">אתיקה</a></li>
+            <li><a href="../../archive.html#family">משפחה</a></li>
+            <li><a href="../../archive.html#old-site">האתר הישן</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <p class="footer__title">עוד</p>
+          <ul class="footer__links">
+            <li><a href="../../en/index.html">English</a></li>
           </ul>
         </div>
       </div>
@@ -405,11 +368,6 @@
   </div>
 
   <script>
-    // Mobile menu
-    document.querySelector('.nav__toggle').addEventListener('click', function() {
-      document.querySelector('.nav__list').classList.toggle('is-open');
-    });
-
     // Lightbox
     (function() {
       const lightbox = document.getElementById('lightbox');
@@ -477,5 +435,16 @@
     })();
   </script>
 
+  <script>
+    (function () {
+      var t = document.querySelector('.nav__toggle');
+      var l = document.querySelector('.nav__list');
+      if (!t || !l) return;
+      t.addEventListener('click', function () {
+        var open = l.classList.toggle('is-open');
+        t.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    })();
+  </script>
 </body>
 </html>

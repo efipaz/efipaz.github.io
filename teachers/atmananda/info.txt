@@ -1,0 +1,9 @@
+שם: אטמאננדה קרישנה מנון
+name_en: Atmananda Krishna Menon
+שנים: 1883-1959
+תפקיד: מורה אדוואיטה
+role_en: Advaita teacher
+wiki_en: https://en.wikipedia.org/wiki/Atmananda_Krishna_Menon
+סדר: 5
+ביוגרפיה: אטמאננדה היה מורה אדוואיטה מקראלה, הודו. שיטתו הישירה והמודרנית השפיעה על דורות של מחפשים רוחניים.
+bio_en: Atmananda was an Advaita teacher from Kerala, India. His direct, modern approach influenced generations of spiritual seekers.

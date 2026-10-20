@@ -1,18 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <urlset xmlns="http://www.google.com/schemas/sitemap/0.84">
-   <url>
-    <loc>http://www.efipaz.com</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-   </url> 
-    <url>
-       <loc>http://www.efipaz.com/LightOfIndia</loc>
-       <changefreq>weekly</changefreq>
-       <priority>0.9</priority>
-   </url> 
-    <url>
-       <loc>http://www.efipaz.com/Ethics</loc>
-       <changefreq>weekly</changefreq>
-       <priority>0.8</priority>
-   </url> 
-  </urlset>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.efipaz.com/</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.efipaz.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.efipaz.com/en/"/>
+  </url>
+  <url>
+    <loc>https://www.efipaz.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.efipaz.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.efipaz.com/"/>
+  </url>
+  <url>
+    <loc>https://www.efipaz.com/spiritual.html</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.efipaz.com/spiritual.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.efipaz.com/en/spiritual.html"/>
+  </url>
+  <url>
+    <loc>https://www.efipaz.com/en/spiritual.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.efipaz.com/en/spiritual.html"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.efipaz.com/spiritual.html"/>
+  </url>
+  <url>
+    <loc>https://www.efipaz.com/travel.html</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.efipaz.com/travel.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.efipaz.com/en/travel.html"/>
+  </url>
+  <url>
+    <loc>https://www.efipaz.com/en/travel.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.efipaz.com/en/travel.html"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.efipaz.com/travel.html"/>
+  </url>
+  <url>
+    <loc>https://www.efipaz.com/archive.html</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.efipaz.com/archive.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.efipaz.com/en/archive.html"/>
+  </url>
+  <url>
+    <loc>https://www.efipaz.com/en/archive.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.efipaz.com/en/archive.html"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.efipaz.com/archive.html"/>
+  </url>
+  <url>
+    <loc>https://www.efipaz.com/living/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.efipaz.com/living/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.efipaz.com/en/living.html"/>
+  </url>
+  <url>
+    <loc>https://www.efipaz.com/en/living.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.efipaz.com/en/living.html"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.efipaz.com/living/index.html"/>
+  </url>
+  <url>
+    <loc>https://www.efipaz.com/personal/ethics/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.efipaz.com/personal/ethics/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.efipaz.com/en/ethics.html"/>
+  </url>
+  <url>
+    <loc>https://www.efipaz.com/en/ethics.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.efipaz.com/en/ethics.html"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.efipaz.com/personal/ethics/index.html"/>
+  </url>
+  <url>
+    <loc>https://www.efipaz.com/travel/USA%202025%20%20Blue%20Ridge/</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.efipaz.com/travel/USA%202025%20%20Blue%20Ridge/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.efipaz.com/travel/USA%202025%20%20Blue%20Ridge/index.en.html"/>
+  </url>
+  <url>
+    <loc>https://www.efipaz.com/travel/USA%202025%20%20Blue%20Ridge/index.en.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.efipaz.com/travel/USA%202025%20%20Blue%20Ridge/index.en.html"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.efipaz.com/travel/USA%202025%20%20Blue%20Ridge/"/>
+  </url>
+  <url>
+    <loc>https://www.efipaz.com/travel/india/</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.efipaz.com/travel/india/"/>
+  </url>
+  <url>
+    <loc>https://www.efipaz.com/travel/myanmar/</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.efipaz.com/travel/myanmar/"/>
+  </url>
+  <url>
+    <loc>https://www.efipaz.com/travel/%D7%A7%D7%9E%D7%90%D7%A7%D7%95%D7%A8%D7%94%2024/</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.efipaz.com/travel/%D7%A7%D7%9E%D7%90%D7%A7%D7%95%D7%A8%D7%94%2024/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.efipaz.com/travel/%D7%A7%D7%9E%D7%90%D7%A7%D7%95%D7%A8%D7%94%2024/index.en.html"/>
+  </url>
+  <url>
+    <loc>https://www.efipaz.com/travel/%D7%A7%D7%9E%D7%90%D7%A7%D7%95%D7%A8%D7%94%2024/index.en.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.efipaz.com/travel/%D7%A7%D7%9E%D7%90%D7%A7%D7%95%D7%A8%D7%94%2024/index.en.html"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.efipaz.com/travel/%D7%A7%D7%9E%D7%90%D7%A7%D7%95%D7%A8%D7%94%2024/"/>
+  </url>
+  <url>
+    <loc>https://www.efipaz.com/teachers/atmananda/</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.efipaz.com/teachers/atmananda/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.efipaz.com/teachers/atmananda/index.en.html"/>
+  </url>
+  <url>
+    <loc>https://www.efipaz.com/teachers/atmananda/index.en.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.efipaz.com/teachers/atmananda/index.en.html"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.efipaz.com/teachers/atmananda/"/>
+  </url>
+  <url>
+    <loc>https://www.efipaz.com/teachers/demello/</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.efipaz.com/teachers/demello/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.efipaz.com/teachers/demello/index.en.html"/>
+  </url>
+  <url>
+    <loc>https://www.efipaz.com/teachers/demello/index.en.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.efipaz.com/teachers/demello/index.en.html"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.efipaz.com/teachers/demello/"/>
+  </url>
+  <url>
+    <loc>https://www.efipaz.com/teachers/krishnamurti/</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.efipaz.com/teachers/krishnamurti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.efipaz.com/teachers/krishnamurti/index.en.html"/>
+  </url>
+  <url>
+    <loc>https://www.efipaz.com/teachers/krishnamurti/index.en.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.efipaz.com/teachers/krishnamurti/index.en.html"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.efipaz.com/teachers/krishnamurti/"/>
+  </url>
+  <url>
+    <loc>https://www.efipaz.com/teachers/nisargadatta/</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.efipaz.com/teachers/nisargadatta/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.efipaz.com/teachers/nisargadatta/index.en.html"/>
+  </url>
+  <url>
+    <loc>https://www.efipaz.com/teachers/nisargadatta/index.en.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.efipaz.com/teachers/nisargadatta/index.en.html"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.efipaz.com/teachers/nisargadatta/"/>
+  </url>
+  <url>
+    <loc>https://www.efipaz.com/teachers/spinoza/</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.efipaz.com/teachers/spinoza/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.efipaz.com/teachers/spinoza/index.en.html"/>
+  </url>
+  <url>
+    <loc>https://www.efipaz.com/teachers/spinoza/index.en.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.efipaz.com/teachers/spinoza/index.en.html"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.efipaz.com/teachers/spinoza/"/>
+  </url>
+  <url>
+    <loc>https://www.efipaz.com/teachers/watts/</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.efipaz.com/teachers/watts/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.efipaz.com/teachers/watts/index.en.html"/>
+  </url>
+  <url>
+    <loc>https://www.efipaz.com/teachers/watts/index.en.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.efipaz.com/teachers/watts/index.en.html"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.efipaz.com/teachers/watts/"/>
+  </url>
+</urlset>

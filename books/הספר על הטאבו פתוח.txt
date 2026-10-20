@@ -1,0 +1,5 @@
+כותרת: הספר אודות הטאבו
+תיאור: תרגום הספר "The Book: On the Taboo Against Knowing Who You Are" מאת אלן ואטס.
+title_en: The Book: On the Taboo
+description_en: Hebrew translation of Alan Watts' "The Book: On the Taboo Against Knowing Who You Are".
+סדר: 1

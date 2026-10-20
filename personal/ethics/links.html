@@ -8,22 +8,26 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../style.css?v=a039e7ee">
 </head>
 <body>
 
+  <a class="skip-link" href="#main">דלג לתוכן</a>
   <header class="header">
     <div class="container header__inner">
       <a href="../../index.html" class="header__logo">אפי פז</a>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li><a href="index.html" class="nav__link">אתיקה</a></li>
-          <li><a href="services.html" class="nav__link">שירותים</a></li>
-          <li><a href="links.html" class="nav__link nav__link--active">קישורים</a></li>
-          <li><a href="About.html" class="nav__link">אודות</a></li>
-          <li><a href="contact.html" class="nav__link">צור קשר</a></li>
+      <nav class="nav" aria-label="תפריט">
+        <ul class="nav__list" id="nav-list">
+          <li><a href="../../index.html" class="nav__link">בית</a></li>
+          <li><a href="../../spiritual.html" class="nav__link">תבונה, מודעות והרחבת הדעת</a></li>
+          <li><a href="../../travel.html" class="nav__link">מסעות</a></li>
+          <li><a href="../../archive.html" class="nav__link nav__link--active">ארכיון</a></li>
         </ul>
-        <button class="nav__toggle" aria-label="Menu">
+        <div class="lang-switch">
+          <a href="#" class="active" aria-current="page">עב</a>
+          <a href="../../en/ethics.html" lang="en" hreflang="en">EN</a>
+        </div>
+        <button class="nav__toggle" aria-label="תפריט" aria-expanded="false" aria-controls="nav-list">
           <span></span>
           <span></span>
           <span></span>
@@ -32,113 +36,165 @@
     </div>
   </header>
 
+  <main id="main">
+
   <div class="page-header">
     <div class="container">
       <div class="breadcrumb">
         <a href="index.html">אתיקה לעסקים</a> / קישורים
       </div>
       <h1>קישורים בנושא אתיקה בעסקים</h1>
-      <p class="page-header__subtitle">מקורות נוספים לקריאה והעמקה</p>
     </div>
   </div>
 
   <section class="section">
     <div class="container container--narrow">
       <article class="article">
-        <h2 id="world">מקורות בינלאומיים</h2>
+        <h2 id="world">מקורות נוספים:</h2>
 
-        <h3>Morality, Ethics &amp; Philosophy Research Resources</h3>
-        <p>מקורות מקוונים בנושאי אתיקה</p>
+        <p><strong>Morality, Ethics &amp; Philosophy Research Resources</strong><br>
+        <a href="http://sbaweb.wayne.edu/~aspalding/ethics/ethicslist.html" target="_blank" rel="noopener">http://sbaweb.wayne.edu/~aspalding/ethics/ethicslist.html</a><br>
+        מקורות מקוונים בנושאי אתיקה</p>
 
-        <h3>Ethical Perspectives</h3>
-        <p><a href="http://www.ethical-perspectives.be/" target="_blank" rel="noopener">ethical-perspectives.be</a></p>
-        <p>עיתון מקוון אירופי בנושאי אתיקה בעסקים</p>
+        <p><strong>Ethical Perspectives</strong><br>
+        <a href="http://www.ethical-perspectives.be/" target="_blank" rel="noopener">http://www.ethical-perspectives.be/</a><br>
+        עיתון מקוון אירופי בנושאי אתיקה בעסקים</p>
 
-        <h3>PBS Corporate Ethics</h3>
-        <p><a href="http://www.pbs.org/newshour/bb/business/ethics/" target="_blank" rel="noopener">pbs.org/newshour/bb/business/ethics</a></p>
-        <p>אתר הטלוויזיה הציבורית בארה"ב המוקדש לאתיקה בעסקים</p>
+        <p><a href="http://www.pbs.org/newshour/bb/business/ethics/" target="_blank" rel="noopener">http://www.pbs.org/newshour/bb/business/ethics/</a><br>
+        <strong>Online NewsHour -- Corporate Ethics</strong><br>
+        אתר הטלוויזיה הציבורית בארה"ב המוקדש לאתיקה בעסקים</p>
 
-        <h3>Better Business - IBTE</h3>
-        <p><a href="http://www.ethix.org" target="_blank" rel="noopener">ethix.org</a></p>
-        <p>IBTE - מוסד לעסקים, אתיקה וטכנולוגיה (Institute of Business, Technology &amp; Ethics)</p>
+        <p><strong>Better Business</strong><br>
+        <a href="http://www.ethix.org/tools.html#ten" target="_blank" rel="noopener">http://www.ethix.org</a><br>
+        IBTE - מוסד לעסקים, אתיקה וטכנולוגיה<br>
+        Institute of Business, Technology &amp; Ethics</p>
 
-        <h3>Center for Ethics and Business</h3>
-        <p><a href="http://www.ethicsandbusiness.org/toolbox.htm" target="_blank" rel="noopener">ethicsandbusiness.org</a></p>
-        <p>אוניברסיטת לויולה, קליפורניה</p>
+        <p><strong>Center for Ethics and Business</strong><br>
+        <a href="http://www.ethicsandbusiness.org/toolbox.htm" target="_blank" rel="noopener">http://www.ethicsandbusiness.org/toolbox.htm</a><br>
+        אוניברסיטת לויולה, קליפורניה</p>
 
-        <h3>Corporate Integrity - Best Practices in Ethics Management</h3>
-        <p><a href="http://www.crossroadsprograms.com" target="_blank" rel="noopener">crossroadsprograms.com</a></p>
-        <p>אתר אינטראקטיבי לנושאי אתיקה ועסקים</p>
+        <p><strong>Corporate Integrity - Best Practices in Ethics Management</strong><br>
+        <a href="http://www.crossroadsprograms.com/corporate.html" target="_blank" rel="noopener">http://www.crossroadsprograms.com</a><br>
+        אתר אינטאקטיבי לנושאי אתיקה ועסקים</p>
 
-        <h3>SOX-online: The Vendor-Neutral Sarbanes-Oxley Site</h3>
-        <p><a href="http://www.sox-online.com/basics.html" target="_blank" rel="noopener">sox-online.com</a></p>
-        <p>אתר המוקדש לתקנת סרבנס-אוקסלי, לאתיקה ושקיפות בעסקים</p>
+        <p><strong>SOX-online: The Vendor-Neutral Sarbanes-Oxley Site</strong><br>
+        <a href="http://www.sox-online.com/basics.html" target="_blank" rel="noopener">http://www.sox-online.com/basics.html</a><br>
+        אתר המוקדש לתקנת סרבנס- אוקסלי, לאתיקה ושקיפות בעסקים</p>
 
-        <h3>Business Ethics: Concepts and Cases</h3>
-        <p>By Manuel G. Velasquez, Fifth Edition</p>
-        <p>ספר לימוד מקובל ומעודכן בנושא</p>
+        <p><a href="http://www.scu.edu/ethics/articles/articles.cfm?fam=BUSI" target="_blank" rel="noopener">http://www.scu.edu/ethics/articles/articles.cfm?fam=BUSI</a><br>
+        מאמרים בנושאי אתיקה עסקית, בפרט אתיקה בעסקים בין לאומיים</p>
 
-        <h3>Overview of Business Ethics</h3>
-        <p>נושא אתיקה בעסקים, במסגרת ארגון Business for Social Responsibility, ארגון מוביל בעולם בנושא אחריות חברתית</p>
+        <p><a href="http://cwx.prenhall.com/velasquez" target="_blank" rel="noopener">http://cwx.prenhall.com/velasquez</a><br>
+        <strong>Business Ethics: Concepts and Cases</strong><br>
+        Fifth Edition<br>
+        By Manuel G. Velasquez<br>
+        ספר לימוד מקובל ומעודכן בנושא</p>
+
+        <p><strong>Overview of Business Ethics</strong><br>
+        <a href="http://www.bsr.org/CSRResources/IssueBriefDetail.cfm?DocumentID=48815" target="_blank" rel="noopener">http://www.bsr.org/CSRResources/IssueBriefDetail.cfm?DocumentID=48815</a><br>
+        נושא אתיקה בעסקים, במסגרת ארגון Business for Social Responsibility, ארגון מוביל בעולם בנושא אחריות חברתית</p>
 
         <h3>אתיקה ביהדות</h3>
-        <p>Jewish Law - A Model Course in Jewish Business Ethics</p>
-        <p><a href="http://www.jlaw.com/LawPolicy/EthicsCourse.html" target="_blank" rel="noopener">jlaw.com</a></p>
+        <p>Jewish Law - LawPolicy ("A Model Course in Jewish Business Ethics")<br>
+        <a href="http://www.jlaw.com/LawPolicy/EthicsCourse.html" target="_blank" rel="noopener">http://www.jlaw.com/LawPolicy/EthicsCourse.html</a></p>
 
         <h3>אתיקה בודהיסטית בקונטקסט מערבי</h3>
-        <p>Buddhist Ethics in Western Context: The Virtues Approach</p>
+        <p>Buddhist Ethics in Western Context: The Virtues Approach<br>
+        <a href="http://www.quangduc.com/English/Ethics/19buddhistethic.html" target="_blank" rel="noopener">http://www.quangduc.com/English/Ethics/19buddhistethic.html</a></p>
 
-        <h2 id="israel">בישראל</h2>
+        <h2 id="israel">בישראל:</h2>
 
         <h3>ארגונים בישראל:</h3>
 
-        <p><strong>מעל"ה - מחויבות עסקים לקהילה בישראל</strong><br>
-        <a href="http://www.maala.org.il" target="_blank" rel="noopener">maala.org.il</a></p>
+        <p><strong>מעל"ה – מחויבות עסקים לקהילה בישראל</strong><br>
+        <a href="http://www.maala.org.il" target="_blank" rel="noopener">http://www.maala.org.il</a></p>
 
-        <p><strong>מרכז לאתיקה - משכנות שאננים, ירושלים</strong><br>
-        <a href="http://www.mishkenot.org.il/library/ethics_lib.doc" target="_blank" rel="noopener">mishkenot.org.il</a></p>
+        <p><strong>מרכז לאתיקה – משכנות שאננים, ירושלים</strong><br>
+        <a href="http://www.mishkenot.org.il/library/ethics_lib.doc" target="_blank" rel="noopener">http://www.mishkenot.org.il/library/ethics_lib.doc</a>.</p>
 
         <p><strong>שבי"ל ישראל</strong><br>
-        <a href="http://www.ti-israel.org/" target="_blank" rel="noopener">ti-israel.org</a></p>
+        <a href="http://www.ti-israel.org/" target="_blank" rel="noopener">http://www.ti-israel.org/</a></p>
+
+        <h3>מאמרים בעיתונות העברית:</h3>
+
+        <p><strong>חוסר הבושה של הקהילייה העסקית בישראל – על פרשת קלאבמרקט</strong><br>
+        <a href="http://new.haaretz.co.il/hasite/pages/ShArtPE.jhtml?itemNo=609695&amp;contrassID=2&amp;subContrassID=6&amp;sbSubContrassID=0" target="_blank" rel="noopener">http://new.haaretz.co.il/hasite/pages/ShArtPE.jhtml?itemNo=609695&amp;contrassID=2&amp;subContrassID=6&amp;sbSubContrassID=0</a></p>
+
+        <p><strong>המשנה ליועץ המשפטי: אין מקום לחוק אתיקה בעסקים</strong><br>
+        דידי לחמן-מסר אינה מאמינה שיש צורך בחוק שקושר בין אתיקה לעסקים. לדבריה, אם העסקים חושבים שקוד אתי הוא מוצר נדרש, עליהם לפעול להטמעת קודים אתיים בעסקים, ולא לרוץ למחוקק.<br>
+        <a href="http://www.ynet.co.il/articles/0,7340,L-3124778,00.html" target="_blank" rel="noopener">http://www.ynet.co.il/articles/0,7340,L-3124778,00.html</a></p>
+
+        <p><strong>Ynet פרשת הריגול: זו לא הכלכלה, זה המצפון - סבר פלוצקר</strong><br>
+        <a href="http://www.ynet.co.il/articles/0,7340,L-3092368,00.html" target="_blank" rel="noopener">http://www.ynet.co.il/articles/0,7340,L-3092368,00.html</a></p>
+
+        <p><strong>Ynet הונאות: הרמאים באים מתוך הארגון – כלכלה</strong><br>
+        <a href="http://www.ynet.co.il/articles/0,7340,L-3255233,00.html" target="_blank" rel="noopener">http://www.ynet.co.il/articles/0,7340,L-3255233,00.html</a></p>
+
+        <p><strong>מאמרים - אתיקה למתווכי מלדן-ובעתיד כנראה לכלל המתווכים</strong><br>
+        <a href="http://www.articles.co.il/article/%D7%90%D7%AA%D7%99%D7%A7%D7%259" target="_blank" rel="noopener">http://www.articles.co.il/article/%D7%90%D7%AA%D7%99%D7%A7%D7%9</a></p>
+
+        <p><strong>מאמרים - השקעות ערך – ערכיות</strong><br>
+        <a href="http://www.articles.co.il/article/%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA%20%D7%A2%D7%A8%D7%9A%20-%20%D7%A2%D7%A8%D7%9B%D7%99%D7%95%D7%AA" target="_blank" rel="noopener">http://www.articles.co.il/article/%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA%20%D7%A2%D7%A8%D7%9A%20-%20%D7%A2%D7%A8%D7%9B%D7%99%D7%95%D7%AA</a></p>
+
+        <p><strong>מנהיגים ברשת - שולחן העבודה למנהלים בישראל</strong><br>
+        <a href="http://www.leadersnet.co.il/scripts/docs/doc.asp?commid=1&amp;doc=662&amp;sct=20&amp;open" target="_blank" rel="noopener">http://www.leadersnet.co.il/scripts/docs/doc.asp?commid=1&amp;doc=662&amp;sct=20&amp;open</a></p>
       </article>
     </div>
   </section>
+
+  </main>
 
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
         <div class="footer__section">
-          <h4>אתיקה לעסקים</h4>
+          <p class="footer__title">תבונה, מודעות והרחבת הדעת</p>
           <ul class="footer__links">
-            <li><a href="services.html">שירותים</a></li>
-            <li><a href="Coach.html">אימון אישי</a></li>
-            <li><a href="Org.html">תהליך בארגון</a></li>
+            <li><a href="../../spiritual.html#books">ספרים</a></li>
+            <li><a href="../../spiritual.html#groups">קבוצות</a></li>
+            <li><a href="../../spiritual.html#teachers">מורים</a></li>
           </ul>
         </div>
         <div class="footer__section">
-          <h4>קשר</h4>
+          <p class="footer__title">מסעות</p>
           <ul class="footer__links">
-            <li><a href="contact.html">צור קשר</a></li>
+            <li><a href="../../travel.html#photography">צילומים</a></li>
+            <li><a href="../../travel.html#drawings">ציורים</a></li>
+            <li><a href="../../travel.html#greyhair">הודו בשיער שיבה</a></li>
           </ul>
         </div>
         <div class="footer__section">
-          <h4>אתר ראשי</h4>
+          <p class="footer__title">ארכיון</p>
           <ul class="footer__links">
-            <li><a href="../../index.html">דף הבית</a></li>
+            <li><a href="../../archive.html#living">לחיות בשלום עם הכסף</a></li>
+            <li><a href="../../archive.html#ethics">אתיקה</a></li>
+            <li><a href="../../archive.html#family">משפחה</a></li>
+            <li><a href="../../archive.html#old-site">האתר הישן</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <p class="footer__title">עוד</p>
+          <ul class="footer__links">
+            <li><a href="../../en/index.html">English</a></li>
           </ul>
         </div>
       </div>
       <div class="footer__bottom">
-        <p>אפי פז - אתיקה לעסקים</p>
+        <p>אפי פז</p>
       </div>
     </div>
   </footer>
 
   <script>
-    document.querySelector('.nav__toggle').addEventListener('click', function() {
-      document.querySelector('.nav__list').classList.toggle('is-open');
-    });
+    (function () {
+      var t = document.querySelector('.nav__toggle');
+      var l = document.querySelector('.nav__list');
+      if (!t || !l) return;
+      t.addEventListener('click', function () {
+        var open = l.classList.toggle('is-open');
+        t.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    })();
   </script>
-
 </body>
 </html>

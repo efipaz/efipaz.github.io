@@ -3,31 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="מיאנמר - 369 צילומים ממסע בבורמה, מחולקים ל-5 קטגוריות">
-  <title>מיאנמר | אפי פז</title>
+  <meta name="description" content="בורמה - 369 צילומים ממסע בבורמה, מחולקים ל-5 קטגוריות">
+  <title>בורמה | אפי פז</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../style.css?v=a039e7ee">
   <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 </head>
 <body>
 
+  <a class="skip-link" href="#main">דלג לתוכן</a>
   <header class="header">
     <div class="container header__inner">
       <a href="../../index.html" class="header__logo">אפי פז</a>
-      <nav class="nav">
-        <ul class="nav__list">
+      <nav class="nav" aria-label="תפריט">
+        <ul class="nav__list" id="nav-list">
           <li><a href="../../index.html" class="nav__link">בית</a></li>
-          <li><a href="../../spiritual.html" class="nav__link">רוחניות ודעת</a></li>
+          <li><a href="../../spiritual.html" class="nav__link">תבונה, מודעות והרחבת הדעת</a></li>
           <li><a href="../../travel.html" class="nav__link nav__link--active">מסעות</a></li>
           <li><a href="../../archive.html" class="nav__link">ארכיון</a></li>
         </ul>
         <div class="lang-switch">
-          <a href="index.html" class="active">עב</a>
-          <a href="../../en/travel.html">EN</a>
+          <a href="#" class="active" aria-current="page">עב</a>
+          <a href="../../en/travel.html" lang="en" hreflang="en">EN</a>
         </div>
-        <button class="nav__toggle" aria-label="תפריט">
+        <button class="nav__toggle" aria-label="תפריט" aria-expanded="false" aria-controls="nav-list">
           <span></span>
           <span></span>
           <span></span>
@@ -36,9 +37,11 @@
     </div>
   </header>
 
+  <main id="main">
+
   <div class="page-header">
     <div class="container">
-      <h1>מיאנמר</h1>
+      <h1>בורמה</h1>
       <p class="page-header__subtitle">369 צילומים ממסע בבורמה</p>
     </div>
   </div>
@@ -63,14 +66,14 @@
         </a>
 
         <a href="nature.html" class="gallery-category">
-          <img src="pictures/Nature/Landscape/@Bagan%201%20198.jpg" alt="טבע" loading="lazy">
+          <img src="pictures/Nature/Landscape/Bagan%201%20091.jpg" alt="טבע" loading="lazy">
           <div class="gallery-category__overlay">
             <span class="gallery-category__title">טבע (49)</span>
           </div>
         </a>
 
         <a href="people.html" class="gallery-category">
-          <img src="pictures/People/Children/@Yangon-Bagoo%20063.jpg" alt="אנשים" loading="lazy">
+          <img src="pictures/People/Children/Bagan%201%20013.jpg" alt="אנשים" loading="lazy">
           <div class="gallery-category__overlay">
             <span class="gallery-category__title">אנשים (77)</span>
           </div>
@@ -86,28 +89,40 @@
     </div>
   </section>
 
+  </main>
+
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
         <div class="footer__section">
-          <h4>ניווט</h4>
+          <p class="footer__title">תבונה, מודעות והרחבת הדעת</p>
           <ul class="footer__links">
-            <li><a href="../../index.html">דף הבית</a></li>
-            <li><a href="../../spiritual.html">רוחניות</a></li>
-            <li><a href="../../travel.html">מסעות</a></li>
+            <li><a href="../../spiritual.html#books">ספרים</a></li>
+            <li><a href="../../spiritual.html#groups">קבוצות</a></li>
+            <li><a href="../../spiritual.html#teachers">מורים</a></li>
           </ul>
         </div>
         <div class="footer__section">
-          <h4>גלריות</h4>
+          <p class="footer__title">מסעות</p>
           <ul class="footer__links">
-            <li><a href="../india/index.html">הודו</a></li>
-            <li><a href="../myanmar/index.html">מיאנמר</a></li>
+            <li><a href="../../travel.html#photography">צילומים</a></li>
+            <li><a href="../../travel.html#drawings">ציורים</a></li>
+            <li><a href="../../travel.html#greyhair">הודו בשיער שיבה</a></li>
           </ul>
         </div>
         <div class="footer__section">
-          <h4>קשר</h4>
+          <p class="footer__title">ארכיון</p>
           <ul class="footer__links">
-            <li><a href="mailto:efi@efipaz.com">efi@efipaz.com</a></li>
+            <li><a href="../../archive.html#living">לחיות בשלום עם הכסף</a></li>
+            <li><a href="../../archive.html#ethics">אתיקה</a></li>
+            <li><a href="../../archive.html#family">משפחה</a></li>
+            <li><a href="../../archive.html#old-site">האתר הישן</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <p class="footer__title">עוד</p>
+          <ul class="footer__links">
+            <li><a href="../../en/index.html">English</a></li>
           </ul>
         </div>
       </div>
@@ -118,10 +133,15 @@
   </footer>
 
   <script>
-    document.querySelector('.nav__toggle').addEventListener('click', function() {
-      document.querySelector('.nav__list').classList.toggle('is-open');
-    });
+    (function () {
+      var t = document.querySelector('.nav__toggle');
+      var l = document.querySelector('.nav__list');
+      if (!t || !l) return;
+      t.addEventListener('click', function () {
+        var open = l.classList.toggle('is-open');
+        t.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    })();
   </script>
-
 </body>
 </html>

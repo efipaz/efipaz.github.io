@@ -1,0 +1,14 @@
+שם: אלן ואטס
+name_en: Alan Watts
+שנים: 1915-1973
+תפקיד: פילוסוף בריטי
+role_en: British philosopher
+ויקיפדיה: https://he.wikipedia.org/wiki/אלן_ווטס
+wiki_en: https://en.wikipedia.org/wiki/Alan_Watts
+תמונה: watts_brey-729056_resize1.jpg
+סדר: 2
+ביוגרפיה: אלן וילסון ואטס היה פילוסוף, סופר ודובר בריטי-אמריקאי שנודע בפירוש והצגת הפילוסופיה והרוחניות המזרחית לקהל המערבי.
+נולד בצ'יזלהרסט, אנגליה ב-1915, וגילה עניין בתרבויות המזרח הרחוק בגיל צעיר. הוא החל לכתוב על בודהיזם זן כבר בגיל העשרה, והיה לאחד מהפרשנים המשפיעים ביותר של הפילוסופיה המזרחית במאה ה-20.
+עבודתו חוקרת את האשליה של האגו הנפרד, את חוכמת חוסר הביטחון, את הטאבו נגד לדעת מי אתה ואת אמנות החיים ברגע הנוכחי.
+bio_en: Alan Watts was a British philosopher who interpreted Eastern philosophy for Western audiences. He made Zen Buddhism, Taoism and Hindu philosophy accessible and understandable to many readers.
+His work explores the illusion of the separate ego, the wisdom of insecurity, the taboo against knowing who you are, and the art of living in the present moment.

@@ -8,27 +8,27 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../style.css?v=a039e7ee">
 </head>
 <body>
 
   <!-- Header -->
+  <a class="skip-link" href="#main">דלג לתוכן</a>
   <header class="header">
     <div class="container header__inner">
-      <a href="index.html" class="header__logo">אפ.אי. יעוץ עסקי</a>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li><a href="index.html" class="nav__link">ראשי</a></li>
-          <li><a href="services.html" class="nav__link">שירותים</a></li>
-          <li><a href="projects.html" class="nav__link">פרויקטים</a></li>
-          <li><a href="customers.html" class="nav__link nav__link--active">לקוחות</a></li>
-          <li><a href="About.html" class="nav__link">אודות</a></li>
-          <li><a href="contact.html" class="nav__link">צור קשר</a></li>
+      <a href="../index.html" class="header__logo">אפי פז</a>
+      <nav class="nav" aria-label="תפריט">
+        <ul class="nav__list" id="nav-list">
+          <li><a href="../index.html" class="nav__link">בית</a></li>
+          <li><a href="../spiritual.html" class="nav__link">תבונה, מודעות והרחבת הדעת</a></li>
+          <li><a href="../travel.html" class="nav__link">מסעות</a></li>
+          <li><a href="../archive.html" class="nav__link nav__link--active">ארכיון</a></li>
         </ul>
         <div class="lang-switch">
-          <a href="../index.html">לאתר הראשי</a>
+          <a href="#" class="active" aria-current="page">עב</a>
+          <a href="../en/archive.html" lang="en" hreflang="en">EN</a>
         </div>
-        <button class="nav__toggle" aria-label="תפריט">
+        <button class="nav__toggle" aria-label="תפריט" aria-expanded="false" aria-controls="nav-list">
           <span></span>
           <span></span>
           <span></span>
@@ -37,11 +37,13 @@
     </div>
   </header>
 
+  <main id="main">
+
   <!-- Page Header -->
   <section class="page-header">
     <div class="container">
       <h1>לקוחות</h1>
-      <p class="page-header__subtitle">בין לקוחותינו</p>
+      <p class="page-header__subtitle">בין לקוחותינו:</p>
     </div>
   </section>
 
@@ -66,7 +68,7 @@
           <li>גיורא-לויעד</li>
           <li>הקיבוץ הארצי</li>
           <li>חומי פלסטיק</li>
-          <li>חיל האוויר</li>
+          <li>חיל האויר</li>
           <li>חממת גרנות</li>
           <li>חסבר בע"מ</li>
           <li>מ.א.ג.</li>
@@ -98,56 +100,61 @@
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="section section--alt">
-    <div class="container text-center">
-      <h2 class="mb-2">מעוניינים להצטרף?</h2>
-      <p class="mb-3">נשמח לשמוע מכם ולספק ייעוץ מקצועי.</p>
-      <a href="contact.html" class="btn btn--accent">צרו קשר</a>
-    </div>
-  </section>
-
   <!-- Footer -->
+
+  </main>
+
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
         <div class="footer__section">
-          <h4>ניווט</h4>
+          <p class="footer__title">תבונה, מודעות והרחבת הדעת</p>
           <ul class="footer__links">
-            <li><a href="index.html">ראשי</a></li>
-            <li><a href="services.html">שירותים</a></li>
-            <li><a href="projects.html">פרויקטים</a></li>
-            <li><a href="customers.html">לקוחות</a></li>
+            <li><a href="../spiritual.html#books">ספרים</a></li>
+            <li><a href="../spiritual.html#groups">קבוצות</a></li>
+            <li><a href="../spiritual.html#teachers">מורים</a></li>
           </ul>
         </div>
         <div class="footer__section">
-          <h4>מידע</h4>
+          <p class="footer__title">מסעות</p>
           <ul class="footer__links">
-            <li><a href="About.html">אודות אפי פז</a></li>
-            <li><a href="links.html">קישורים</a></li>
-            <li><a href="contact.html">צור קשר</a></li>
+            <li><a href="../travel.html#photography">צילומים</a></li>
+            <li><a href="../travel.html#drawings">ציורים</a></li>
+            <li><a href="../travel.html#greyhair">הודו בשיער שיבה</a></li>
           </ul>
         </div>
         <div class="footer__section">
-          <h4>קשר</h4>
+          <p class="footer__title">ארכיון</p>
           <ul class="footer__links">
-            <li><a href="mailto:efipaz@gmail.com">efipaz@gmail.com</a></li>
-            <li>054-451-4502</li>
+            <li><a href="../archive.html#living">לחיות בשלום עם הכסף</a></li>
+            <li><a href="../archive.html#ethics">אתיקה</a></li>
+            <li><a href="../archive.html#family">משפחה</a></li>
+            <li><a href="../archive.html#old-site">האתר הישן</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <p class="footer__title">עוד</p>
+          <ul class="footer__links">
+            <li><a href="../en/index.html">English</a></li>
           </ul>
         </div>
       </div>
       <div class="footer__bottom">
-        <p><a href="../index.html">אפי פז</a> - אתר אישי</p>
+        <p>אפי פז</p>
       </div>
     </div>
   </footer>
 
   <script>
-    // Mobile navigation toggle
-    document.querySelector('.nav__toggle').addEventListener('click', function() {
-      document.querySelector('.nav__list').classList.toggle('is-open');
-    });
+    (function () {
+      var t = document.querySelector('.nav__toggle');
+      var l = document.querySelector('.nav__list');
+      if (!t || !l) return;
+      t.addEventListener('click', function () {
+        var open = l.classList.toggle('is-open');
+        t.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    })();
   </script>
-
 </body>
 </html>

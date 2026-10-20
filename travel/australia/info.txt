@@ -1,0 +1,4 @@
+כותרת: אוסטרליה
+תיאור: צילומים מאוסטרליה – בקרוב.
+title_en: Australia
+description_en: Photos from Australia – coming soon.

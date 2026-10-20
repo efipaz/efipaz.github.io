@@ -1,0 +1,5 @@
+כותרת: חוכמה מלאה שמחה
+תיאור: מאת אלן ואטס – על החוכמה שבחוסר הביטחון והשמחה שבקבלת הרגע.
+title_en: The Wisdom of Insecurity
+description_en: By Alan Watts – on the wisdom of insecurity and the joy of accepting the moment.
+סדר: 5

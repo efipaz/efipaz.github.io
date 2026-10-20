@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Read | Efi Paz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css?v=a039e7ee">
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+</head>
+<body class="viewer">
+  <div class="viewer__bar">
+    <button type="button" class="btn viewer__back" id="back" onclick="history.length > 1 ? history.back() : location.assign('spiritual.html')">Back</button>
+    <p class="viewer__title" id="title">Read</p>
+    <span class="viewer__page" id="page" aria-live="polite"></span>
+  </div>
+  <div class="viewer__pages" id="pages"><p class="viewer__msg">Loading…</p></div>
+
+  <script>
+    window.VIEWER_LANG = 'en';
+    window.VIEWER_BASE = '../';
+  </script>
+  <script src="../assets/js/viewer.js?v=ee6e6660"></script>
+</body>
+</html>

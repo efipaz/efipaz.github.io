@@ -1,270 +1,143 @@
-# CLAUDE.md - הוראות עבודה לסוכני AI
+# CLAUDE.md – הוראות עבודה לסוכני AI
 
-קובץ זה מכיל הנחיות חיוניות לעבודה על פרויקט efipaz.com.
+קובץ זה מכיל הנחיות מחייבות לעבודה על פרויקט efipaz.com.
 **קרא קובץ זה במלואו לפני כל שינוי בקוד.**
 
 ---
 
 ## סקירת הפרויקט
 
-אתר אישי של אפי פז - תוכן רוחני, צילומי מסעות, ייעוץ עסקי, וחיים בשלום עם הכסף.
-האתר פעיל מאמצע שנות ה-2000, עבר מודרניזציה משמעותית בינואר 2026.
+אתר אישי של אפי פז (בן 80): תבונה ומודעות (ספרים, קבוצות, מורים), צילומי מסעות, וארכיון
+(לחיות בשלום עם הכסף, אתיקה, משפחה, האתר הישן). דו-לשוני: עברית בשורש, אנגלית ב-`en/`.
+האתר מתארח ב-GitHub Pages מהריפו `efipaz/efipaz.github.io` (ענף `main`, דומיין www.efipaz.com).
 
-### מבנה התיקיות הראשי
+**העיקרון המנחה:** אפי מעלה קבצים דרך ממשק GitHub (או דרך `admin.html`) והאתר מתעדכן לבד.
+אפס עריכת HTML ידנית מצד אפי. כל מה שאפי עורך אי פעם הוא קובץ `.txt` פשוט.
+
+### מבנה התיקיות
 
 ```
 efipaz/
-├── index.html              # דף הבית
-├── spiritual.html          # רוחניות (קרישנמורטי, ואטס, דה מלו)
-├── travel.html             # עמוד ראשי מסעות
-├── personal.html           # תוכן אישי ואמנות
-├── living.html             # לחיות בשלום עם הכסף
-├── ethics.html             # אתיקה
-├── archive.html            # ארכיון תוכן ישן
-├── style.css               # ה-CSS הראשי - עיצוב מינימליסטי יפני
-│
-├── en/                     # גרסה אנגלית
-│   ├── index.html
-│   ├── spiritual.html
-│   └── travel.html
-│
-├── travel/                 # גלריות תמונות
-│   ├── india/
-│   │   ├── index.html      # גלריית הודו
-│   │   └── pictures/       # 897 תמונות ב-12 קטגוריות
-│   └── myanmar/
-│       ├── index.html      # גלריית מיאנמר
-│       └── pictures/       # 369 תמונות
-│
-├── books/                  # ספרים (מערכת אוטומטית!)
-│   ├── manifest.json       # רשימת ספרים - נוצר אוטומטית
-│   └── covers/             # שערי ספרים - נוצרים אוטומטית
-│
-├── teachers/               # דפי מורים רוחניים
-├── assets/
-│   ├── img/                # לוגו ותמונות שירות
-│   └── js/
-│       ├── gallery.js      # Lightbox לגלריות
-│       └── dynamic-books.js # טוען ספרים אוטומטית
-│
-├── scripts/                # סקריפטי תחזוקה
-├── .github/workflows/      # GitHub Actions - אוטומציה
-└── archive/                # קבצים ישנים (לא לגעת!)
+├── index.html spiritual.html travel.html archive.html   # 4 עמודי התפריט (עברית)
+├── admin.html              # לוח הבקרה של אפי (noindex, לא בתפריט)
+├── viewer.html             # קורא PDF (pdf.js) – viewer.html?file=<נתיב>
+├── 404.html  style.css  sitemap.xml  robots.txt  HOWTO.md  content-report.md
+├── en/                     # אותם עמודים באנגלית (index, spiritual, travel, archive, viewer) + living/ethics: תיאור באנגלית של האתרים העבריים
+├── books/                  # ספרים: PDF/Word → שער + כרטיס אוטומטי. <שם>.txt לכותרת/תיאור
+├── transcripts/            # תמלולים (קבוצות) – אותו מנגנון כמו books
+├── travel/<תיקייה>/        # כל תיקייה עם תמונות = גלריה. info.txt אופציונלי, cover.jpg אופציונלי
+│   ├── india/ myanmar/     # גלריות ידניות (עם קטגוריות) – index.html נכתב ביד, לא נדרס
+│   └── thumbs/             # נוצר אוטומטית
+├── teachers/<id>/          # הוגה: info.txt + portrait.jpg + קבצים → index.html + index.en.html אוטומטיים. עמוד אחד להוגה: אין עמודי סקירה ידניים לצידו
+├── recordings/manifest.json  # רשימת ההקלטות מ-archive.org (אוטומטי)
+├── living/ personal/ business/   # עמודי תוכן ישנים שהומרו (טקסט מקורי של אפי)
+├── archive/                # ארכיון: courses/, family/, misc/, ו-old-site/ (האתר הישן כפי שהיה, UTF-8, לא נוגעים בתוכן)
+├── assets/js/gallery.js viewer.js   assets/data/content-report.json
+├── scripts/                # build_content.py, sitechrome.py, apply_chrome.py, check_site.py, validate-all.sh
+└── .github/workflows/auto-process-content.yml
 ```
 
 ---
 
-## מערכת תוכן אוטומטית (חשוב!)
+## מערכת התוכן האוטומטית (חשוב!)
 
-### איך אפי מוסיף ספרים חדשים
+`scripts/build_content.py` הוא המנוע. הוא רץ ב-GitHub Actions בכל push ל-`books/ transcripts/ travel/ teachers/`
+ולקבצים בשורש, וגם מקומית. הוא:
 
-**אפס עבודה ידנית נדרשת מאפי.** הזרימה:
+| מה | איך |
+|----|-----|
+| ספרים/תמלולים | ממיר doc/docx/odt/rtf/mht ל-PDF (LibreOffice), מפיק שער מעמוד 1, כותב `manifest.json`, ומזריק כרטיסים ל-`spiritual.html` + `en/spiritual.html` בין `<!-- auto:books -->` ו-`<!-- /auto:books -->` |
+| גלריות | כל תיקייה ב-`travel/` עם תמונות/וידאו: thumbnails, HEIC→JPG, poster לווידאו, `index.html` + `index.en.html` מתבנית, `gallery-manifest.json`, כרטיסים ב-`travel.html` בין `auto:galleries`. תיקייה עם `cover.*` בלבד = כרטיס "בקרוב" |
+| מורים | `teachers/<id>/info.txt` (מפתחות בעברית/אנגלית, ראה דוגמה ב-`teachers/spinoza/info.txt`) → עמוד הוגה he+en עם ביו, ויקיפדיה, PDF דרך ה-viewer, mp3, עמודים ישנים, תמונות; כרטיסים ב-`spiritual.html` בין `auto:teachers` |
+| הקלטות | שואל את archive.org (`uploader:efipaz@gmail.com`) → `recordings/manifest.json` → כרטיסים בין `auto:recordings` |
+| שורש | PDF/תמונה שהועלו לשורש בטעות מועברים ל-`books/` או ל-`travel/inbox-<תאריך>/` |
+| דוח | `content-report.md` (לאפי, עברית) + `assets/data/content-report.json` (ל-`admin.html`) |
+| sitemap | `sitemap.xml` נבנה מחדש |
 
-1. אפי מעלה קובץ PDF לתיקיית `books/`
-2. GitHub Action רץ אוטומטית
-3. מחלץ שער מעמוד ראשון → `books/covers/`
-4. מעדכן `books/manifest.json`
-5. האתר מציג את הספר החדש עם שער
-
-### קבצים מעורבים
-
-| קובץ | תפקיד |
-|------|-------|
-| `books/manifest.json` | רשימת כל הספרים (נוצר אוטומטית) |
-| `assets/js/dynamic-books.js` | טוען ומציג ספרים מה-manifest |
-| `.github/workflows/auto-process-content.yml` | מעבד קבצים חדשים |
-
-### לסוכני AI: אל תערוך ידנית!
-
-- **אין לערוך את `books/manifest.json` ידנית** - הוא נוצר אוטומטית
-- **אין להוסיף ספרים ל-HTML ידנית** - הם נטענים דינמית
-- אם צריך לתקן משהו, תקן את הסקריפטים או את `dynamic-books.js`
+**כללים לסוכני AI:**
+- **אין לערוך ידנית** את ה-manifest-ים, את מה שבין סימני `<!-- auto:* -->`, את `travel/*/index.html` של גלריות אוטומטיות,
+  את `teachers/*/index*.html`, את `sitemap.xml` ואת `content-report.*`. אם צריך לתקן – מתקנים את `build_content.py`.
+- המנוע **סלחני**: קובץ בעייתי לעולם לא מפיל את הריצה, הוא נרשם בדוח. שמור על העיקרון הזה.
+- המנוע **אידמפוטנטי**: ריצה שנייה בלי שינוי תוכן לא משנה קבצים. בדוק זאת אחרי כל שינוי בו.
+- מטא-דאטה של קבצים = קובץ `.txt` ליד הקובץ באותו שם (ספרים, מורים, גלריות). פורמט `מפתח: ערך`, ראה `parse_info()`.
+- אסור להוסיף דרישות נסתרות (כמו `info.txt` חובה). כל דבר שאפי מעלה למקום סביר חייב לעבוד.
 
 ---
 
-## מערכת העיצוב
+## עיצוב ו-chrome משותף
 
-### פילוסופיית העיצוב: מינימליזם יפני
-
-עיצוב האתר מבוסס על אסתטיקה יפנית מינימליסטית.
-**לא להוסיף עיצובים מורכבים, אנימציות מוגזמות, או צבעים נוספים.**
-
-### פלטת הצבעים - 3 צבעים בלבד!
-
-```css
---color-bg: #F7F5F0;        /* שמנת חמה - רקע */
---color-text: #1A1A1A;      /* שחור-אפור כהה - טקסט */
---color-accent: #8B2635;    /* אדום יפני עמוק - הדגשה */
-```
-
-**אין להוסיף צבעים חדשים.** כל צבע נוסף מנוגד לפילוסופיית העיצוב.
-
-### גופנים
-
-- עברית: `Heebo` (Google Fonts)
-- אנגלית: `Inter` (Google Fonts)
-
-### CSS Classes חשובים
-
-| Class | שימוש |
-|-------|-------|
-| `.container` | מיכל ראשי - max-width: 1100px |
-| `.section` | סקציה - padding עליון ותחתון |
-| `.section--alt` | סקציה עם רקע חלופי |
-| `.gallery` | גריד גלריית תמונות |
-| `.gallery__item` | פריט בגלריה |
-| `.card` | כרטיס תוכן |
-| `.btn` | כפתור |
+- מינימליזם יפני, **3 צבעים בלבד**: `#F7F5F0` רקע, `#1A1A1A` טקסט, `#8B2635` הדגשה (+ הגוונים המתועדים ב-`style.css`).
+  `check_site.py` נכשל על כל צבע אחר.
+- גופנים: Heebo (עברית), Inter (אנגלית). עמודי `en/` מקבלים `lang="en" dir="ltr"` ו-`style.css` מטפל בשאר.
+- **כל העמודים חולקים header/nav/footer מ-`scripts/sitechrome.py`.** תפריט של 4 פריטים לפי "מבנה האתר" של אפי:
+  בית · תבונה, מודעות והרחבת הדעת · מסעות · ארכיון. אין להוסיף פריטים.
+- שינוי בתפריט/פוטר: עורכים את `sitechrome.py` ומריצים `python3 scripts/apply_chrome.py` (מעדכן את כל העמודים הידניים;
+  העמודים האוטומטיים מתעדכנים בריצת `build_content.py`).
+- עמוד חדש: `<main id="main">` עוטף את התוכן, קישור דילוג, `<meta charset="UTF-8">`, ללא inline styles, ללא classes שלא קיימים ב-`style.css`.
+- תמונות: לעולם לא `<img>` לקובץ מעל 1MB (ה-checker נכשל). משתמשים ב-thumbs.
 
 ---
 
-## סקריפטי תחזוקה
+## חי מול ארכיון – לא מערבבים
 
-### scripts/validate-all.sh
-מריץ את כל בדיקות האיכות - **הרץ לפני כל commit!**
+| חי (נערך, מתוחזק) | ארכיון (לא נוגעים) |
+|---|---|
+| עמודי השורש, `en/`, `books/`, `transcripts/`, `travel/`, `teachers/`, `living/`, `personal/`, `business/`, `assets/`, `scripts/` | `archive/` כולו, ובמיוחד `archive/old-site/` (האתר הישן כפי שהיה) |
+
+- `archive/old-site/` נגיש מ-`archive.html#old-site`. אין להמיר קידוד, אין "לשפר", אין למחוק.
+- קישורים מעמודים חיים אל `archive/old-site/` מותרים רק מ-`archive.html`, `en/ethics.html` ו-`personal/ethics/index.html` (ה-checker אוכף).
+- בשורש נשארים redirect stubs לנתיבים הישנים הציבוריים (`/LightOfIndia/`, `/Burma/`, `/Ethics/` וכו').
+
+---
+
+## בדיקות – לפני כל commit
+
 ```bash
-bash scripts/validate-all.sh
+bash scripts/validate-all.sh      # build dry-run + apply_chrome --check + check_site
+python3 scripts/build_content.py   # ריצה אמיתית (צריך poppler, imagemagick, ffmpeg, libreoffice, Pillow)
+python3 scripts/build_content.py   # ריצה שנייה: חייבת לדווח "changed files: 0"
 ```
 
-### scripts/check-encoding.sh
-בודק בעיות קידוד בקבצי HTML - מזהה טקסט פגום (gibberish).
+`check_site.py` בודק: קישורים ועוגנים, charset/lang/dir, תגיות `<!img`, סימני auto מאוזנים, manifests תקינים,
+סנכרון he↔en (sections + מספר כרטיסים), פלטת צבעים, תמונות כבדות, התנגשויות רישיות בשמות קבצים.
 
-### scripts/check-links.sh
-בודק קישורים שבורים בתוך האתר.
-
-### scripts/fix-encoding.sh
-מתקן בעיות קידוד Windows-1255 → UTF-8.
-
-### scripts/audit.sh
-יוצר דוח מצב מפורט של כל קבצי ה-HTML → `AUDIT_REPORT.md`
-
-### scripts/cleanup-dead-code.sh
-מנקה קוד מת (PHP, Flash, CSS ישן) מהפרויקט.
-```bash
-bash scripts/cleanup-dead-code.sh --dry-run  # לבדיקה בלבד
-bash scripts/cleanup-dead-code.sh            # למחיקה בפועל
-```
-
-### scripts/check-lang-sync.sh
-**חשוב!** בודק סנכרון בין גרסה עברית לאנגלית.
-```bash
-bash scripts/check-lang-sync.sh
-```
-מוודא ש:
-- כל עמוד עברי יש לו עמוד אנגלי מקביל
-- מספר הסקציות והכרטיסים תואם
-- שני הגרסאות מעודכנות
-
----
-
-## היסטוריית בעיות - למד משגיאות העבר!
-
-### 1. בעיות קידוד (Encoding)
-האתר מכיל קבצים ישנים מ-Windows-1255.
-**תמיד וודא:**
-- כל קובץ HTML חדש מכיל `<meta charset="UTF-8">`
-- עברית נראית תקינה ולא כג'יבריש
-
-### 2. נתיבי תמונות שבורים
-בעבר היו הרבה נתיבי תמונות שגויים.
-**תמיד השתמש בנתיבים יחסיים מדויקים:**
-```html
-<!-- נכון -->
-<img src="pictures/Religion/Buddhist_monks/image.jpg">
-
-<!-- לא נכון -->
-<img src="../../../pictures/Religion/Buddhist_monks/image.jpg">
-```
-
-### 3. ערבוב CSS ישן וחדש
-יש קבצי CSS ישנים בתיקיות משנה.
-**השתמש רק ב-`style.css` הראשי** עבור עמודים חדשים.
-
-### 4. תיקיית archive/
-תיקייה זו מכילה תוכן ישן בעל ערך:
-- `courses/` - קורסים עסקיים (PDF ו-HTML)
-- `Quotes.html` - ציטוטים
-- `Personal_Training.html` - מתודולוגיית אימון
-- `family/` - תוכן משפחתי (טיוטה)
-
-**אין לערוך או למחוק קבצים ב-archive/ אלא אם התבקשת במפורש.**
-קוד טכני (PHP, WordPress) כבר נוקה מהתיקייה.
-
----
-
-## גלריית תמונות
-
-### מבנה התמונות
-
-```
-travel/india/pictures/
-├── Animals/
-├── Architecture/
-├── Art_and_Craft/
-├── Children/
-├── Colors/
-├── Landscape/
-├── Openings/
-├── Outside/
-├── People/
-├── Portraits/
-├── Religion/
-└── Tress_Flowers_and_Fruit/
-```
-
-כל קטגוריה מכילה תתי-קטגוריות עם התמונות עצמן.
-
-### קומפוננט הגלריה
-
-הגלריה משתמשת ב:
-1. **גריד תמונות רספונסיבי** - CSS Grid עם auto-fill
-2. **Lightbox** - צפייה בתמונה מוגדלת (`assets/js/gallery.js`)
-3. **Lazy loading מובנה** - `loading="lazy"` (תכונת דפדפן, לא JS)
-4. **פילטר grayscale** - עם הסרה ב-hover
-
-**חשוב:** השתמש ב-`src` רגיל, לא ב-`data-src`:
-```html
-<!-- נכון -->
-<img src="pictures/Animals/image.jpg" loading="lazy" alt="תיאור">
-
-<!-- לא נכון (ישן) -->
-<img data-src="pictures/Animals/image.jpg">
-```
+בדיקה ויזואלית: `python3 -m http.server 8077` + Playwright (Chromium ב-`/opt/pw-browsers/chromium`) – כל עמוד
+ב-1280 וב-390, 0 שגיאות קונסול, 0 בקשות 404, צילומי מסך.
 
 ---
 
 ## רשימת בדיקות לפני Commit
 
-- [ ] הרצת `scripts/validate-all.sh` עברה בהצלחה
-- [ ] הרצת `scripts/check-lang-sync.sh` - עברית ואנגלית מסונכרנות
-- [ ] כל קובץ HTML חדש מכיל `charset=UTF-8`
-- [ ] עברית נראית תקינה
-- [ ] נתיבי תמונות עובדים
-- [ ] האתר רספונסיבי (בדוק גם במובייל)
-- [ ] עיצוב שומר על 3 צבעים בלבד
-- [ ] לא נגעת ב-archive/ ללא סיבה
-- [ ] לא ערכת `books/manifest.json` ידנית
+- [ ] `bash scripts/validate-all.sh` ירוק
+- [ ] `build_content.py` פעמיים – השנייה בלי שינויים
+- [ ] עברית ואנגלית מסונכרנות (אותן sections, אותו מספר כרטיסים)
+- [ ] לא נגעת ב-`archive/` ולא ב-manifest-ים/אזורי auto ידנית
+- [ ] לא הוספת צבע, גופן, ספרייה חיצונית או פריט תפריט
+- [ ] אם שינית `sitechrome.py` – הרצת `apply_chrome.py`
 
 ---
 
-## קבצים חשובים לקריאה
+## מבנה תוכן – כללים
 
-| קובץ | תוכן |
-|------|------|
-| `README.md` | סקירה כללית לאנשים |
-| `CLAUDE.md` | **הקובץ הזה** - הוראות ל-AI |
-| `style.css` | כל ה-CSS - למד אותו! |
-| `AUDIT_REPORT.md` | דוח מצב הקבצים |
+- **עמוד אחד לכל דבר.** להוגה יש עמוד אחד (נוצר אוטומטית). עמודי משנה (פרק מתורגם, מאמר) הם תוכן, לא "סקירה" נוספת.
+  עמוד שמשכפל עמוד אחר נמחק ומשאיר redirect stub. עמוד בלי תוכן (למשל "הסרטון הוסר") נמחק.
+- **הארכיון מצביע ישירות על האתרים המקוריים** (`living/index.html`, `personal/ethics/index.html`, `business/index.html`),
+  בלי שכבת "סקירה" ביניהם. אין עמודי living/ethics/personal/family בשורש (נותרו redirect stubs).
+- מטא-דאטה ב-`info.txt` של הוגה: בנוסף לשדות הרגילים, `קישורים:` (שורה לכל קישור, `תווית | https://…`) ו-`עמודים:` (משפט מעל רשימת עמודי המשנה).
+- כותרת של עמוד משנה נלקחת מה-`<h1>` שלו; כותרת של PDF מה-`.txt` שלידו – חייבת להתאים למה שכתוב בקובץ עצמו.
+
+## היסטוריה חשובה (למד משגיאות העבר)
+
+1. **ינואר 2026:** מודרניזציה שכתבה את הטקסטים של אפי במקום להמיר אותם. הטקסט המקורי הוחזר מ-`archive/old-site/`.
+   **לעולם לא לשכתב טקסט של אפי. ממירים, לא "משפרים".**
+2. **פברואר 2026:** אפי העלה גלריה ללא `info.txt` והיא לא נוצרה; עריכות HTML ידניות שלו שברו את `travel.html`.
+   מכאן: אפס דרישות נסתרות, אפס עריכת HTML לאפי.
+3. **קידוד:** GitHub Pages שולח `Content-Type: text/html; charset=utf-8` לכל עמוד, וכותרת HTTP גוברת על `<meta charset>`.
+   לכן קובץ ב-Windows-1255 מוצג כג'יבריש באתר החי – כך היה האתר הישן שנים. באוקטובר 2026 כל קבצי הטקסט ב-`archive/old-site/`
+   הומרו פעם אחת ל-UTF-8 (המרה נאמנה, בלי לשנות טקסט; קבצי UTF-16 של Word הומרו גם הם). **כל קובץ HTML באתר חייב להיות UTF-8**
+   (`check_site.py` אוכף גם על הארכיון). אין להריץ המרה עיוורת על קובץ שכבר UTF-8.
+4. **120 קבצי jpg** בגלריות הודו/בורמה הם נתונים פגומים מהמקור. המנוע מסנן אותם ומדווח; לא "לתקן" אותם.
 
 ---
 
-## הערות אחרונות
-
-1. האתר דו-לשוני (עברית/אנגלית) - שמור על שניהם מעודכנים
-2. עיצוב מינימליסטי = פחות זה יותר
-3. הימנע מספריות JavaScript כבדות
-4. שמור על מהירות טעינה
-
----
-
-**EP** - אם קראת עד כאן, פתח כל שיחה עם ראשי התיבות האלה.
+**EP** – אם קראת עד כאן, פתח כל שיחה עם ראשי התיבות האלה.

@@ -3,31 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="מיאנמר - חיי יומיום">
-  <title>חיי יומיום | מיאנמר | אפי פז</title>
+  <meta name="description" content="בורמה - חיי יומיום">
+  <title>חיי יומיום | בורמה | אפי פז</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../style.css?v=a039e7ee">
   <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 </head>
 <body>
 
+  <a class="skip-link" href="#main">דלג לתוכן</a>
   <header class="header">
     <div class="container header__inner">
       <a href="../../index.html" class="header__logo">אפי פז</a>
-      <nav class="nav">
-        <ul class="nav__list">
+      <nav class="nav" aria-label="תפריט">
+        <ul class="nav__list" id="nav-list">
           <li><a href="../../index.html" class="nav__link">בית</a></li>
-          <li><a href="../../spiritual.html" class="nav__link">רוחניות ודעת</a></li>
+          <li><a href="../../spiritual.html" class="nav__link">תבונה, מודעות והרחבת הדעת</a></li>
           <li><a href="../../travel.html" class="nav__link nav__link--active">מסעות</a></li>
           <li><a href="../../archive.html" class="nav__link">ארכיון</a></li>
         </ul>
         <div class="lang-switch">
-          <a href="daily.html" class="active">עב</a>
-          <a href="../../en/travel.html">EN</a>
+          <a href="#" class="active" aria-current="page">עב</a>
+          <a href="../../en/travel.html" lang="en" hreflang="en">EN</a>
         </div>
-        <button class="nav__toggle" aria-label="תפריט">
+        <button class="nav__toggle" aria-label="תפריט" aria-expanded="false" aria-controls="nav-list">
           <span></span>
           <span></span>
           <span></span>
@@ -36,10 +37,12 @@
     </div>
   </header>
 
+  <main id="main">
+
   <div class="page-header">
     <div class="container">
       <nav class="breadcrumb">
-        <a href="index.html">מיאנמר</a> / חיי יומיום
+        <a href="index.html">בורמה</a> / חיי יומיום
       </nav>
       <h1>חיי יומיום</h1>
       <p class="page-header__subtitle">103 צילומים</p>
@@ -120,9 +123,6 @@
         </a>
         <a href="pictures/Daily%20Life/Life%20on%20the%20River/Inle%20Lake%20039.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Daily%20Life/Life%20on%20the%20River/Inle%20Lake%20039.jpg" alt="Inle Lake 039.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Daily%20Life/Life%20on%20the%20River/Inle%20Lake%20047.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Daily%20Life/Life%20on%20the%20River/Inle%20Lake%20047.jpg" alt="Inle Lake 047.jpg" loading="lazy">
         </a>
         <a href="pictures/Daily%20Life/Life%20on%20the%20River/Inle%20Lake%20049.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Daily%20Life/Life%20on%20the%20River/Inle%20Lake%20049.jpg" alt="Inle Lake 049.jpg" loading="lazy">
@@ -247,47 +247,11 @@
         <a href="pictures/Daily%20Life/Transportation/Mandalay%20-%20Mingon%20005.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Daily%20Life/Transportation/Mandalay%20-%20Mingon%20005.jpg" alt="Mandalay - Mingon 005.jpg" loading="lazy">
         </a>
-        <a href="pictures/Daily%20Life/Transportation/Mandalay%20-%20Mingon%20041.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Daily%20Life/Transportation/Mandalay%20-%20Mingon%20041.jpg" alt="Mandalay - Mingon 041.jpg" loading="lazy">
-        </a>
         <a href="pictures/Daily%20Life/Transportation/Monsoon%20and%20Poppa%2010.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Daily%20Life/Transportation/Monsoon%20and%20Poppa%2010.jpg" alt="Monsoon and Poppa 10.jpg" loading="lazy">
         </a>
-        <a href="pictures/Daily%20Life/Transportation/Yangon%20062.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Daily%20Life/Transportation/Yangon%20062.jpg" alt="Yangon 062.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Daily%20Life/Transportation/Yangon%20099.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Daily%20Life/Transportation/Yangon%20099.jpg" alt="Yangon 099.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Daily%20Life/Transportation/Yangon-Bagoo%20029.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Daily%20Life/Transportation/Yangon-Bagoo%20029.jpg" alt="Yangon-Bagoo 029.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Daily%20Life/Transportation/Yangon-Bagoo%20112a.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Daily%20Life/Transportation/Yangon-Bagoo%20112a.jpg" alt="Yangon-Bagoo 112a.jpg" loading="lazy">
-        </a>
         <a href="pictures/Daily%20Life/Village%20Life/@Bagan%201%20049.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Daily%20Life/Village%20Life/@Bagan%201%20049.jpg" alt="@Bagan 1 049.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Daily%20Life/Village%20Life/Bagan%201%20036.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Daily%20Life/Village%20Life/Bagan%201%20036.jpg" alt="Bagan 1 036.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Daily%20Life/Village%20Life/Bagan%201%20041.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Daily%20Life/Village%20Life/Bagan%201%20041.jpg" alt="Bagan 1 041.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Daily%20Life/Village%20Life/Bagan%202%20007.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Daily%20Life/Village%20Life/Bagan%202%20007.jpg" alt="Bagan 2 007.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Daily%20Life/Village%20Life/Bagan%202%20065.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Daily%20Life/Village%20Life/Bagan%202%20065.jpg" alt="Bagan 2 065.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Daily%20Life/Village%20Life/Bagan%20to%20Pa-Ya%2014.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Daily%20Life/Village%20Life/Bagan%20to%20Pa-Ya%2014.jpg" alt="Bagan to Pa-Ya 14.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Daily%20Life/Village%20Life/Bagan%20to%20Pa-Ya%2071.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Daily%20Life/Village%20Life/Bagan%20to%20Pa-Ya%2071.jpg" alt="Bagan to Pa-Ya 71.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Daily%20Life/Village%20Life/Bagoo-Kalaw%20008.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Daily%20Life/Village%20Life/Bagoo-Kalaw%20008.jpg" alt="Bagoo-Kalaw 008.jpg" loading="lazy">
         </a>
         <a href="pictures/Daily%20Life/Village%20Life/Bagoo-Kalaw%20011.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Daily%20Life/Village%20Life/Bagoo-Kalaw%20011.jpg" alt="Bagoo-Kalaw 011.jpg" loading="lazy">
@@ -343,33 +307,47 @@
         <a href="pictures/Daily%20Life/Village%20Life/Pindia%20cave%20175.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Daily%20Life/Village%20Life/Pindia%20cave%20175.jpg" alt="Pindia cave 175.jpg" loading="lazy">
         </a>
-        <a href="pictures/Daily%20Life/Village%20Life/Yangon-Bagoo%20150.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Daily%20Life/Village%20Life/Yangon-Bagoo%20150.jpg" alt="Yangon-Bagoo 150.jpg" loading="lazy">
-        </a>
         <a href="pictures/Daily%20Life/Village%20Life/Yangon-Bagoo%20169.jpg" class="gallery__item" data-lightbox>
           <img src="pictures/Daily%20Life/Village%20Life/Yangon-Bagoo%20169.jpg" alt="Yangon-Bagoo 169.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Daily%20Life/Village%20Life/Yangon-Bagoo%20171.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Daily%20Life/Village%20Life/Yangon-Bagoo%20171.jpg" alt="Yangon-Bagoo 171.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Daily%20Life/Village%20Life/Yangon-Bagoo%20175.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Daily%20Life/Village%20Life/Yangon-Bagoo%20175.jpg" alt="Yangon-Bagoo 175.jpg" loading="lazy">
-        </a>
-        <a href="pictures/Daily%20Life/Village%20Life/Yangon-Bagoo%20176.jpg" class="gallery__item" data-lightbox>
-          <img src="pictures/Daily%20Life/Village%20Life/Yangon-Bagoo%20176.jpg" alt="Yangon-Bagoo 176.jpg" loading="lazy">
         </a>
       </div>
     </div>
   </section>
 
+  </main>
+
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
         <div class="footer__section">
-          <h4>ניווט</h4>
+          <p class="footer__title">תבונה, מודעות והרחבת הדעת</p>
           <ul class="footer__links">
-            <li><a href="../../index.html">דף הבית</a></li>
-            <li><a href="index.html">חזרה לגלריה</a></li>
+            <li><a href="../../spiritual.html#books">ספרים</a></li>
+            <li><a href="../../spiritual.html#groups">קבוצות</a></li>
+            <li><a href="../../spiritual.html#teachers">מורים</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <p class="footer__title">מסעות</p>
+          <ul class="footer__links">
+            <li><a href="../../travel.html#photography">צילומים</a></li>
+            <li><a href="../../travel.html#drawings">ציורים</a></li>
+            <li><a href="../../travel.html#greyhair">הודו בשיער שיבה</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <p class="footer__title">ארכיון</p>
+          <ul class="footer__links">
+            <li><a href="../../archive.html#living">לחיות בשלום עם הכסף</a></li>
+            <li><a href="../../archive.html#ethics">אתיקה</a></li>
+            <li><a href="../../archive.html#family">משפחה</a></li>
+            <li><a href="../../archive.html#old-site">האתר הישן</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <p class="footer__title">עוד</p>
+          <ul class="footer__links">
+            <li><a href="../../en/index.html">English</a></li>
           </ul>
         </div>
       </div>
@@ -393,11 +371,6 @@
   </div>
 
   <script>
-    // Mobile menu
-    document.querySelector('.nav__toggle').addEventListener('click', function() {
-      document.querySelector('.nav__list').classList.toggle('is-open');
-    });
-
     // Lightbox
     (function() {
       const lightbox = document.getElementById('lightbox');
@@ -465,5 +438,16 @@
     })();
   </script>
 
+  <script>
+    (function () {
+      var t = document.querySelector('.nav__toggle');
+      var l = document.querySelector('.nav__list');
+      if (!t || !l) return;
+      t.addEventListener('click', function () {
+        var open = l.classList.toggle('is-open');
+        t.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    })();
+  </script>
 </body>
 </html>

@@ -1,19 +1,121 @@
-{"generated":"2026-06-15T18:35:42+00:00","books":[
-{"title":"איך לצאת מדעתך בפחות משעה","path":"books/%D7%90%D7%99%D7%9A%20%D7%9C%D7%A6%D7%90%D7%AA%20%D7%9E%D7%93%D7%A2%D7%AA%D7%9A%20%D7%91%D7%A4%D7%97%D7%95%D7%AA%20%D7%9E%D7%A9%D7%A2%D7%94.pdf","type":"PDF","category":"","cover":"books/covers/34567a59.png","description":""}
-,
-{"title":"הודו בשיער שיבה עם שער","path":"books/%D7%94%D7%95%D7%93%D7%95%20%D7%91%D7%A9%D7%99%D7%A2%D7%A8%20%D7%A9%D7%99%D7%91%D7%94%20%D7%A2%D7%9D%20%D7%A9%D7%A2%D7%A8.pdf","type":"PDF","category":"","cover":"books/covers/7b23aca7.png","description":""}
-,
-{"title":"הספר על הטאבו פתוח","path":"books/%D7%94%D7%A1%D7%A4%D7%A8%20%D7%A2%D7%9C%20%D7%94%D7%98%D7%90%D7%91%D7%95%20%D7%A4%D7%AA%D7%95%D7%97.pdf","type":"PDF","category":"","cover":"books/covers/ae939e85.png","description":""}
-,
-{"title":"חוכמה מלאה שמחה","path":"books/%D7%97%D7%95%D7%9B%D7%9E%D7%94%20%D7%9E%D7%9C%D7%90%D7%94%20%D7%A9%D7%9E%D7%97%D7%94.pdf","type":"PDF","category":"","cover":"books/covers/8592a944.png","description":""}
-,
-{"title":"להיות מודעות","path":"books/%D7%9C%D7%94%D7%99%D7%95%D7%AA%20%D7%9E%D7%95%D7%93%D7%A2%D7%95%D7%AA.pdf","type":"PDF","category":"","cover":"books/covers/4f6faec5.png","description":""}
-,
-{"title":"פרויד יונג ונוימן","path":"books/%D7%A4%D7%A8%D7%95%D7%99%D7%93%20%D7%99%D7%95%D7%A0%D7%92%20%D7%95%D7%A0%D7%95%D7%99%D7%9E%D7%9F.pdf","type":"PDF","category":"","cover":"books/covers/b9fe4995.png","description":""}
-,
-{"title":"שיחות אתי הילסום","path":"books/%D7%A9%D7%99%D7%97%D7%95%D7%AA%20%D7%90%D7%AA%D7%99%20%D7%94%D7%99%D7%9C%D7%A1%D7%95%D7%9D.pdf","type":"PDF","category":"","cover":"books/covers/07ab2534.png","description":""}
-,
-{"title":"שלושת מאפייני הקיום","path":"books/%D7%A9%D7%9C%D7%95%D7%A9%D7%AA%20%D7%9E%D7%90%D7%A4%D7%99%D7%99%D7%A0%D7%99%20%D7%94%D7%A7%D7%99%D7%95%D7%9D.pdf","type":"PDF","category":"","cover":"books/covers/4c9b40a1.png","description":""}
-,
-{"title":"שני דובים חפיז עברית","path":"books/%D7%A9%D7%A0%D7%99%20%D7%93%D7%95%D7%91%D7%99%D7%9D%20%D7%97%D7%A4%D7%99%D7%96%20%D7%A2%D7%91%D7%A8%D7%99%D7%AA.pdf","type":"PDF","category":"","cover":"books/covers/b4cb8db3.png","description":""}
-]}
+{
+ "items": [
+  {
+   "sidecar": "books/הספר על הטאבו פתוח.txt",
+   "source_sig": null,
+   "title": "הספר אודות הטאבו",
+   "title_en": "The Book: On the Taboo",
+   "description": "תרגום הספר \"The Book: On the Taboo Against Knowing Who You Are\" מאת אלן ואטס.",
+   "description_en": "Hebrew translation of Alan Watts' \"The Book: On the Taboo Against Knowing Who You Are\".",
+   "path": "books/הספר על הטאבו פתוח.pdf",
+   "size_kb": 3378,
+   "category": "",
+   "cover": "books/covers/543829128d.jpg",
+   "order": "1"
+  },
+  {
+   "sidecar": "books/איך לצאת מדעתך בפחות משעה.txt",
+   "source_sig": null,
+   "title": "לצאת מן הדעת",
+   "title_en": "Losing Your Mind",
+   "description": "איך לצאת מדעתך בפחות משעה – על שחרור מהזדהות עם המחשבה והאגו.",
+   "description_en": "How to lose your mind in less than an hour – on releasing identification with thought and ego.",
+   "path": "books/איך לצאת מדעתך בפחות משעה.pdf",
+   "size_kb": 333,
+   "category": "",
+   "cover": "books/covers/fc0daa6465.jpg",
+   "order": "2"
+  },
+  {
+   "sidecar": "books/שיחות אתי הילסום.txt",
+   "source_sig": null,
+   "title": "שיחות אתי הילסום",
+   "title_en": "Conversations on Etty Hillesum",
+   "description": "שיחות על יומנה של אתי הילסום – כמסע להארה.",
+   "description_en": "Conversations about Etty Hillesum's diary – as a journey to enlightenment.",
+   "path": "books/שיחות אתי הילסום.pdf",
+   "size_kb": 10093,
+   "category": "",
+   "cover": "books/covers/3ce0e46cf2.jpg",
+   "order": "3"
+  },
+  {
+   "sidecar": "books/הודו בשיער שיבה עם שער.txt",
+   "source_sig": null,
+   "title": "הודו בשיער שיבה",
+   "title_en": "India with Grey Hair",
+   "description": "רשמים והרהורים ממסעות להודו לאחר שנים רבות. מבט אחר דרך עיניים שנצברה בהן חוכמה.",
+   "description_en": "Reflections and impressions from travels to India after many years.",
+   "path": "books/הודו בשיער שיבה עם שער.pdf",
+   "size_kb": 1493,
+   "category": "",
+   "cover": "books/covers/692d88d66d.jpg",
+   "order": "4"
+  },
+  {
+   "sidecar": "books/חוכמה מלאה שמחה.txt",
+   "source_sig": null,
+   "title": "חוכמה מלאה שמחה",
+   "title_en": "The Wisdom of Insecurity",
+   "description": "מאת אלן ואטס – על החוכמה שבחוסר הביטחון והשמחה שבקבלת הרגע.",
+   "description_en": "By Alan Watts – on the wisdom of insecurity and the joy of accepting the moment.",
+   "path": "books/חוכמה מלאה שמחה.pdf",
+   "size_kb": 1396,
+   "category": "",
+   "cover": "books/covers/4a10e886dd.jpg",
+   "order": "5"
+  },
+  {
+   "sidecar": "books/להיות מודעות.txt",
+   "source_sig": null,
+   "title": "להיות מודעות",
+   "title_en": "Being Awareness",
+   "description": "",
+   "description_en": "",
+   "path": "books/להיות מודעות.pdf",
+   "size_kb": 271,
+   "category": "",
+   "cover": "books/covers/052f625cd8.jpg",
+   "order": ""
+  },
+  {
+   "sidecar": "books/פרויד יונג ונוימן.txt",
+   "source_sig": null,
+   "title": "פרויד יונג ונוימן",
+   "title_en": "Freud, Jung and Neumann",
+   "description": "",
+   "description_en": "",
+   "path": "books/פרויד יונג ונוימן.pdf",
+   "size_kb": 11253,
+   "category": "",
+   "cover": "books/covers/ee1b1f1f08.jpg",
+   "order": ""
+  },
+  {
+   "sidecar": "books/שלושת מאפייני הקיום.txt",
+   "source_sig": null,
+   "title": "שלושת מאפייני הקיום",
+   "title_en": "The Three Marks of Existence",
+   "description": "",
+   "description_en": "",
+   "path": "books/שלושת מאפייני הקיום.pdf",
+   "size_kb": 520,
+   "category": "",
+   "cover": "books/covers/85e13df297.jpg",
+   "order": ""
+  },
+  {
+   "sidecar": "books/שני דובים חפיז עברית.txt",
+   "source_sig": null,
+   "title": "שני דובים חפיז עברית",
+   "title_en": "Two Bears – Hafiz (Hebrew)",
+   "description": "",
+   "description_en": "",
+   "path": "books/שני דובים חפיז עברית.pdf",
+   "size_kb": 468,
+   "category": "",
+   "cover": "books/covers/2dd28773a7.jpg",
+   "order": ""
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>קריאה | אפי פז</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=a039e7ee">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body class="viewer">
+  <div class="viewer__bar">
+    <button type="button" class="btn viewer__back" id="back" onclick="history.length > 1 ? history.back() : location.assign('spiritual.html')">חזרה</button>
+    <p class="viewer__title" id="title">קריאה</p>
+    <span class="viewer__page" id="page" aria-live="polite"></span>
+  </div>
+  <div class="viewer__pages" id="pages"><p class="viewer__msg">טוען…</p></div>
+
+  <script>
+    // Shared viewer logic. The English copy (en/viewer.html) sets window.VIEWER_BASE = '../'.
+    window.VIEWER_LANG = 'he';
+  </script>
+  <script src="assets/js/viewer.js?v=ee6e6660"></script>
+</body>
+</html>

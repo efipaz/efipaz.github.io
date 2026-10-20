@@ -8,22 +8,26 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../style.css?v=a039e7ee">
 </head>
 <body>
 
+  <a class="skip-link" href="#main">דלג לתוכן</a>
   <header class="header">
     <div class="container header__inner">
       <a href="../../index.html" class="header__logo">אפי פז</a>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li><a href="index.html" class="nav__link">אתיקה</a></li>
-          <li><a href="services.html" class="nav__link">שירותים</a></li>
-          <li><a href="links.html" class="nav__link">קישורים</a></li>
-          <li><a href="About.html" class="nav__link">אודות</a></li>
-          <li><a href="contact.html" class="nav__link">צור קשר</a></li>
+      <nav class="nav" aria-label="תפריט">
+        <ul class="nav__list" id="nav-list">
+          <li><a href="../../index.html" class="nav__link">בית</a></li>
+          <li><a href="../../spiritual.html" class="nav__link">תבונה, מודעות והרחבת הדעת</a></li>
+          <li><a href="../../travel.html" class="nav__link">מסעות</a></li>
+          <li><a href="../../archive.html" class="nav__link nav__link--active">ארכיון</a></li>
         </ul>
-        <button class="nav__toggle" aria-label="Menu">
+        <div class="lang-switch">
+          <a href="#" class="active" aria-current="page">עב</a>
+          <a href="../../en/ethics.html" lang="en" hreflang="en">EN</a>
+        </div>
+        <button class="nav__toggle" aria-label="תפריט" aria-expanded="false" aria-controls="nav-list">
           <span></span>
           <span></span>
           <span></span>
@@ -32,13 +36,14 @@
     </div>
   </header>
 
+  <main id="main">
+
   <div class="page-header">
     <div class="container">
       <div class="breadcrumb">
         <a href="index.html">אתיקה לעסקים</a> / אימון אישי
       </div>
       <h1>אימון אישי באתיקה</h1>
-      <p class="page-header__subtitle">קואצ'ינג לאתיקה ומדיניות</p>
     </div>
   </div>
 
@@ -46,7 +51,7 @@
     <div class="container">
       <div class="two-col">
         <div>
-          <h2>מה קורה בתהליך אימון אתיקה?</h2>
+          <h2>מה קורה בתהליך אימון אתיקה ?</h2>
           <p>אימון אתיקה ומדיניות היא גישה מובנית לפיתוח גישתך הכוללנית לבעיות אתיות. היא מבוססת על פגישות אישיות, אבל יכולה לכלול גם שיחות טלפוניות, דואר אלקטרוני וקריאה מודרכת.</p>
 
           <p>בהתאם לצרכיך הספציפיים, פיתוח גישתך האופטימלית יתנהל פחות או יותר לאור הנקודות הבאות:</p>
@@ -54,22 +59,20 @@
           <ul class="content-list">
             <li>פיתוח הבנה לגבי הערכים והמושגים הבסיסיים של האתיקה</li>
             <li>בחינת היחסים ההדדיים בין חוק ואתיקה</li>
-            <li>בניית פרדיגמה ליושרה ארגונית</li>
+            <li>בניית פרדיגמה ליושרה אירגונית</li>
             <li>פיתוח תפקיד המנהיגות האתית</li>
             <li>הבנת החשיבות של תרבות הארגון והחברה</li>
             <li>בחינה פרטנית של יישום תכניות אתיקה</li>
             <li>פיתוח תכנית להערכה שוטפת של יושרה ארגונית</li>
           </ul>
 
-          <p>לכל אורך התהליך, קריאה מודרכת במאמרים ובפרקים נבחרים משמשת כבסיס לדיון ובחינה. יתר הפגישה או השיחה מוקדש לבעיות שוטפות או ארוכות טווח לפי צרכי המנהל ודרישותיו.</p>
+          <p>לכל אורך התהליך, קריאה מודרכת במאמרים ובפרקים נבחרים משמשת כבסיס לדיון ובחינה. יתר הפגישה או השיחה מוקדש לבעיות שוטפות או ארוכות טווח לפי צרכי המנהל ודרישותיו. בכל עת ניתן לשלוח דואל ולהעלות בעיות, ניתן תמיד לתאם ולארגן פגישות והצגת נושאים על ידי המאמן, ובמקרים דחופים ניתן כמובן להתייעץ טלפונית באופן מיידי.</p>
         </div>
         <div>
           <h2>למה לי מאמן אתיקה ומדיניות?</h2>
-          <p>מנהיגות מצליחה מחייבת יכולת ראייה אובייקטיבית של התמונה הרחבה - וכן יכולת להסביר ולהנחיל אותה לאחרים. בלחצי היום-יום נשכחים ונזנחים לעיתים האובייקטיביות והחזון.</p>
+          <p>מנהיגות מצליחה מחייבת יכולת ראייה אובייקטיבית של התמונה הרחבה – וכן יכולת להסביר ולהנחיל אותה לאחרים. בלחצי היום-יום נשכחים ונזנחים לעיתים האובייקטיביות והחזון. אף פעם אין די זמן לקרא את כל החומר והספרים. וכשמוצאים כבר את הזמן לכך, אין עם מי לדון בלקחים שנלמדו מהקריאה. מאמן אתיקה ומדיניות מעמיד לרשותך אדם מעורב אך אובייקטיבי מספיק כדי לסייע למנהל הבכיר לראות את התמונה הגדולה – ולשתף אחרים בתובנות שלו.</p>
 
-          <p>אף פעם אין די זמן לקרוא את כל החומר והספרים. וכשמוצאים כבר את הזמן לכך, אין עם מי לדון בלקחים שנלמדו מהקריאה. מאמן אתיקה ומדיניות מעמיד לרשותך אדם מעורב אך אובייקטיבי מספיק כדי לסייע למנהל הבכיר לראות את התמונה הגדולה - ולשתף אחרים בתובנות שלו.</p>
-
-          <p>המאמן הוא יועץ ונאמן המסייע למנהל הבכיר לטפל בבעיות הרוחב והעומק של הארגון. מנהלים בכירים עשויים לחוש בצורך לממש תכנית אתית, ואולי כבר התחילו בכך, אך לא תמיד ברור להם כיצד מתקדמים וכיצד מטמיעים בארגון את הערכים והחזון בצורה מעמיקה ולא שטחית, ולא רק כדי לצאת ידי חובה.</p>
+          <p>המאמן הוא יועץ ונאמן המסייע למנהל הבכיר לטפל בבעיות הרוחב והעומק של הארגון. מנהלים בכירים עשויים לחוש בצורך לממש תכנית אתית, ואולי כבר התחילו בכך, אך לא תמיד ברור להם כיצד מתקדמים וכיצד מטמיעים בארגון את הערכים והחזון בצורה מעמיקה ולא שיטחית, ולא רק כדי לצאת ידי חובה. עשויות לצוץ בעיות אתיות ואף משברים בהם אין תחליף למאמן המסוגל להביע דיעה אובייקטיבית ומבט-על בנוגע למצב.</p>
 
           <p>כמנהל בכיר, אתה מכיר את הארגון שלך. אנחנו מאמינים שיועץ נאמן שמכיר את הנושא יכול להעצים את האובייקטיביות והחזון של ההנהלה הבכירה.</p>
         </div>
@@ -77,42 +80,59 @@
     </div>
   </section>
 
+  </main>
+
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
         <div class="footer__section">
-          <h4>אתיקה לעסקים</h4>
+          <p class="footer__title">תבונה, מודעות והרחבת הדעת</p>
           <ul class="footer__links">
-            <li><a href="services.html">שירותים</a></li>
-            <li><a href="Org.html">תהליך בארגון</a></li>
-            <li><a href="About.html">אודות</a></li>
+            <li><a href="../../spiritual.html#books">ספרים</a></li>
+            <li><a href="../../spiritual.html#groups">קבוצות</a></li>
+            <li><a href="../../spiritual.html#teachers">מורים</a></li>
           </ul>
         </div>
         <div class="footer__section">
-          <h4>קשר</h4>
+          <p class="footer__title">מסעות</p>
           <ul class="footer__links">
-            <li><a href="links.html">קישורים</a></li>
-            <li><a href="contact.html">צור קשר</a></li>
+            <li><a href="../../travel.html#photography">צילומים</a></li>
+            <li><a href="../../travel.html#drawings">ציורים</a></li>
+            <li><a href="../../travel.html#greyhair">הודו בשיער שיבה</a></li>
           </ul>
         </div>
         <div class="footer__section">
-          <h4>אתר ראשי</h4>
+          <p class="footer__title">ארכיון</p>
           <ul class="footer__links">
-            <li><a href="../../index.html">דף הבית</a></li>
+            <li><a href="../../archive.html#living">לחיות בשלום עם הכסף</a></li>
+            <li><a href="../../archive.html#ethics">אתיקה</a></li>
+            <li><a href="../../archive.html#family">משפחה</a></li>
+            <li><a href="../../archive.html#old-site">האתר הישן</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <p class="footer__title">עוד</p>
+          <ul class="footer__links">
+            <li><a href="../../en/index.html">English</a></li>
           </ul>
         </div>
       </div>
       <div class="footer__bottom">
-        <p>אפי פז - אתיקה לעסקים</p>
+        <p>אפי פז</p>
       </div>
     </div>
   </footer>
 
   <script>
-    document.querySelector('.nav__toggle').addEventListener('click', function() {
-      document.querySelector('.nav__list').classList.toggle('is-open');
-    });
+    (function () {
+      var t = document.querySelector('.nav__toggle');
+      var l = document.querySelector('.nav__list');
+      if (!t || !l) return;
+      t.addEventListener('click', function () {
+        var open = l.classList.toggle('is-open');
+        t.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    })();
   </script>
-
 </body>
 </html>

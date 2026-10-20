@@ -1,0 +1,6 @@
+כותרת: אור הודו
+תיאור: מסע צילומי דרך הצבעים התוססים, המקדשים העתיקים והמהות הרוחנית של הודו.
+title_en: Light of India
+description_en: A photographic journey through the vibrant colors, ancient temples and spiritual essence of India.
+תמונה: pictures/Religion/Buddhist_monks/Alchi_063.jpg
+סדר: 1

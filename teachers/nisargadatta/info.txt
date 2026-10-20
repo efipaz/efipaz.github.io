@@ -1,0 +1,9 @@
+שם: ניזרגדטה מהראג'
+name_en: Nisargadatta Maharaj
+שנים: 1897-1981
+תפקיד: מורה אדוואיטה
+role_en: Advaita teacher
+wiki_en: https://en.wikipedia.org/wiki/Nisargadatta_Maharaj
+סדר: 4
+ביוגרפיה: ניזרגדטה מהראג' היה מורה אדוואיטה (אי-שניות) מבומביי. ספרו "אני זה" (I Am That) נחשב לאחד הטקסטים החשובים ברוחניות המודרנית.
+bio_en: Nisargadatta Maharaj was an Advaita (non-duality) teacher from Bombay. His book "I Am That" is considered one of the most important texts of modern spirituality.

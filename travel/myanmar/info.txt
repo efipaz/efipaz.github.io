@@ -1,0 +1,6 @@
+כותרת: בורמה
+תיאור: הפגודות המוזהבות, המנזרים השלווים והאנשים החמים של מיאנמר (בורמה).
+title_en: Myanmar
+description_en: The golden pagodas, peaceful monasteries and warm people of Myanmar (Burma).
+תמונה: pictures/Religion/Monks/Bagoo-Kalaw 006.jpg
+סדר: 2

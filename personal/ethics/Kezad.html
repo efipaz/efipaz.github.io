@@ -8,22 +8,26 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../style.css?v=a039e7ee">
 </head>
 <body>
 
+  <a class="skip-link" href="#main">דלג לתוכן</a>
   <header class="header">
     <div class="container header__inner">
       <a href="../../index.html" class="header__logo">אפי פז</a>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li><a href="index.html" class="nav__link">אתיקה</a></li>
-          <li><a href="services.html" class="nav__link">שירותים</a></li>
-          <li><a href="links.html" class="nav__link">קישורים</a></li>
-          <li><a href="About.html" class="nav__link">אודות</a></li>
-          <li><a href="contact.html" class="nav__link">צור קשר</a></li>
+      <nav class="nav" aria-label="תפריט">
+        <ul class="nav__list" id="nav-list">
+          <li><a href="../../index.html" class="nav__link">בית</a></li>
+          <li><a href="../../spiritual.html" class="nav__link">תבונה, מודעות והרחבת הדעת</a></li>
+          <li><a href="../../travel.html" class="nav__link">מסעות</a></li>
+          <li><a href="../../archive.html" class="nav__link nav__link--active">ארכיון</a></li>
         </ul>
-        <button class="nav__toggle" aria-label="Menu">
+        <div class="lang-switch">
+          <a href="#" class="active" aria-current="page">עב</a>
+          <a href="../../en/ethics.html" lang="en" hreflang="en">EN</a>
+        </div>
+        <button class="nav__toggle" aria-label="תפריט" aria-expanded="false" aria-controls="nav-list">
           <span></span>
           <span></span>
           <span></span>
@@ -32,10 +36,12 @@
     </div>
   </header>
 
+  <main id="main">
+
   <div class="page-header">
     <div class="container">
       <div class="breadcrumb">
-        <a href="index.html">אתיקה לעסקים</a> / <a href="Org.html">תהליך בארגון</a> / כיצד מובילים
+        <a href="index.html">אתיקה לעסקים</a> / <a href="Org.html">הטמעת קוד אתי בארגון</a>
       </div>
       <h1>כיצד אנחנו מובילים את תהליך בניית הקוד האתי</h1>
       <p class="page-header__subtitle">הטמעת קוד אתי בארגון</p>
@@ -45,51 +51,48 @@
   <section class="section">
     <div class="container container--narrow">
       <article class="article">
-        <p>אימוץ תקנון אתי, והפיכת החברה למושתתת על ערכי אתיקה, היא תהליך מובנה, מבוסס אבני דרך ותוצרי ביניים, אשר מסייעים לפעילות מסודרת ולבדיקת ההתקדמות בכל שלב.</p>
-
-        <p>ניתן לתאר את המבנה הכללי של התהליך, כפי שהוא מצטייר מניסיון בחברות קודמות שעברו את התהליך. עם זאת חשוב להעיר כי התהליך המדויק מתוכנן ומבוצע בהתאם לנתונים ייחודיים כמו גודל החברה, התרבות הארגונית ומידת הפתיחות לשינויים, וכן המצב האתי הקיים, גם אם במובלע, בחברה ובסביבתה העסקית.</p>
+        <p>אימוץ תקנון אתי, והפיכת החברה למושתתת על ערכי אתיקה, היא תהליך מובנה, מבוסס אבני דרך ותוצרי ביניים, אשר מסייעים לפעילות מסודרת ולבדיקת ההתקדמות בכל שלב. (כדי להבין את חשיבות התהליך ראה גם את <a href="Org.html">תהליך הקמה והטמעה של קוד אתי</a> )ניתן לתאר את המבנה הכללי של התהליך, כפי שהוא מצטייר מנסיון בחברות קודמות שעברו את התהליך. עם זאת חשוב להעיר כי התהליך המדוייק מתוכנן ומבוצע בהתאם לנתונים יחודיים כמו גודל החברה, התרבות הארגונית ומידת הפתיחות לשינויים, וכן המצב האתי הקיים, גם אם במובלע, בחברה ובסביבתה העסקית.</p>
 
         <h2>שלבי התהליך:</h2>
 
         <h3>1. בדיקת צרכים ובניית ידע</h3>
         <ul>
-          <li>פיתוח הבנה לגבי הערכים והמושגים הבסיסיים של האתיקה</li>
-          <li>בחינת היחסים ההדדיים בין חוק ואתיקה</li>
-          <li>הבנת תרבות הארגון והחברה</li>
-          <li>הבנת הצרכים שהביאו לתהליך</li>
+          <li>א. פיתוח הבנה לגבי הערכים והמושגים הבסיסיים של האתיקה</li>
+          <li>ב. בחינת היחסים ההדדיים בין חוק ואתיקה</li>
+          <li>ג. הבנת תרבות הארגון והחברה</li>
+          <li>ד. הבנת הצרכים שהביאו לתהליך</li>
         </ul>
 
         <h3>2. הקוד האתי</h3>
-        <p><strong>איתור ערכים:</strong></p>
         <ul>
-          <li>ערכים הדרושים כדי לעמוד בדרישות החוק והתקנות</li>
-          <li>הערכים הרלוונטיים ביותר לשטח העסקי בו פועלת החברה</li>
-          <li>ערכים הנותנים מענה לבעיות קיימות בסביבת העבודה</li>
-          <li>ערכים הנובעים מהתכנון האסטרטגי של החברה</li>
-          <li>ערכים העשויים להיות מענה לצרכים של בעלי עניין שונים בחברה (משקיעים, עובדים, ספקים, לקוחות והקהילה)</li>
-        </ul>
-
-        <p><strong>בניית רשימת ערכי ליבה:</strong></p>
-        <ul>
-          <li>חמישה עד עשרה ערכים אתיים מובילים</li>
-          <li>ערך/ים מכל אחת מהקבוצות</li>
-        </ul>
-
-        <p><strong>המשך התהליך:</strong></p>
-        <ul>
-          <li>חיבור הקוד האתי</li>
-          <li>קבלת הערות וביקורת מאנשי מפתח בחברה</li>
-          <li>הכרזה על הקוד והפצתו בכל החברה</li>
+          <li>א. איתור ערכים
+            <ul>
+              <li>1. ערכים הדרושים כדי לעמוד בדרישות החוק והתקנות</li>
+              <li>2. הערכים הרלוונטים ביותר לשטח העסקי בו פועלת החברה</li>
+              <li>3. ערכים הנותנים מענה לבעיות קיימות בסביבת העבודה</li>
+              <li>4. ערכים הנובעים התכנון האסטרטגי של החברה</li>
+              <li>5. ערכים העשויים להיות מענה לצרכים של בעלי עניין שונים בחברה (משקיעים, עובדים, ספקים, לקוחות והקהילה)</li>
+            </ul>
+          </li>
+          <li>ב. בניית רשימת ערכי ליבה
+            <ul>
+              <li>1. חמישה עד עשרה ערכים אתיים מובילים</li>
+              <li>2. ערכ/ים מכל אחת מהקבוצות</li>
+            </ul>
+          </li>
+          <li>ג. חיבור הקוד האתי</li>
+          <li>ד. קבלת הערות וביקורת מאנשי מפתח בחברה</li>
+          <li>ה. הכרזה על הקוד והפצתו בכל החברה</li>
         </ul>
 
         <h3>3. פיתוח תכנית להערכה שוטפת של אתיקה ארגונית</h3>
         <ul>
-          <li>הטמעה</li>
-          <li>הדרכה</li>
-          <li>עדכון תקופתי</li>
+          <li>א. הטמעה</li>
+          <li>ב. הדרכה</li>
+          <li>ג. עדכון תקופתי</li>
         </ul>
 
-        <p>לכל אורך התהליך, יתנהלו פגישות אישיות וקבוצתיות עם חברי הקבוצה המובילה בנושא, כמו גם מספר פגישות עם הנהלת החברה, עם עובדים וגורמים נוספים כגון נציגי לקוחות, ספקים עיקריים וחברי דירקטוריון.</p>
+        <p>לכל אורך התהליך, תתנהלנה פגישות אישיות וקבוצתיות עם חברי הקבוצה המובילה בנושא, כמו גם מספר פגישות עם הנהלת החברה, עם עובדים ווגורמים נוספים כגון נציגי לקוחות, ספקים עיקריים וחברי דירקטוריון. הפגישות יוקדשו ללימוד בנייה וגיבוש קוד אתי, "עבודת בית" ופגישות בקרה.</p>
 
         <p>במקביל לתהליך בניית הקוד האתי, יתבצע גם פיתוח תפקיד המנהיגות האתית ופיתוח תכנית ליישום הקוד. בתהליך ישולבו גם סדנאות בהן יתבקשו המשתתפים להעלות בעיות אתיות מכל האגפים כמו סביבת העבודה, מכירות ושיווק, מדיניות משאבי אנוש, מחלקת הכספים ויחסי ניהול. כמו כן ישולבו משחקי תפקידים, case studies ותילמד גישה מובנית להצגה ומציאת מענה אופטימלי לבעיות אתיות.</p>
 
@@ -100,41 +103,59 @@
     </div>
   </section>
 
+  </main>
+
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
         <div class="footer__section">
-          <h4>אתיקה לעסקים</h4>
+          <p class="footer__title">תבונה, מודעות והרחבת הדעת</p>
           <ul class="footer__links">
-            <li><a href="services.html">שירותים</a></li>
-            <li><a href="Coach.html">אימון אישי</a></li>
-            <li><a href="Org.html">תהליך בארגון</a></li>
+            <li><a href="../../spiritual.html#books">ספרים</a></li>
+            <li><a href="../../spiritual.html#groups">קבוצות</a></li>
+            <li><a href="../../spiritual.html#teachers">מורים</a></li>
           </ul>
         </div>
         <div class="footer__section">
-          <h4>קשר</h4>
+          <p class="footer__title">מסעות</p>
           <ul class="footer__links">
-            <li><a href="contact.html">צור קשר</a></li>
+            <li><a href="../../travel.html#photography">צילומים</a></li>
+            <li><a href="../../travel.html#drawings">ציורים</a></li>
+            <li><a href="../../travel.html#greyhair">הודו בשיער שיבה</a></li>
           </ul>
         </div>
         <div class="footer__section">
-          <h4>אתר ראשי</h4>
+          <p class="footer__title">ארכיון</p>
           <ul class="footer__links">
-            <li><a href="../../index.html">דף הבית</a></li>
+            <li><a href="../../archive.html#living">לחיות בשלום עם הכסף</a></li>
+            <li><a href="../../archive.html#ethics">אתיקה</a></li>
+            <li><a href="../../archive.html#family">משפחה</a></li>
+            <li><a href="../../archive.html#old-site">האתר הישן</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <p class="footer__title">עוד</p>
+          <ul class="footer__links">
+            <li><a href="../../en/index.html">English</a></li>
           </ul>
         </div>
       </div>
       <div class="footer__bottom">
-        <p>אפי פז - אתיקה לעסקים</p>
+        <p>אפי פז</p>
       </div>
     </div>
   </footer>
 
   <script>
-    document.querySelector('.nav__toggle').addEventListener('click', function() {
-      document.querySelector('.nav__list').classList.toggle('is-open');
-    });
+    (function () {
+      var t = document.querySelector('.nav__toggle');
+      var l = document.querySelector('.nav__list');
+      if (!t || !l) return;
+      t.addEventListener('click', function () {
+        var open = l.classList.toggle('is-open');
+        t.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    })();
   </script>
-
 </body>
 </html>

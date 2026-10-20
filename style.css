@@ -372,7 +372,13 @@ a:hover {
   transform: scale(1.02);
 }
 
-/* Book covers - don't crop */
+/* Book covers - don't crop; the cover sits centred in a full-width band */
+.card--book .card__image {
+  width: 100%;
+  aspect-ratio: auto;
+  height: 280px;
+}
+
 .card--book .card__image img {
   object-fit: contain;
   background-color: var(--color-bg);
@@ -385,7 +391,7 @@ a:hover {
   font-weight: 500;
   margin: var(--space-lg) 0 var(--space-md) 0;
   padding-bottom: var(--space-xs);
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .books-category-title:first-child,
@@ -1050,7 +1056,7 @@ blockquote, .quote {
   position: fixed;
   inset: 0;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(26, 26, 26, 0.95);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1089,7 +1095,7 @@ blockquote, .quote {
   position: absolute;
   width: 40px;
   height: 40px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(247, 245, 240, 0.25);
   border-top-color: var(--color-bg);
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
@@ -1262,7 +1268,218 @@ blockquote, .quote {
   }
 
   body {
-    background: white;
-    color: black;
+    background: #F7F5F0;
+    color: #1A1A1A;
   }
 }
+
+/* ============================================
+   תוספות 2026 — תוכן אוטומטי, viewer, נגישות
+   ============================================ */
+
+/* אנגלית: כותרות ב-Inter */
+[lang="en"] h1, [lang="en"] h2, [lang="en"] h3, [lang="en"] h4, [lang="en"] h5, [lang="en"] h6,
+[lang="en"] .nav__link, [lang="en"] .btn {
+  font-family: var(--font-english);
+}
+[lang="he"] [lang="en"] { font-family: var(--font-english); }
+[lang="en"] [lang="he"] { font-family: var(--font-hebrew); }
+
+/* קישור דילוג לתוכן */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  inset-inline-start: var(--space-sm);
+  background: var(--color-text);
+  color: var(--color-bg);
+  padding: var(--space-xs) var(--space-sm);
+  border: none;
+  z-index: 200;
+}
+.skip-link:focus { top: var(--space-xs); }
+
+/* פוטר: כותרת עמודה (ללא קפיצת רמות כותרת) */
+.footer__title {
+  color: var(--color-bg);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: var(--space-sm);
+  letter-spacing: 0.05em;
+}
+
+/* כרטיסים: שורת פעולות, קישור ללא חץ, כרטיס "בקרוב" */
+.card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  align-items: center;
+  margin: 0;
+}
+.card__link--plain::after { content: none; }
+.card__link--plain { color: var(--color-text-light); }
+.card__link--plain:hover { color: var(--color-accent); }
+.card__title a { border: none; }
+.card__image { display: block; border: none; }
+.card--placeholder { opacity: 0.75; }
+.card--placeholder:hover { border-color: var(--color-border); }
+.card--placeholder .card__image img { filter: grayscale(60%); }
+.card--placeholder:hover .card__image img { transform: none; filter: grayscale(60%); }
+.page-header__desc { color: var(--color-text-light); max-width: var(--max-width-narrow); margin: var(--space-xs) auto 0; }
+
+/* מורים: אות במקום תמונה, פורטרט בעמוד המורה */
+.person-card__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-alt);
+}
+.person-card__initial {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--color-accent);
+}
+.person-card__name a { border: none; }
+.two-col--top { align-items: start; }
+.two-col__image--portrait { max-width: 320px; }
+.two-col__image--portrait img { filter: grayscale(30%); }
+
+/* אודיו / וידאו / הקלטות */
+.audio-list { display: grid; gap: var(--space-md); }
+.audio-item { padding: var(--space-sm) var(--space-md); border: 1px solid var(--color-border); background: var(--color-bg); }
+.audio-item__title { font-weight: 500; margin-bottom: var(--space-xs); }
+.audio-item audio { width: 100%; }
+.audio-item__meta, .video-item__meta { font-size: 0.8rem; color: var(--color-text-light); margin: var(--space-xs) 0 0; }
+.videos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: var(--space-md); }
+.video-item video { width: 100%; aspect-ratio: 16 / 9; background: var(--color-text); display: block; }
+.recording__player { margin: var(--space-sm) 0; }
+.recording__player iframe { width: 100%; height: 640px; border: 1px solid var(--color-border); }  /* tall enough for the whole playlist */
+.btn--small { padding: calc(var(--space-xs) / 2) var(--space-sm); font-size: 0.85rem; }
+
+/* Lightbox: וידאו, שגיאה, קישור לפתיחה */
+.lightbox__video { max-width: 90vw; max-height: 85vh; }
+.lightbox__img[hidden], .lightbox__video[hidden], .lightbox__loader[hidden], .lightbox__error[hidden],
+.lightbox__prev[hidden], .lightbox__next[hidden] { display: none; }
+.lightbox__error { color: var(--color-bg); }
+.lightbox__open {
+  position: absolute;
+  top: var(--space-md);
+  left: var(--space-md);
+  color: var(--color-bg);
+  border: none;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+.lightbox__open:hover { opacity: 1; color: var(--color-bg); }
+
+/* viewer (pdf.js): one thin bar — back · title · page counter. Zoom is the browser's; download sits under the last page */
+.viewer { display: flex; flex-direction: column; min-height: 100vh; }
+.viewer__bar {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-xs) var(--space-sm);
+  padding: var(--space-xs) var(--space-sm);
+  background: var(--color-bg); border-bottom: 1px solid var(--color-border);
+}
+.viewer__title { flex: 1 1 160px; min-width: 0; font-size: 1rem; font-weight: 500; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.viewer__bar .btn { padding: 6px 12px; min-height: 40px; display: inline-flex; align-items: center; font-size: 0.95rem; }
+.viewer__back::before { content: '\2039'; margin-inline-end: 6px; font-size: 1.2em; line-height: 1; }
+[dir="ltr"] .viewer__back::before { content: '\2039'; }
+.viewer__page { font-size: 0.9rem; color: var(--color-text-light); min-width: 64px; text-align: center; direction: ltr; unicode-bidi: isolate; }
+.viewer__pages { flex: 1; padding: var(--space-sm); background: var(--color-bg-alt); }
+.viewer__end { text-align: center; padding: var(--space-md) 0 var(--space-lg); color: var(--color-text-light); }
+.viewer__end a { display: inline-block; padding: 8px 4px; }
+.viewer__canvas { display: block; margin: 0 auto var(--space-sm); max-width: 100%; height: auto; box-shadow: 0 1px 4px rgba(26, 26, 26, 0.15); background: #fff; }
+.viewer__fallback { width: 100%; height: calc(100vh - 60px); border: none; }
+.viewer__msg { padding: var(--space-lg); text-align: center; color: var(--color-text-light); }
+
+/* תפריט נייד: הכפתור מקבל מצב פתוח */
+.nav__toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+
+/* ארכיון: האתר הישן */
+.old-site-list { columns: 2; column-gap: var(--space-lg); }
+@media (max-width: 600px) { .old-site-list { columns: 1; } }
+
+/* הדפסה: קישורים חיצוניים עם כתובת */
+@media print {
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.8em; }
+  .gallery-section.is-collapsed .gallery-section__content { display: grid; }
+}
+
+/* ============================================
+   לוח הבקרה של אפי (admin.html)
+   ============================================ */
+.admin { font-size: 1.15rem; }
+.admin h1 { font-size: 2.2rem; }
+.admin .admin__intro { font-size: 1.2rem; max-width: var(--max-width-narrow); margin: 0 auto var(--space-lg); }
+.admin__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-md); }
+.admin__btn {
+  display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-xs);
+  padding: var(--space-md); min-height: 150px;
+  background: var(--color-bg); border: 2px solid var(--color-text); color: var(--color-text);
+  font-size: 1.3rem; font-weight: 500; text-decoration: none; cursor: pointer; text-align: start;
+  transition: all var(--transition);
+}
+.admin__btn:hover, .admin__btn:focus { background: var(--color-text); color: var(--color-bg); }
+.admin__btn small { font-size: 0.9rem; font-weight: 400; color: inherit; opacity: 0.8; }
+.admin__btn .admin__icon { font-size: 2rem; line-height: 1; }
+.admin__panel { background: var(--color-bg-alt); border: 1px solid var(--color-border); padding: var(--space-md); margin-top: var(--space-md); }
+.admin__panel[hidden] { display: none; }
+.admin__steps { counter-reset: step; list-style: none; padding: 0; margin: var(--space-sm) 0; }
+.admin__steps li { position: relative; padding-inline-start: 3rem; margin-bottom: var(--space-sm); min-height: 2.4rem; }
+.admin__steps li::before {
+  counter-increment: step; content: counter(step);
+  position: absolute; inset-inline-start: 0; top: 0;
+  width: 2.2rem; height: 2.2rem; border-radius: 50%;
+  background: var(--color-accent); color: var(--color-bg);
+  display: flex; align-items: center; justify-content: center; font-weight: 600;
+}
+.admin__status { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-sm); font-size: 1.1rem; }
+.admin__dot { width: 1rem; height: 1rem; border-radius: 50%; background: var(--color-border); display: inline-block; }
+.admin__dot--ok { background: var(--color-accent); }
+.admin__dot--busy { background: var(--color-text-light); animation: pulse 1.2s ease-in-out infinite; }
+.admin__dot--bad { background: var(--color-accent); box-shadow: 0 0 0 3px var(--color-bg), 0 0 0 5px var(--color-accent); }
+@keyframes pulse { 50% { opacity: 0.3; } }
+.admin input[type="text"] {
+  font: inherit; padding: var(--space-xs) var(--space-sm); border: 1px solid var(--color-text);
+  background: var(--color-bg); color: var(--color-text); width: 100%; max-width: 420px;
+}
+.admin .btn--big { font-size: 1.1rem; padding: var(--space-sm) var(--space-md); }
+.admin__list { list-style: none; padding: 0; }
+.admin__list li { padding: var(--space-xs) 0; border-bottom: 1px solid var(--color-border); }
+.admin__list li a { border: none; }
+.admin__note { font-size: 1rem; color: var(--color-text-light); }
+
+/* יעדי מגע בגודל מספק (44px) */
+.nav__toggle { min-width: 44px; min-height: 44px; }
+.lang-switch a { min-height: 32px; display: inline-flex; align-items: center; }
+@media (max-width: 768px) { .lang-switch a { min-height: 44px; padding: 4px 12px; } }
+
+/* כתובות ארוכות לא שוברות את הפריסה בטלפון */
+main a, .document-item__title { overflow-wrap: anywhere; }
+
+.footer__links a { display: inline-block; padding: 6px 0; }
+.viewer__bar[data-empty="1"] .viewer__page { display: none; }
+
+/* עוגנים פנימיים נעצרים מתחת לכותרת הדביקה, לא מאחוריה */
+[id] { scroll-margin-top: 5.5rem; }
+
+/* עמודי מדור: תת-הכותרת היא קישורים לחלקי העמוד (העמודים ארוכים, במיוחד בטלפון) */
+.page-header__links { color: var(--color-text-light); font-size: 1rem; }
+.page-header__links a { display: inline-block; padding: 6px 2px; color: var(--color-text-light); border-bottom: 1px solid var(--color-border); }
+.page-header__links a:hover, .page-header__links a:focus { color: var(--color-accent); border-color: var(--color-accent); }
+
+/* מתג שפה: רק השפה האחרת מוצגת (כפתור אחד ברור במקום שניים) */
+.lang-switch a.active { display: none; }
+
+/* טלפון: פחות אוויר ריק מעל התוכן, המבורגר שרואים, שהופך ל-X כשהתפריט פתוח */
+@media (max-width: 768px) {
+  .section { padding: var(--space-lg) 0; }
+  .page-header { padding: var(--space-lg) 0; }
+  .nav__toggle span { width: 24px; height: 2px; margin: 5px auto; transition: transform var(--transition), opacity var(--transition); }
+  .nav__toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav__toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+}
+
+/* קישורי "לקריאה · להורדה" ברשימות מסמכים: שטח מגע גדול בלי שינוי מראה */
+.document-item__meta a, .card__actions a, .video-item__meta a, .audio-item a { display: inline-block; padding: 6px 2px; margin: -6px 0; }
+.document-item__title a, .card__title a, .person-card__name a { display: inline-block; padding: 5px 0; margin: -5px 0; }

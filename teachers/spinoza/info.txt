@@ -1,0 +1,10 @@
+שם: ברוך שפינוזה
+name_en: Baruch Spinoza
+שנים: 1632-1677
+תפקיד: פילוסוף יהודי-הולנדי
+role_en: Dutch-Jewish philosopher
+ויקיפדיה: https://he.wikipedia.org/wiki/ברוך_שפינוזה
+wiki_en: https://en.wikipedia.org/wiki/Baruch_Spinoza
+סדר: 6
+ביוגרפיה: שפינוזה היה אחד הפילוסופים החשובים של העת החדשה. תורתו על האל כטבע עצמו ועל חופש המחשבה השפיעה על הוגים רבים.
+bio_en: Spinoza was one of the most important philosophers of the early modern period. His teaching of God as nature itself and his defense of freedom of thought influenced many thinkers.

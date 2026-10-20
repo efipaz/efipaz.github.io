@@ -1,0 +1,14 @@
+שם: ג'ידו קרישנמורטי
+name_en: Jiddu Krishnamurti
+שנים: 1895-1986
+תפקיד: פילוסוף הודי
+role_en: Indian philosopher
+ויקיפדיה: https://he.wikipedia.org/wiki/ג'ידו_קרישנמורטי
+wiki_en: https://en.wikipedia.org/wiki/Jiddu_Krishnamurti
+תמונה: Krishnamurti.jpg
+סדר: 1
+ביוגרפיה: קרישנמורטי היה פילוסוף ונואם שהדגיש שהאמת היא ארץ ללא שבילים. תורתו מתמקדת בטבע המחשבה, מדיטציה ללא שיטה וחופש פסיכולוגי.
+bio_en: Krishnamurti was a philosopher and speaker who spent decades traveling and speaking about the need for radical transformation in humanity. He emphasized that truth is a pathless land and that no organization, belief or dogma can lead a person to truth.
+His teachings focus on the nature of thought, meditation without method, psychological freedom and self-knowledge through direct observation.
+עמודים: ארבעה פרקים מתורגמים לעברית מספרו של Dhopeshwarkar על קרישנמורטי (בתרגום שמוליק).
+pages_intro_en: Four chapters from Dhopeshwarkar's book on Krishnamurti, translated into Hebrew (by Shmulik).

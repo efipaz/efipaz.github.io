@@ -3,31 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="מסעות - צילומים, ציורים והודו בשיער שיבה">
+  <meta name="description" content="מסעות – צילומים, ציורים והודו בשיער שיבה">
   <title>מסעות | אפי פז</title>
+  <link rel="canonical" href="https://www.efipaz.com/travel.html">
+  <meta property="og:url" content="https://www.efipaz.com/travel.html">
+  <link rel="alternate" hreflang="he" href="https://www.efipaz.com/travel.html">
+  <link rel="alternate" hreflang="en" href="https://www.efipaz.com/en/travel.html">
+  <meta property="og:title" content="מסעות | אפי פז">
+  <meta property="og:description" content="מסעות – צילומים, ציורים והודו בשיער שיבה">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="אפי פז">
+  <meta property="og:locale" content="he_IL">
+  <meta property="og:image" content="https://www.efipaz.com/travel/india/thumbs/cover.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=a039e7ee">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-
+  <a class="skip-link" href="#main">דלג לתוכן</a>
   <header class="header">
     <div class="container header__inner">
       <a href="index.html" class="header__logo">אפי פז</a>
-      <nav class="nav">
-        <ul class="nav__list">
+      <nav class="nav" aria-label="תפריט">
+        <ul class="nav__list" id="nav-list">
           <li><a href="index.html" class="nav__link">בית</a></li>
           <li><a href="spiritual.html" class="nav__link">תבונה, מודעות והרחבת הדעת</a></li>
           <li><a href="travel.html" class="nav__link nav__link--active">מסעות</a></li>
           <li><a href="archive.html" class="nav__link">ארכיון</a></li>
         </ul>
         <div class="lang-switch">
-          <a href="travel.html" class="active">עב</a>
-          <a href="en/travel.html">EN</a>
+          <a href="#" class="active" aria-current="page">עב</a>
+          <a href="en/travel.html" lang="en" hreflang="en">EN</a>
         </div>
-        <button class="nav__toggle" aria-label="Menu">
+        <button class="nav__toggle" aria-label="תפריט" aria-expanded="false" aria-controls="nav-list">
           <span></span>
           <span></span>
           <span></span>
@@ -36,180 +46,150 @@
     </div>
   </header>
 
-  <div class="page-header">
-    <div class="container">
-      <h1>מסעות</h1>
-      <p class="page-header__subtitle">צילומים, ציורים והודו בשיער שיבה</p>
+  <main id="main">
+
+    <div class="page-header">
+      <div class="container">
+        <h1>מסעות</h1>
+        <nav class="page-header__links" aria-label="בעמוד זה"><a href="#photography">צילומים</a> · <a href="#drawings">ציורים</a> · <a href="#greyhair">הודו בשיער שיבה</a></nav>
+      </div>
     </div>
-  </div>
 
-  <!-- צילומים -->
-  <section id="photography" class="section">
-    <div class="container">
-      <h2 class="mb-3">צילומים</h2>
-      <p class="mb-3">גלריות תמונות ממסעות באסיה ובעולם.</p>
+    <section id="photography" class="section">
+      <div class="container">
+        <h2 class="mb-3">צילומים</h2>
+        <p class="mb-3">גלריות תמונות ממסעות באסיה ובעולם.</p>
+        <!-- auto:galleries -->
+    <div class="cards">
+    <a href="travel/india/index.html" class="card">
+      <div class="card__image"><img src="travel/india/thumbs/cover.54d630.jpg" alt="" loading="lazy"></div>
+      <div class="card__content">
+        <h3 class="card__title">אור הודו</h3>
+        <p class="card__text">מסע צילומי דרך הצבעים התוססים, המקדשים העתיקים והמהות הרוחנית של הודו.</p>
+        <span class="card__link">לגלריה</span>
+      </div>
+    </a>
+    <a href="travel/myanmar/index.html" class="card">
+      <div class="card__image"><img src="travel/myanmar/thumbs/cover.692402.jpg" alt="" loading="lazy"></div>
+      <div class="card__content">
+        <h3 class="card__title">בורמה</h3>
+        <p class="card__text">הפגודות המוזהבות, המנזרים השלווים והאנשים החמים של מיאנמר (בורמה).</p>
+        <span class="card__link">לגלריה</span>
+      </div>
+    </a>
+    <a href="travel/USA%202025%20%20Blue%20Ridge/index.html" class="card">
+      <div class="card__image"><img src="travel/USA%202025%20%20Blue%20Ridge/thumbs/cover.55a997.jpg" alt="" loading="lazy"></div>
+      <div class="card__content">
+        <h3 class="card__title">ארה&quot;ב 2025 – הרי בלו רידג&#x27;</h3>
+        <p class="card__text">טיול בהרי בלו רידג&#x27;, מאי 2025.</p>
+        <span class="card__link">לגלריה</span>
+      </div>
+    </a>
+    <a href="travel/%D7%A7%D7%9E%D7%90%D7%A7%D7%95%D7%A8%D7%94%2024/index.html" class="card">
+      <div class="card__image"><img src="travel/%D7%A7%D7%9E%D7%90%D7%A7%D7%95%D7%A8%D7%94%2024/thumbs/cover.995653.jpg" alt="" loading="lazy"></div>
+      <div class="card__content">
+        <h3 class="card__title">יפן – קמאקורה 2024</h3>
+        <p class="card__text">מקדשים, גנים יפניים ויערות במבוק בקמאקורה.</p>
+        <span class="card__link">לגלריה</span>
+      </div>
+    </a>
+    <div class="card card--placeholder">
+      <div class="card__image"><img src="travel/thailand/thumbs/cover.96aecd.jpg" alt="" loading="lazy"></div>
+      <div class="card__content">
+        <h3 class="card__title">תאילנד</h3>
+        <p class="card__text">צילומים מתאילנד – בקרוב.</p>
+        <span class="card__link card__link--plain">בקרוב</span>
+      </div>
+    </div>
+    <div class="card card--placeholder">
+      <div class="card__image"><img src="travel/australia/thumbs/cover.4dc890.jpg" alt="" loading="lazy"></div>
+      <div class="card__content">
+        <h3 class="card__title">אוסטרליה</h3>
+        <p class="card__text">צילומים מאוסטרליה – בקרוב.</p>
+        <span class="card__link card__link--plain">בקרוב</span>
+      </div>
+    </div>
+    </div>
+<!-- /auto:galleries -->
+      </div>
+    </section>
 
-      <div class="cards">
-        <!-- הודו -->
-        <a href="travel/india/index.html" class="card">
-          <div class="card__image">
-            <img src="travel/india/pictures/Religion/Buddhist_monks/Alchi_063.jpg" alt="הודו" loading="lazy">
-          </div>
-          <div class="card__content">
-            <h3 class="card__title">הודו</h3>
-            <p class="card__text">מסע צילומי דרך הצבעים התוססים, המקדשים העתיקים והמהות הרוחנית של הודו.</p>
-            <span class="card__link">לגלריה</span>
-          </div>
-        </a>
-
-        <!-- בורמה -->
-        <a href="travel/myanmar/index.html" class="card">
-          <div class="card__image">
-            <img src="Burma/pictures/Religion/Monks/Bagoo-Kalaw 006.jpg"
-                       alt="בורמה" loading="lazy">
-            <!img src="travel/myanmar/pictures/Religion/Temples/Mandalay - Mingon 082.jpg" 
-     alt="בורמה" 
-     loading="lazy">
-
-           
-            <!img src="travel/myanmar/pictures/Religion/Temples/Mandalay%20-%20Mingon%20082.jpg" alt="בורמה" loading="lazy">
-          </div>
-          <div class="card__content">
-            <h3 class="card__title">בורמה</h3>
-            <p class="card__text">הפגודות המוזהבות, המנזרים השלווים והאנשים החמים של מיאנמר (בורמה).</p>
-            <span class="card__link">אל הגלריה</span>
-          </div>
-        </a>
-
-        <!-- יפן -->
-        <a href="travel/japan/index.html" class="card">
-          <div class="card__image">
-            <img src="travel/%D7%A7%D7%9E%D7%90%D7%A7%D7%95%D7%A8%D7%94%2024/20240502_101727.jpg" alt="יפן" loading="lazy">
-          </div>
-          <div class="card__content">
-            <h3 class="card__title">יפן</h3>
-            <p class="card__text">קמאקורה 2024 - מקדשים, גנים יפניים ויערות במבוק ביפן.</p>
-            <span class="card__link">לגלריה</span>
-          </div>
-        </a>
-
-        <!-- תאילנד - בקרוב -->
-        
-        <div class="card card--placeholder">
-          <div class="card__image">
-       
-            <!img src="travel/india/pictures/Architecture/Arches/Delhi-Sights-152.jpg" alt="תאילנד" loading="lazy">
-            <img src="travel/test/monk.jpg" alt="תאילנד" loading="lazy">
-          </div>
-          <div class="card__content">
-            <h3 class="card__title">תאילנד</h3>
-            <p class="card__text">צילומים מתאילנד - בקרוב.</p>
-            <span class="card__link">בקרוב</span>
-          </div>
+    <section id="drawings" class="section section--alt">
+      <div class="container">
+        <h2 class="mb-3">ציורים</h2>
+        <p class="mb-3">ציורים ואיורים בהשראת מסעות ומורים.</p>
+        <div class="cards">
+    <a href="personal/drawings/watts-pic.html" class="card">
+      <div class="card__image"><img src="personal/drawings/watts-pic_files/watts_brey.jpg" alt="" loading="lazy"></div>
+      <div class="card__content">
+        <h3 class="card__title">אלן ואטס</h3>
+        <p class="card__text">ציור של אלן ואטס מאת נורם בריפוגל</p>
+        <span class="card__link">לציור</span>
+      </div>
+    </a>
+    <a href="personal/drawings/rampole.html" class="card">
+      <div class="card__image"><img src="personal/drawings/rampole_files/davis_rumpole.gif" alt="" loading="lazy"></div>
+      <div class="card__content">
+        <h3 class="card__title">רמפול</h3>
+        <p class="card__text">ציור של רמפול</p>
+        <span class="card__link">לציור</span>
+      </div>
+    </a>
+    <a href="personal/drawings/Danielle/Danielle_index.html" class="card">
+      <div class="card__image"><img src="personal/drawings/Danielle/tn_Belle.jpg" alt="" loading="lazy"></div>
+      <div class="card__content">
+        <h3 class="card__title">גלריית דניאל</h3>
+        <p class="card__text">ציורי נסיכות</p>
+        <span class="card__link">לגלריה</span>
+      </div>
+    </a>
+    <a href="personal/drawings/Park%20Albert%2006%20%D7%9C%D7%A6%D7%99%D7%95%D7%A8.jpg" class="card">
+      <div class="card__image"><img src="personal/drawings/Park Albert 06 לציור.jpg" alt="" loading="lazy"></div>
+      <div class="card__content">
+        <h3 class="card__title">פארק אלברט</h3>
+        <p class="card__text">צילום לציור</p>
+        <span class="card__link">לתמונה</span>
+      </div>
+    </a>
         </div>
-
-        <!-- אוסטרליה - בקרוב -->
-        <div class="card card--placeholder">
-          <div class="card__image">
-            <img src="travel/test/aussie.jpg" alt="אוסטרליה" loading="lazy">
-            <!img src="travel/india/pictures/Landscape/Fields/Allapuza-Backwater-170.jpg" alt="אוסטרליה" loading="lazy">
-          </div>
-          <div class="card__content">
-            <h3 class="card__title">אוסטרליה</h3>
-            <p class="card__text">צילומים מאוסטרליה - בקרוב.</p>
-            <span class="card__link">בקרוב</span>
-          </div>
-        </div>
       </div>
+    </section>
 
-      <!-- גלריות חדשות נטענות כאן אוטומטית מ-gallery-manifest.json -->
-      <div id="dynamic-galleries" class="cards mt-3"></div>
-
-      <p class="mt-3 text-center" style="color: var(--color-text); opacity: 0.7;">ועוד יעדים נוספים...</p>
-    </div>
-  </section>
-
-  <!-- ציורים -->
-  <section id="drawings" class="section section--alt">
-    <div class="container">
-      <h2 class="mb-3">ציורים</h2>
-      <p class="mb-3">ציורים ואיורים בהשראת מסעות ומורים רוחניים.</p>
-
-      <div class="cards">
-        <a href="Drawings/watts-pic.htm" class="card">
-          <div class="card__content">
-            <h3 class="card__title">אלן ואטס</h3>
-            <p class="card__text">ציור של אלן ואטס מאת Norm Breyfogle</p>
-            <span class="card__link">לציור</span>
-          </div>
-        </a>
-        <a href="Drawings/huxley.htm" class="card">
-          <div class="card__content">
-            <h3 class="card__title">אולדוס הקסלי</h3>
-            <p class="card__text">ציור של הקסלי</p>
-            <span class="card__link">לציור</span>
-          </div>
-        </a>
-        <a href="Drawings/rampole.htm" class="card">
-          <div class="card__content">
-            <h3 class="card__title">ציורים נוספים</h3>
-            <p class="card__text">ציורים נוספים מהאוסף</p>
-            <span class="card__link">לציורים</span>
-          </div>
-        </a>
+    <section id="greyhair" class="section">
+      <div class="container container--narrow">
+        <h2 class="mb-3">הודו בשיער שיבה</h2>
+        <p class="mb-3">רשמים והרהורים ממסעות להודו לאחר שנים רבות. מבט אחר על המקומות המוכרים, דרך עיניים שנצברה בהן חוכמה והבנה.</p>
+        <p>החזרה להודו בגיל מבוגר יותר מאפשרת פרספקטיבה שונה – פחות חיפוש ויותר נוכחות, פחות ציפיות ויותר קבלה.</p>
+        <p class="mt-3 card__actions">
+          <a href="viewer.html?file=books%2F%D7%94%D7%95%D7%93%D7%95%20%D7%91%D7%A9%D7%99%D7%A2%D7%A8%20%D7%A9%D7%99%D7%91%D7%94%20%D7%A2%D7%9D%20%D7%A9%D7%A2%D7%A8.pdf" class="btn">לקריאה</a>
+          <a href="books/%D7%94%D7%95%D7%93%D7%95%20%D7%91%D7%A9%D7%99%D7%A2%D7%A8%20%D7%A9%D7%99%D7%91%D7%94%20%D7%A2%D7%9D%20%D7%A9%D7%A2%D7%A8.pdf" class="btn" download>להורדה (PDF)</a>
+        </p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- הודו בשיער שיבה -->
-  <section id="greyhair" class="section">
-    <div class="container container--narrow">
-      <h2 class="mb-3">הודו בשיער שיבה</h2>
-      <p class="mb-3">
-        רשמים והרהורים ממסעות להודו לאחר שנים רבות.
-        מבט אחר על המקומות המוכרים, דרך עיניים שנצברה בהן חוכמה והבנה.
-      </p>
-      <p>
-        החזרה להודו בגיל מבוגר יותר מאפשרת פרספקטיבה שונה -
-        פחות חיפוש ויותר נוכחות, פחות ציפיות ויותר קבלה.
-      </p>
-      <div class="mt-3">
-        <a href="books/%D7%94%D7%95%D7%93%D7%95%20%D7%91%D7%A9%D7%99%D7%A2%D7%A8%20%D7%A9%D7%99%D7%91%D7%94%20%D7%A2%D7%9D%20%D7%A9%D7%A2%D7%A8.pdf" class="btn">לספר (PDF)</a>
+    <section id="blog" class="section section--alt">
+      <div class="container container--narrow">
+        <h2 class="mb-3">Travelling Mates</h2>
+        <p class="mb-3">בלוג המסעות – סיפורים, תמונות והרהורים מטיולים ברחבי העולם.</p>
+        <div class="mt-3"><a href="https://efipaz.blogspot.com/" target="_blank" rel="noopener" class="btn">לבלוג</a></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- בלוג המסעות -->
-  <section id="blog" class="section section--alt">
-    <div class="container container--narrow">
-      <h2 class="mb-3">Travelling Mates</h2>
-      <p class="mb-3">
-        בלוג המסעות - סיפורים, תמונות והרהורים מטיולים ברחבי העולם.
-      </p>
-      <div class="mt-3">
-        <a href="https://efipaz.blogspot.com/" target="_blank" rel="noopener noreferrer" class="btn">לבלוג</a>
+    <section id="flickr" class="section">
+      <div class="container container--narrow">
+        <h2 class="mb-3">Flickr</h2>
+        <p class="mb-3">אוסף תמונות נוסף בפליקר.</p>
+        <div class="mt-3"><a href="https://www.flickr.com/photos/elirazraz/" target="_blank" rel="noopener" class="btn">לפליקר</a></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- פליקר -->
-  <section id="flickr" class="section">
-    <div class="container container--narrow">
-      <h2 class="mb-3">Flickr</h2>
-      <p class="mb-3">
-        אוסף תמונות נוסף בפליקר.
-      </p>
-      <div class="mt-3">
-        <a href="https://www.flickr.com/photos/efipaz/" target="_blank" rel="noopener noreferrer" class="btn">לפליקר</a>
-      </div>
-    </div>
-  </section>
+  </main>
 
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
         <div class="footer__section">
-          <h4>רוחניות ודעת</h4>
+          <p class="footer__title">תבונה, מודעות והרחבת הדעת</p>
           <ul class="footer__links">
             <li><a href="spiritual.html#books">ספרים</a></li>
             <li><a href="spiritual.html#groups">קבוצות</a></li>
@@ -217,23 +197,24 @@
           </ul>
         </div>
         <div class="footer__section">
-          <h4>מסעות</h4>
+          <p class="footer__title">מסעות</p>
           <ul class="footer__links">
-            <li><a href="#photography">צילומים</a></li>
-            <li><a href="#drawings">ציורים</a></li>
-            <li><a href="#greyhair">הודו בשיער שיבה</a></li>
+            <li><a href="travel.html#photography">צילומים</a></li>
+            <li><a href="travel.html#drawings">ציורים</a></li>
+            <li><a href="travel.html#greyhair">הודו בשיער שיבה</a></li>
           </ul>
         </div>
         <div class="footer__section">
-          <h4>ארכיון</h4>
+          <p class="footer__title">ארכיון</p>
           <ul class="footer__links">
             <li><a href="archive.html#living">לחיות בשלום עם הכסף</a></li>
             <li><a href="archive.html#ethics">אתיקה</a></li>
             <li><a href="archive.html#family">משפחה</a></li>
+            <li><a href="archive.html#old-site">האתר הישן</a></li>
           </ul>
         </div>
         <div class="footer__section">
-          <h4>שפה</h4>
+          <p class="footer__title">עוד</p>
           <ul class="footer__links">
             <li><a href="en/index.html">English</a></li>
           </ul>
@@ -245,25 +226,17 @@
     </div>
   </footer>
 
-  <script src="assets/js/dynamic-gallery.js"></script>
+  <script src="assets/js/gallery.js?v=849eee17"></script>
   <script>
-    document.querySelector('.nav__toggle').addEventListener('click', function() {
-      document.querySelector('.nav__list').classList.toggle('is-open');
-    });
+    (function () {
+      var t = document.querySelector('.nav__toggle');
+      var l = document.querySelector('.nav__list');
+      if (!t || !l) return;
+      t.addEventListener('click', function () {
+        var open = l.classList.toggle('is-open');
+        t.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    })();
   </script>
-
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-

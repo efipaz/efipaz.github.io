@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="לוח הבקרה להוספת תוכן לאתר">
+  <title>לוח הבקרה של אפי | אפי פז</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:title" content="לוח הבקרה של אפי | אפי פז">
+  <meta property="og:description" content="לוח הבקרה להוספת תוכן לאתר">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="אפי פז">
+  <meta property="og:locale" content="he_IL">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=a039e7ee">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <a class="skip-link" href="#main">דלג לתוכן</a>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">אפי פז</a>
+      <nav class="nav" aria-label="תפריט">
+        <ul class="nav__list" id="nav-list">
+          <li><a href="index.html" class="nav__link nav__link--active">בית</a></li>
+          <li><a href="spiritual.html" class="nav__link">תבונה, מודעות והרחבת הדעת</a></li>
+          <li><a href="travel.html" class="nav__link">מסעות</a></li>
+          <li><a href="archive.html" class="nav__link">ארכיון</a></li>
+        </ul>
+        <div class="lang-switch">
+          <a href="#" class="active" aria-current="page">עב</a>
+          
+        </div>
+        <button class="nav__toggle" aria-label="תפריט" aria-expanded="false" aria-controls="nav-list">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <div class="page-header">
+      <div class="container">
+        <h1>לוח הבקרה של אפי</h1>
+        <p class="page-header__subtitle">כל מה שצריך כדי להוסיף תוכן לאתר – במחשב, לא בטלפון</p>
+      </div>
+    </div>
+
+    <section class="section admin">
+      <div class="container">
+        <p class="admin__intro">לוחצים על מה שרוצים לעשות, וקוראים את שלושת הצעדים. כל כפתור ירוק פותח את המסך הנכון ב-GitHub, כשהתיקייה הנכונה כבר פתוחה – אי אפשר לטעות.</p>
+        <div class="admin__grid">
+        <button type="button" class="admin__btn" data-panel="book" aria-expanded="false" aria-controls="panel-book">
+          <span class="admin__icon" aria-hidden="true">📕</span>
+          <span>ספר חדש</span>
+          <small>PDF או Word → ספרים</small>
+        </button>
+        <button type="button" class="admin__btn" data-panel="transcript" aria-expanded="false" aria-controls="panel-transcript">
+          <span class="admin__icon" aria-hidden="true">📝</span>
+          <span>תמלול חדש</span>
+          <small>PDF או Word → קבוצות</small>
+        </button>
+        <button type="button" class="admin__btn" data-panel="photos" aria-expanded="false" aria-controls="panel-photos">
+          <span class="admin__icon" aria-hidden="true">📷</span>
+          <span>תמונות לגלריה קיימת</span>
+          <small>להוסיף תמונות לטיול</small>
+        </button>
+        <button type="button" class="admin__btn" data-panel="gallery" aria-expanded="false" aria-controls="panel-gallery">
+          <span class="admin__icon" aria-hidden="true">🗂️</span>
+          <span>גלריה חדשה</span>
+          <small>טיול חדש</small>
+        </button>
+        <button type="button" class="admin__btn" data-panel="teacher" aria-expanded="false" aria-controls="panel-teacher">
+          <span class="admin__icon" aria-hidden="true">👤</span>
+          <span>הוגה חדש</span>
+          <small>מורה או פילוסוף</small>
+        </button>
+        <button type="button" class="admin__btn" data-panel="recording" aria-expanded="false" aria-controls="panel-recording">
+          <span class="admin__icon" aria-hidden="true">🎧</span>
+          <span>הקלטה חדשה</span>
+          <small>לארכיב האינטרנט</small>
+        </button>
+        <button type="button" class="admin__btn" data-panel="text" aria-expanded="false" aria-controls="panel-text">
+          <span class="admin__icon" aria-hidden="true">✏️</span>
+          <span>לתקן טקסט</span>
+          <small>שם, כותרת, ביוגרפיה</small>
+        </button>
+        <button type="button" class="admin__btn" data-panel="status" aria-expanded="false" aria-controls="panel-status">
+          <span class="admin__icon" aria-hidden="true">❓</span>
+          <span>מה קרה עם מה שהעליתי?</span>
+          <small>מצב העדכון</small>
+        </button>
+        </div>
+      <div class="admin__panel" id="panel-book" hidden>
+        <h3>ספר חדש</h3>
+        <ol class="admin__steps">
+            <li>לוחצים על הכפתור הירוק למטה. נפתח מסך של GitHub עם תיקיית <b>books</b> כבר פתוחה.</li>
+            <li>גוררים את קובץ ה-PDF (או Word) לתוך המסגרת המקווקוות, או לוחצים <b>choose your files</b> ובוחרים אותו.</li>
+            <li>גוללים למטה ולוחצים על הכפתור הירוק <b>Commit changes</b>. זהו. תוך כמה דקות הספר מופיע באתר עם שער.</li>
+        </ol>
+        <a class="btn btn--filled btn--big" href="https://github.com/efipaz/efipaz.github.io/upload/main/books" target="_blank" rel="noopener">להעלאת ספר →</a>
+        <p class="admin__note">רוצה כותרת ותיאור יפים במקום שם הקובץ? אפשר לבקש מאריה, או להוסיף קובץ טקסט באותו שם (ראה 'לתקן טקסט').</p>
+      </div>
+      <div class="admin__panel" id="panel-transcript" hidden>
+        <h3>תמלול חדש (קבוצות)</h3>
+        <ol class="admin__steps">
+            <li>לוחצים על הכפתור הירוק. נפתח מסך של GitHub עם תיקיית <b>transcripts</b> פתוחה.</li>
+            <li>גוררים את הקובץ (PDF או Word) למסגרת.</li>
+            <li>לוחצים <b>Commit changes</b>. התמלול מופיע תחת 'קבוצות ← תמלולים'.</li>
+        </ol>
+        <a class="btn btn--filled btn--big" href="https://github.com/efipaz/efipaz.github.io/upload/main/transcripts" target="_blank" rel="noopener">להעלאת תמלול →</a>
+        
+      </div>
+      <div class="admin__panel" id="panel-photos" hidden>
+        <h3>תמונות לגלריה קיימת</h3>
+        <ol class="admin__steps">
+            <li>בוחרים למטה את הגלריה.</li>
+            <li>לוחצים על הכפתור הירוק. נפתח מסך GitHub עם תיקיית הגלריה פתוחה.</li>
+            <li>גוררים את התמונות (אפשר הרבה בבת אחת) ולוחצים <b>Commit changes</b>. התמונות מצטרפות לגלריה.</li>
+        </ol>
+        <label for="gallery-select">הגלריה:</label>
+        <select id="gallery-select" class="admin__select"></select>
+        <p class="mt-2"><a class="btn btn--filled btn--big" id="gallery-upload" href="#" target="_blank" rel="noopener">להעלאת תמונות →</a></p>
+        <p class="admin__note">תמונות מהטלפון (גם HEIC) וסרטונים (mp4 עד 25MB) מתאימים. האתר מקטין אותן לבד.</p>
+      </div>
+      <div class="admin__panel" id="panel-gallery" hidden>
+        <h3>גלריה חדשה</h3>
+        <ol class="admin__steps">
+            <li>כותבים למטה את שם הגלריה, למשל <b>תאילנד 2025</b>.</li>
+            <li>לוחצים על <b>1. ליצור את הגלריה</b>. נפתח מסך GitHub עם קובץ מוכן – רק לוחצים שם על <b>Commit changes</b> (הכפתור הירוק, למטה מימין).</li>
+            <li>חוזרים לכאן ולוחצים על <b>2. להעלות תמונות</b>. גוררים את התמונות ולוחצים <b>Commit changes</b>.</li>
+        </ol>
+        <label for="gallery-name">שם הגלריה:</label>
+        <input type="text" id="gallery-name" placeholder="למשל: תאילנד 2025">
+        <p class="admin__note" id="gallery-hint"></p>
+        <p class="mt-2 card__actions">
+          <a class="btn btn--filled btn--big" id="gallery-create" href="#" target="_blank" rel="noopener">1. ליצור את הגלריה →</a>
+          <a class="btn btn--big" id="gallery-new-upload" href="#" target="_blank" rel="noopener">2. להעלות תמונות →</a>
+        </p>
+        <p class="admin__note">הגלריה מופיעה בעמוד 'מסעות' לבד, עם השם שכתבת. אם רוצים כיסוי מסוים – מעלים תמונה בשם <b>cover.jpg</b>.</p>
+      </div>
+      <div class="admin__panel" id="panel-teacher" hidden>
+        <h3>הוגה חדש</h3>
+        <ol class="admin__steps">
+            <li>כותבים למטה את השם בעברית ובאנגלית.</li>
+            <li>לוחצים על <b>1. ליצור את ההוגה</b>. נפתח מסך GitHub עם כרטיס מוכן – אפשר להוסיף שם כמה שורות ביוגרפיה, ואז <b>Commit changes</b>.</li>
+            <li>חוזרים לכאן ולוחצים <b>2. להעלות קבצים</b> – תמונה (portrait.jpg), ספרים (PDF), הקלטות (mp3).</li>
+        </ol>
+        <label for="teacher-name">שם בעברית:</label>
+        <input type="text" id="teacher-name" placeholder="למשל: רמאנה מהארשי">
+        <label for="teacher-name-en" class="mt-2">שם באנגלית (לא חובה):</label>
+        <input type="text" id="teacher-name-en" placeholder="e.g. Ramana Maharshi">
+        <p class="admin__note" id="teacher-hint"></p>
+        <p class="mt-2 card__actions">
+          <a class="btn btn--filled btn--big" id="teacher-create" href="#" target="_blank" rel="noopener">1. ליצור את ההוגה →</a>
+          <a class="btn btn--big" id="teacher-upload" href="#" target="_blank" rel="noopener">2. להעלות קבצים →</a>
+        </p>
+        
+      </div>
+      <div class="admin__panel" id="panel-recording" hidden>
+        <h3>הקלטה חדשה</h3>
+        <ol class="admin__steps">
+            <li>הקלטות של פגישות הן קבצים גדולים, ולכן הן עולות ל-<b>ארכיב האינטרנט</b> (archive.org) ולא לאתר.</li>
+            <li>לוחצים על הכפתור, נכנסים לחשבון efipaz@gmail.com, ומעלים את קובץ ה-mp3 עם כותרת (למשל: פגישות בודהיזם בנהריה 2026).</li>
+            <li>האתר מושך את רשימת ההקלטות מהארכיב לבד – פעם בשבוע, או בכל עדכון אחר של האתר.</li>
+        </ol>
+        <a class="btn btn--filled btn--big" href="https://archive.org/upload/" target="_blank" rel="noopener">להעלאת הקלטה לארכיב →</a>
+        
+      </div>
+      <div class="admin__panel" id="panel-text" hidden>
+        <h3>לתקן טקסט</h3>
+        <ol class="admin__steps">
+            <li>בוחרים למטה את הטקסט שרוצים לתקן (שם וביוגרפיה של הוגה, כותרת ותיאור של גלריה או ספר).</li>
+            <li>נפתח מסך עריכה של GitHub. מתקנים את המילים (רק את המילים אחרי הנקודתיים).</li>
+            <li>לוחצים <b>Commit changes</b>. התיקון מופיע באתר תוך כמה דקות.</li>
+        </ol>
+        <ul class="admin__list" id="text-files"><li>טוען…</li></ul>
+        <p class="admin__note">שינוי בעיצוב או בעמוד עצמו – שולחים לאריה.</p>
+      </div>
+      <div class="admin__panel" id="panel-status" hidden>
+        <h3>מה קרה עם מה שהעליתי?</h3>
+        <ol class="admin__steps">
+            <li>אחרי <b>Commit changes</b> האתר מתעדכן לבד תוך 2–5 דקות. כאן רואים את המצב.</li>
+            <li>אם כתוב ❌ – לשלוח לאריה את הקישור של העמוד הזה.</li>
+            <li>למטה רשימת הדברים שהמערכת לא ידעה מה לעשות איתם, אם יש.</li>
+        </ol>
+        <div class="admin__status" id="status"><span class="admin__dot"></span><span>בודק…</span></div>
+        <div id="report" class="mt-2"></div>
+        <p class="mt-2"><a class="btn" href="https://github.com/efipaz/efipaz.github.io/actions/workflows/auto-process-content.yml" target="_blank" rel="noopener">לראות את העדכונים ב-GitHub</a></p>
+        
+      </div>
+      </div>
+    </section>
+
+    <section class="section section--alt admin">
+      <div class="container container--narrow">
+        <h2>שלוש הערות</h2>
+        <ul class="content-list">
+          <li><b>במחשב בלבד.</b> מסך ההעלאה של GitHub לא עובד טוב בטלפון.</li>
+          <li><b>קובץ גדול מ-25MB</b> (סרטון ארוך) לא עובר דרך הדפדפן – לשלוח לאריה.</li>
+          <li><b>סבלנות:</b> אחרי Commit changes לוקח 2–5 דקות עד שהאתר מתעדכן. אפשר לבדוק ב"מה קרה עם מה שהעליתי?".</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__section">
+          <p class="footer__title">תבונה, מודעות והרחבת הדעת</p>
+          <ul class="footer__links">
+            <li><a href="spiritual.html#books">ספרים</a></li>
+            <li><a href="spiritual.html#groups">קבוצות</a></li>
+            <li><a href="spiritual.html#teachers">מורים</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <p class="footer__title">מסעות</p>
+          <ul class="footer__links">
+            <li><a href="travel.html#photography">צילומים</a></li>
+            <li><a href="travel.html#drawings">ציורים</a></li>
+            <li><a href="travel.html#greyhair">הודו בשיער שיבה</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <p class="footer__title">ארכיון</p>
+          <ul class="footer__links">
+            <li><a href="archive.html#living">לחיות בשלום עם הכסף</a></li>
+            <li><a href="archive.html#ethics">אתיקה</a></li>
+            <li><a href="archive.html#family">משפחה</a></li>
+            <li><a href="archive.html#old-site">האתר הישן</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <p class="footer__title">עוד</p>
+          <ul class="footer__links">
+            <li><a href="en/index.html">English</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>אפי פז</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var REPO = 'efipaz/efipaz.github.io';
+      var GH = 'https://github.com/' + REPO;
+      var panels = document.querySelectorAll('.admin__panel');
+      document.querySelectorAll('.admin__btn').forEach(function (b) {
+        b.addEventListener('click', function () {
+          var key = b.getAttribute('data-panel');
+          panels.forEach(function (p) { p.hidden = p.id !== 'panel-' + key; });
+          document.querySelectorAll('.admin__btn').forEach(function (x) { x.setAttribute('aria-expanded', x === b ? 'true' : 'false'); });
+          document.getElementById('panel-' + key).scrollIntoView({ behavior: 'smooth', block: 'start' });
+          if (key === 'status') loadStatus();
+        });
+      });
+
+      function clean(name) { return (name || '').replace(/[\\/:*?"<>|#%]+/g, ' ').replace(/\s+/g, ' ').replace(/^[. ]+|[. ]+$/g, '').trim().slice(0, 80); }
+      function enc(path) { return path.split('/').map(encodeURIComponent).join('/'); }
+      function setHref(a, href) { if (href) { a.href = href; a.removeAttribute('aria-disabled'); } else { a.removeAttribute('href'); a.setAttribute('aria-disabled', 'true'); } }
+
+      // galleries (existing, non-manual) for "add photos"
+      var sel = document.getElementById('gallery-select');
+      var up = document.getElementById('gallery-upload');
+      fetch('travel/gallery-manifest.json').then(function (r) { return r.json(); }).then(function (m) {
+        sel.innerHTML = '';
+        (m.galleries || []).filter(function (g) { return !g.manual; }).forEach(function (g) {
+          var o = document.createElement('option'); o.value = g.id; o.textContent = g.title; sel.appendChild(o);
+        });
+        setUp();
+      }).catch(function () { sel.innerHTML = '<option>לא הצלחתי לטעון את רשימת הגלריות</option>'; });
+      function setUp() { up.href = GH + '/upload/main/travel/' + enc(sel.value || ''); }
+      sel.addEventListener('change', setUp);
+
+      // new gallery: create info.txt (creates the folder), then upload
+      var gname = document.getElementById('gallery-name');
+      function setGallery() {
+        var n = clean(gname.value);
+        var ok = n.length > 0;
+        document.getElementById('gallery-hint').textContent = ok ? ('התיקייה תיקרא: travel/' + n) : 'כותבים קודם את שם הגלריה.';
+        var create = document.getElementById('gallery-create');
+        var upload = document.getElementById('gallery-new-upload');
+        setHref(create, ok ? GH + '/new/main?filename=' + encodeURIComponent('travel/' + n + '/info.txt') + '&value=' + encodeURIComponent('כותרת: ' + n + '\nתיאור: \n') : null);
+        setHref(upload, ok ? GH + '/upload/main/travel/' + enc(n) : null);
+        create.setAttribute('aria-disabled', ok ? 'false' : 'true');
+        upload.setAttribute('aria-disabled', ok ? 'false' : 'true');
+      }
+      gname.addEventListener('input', setGallery); setGallery();
+
+      // new teacher
+      var tname = document.getElementById('teacher-name');
+      var tname_en = document.getElementById('teacher-name-en');
+      function slug(s) { return clean(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
+      function setTeacher() {
+        var he = clean(tname.value), en = clean(tname_en.value);
+        var d = new Date();
+        var stamp = d.getFullYear() + ('0' + (d.getMonth() + 1)).slice(-2) + ('0' + d.getDate()).slice(-2);
+        var id = slug(en) || (he ? 'teacher-' + stamp : '');
+        var ok = he.length > 0 && id.length > 0;
+        document.getElementById('teacher-hint').textContent = ok ? ('תיקיית ההוגה תיקרא: teachers/' + id) : 'כותבים קודם את השם בעברית (ובאנגלית, אם יודעים).';
+        var create = document.getElementById('teacher-create');
+        var upload = document.getElementById('teacher-upload');
+        var tpl = 'שם: ' + he + '\nשם באנגלית: ' + en + '\nשנים: \nתפקיד: \nתפקיד באנגלית: \nויקיפדיה: \nויקיפדיה באנגלית: \nביוגרפיה: \nביוגרפיה באנגלית: \n';
+        setHref(create, ok ? GH + '/new/main?filename=' + encodeURIComponent('teachers/' + id + '/info.txt') + '&value=' + encodeURIComponent(tpl) : null);
+        setHref(upload, ok ? GH + '/upload/main/teachers/' + id : null);
+        create.setAttribute('aria-disabled', ok ? 'false' : 'true');
+        upload.setAttribute('aria-disabled', ok ? 'false' : 'true');
+      }
+      tname.addEventListener('input', setTeacher); tname_en.addEventListener('input', setTeacher); setTeacher();
+
+      // editable text files
+      var list = document.getElementById('text-files');
+      Promise.all([
+        fetch('teachers/manifest.json').then(function (r) { return r.json(); }).catch(function () { return {teachers: []}; }),
+        fetch('travel/gallery-manifest.json').then(function (r) { return r.json(); }).catch(function () { return {galleries: []}; }),
+        fetch('books/manifest.json').then(function (r) { return r.json(); }).catch(function () { return {items: []}; })
+      ]).then(function (res) {
+        list.innerHTML = '';
+        function add(label, path) {
+          var li = document.createElement('li'); var a = document.createElement('a');
+          a.href = GH + '/edit/main/' + enc(path); a.target = '_blank'; a.rel = 'noopener'; a.textContent = label; li.appendChild(a); list.appendChild(li);
+        }
+        (res[0].teachers || []).forEach(function (t) { add('הוגה: ' + t.name, 'teachers/' + t.id + '/info.txt'); });
+        (res[1].galleries || []).forEach(function (g) { add('גלריה: ' + g.title, 'travel/' + g.id + '/info.txt'); });
+        (res[2].items || []).forEach(function (b) {
+          if (b.sidecar) { add('ספר: ' + b.title, b.sidecar); return; }
+          var li = document.createElement('li'); var a = document.createElement('a');
+          a.href = GH + '/new/main?filename=' + encodeURIComponent(b.path.replace(/\.pdf$/i, '.txt')) + '&value=' + encodeURIComponent('כותרת: ' + b.title + '\nתיאור: \n');
+          a.target = '_blank'; a.rel = 'noopener'; a.textContent = 'ספר: ' + b.title + ' (עדיין בלי כותרת – ליצור)'; li.appendChild(a); list.appendChild(li);
+        });
+        if (!list.children.length) list.innerHTML = '<li>אין עדיין קבצי טקסט.</li>';
+      });
+
+      // status from GitHub Actions (public API, no token) + the content report
+      function loadStatus() {
+        var el = document.getElementById('status');
+        fetch('https://api.github.com/repos/' + REPO + '/actions/workflows/auto-process-content.yml/runs?per_page=1&branch=main', { headers: { Accept: 'application/vnd.github+json' } })
+          .then(function (r) { if (!r.ok) throw new Error('http ' + r.status); return r.json(); })
+          .then(function (d) {
+            var run = d.workflow_runs && d.workflow_runs[0];
+            if (!run) { el.innerHTML = '<span class="admin__dot"></span><span>אין עדיין עדכונים.</span>'; return; }
+            var when = new Date(run.updated_at);
+            var mins = Math.round((Date.now() - when.getTime()) / 60000);
+            var ago = mins < 1 ? 'עכשיו' : mins < 60 ? 'לפני ' + mins + ' דקות' : 'לפני ' + Math.round(mins / 60) + ' שעות';
+            if (run.status !== 'completed') el.innerHTML = '<span class="admin__dot admin__dot--busy"></span><span>⏳ מעבד את העדכון… (' + ago + ')</span>';
+            else if (run.conclusion === 'success') el.innerHTML = '<span class="admin__dot admin__dot--ok"></span><span>✅ האתר מעודכן (' + ago + ')</span>';
+            else {
+              el.innerHTML = '<span class="admin__dot admin__dot--bad"></span><span>❌ העדכון האחרון נכשל (' + ago + '). לשלוח לאריה את הקישור: </span>';
+              var a = document.createElement('a'); a.href = run.html_url; a.target = '_blank'; a.rel = 'noopener'; a.textContent = run.html_url; el.appendChild(a);
+            }
+          })
+          .catch(function () { el.innerHTML = '<span class="admin__dot"></span><span>לא הצלחתי לבדוק עכשיו. אפשר לנסות שוב עוד דקה.</span>'; });
+        fetch('assets/data/content-report.json?' + Date.now()).then(function (r) { return r.json(); }).then(function (rep) {
+          var out = document.getElementById('report');
+          var rows = (rep.errors || []).concat(rep.warnings || []);
+          if (!rows.length) { out.innerHTML = '<p>✅ כל הקבצים שהועלו מוצגים באתר.</p>'; return; }
+          var ul = document.createElement('ul'); ul.className = 'admin__list';
+          rows.forEach(function (r) { var li = document.createElement('li'); li.textContent = (r.level === 'error' ? '❌ ' : '⚠️ ') + r.he; ul.appendChild(li); });
+          out.innerHTML = ''; out.appendChild(ul);
+        }).catch(function () {});
+      }
+    })();
+  </script>
+  <script>
+    (function () {
+      var t = document.querySelector('.nav__toggle');
+      var l = document.querySelector('.nav__list');
+      if (!t || !l) return;
+      t.addEventListener('click', function () {
+        var open = l.classList.toggle('is-open');
+        t.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    })();
+  </script>
+</body>
+</html>
