@@ -116,6 +116,19 @@
    "category": "",
    "cover": "books/covers/2dd28773a7.jpg",
    "order": ""
+  },
+  {
+   "sidecar": null,
+   "source_sig": "60b7aac877",
+   "title": "שפינוזה בכיסא נח",
+   "title_en": "",
+   "description": "",
+   "description_en": "",
+   "path": "books/שפינוזה בכיסא נח.pdf",
+   "size_kb": 514,
+   "category": "",
+   "cover": "books/covers/bc3cba7841.jpg",
+   "order": ""
   }
  ]
 }

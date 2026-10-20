@@ -1,9 +1,15 @@
 {
- "updated": "2026-10-20T00:29:09+00:00",
+ "updated": "2026-10-20T10:33:01+00:00",
  "ok": true,
  "errors": [],
  "warnings": [],
- "done": [],
+ "done": [
+  {
+   "level": "ok",
+   "he": "הקובץ שפינוזה בכיסא נח.docx הומר ל-PDF",
+   "path": "books/שפינוזה בכיסא נח.pdf"
+  }
+ ],
  "known_corrupt": [
   "travel/india/pictures/Animals/Birds/@Paleolim-Creatures-010.jpg",
   "travel/india/pictures/Animals/Birds/Benaulim-031.jpg",
