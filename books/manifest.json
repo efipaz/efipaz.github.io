@@ -66,6 +66,19 @@
    "order": "5"
   },
   {
+   "sidecar": null,
+   "source_sig": null,
+   "title": "זן ובעיית השליטה",
+   "title_en": "",
+   "description": "",
+   "description_en": "",
+   "path": "books/זן ובעיית השליטה.pdf",
+   "size_kb": 3875,
+   "category": "",
+   "cover": "books/covers/911a373462.jpg",
+   "order": ""
+  },
+  {
    "sidecar": "books/להיות מודעות.txt",
    "source_sig": null,
    "title": "להיות מודעות",
