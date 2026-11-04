@@ -1,9 +1,70 @@
 {
- "updated": "2026-11-04T16:07:07+00:00",
+ "updated": "2026-11-04T16:46:52+00:00",
  "ok": true,
  "errors": [],
  "warnings": [],
- "done": [],
+ "done": [
+  {
+   "level": "ok",
+   "he": "התמונה 'Port_20181005_125339.jpg' הועלתה לתיקייה הראשית — הועברה לגלריה travel/inbox-2026-11-04. הגלריה מוסתרת עד שנותנים לה שם (לוח הבקרה ← לתקן טקסט)",
+   "path": "travel/inbox-2026-11-04/Port_20181005_125339.jpg"
+  },
+  {
+   "level": "ok",
+   "he": "התמונה 'Port_20181005_125727 ש.jpg' הועלתה לתיקייה הראשית — הועברה לגלריה travel/inbox-2026-11-04",
+   "path": "travel/inbox-2026-11-04/Port_20181005_125727 ש.jpg"
+  },
+  {
+   "level": "ok",
+   "he": "התמונה 'Port_20181005_130004.jpg' הועלתה לתיקייה הראשית — הועברה לגלריה travel/inbox-2026-11-04",
+   "path": "travel/inbox-2026-11-04/Port_20181005_130004.jpg"
+  },
+  {
+   "level": "ok",
+   "he": "התמונה 'Port_20181005_152650.jpg' הועלתה לתיקייה הראשית — הועברה לגלריה travel/inbox-2026-11-04",
+   "path": "travel/inbox-2026-11-04/Port_20181005_152650.jpg"
+  },
+  {
+   "level": "ok",
+   "he": "התמונה 'Port_20181005_152727.jpg' הועלתה לתיקייה הראשית — הועברה לגלריה travel/inbox-2026-11-04",
+   "path": "travel/inbox-2026-11-04/Port_20181005_152727.jpg"
+  },
+  {
+   "level": "ok",
+   "he": "התמונה 'Port_20181005_162045.jpg' הועלתה לתיקייה הראשית — הועברה לגלריה travel/inbox-2026-11-04",
+   "path": "travel/inbox-2026-11-04/Port_20181005_162045.jpg"
+  },
+  {
+   "level": "ok",
+   "he": "התמונה 'Port_20181005_162128_EXP1.jpg' הועלתה לתיקייה הראשית — הועברה לגלריה travel/inbox-2026-11-04",
+   "path": "travel/inbox-2026-11-04/Port_20181005_162128_EXP1.jpg"
+  },
+  {
+   "level": "ok",
+   "he": "התמונה 'Port_20181005_162207.jpg' הועלתה לתיקייה הראשית — הועברה לגלריה travel/inbox-2026-11-04",
+   "path": "travel/inbox-2026-11-04/Port_20181005_162207.jpg"
+  },
+  {
+   "level": "ok",
+   "he": "התמונה 'Port_20181005_162311.jpg' הועלתה לתיקייה הראשית — הועברה לגלריה travel/inbox-2026-11-04",
+   "path": "travel/inbox-2026-11-04/Port_20181005_162311.jpg"
+  },
+  {
+   "level": "ok",
+   "he": "התמונה 'Port_20181005_195103.jpg' הועלתה לתיקייה הראשית — הועברה לגלריה travel/inbox-2026-11-04",
+   "path": "travel/inbox-2026-11-04/Port_20181005_195103.jpg"
+  },
+  {
+   "level": "ok",
+   "he": "התמונה 'Port_20181006_101901.jpg' הועלתה לתיקייה הראשית — הועברה לגלריה travel/inbox-2026-11-04",
+   "path": "travel/inbox-2026-11-04/Port_20181006_101901.jpg"
+  },
+  {
+   "level": "ok",
+   "he": "התמונה 'Port_20181006_130155.jpg' הועלתה לתיקייה הראשית — הועברה לגלריה travel/inbox-2026-11-04",
+   "path": "travel/inbox-2026-11-04/Port_20181006_130155.jpg"
+  }
+ ],
  "known_corrupt": [
   "travel/india/pictures/Animals/Birds/@Paleolim-Creatures-010.jpg",
   "travel/india/pictures/Animals/Birds/Benaulim-031.jpg",
