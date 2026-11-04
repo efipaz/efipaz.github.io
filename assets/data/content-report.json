@@ -1,14 +1,8 @@
 {
- "updated": "2026-11-04T14:44:39+00:00",
+ "updated": "2026-11-04T14:49:09+00:00",
  "ok": true,
  "errors": [],
- "warnings": [
-  {
-   "level": "warn",
-   "he": "התיקייה travel/פורטוגל 2018 עמק הדואורו לא מכילה תמונות או סרטונים, ולכן לא הפכה לגלריה. (תמונות: jpg/png/heic, סרטונים: mp4)",
-   "path": "travel/פורטוגל 2018 עמק הדואורו"
-  }
- ],
+ "warnings": [],
  "done": [],
  "known_corrupt": [
   "travel/india/pictures/Animals/Birds/@Paleolim-Creatures-010.jpg",
