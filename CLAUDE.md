@@ -95,6 +95,15 @@ efipaz/
 
 ---
 
+## זרימת עבודה בין הריפואים (aryeh1/efipaz ↔ efipaz/efipaz.github.io)
+
+- האתר החי הוא `efipaz/efipaz.github.io` (`main`). `aryeh1/efipaz` הוא ריפו עבודה, וה-`main` שלו חייב להישאר **זהה בהיסטוריה** ל-`main` של אפי.
+- ענף עבודה תמיד מתחיל מ-`main` של אפי (`git fetch upstream main && git checkout -B <branch> upstream/main`).
+- PR אל אפי נפתח **מהענף** (`main...aryeh1:efipaz:<branch>`), לא מ-`aryeh1/main`.
+- PR ב-`aryeh1/efipaz` ממוזגים רק ב-"Create a merge commit". squash או rebase כותבים את ה-commit מחדש, ה-`main` שלנו מפסיק להיות צאצא של
+  ה-`main` של אפי, וה-PR הבא אליו מראה "Can't automatically merge" (קרה בנובמבר 2026).
+- אחרי שאפי ממזג: `git push --force-with-lease origin upstream/main:main` כדי ליישר את `aryeh1/main` חזרה. ה-push הזה דורש אישור של אריה.
+
 ## בדיקות – לפני כל commit
 
 ```bash
