@@ -22,7 +22,8 @@
 
 `scripts/build_content.py` רץ ב-GitHub Actions בכל העלאה והופך קבצים לתוכן:
 שערי ספרים, המרת Word ל-PDF, thumbnails, עמודי גלריה ועמודי הוגים (עברית + אנגלית), רשימת הקלטות,
-ודוח בעברית (`content-report.md`). ראה [CLAUDE.md](CLAUDE.md) לפרטים.
+ודוח בעברית (`content-report.md`). קישורים חיצוניים (פליקר, בלוג) וכתובת המייל נקראים מ-`links.txt` בשורש
+ומוזרקים לכל `<a data-link="…">`. ראה [CLAUDE.md](CLAUDE.md) לפרטים.
 
 ## פיתוח
 

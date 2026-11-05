@@ -121,7 +121,7 @@
         <ol class="admin__steps">
             <li>בוחרים למטה את הגלריה.</li>
             <li>לוחצים על הכפתור הירוק. נפתח מסך GitHub עם תיקיית הגלריה פתוחה.</li>
-            <li>גוררים את התמונות (אפשר הרבה בבת אחת) ולוחצים <b>Commit changes</b>. התמונות מצטרפות לגלריה.</li>
+            <li>גוררים את התמונות (<b>8–10 בכל פעם</b>, לא יותר – תמונות מהטלפון שוקלות 1–3MB כל אחת) ולוחצים <b>Commit changes</b>. התמונות מצטרפות לגלריה. חוזרים על זה עד שכל התמונות עלו.</li>
         </ol>
         <label for="gallery-select">הגלריה:</label>
         <select id="gallery-select" class="admin__select"></select>
@@ -133,8 +133,9 @@
         <ol class="admin__steps">
             <li>כותבים למטה את שם הגלריה, למשל <b>תאילנד 2025</b>.</li>
             <li>לוחצים על <b>1. ליצור את הגלריה</b>. נפתח מסך GitHub עם קובץ מוכן – רק לוחצים שם על <b>Commit changes</b> (הכפתור הירוק, למטה מימין).</li>
-            <li>חוזרים לכאן ולוחצים על <b>2. להעלות תמונות</b>. גוררים את התמונות ולוחצים <b>Commit changes</b>.</li>
+            <li>חוזרים לכאן ולוחצים על <b>2. להעלות תמונות</b>. גוררים את התמונות (<b>8–10 בכל פעם</b>) ולוחצים <b>Commit changes</b>. חוזרים על זה עד שכל התמונות עלו.</li>
         </ol>
+        <p class="admin__note">אם ב"מה קרה עם מה שהעליתי?" כתוב שהגלריה <b>מחכה לתמונות</b> – זה בסדר, פשוט עדיין לא הועלו אליה תמונות.</p>
         <label for="gallery-name">שם הגלריה:</label>
         <input type="text" id="gallery-name" placeholder="למשל: תאילנד 2025">
         <p class="admin__note" id="gallery-hint"></p>
@@ -175,12 +176,12 @@
       <div class="admin__panel" id="panel-text" hidden>
         <h3>לתקן טקסט</h3>
         <ol class="admin__steps">
-            <li>בוחרים למטה את הטקסט שרוצים לתקן (שם וביוגרפיה של הוגה, כותרת ותיאור של גלריה או ספר).</li>
+            <li>בוחרים למטה את הטקסט שרוצים לתקן. השורה הראשונה היא <b>הקישורים החיצוניים והמייל</b> (פליקר, בלוג, כתובת המייל שמופיעה באתר); אחריה שם וביוגרפיה של הוגה, כותרת ותיאור של גלריה או ספר.</li>
             <li>נפתח מסך עריכה של GitHub. מתקנים את המילים (רק את המילים אחרי הנקודתיים).</li>
             <li>לוחצים <b>Commit changes</b>. התיקון מופיע באתר תוך כמה דקות.</li>
         </ol>
         <ul class="admin__list" id="text-files"><li>טוען…</li></ul>
-        <p class="admin__note">שינוי בעיצוב או בעמוד עצמו – שולחים לאריה.</p>
+        <p class="admin__note">בקובץ הקישורים: שורה לכל פריט, בצורה <b>מילה: ערך</b> (למשל <b>פליקר: https://…</b>), בלי שורות אחרות. שינוי בעיצוב או בעמוד עצמו – שולחים לאריה.</p>
       </div>
       <div class="admin__panel" id="panel-status" hidden>
         <h3>מה קרה עם מה שהעליתי?</h3>
@@ -202,7 +203,7 @@
         <h2>שלוש הערות</h2>
         <ul class="content-list">
           <li><b>במחשב בלבד.</b> מסך ההעלאה של GitHub לא עובד טוב בטלפון.</li>
-          <li><b>קובץ גדול מ-25MB</b> (סרטון ארוך) לא עובר דרך הדפדפן – לשלוח לאריה.</li>
+          <li><b>קובץ גדול מ-25MB</b> (סרטון ארוך, ספר כבד) לא עובר דרך הדפדפן – לשלוח לאריה. <b>תמונות מעלים 8–10 בכל פעם</b>; הרבה בבת אחת נתקע.</li>
           <li><b>סבלנות:</b> אחרי Commit changes לוקח 2–5 דקות עד שהאתר מתעדכן. אפשר לבדוק ב"מה קרה עם מה שהעליתי?".</li>
         </ul>
       </div>
@@ -247,6 +248,7 @@
       </div>
       <div class="footer__bottom">
         <p>אפי פז</p>
+        <p><a href="mailto:efipaz@gmail.com" data-link="email">efipaz@gmail.com</a></p>
       </div>
     </div>
   </footer>
@@ -331,6 +333,7 @@
           var li = document.createElement('li'); var a = document.createElement('a');
           a.href = GH + '/edit/main/' + enc(path); a.target = '_blank'; a.rel = 'noopener'; a.textContent = label; li.appendChild(a); list.appendChild(li);
         }
+        add('קישורים חיצוניים ומייל (פליקר, בלוג, כתובת המייל)', 'links.txt');
         (res[0].teachers || []).forEach(function (t) { add('הוגה: ' + t.name, 'teachers/' + t.id + '/info.txt'); });
         (res[1].galleries || []).forEach(function (g) { add('גלריה: ' + g.title, 'travel/' + g.id + '/info.txt'); });
         (res[2].items || []).forEach(function (b) {

@@ -37,8 +37,10 @@ on:
       - '*.MP4'
       - '*.mov'
       - '*.MOV'
+      - 'links.txt'
       - 'scripts/build_content.py'
       - 'scripts/sitechrome.py'
+      - 'scripts/check_site.py'
   schedule:
     - cron: '17 4 * * 1'   # Mondays 04:17 UTC: refresh the archive.org recordings list
   workflow_dispatch:
@@ -59,6 +61,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
+          # Always build the tip of the branch, not the commit that triggered us: Efi may have
+          # pushed (or deleted a folder) again while this run was queued.
+          ref: ${{ github.ref_name }}
           fetch-depth: 1
 
       - name: Install tools
@@ -69,24 +74,27 @@ jobs:
             python3-pil
           python3 -c "import PIL; print('Pillow', PIL.__version__)"
 
-      - name: Build site content
-        run: python3 scripts/build_content.py
-
-      - name: Commit and push
+      - name: Build, commit and push
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
-          git add -A
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-            exit 0
-          fi
-          git commit -m "Auto-process: update site content"
-          # Someone (Efi) may have pushed again while we were building.
+          # --check: run the site checks afterwards and put their findings in Efi's report
+          build() {
+            python3 scripts/build_content.py --check
+            git add -A
+            if git diff --staged --quiet; then echo "No changes to commit"; else
+              git commit -m "Auto-process: update site content"; fi
+          }
+          build
+          # If Efi pushed again while we were building, do NOT rebase our (now stale) result on
+          # top of their change: start over from the new tip and build again.
           for i in 1 2 3; do
-            git rebase --abort 2>/dev/null || true
-            git pull --rebase origin "${GITHUB_REF_NAME}" && git push && exit 0
-            echo "push failed, retrying ($i)"; sleep 10
+            git push && exit 0
+            echo "remote moved; rebuilding on top of it ($i)"
+            git fetch --depth=1 origin "${GITHUB_REF_NAME}"
+            git reset --hard FETCH_HEAD
+            git clean -fd
+            build
           done
           exit 1
 
