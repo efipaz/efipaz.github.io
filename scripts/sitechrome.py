@@ -10,6 +10,7 @@ Navigation follows Efi's own "site structure" document: 4 items.
 from __future__ import annotations
 
 import html
+import re
 
 SITE_URL = "https://www.efipaz.com"
 ROOT = __import__("pathlib").Path(__file__).resolve().parent.parent
@@ -85,6 +86,52 @@ FOOTER = {
 }
 
 SITE_NAME = {"he": "אפי פז", "en": "Efi Paz"}
+
+# External links and the contact e-mail live in links.txt (root), one `key: value` per line,
+# so Efi can change them without touching HTML. Hebrew or English keys.
+LINKS_FILE = ROOT / "links.txt"
+LINK_ALIASES = {
+    "email": {"email", "mail", "מייל", "אימייל", "דואל"},
+    "flickr": {"flickr", "פליקר"},
+    "blog": {"blog", "בלוג"},
+}
+_LINK_ALIAS_TO_KEY = {a: k for k, aliases in LINK_ALIASES.items() for a in aliases}
+_EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
+
+
+def read_links() -> dict:
+    """links.txt -> {"email": ..., "flickr": ..., "blog": ...}. Tolerant: missing file or bad
+    values give an empty / partial dict; the caller keeps whatever is in the pages already.
+    Invalid values are returned under "_invalid" so the build can report them."""
+    out: dict = {}
+    if not LINKS_FILE.exists():
+        return out
+    try:
+        text = LINKS_FILE.read_text(encoding="utf-8-sig", errors="replace")
+    except OSError:
+        return out
+    for ln in text.splitlines():
+        if ":" not in ln:
+            continue
+        key, val = ln.split(":", 1)
+        k = _LINK_ALIAS_TO_KEY.get(key.strip().lower())
+        v = val.strip()
+        if not k:
+            if key.strip() and not key.strip().startswith("#") and not key.strip().lower().startswith("http"):
+                out.setdefault("_unknown", []).append(key.strip())
+            continue
+        if not v:
+            continue
+        ok = _EMAIL_RE.match(v) if k == "email" else v.startswith("https://")
+        if ok:
+            out[k] = v
+        else:
+            out.setdefault("_invalid", {})[k] = v
+    return out
+
+
+def contact_email() -> str:
+    return read_links().get("email", "")
 MENU_LABEL = {"he": "תפריט", "en": "Menu"}
 SKIP_LABEL = {"he": "דלג לתוכן", "en": "Skip to content"}
 
@@ -159,13 +206,15 @@ def footer_html(lang: str, depth: int) -> str:
           </ul>
         </div>""")
     cols_html = "\n".join(cols)
+    email = contact_email()
+    contact = (f'\n        <p><a href="mailto:{esc(email)}" data-link="email">{esc(email)}</a></p>' if email else "")
     return f"""  <footer class="footer">
     <div class="container">
       <div class="footer__inner">
 {cols_html}
       </div>
       <div class="footer__bottom">
-        <p>{esc(SITE_NAME[lang])}</p>
+        <p>{esc(SITE_NAME[lang])}</p>{contact}
       </div>
     </div>
   </footer>"""

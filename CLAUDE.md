@@ -22,6 +22,7 @@ efipaz/
 ├── admin.html              # לוח הבקרה של אפי (noindex, לא בתפריט)
 ├── viewer.html             # קורא PDF (pdf.js) – viewer.html?file=<נתיב>
 ├── 404.html  style.css  sitemap.xml  robots.txt  HOWTO.md  content-report.md
+├── links.txt               # מייל + קישורים חיצוניים (פליקר, בלוג) שאפי עורך; המנוע מזריק לכל <a data-link>
 ├── en/                     # אותם עמודים באנגלית (index, spiritual, travel, archive, viewer) + living/ethics: תיאור באנגלית של האתרים העבריים
 ├── books/                  # ספרים: PDF/Word → שער + כרטיס אוטומטי. <שם>.txt לכותרת/תיאור
 ├── transcripts/            # תמלולים (קבוצות) – אותו מנגנון כמו books
@@ -51,12 +52,16 @@ efipaz/
 | מורים | `teachers/<id>/info.txt` (מפתחות בעברית/אנגלית, ראה דוגמה ב-`teachers/spinoza/info.txt`) → עמוד הוגה he+en עם ביו, ויקיפדיה, PDF דרך ה-viewer, mp3, עמודים ישנים, תמונות; כרטיסים ב-`spiritual.html` בין `auto:teachers` |
 | הקלטות | שואל את archive.org (`uploader:efipaz@gmail.com`) → `recordings/manifest.json` → כרטיסים בין `auto:recordings` |
 | שורש | PDF/תמונה שהועלו לשורש בטעות מועברים ל-`books/` או ל-`travel/inbox-<תאריך>/` |
+| קישורים | `links.txt` (`מייל:`/`פליקר:`/`בלוג:`) → `href` של כל `<a data-link="email|flickr|blog">` בעמודים הידניים (ולטקסט של עוגן המייל). העמודים המחוללים מקבלים זאת מ-`sitechrome.read_links()`; הפוטר מציג את המייל |
+| בדיקה | עם `--check` (ב-Action): `check_site.py` רץ אחרי הבנייה ובעיותיו נכנסות לדוח כ-"⚠️ שים לב". לעולם לא מפיל את הבנייה |
 | דוח | `content-report.md` (לאפי, עברית) + `assets/data/content-report.json` (ל-`admin.html`) |
 | sitemap | `sitemap.xml` נבנה מחדש |
 
 **כללים לסוכני AI:**
 - **אין לערוך ידנית** את ה-manifest-ים, את מה שבין סימני `<!-- auto:* -->`, את `travel/*/index.html` של גלריות אוטומטיות,
   את `teachers/*/index*.html`, את `sitemap.xml` ואת `content-report.*`. אם צריך לתקן – מתקנים את `build_content.py`.
+  גם `href` של עוגן עם `data-link="…"` הוא בבעלות המנוע: משנים ב-`links.txt`, לא ב-HTML.
+  אם מוחקים את שורת `מייל:` מ-`links.txt`, הפוטר מפסיק להציג מייל ו-`apply_chrome.py --check` ידרוש ריצה של `apply_chrome.py` (הפוטר הידני השתנה).
 - המנוע **סלחני**: קובץ בעייתי לעולם לא מפיל את הריצה, הוא נרשם בדוח. שמור על העיקרון הזה.
 - המנוע **אידמפוטנטי**: ריצה שנייה בלי שינוי תוכן לא משנה קבצים. בדוק זאת אחרי כל שינוי בו.
 - מטא-דאטה של קבצים = קובץ `.txt` ליד הקובץ באותו שם (ספרים, מורים, גלריות). פורמט `מפתח: ערך`, ראה `parse_info()`.
@@ -137,6 +142,9 @@ python3 scripts/build_content.py   # ריצה שנייה: חייבת לדווח 
    הומרו פעם אחת ל-UTF-8 (המרה נאמנה, בלי לשנות טקסט; קבצי UTF-16 של Word הומרו גם הם). **כל קובץ HTML באתר חייב להיות UTF-8**
    (`check_site.py` אוכף גם על הארכיון). אין להריץ המרה עיוורת על קובץ שכבר UTF-8.
 4. **120 קבצי jpg** בגלריות הודו/בורמה הם נתונים פגומים מהמקור. המנוע מסנן אותם ומדווח; לא "לתקן" אותם.
+5. **נובמבר 2026:** ה-Action בנה מה-commit המפעיל ולא מקצה הענף, ואז עשה rebase מעל מחיקה של אפי – כרטיס של גלריה מחוקה
+   נשאר באתר עם קישורים שבורים. מכאן: ה-Action עושה checkout של קצה הענף, ואם ה-push נכשל הוא **בונה מחדש** על הקצה החדש
+   (לא rebase של תוצאה ישנה), ומריץ `check_site.py` אחרי כל בנייה (`--check`) כך שקישור שבור מופיע בדוח של אפי.
 
 ---
 

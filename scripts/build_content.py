@@ -21,10 +21,16 @@ What it does
   teachers/<id>/            info.txt (or info.json) + portrait + files -> index.html + index.en.html
   recordings                archive.org items uploaded by Efi -> recordings/manifest.json
   root inbox                media/documents dropped at the repo root are moved to the right folder
+  links.txt                 contact e-mail + external links (Flickr, blog): every <a data-link="…">
+                            on the live pages gets its href (and, for e-mail, its text) from this file
+  sitemap                   sitemap.xml
   report                    content-report.md (Hebrew, for Efi) + assets/data/content-report.json
+  --check                   run scripts/check_site.py after the build and add its problems to the
+                            report as warnings (used by the GitHub Action; never fails the build)
 
 Usage
-  python3 scripts/build_content.py [--dry-run] [--no-network] [--only books,galleries,teachers,recordings,inbox]
+  python3 scripts/build_content.py [--dry-run] [--no-network] [--check]
+                                   [--only inbox,books,galleries,teachers,recordings,links,sitemap]
 """
 from __future__ import annotations
 
@@ -857,9 +863,24 @@ def build_galleries() -> None:
             continue  # a hand-written page that is not a gallery (e.g. a redirect stub)
         if not manual and not images and not videos and cover is None:
             remove_generated(folder)
-            if folder.name not in ("thumbs",) and any(folder.iterdir()):
-                report("warn", f"התיקייה travel/{folder.name} לא מכילה תמונות או סרטונים, ולכן לא הפכה לגלריה. "
-                               f"(תמונות: jpg/png/heic, סרטונים: mp4)", rel(folder))
+            if folder.name not in ("thumbs",):
+                # What else is in there? Ignore metadata, dotfiles, thumbs/ and our own generated pages
+                # (in --dry-run remove_generated() leaves them in place).
+                others = [p for p in folder.iterdir()
+                          if p.is_file() and not p.name.startswith(".") and p.suffix.lower() not in (".txt",)
+                          and p.name != "info.json"
+                          and p.suffix.lower() not in IMAGE_EXT | VIDEO_EXT | HEIC_EXT  # unreadable media: reported by gallery_media()
+                          and not (p.name in ("index.html", "index.en.html")
+                                   and MARKER in p.read_text(encoding="utf-8", errors="replace"))]
+                has_meta = (folder / "info.txt").exists() or (folder / "info.json").exists()
+                if others:
+                    names = ", ".join(p.name for p in others[:5]) + (" ועוד" if len(others) > 5 else "")
+                    report("warn", f"בתיקייה travel/{folder.name} יש קבצים שאינם תמונות או סרטונים ({names}), "
+                                   f"ולכן היא עדיין לא גלריה. (תמונות: jpg/png/heic, סרטונים: mp4)", rel(folder))
+                elif has_meta:
+                    title = info.get("title") or clean_name(folder.name)
+                    report("ok", f"הגלריה '{title}' נוצרה ומחכה לתמונות. להעלות אותן דרך לוח הבקרה ← "
+                                 f"גלריה חדשה ← 2. להעלות תמונות", rel(folder))
             continue
         thumbs = folder / "thumbs"
         if manual:
@@ -1271,6 +1292,89 @@ def build_recordings() -> None:
     log(f"recordings: {len(items)}")
 
 
+# ----------------------------------------------------------------------------- links.txt
+
+LINK_PAGE_GLOBS = ["*.html", "en/*.html", "living/**/*.html", "personal/**/*.html", "business/**/*.html",
+                   "teachers/**/*.html", "travel/**/*.html"]
+A_TAG_RE = re.compile(r"<a\b[^>]*\bdata-link=\"(email|flickr|blog)\"[^>]*>", re.I)
+HREF_RE = re.compile(r"(?<![-\w])href=\"[^\"]*\"", re.I)
+
+
+def build_links() -> None:
+    """links.txt (root) -> href of every <a data-link="…"> on the hand-written live pages.
+    Generated pages (teachers, galleries) get theirs from sitechrome at build time and are skipped."""
+    links = chrome.read_links()
+    for key, val in (links.get("_invalid") or {}).items():
+        what = {"email": "כתובת המייל", "flickr": "הקישור לפליקר", "blog": "הקישור לבלוג"}[key]
+        report("warn", f"{what} בקובץ links.txt לא נראה תקין ('{val}'), ולכן השארתי את הקודם. "
+                       f"קישור צריך להתחיל ב-https:// ומייל צריך להיות בצורה name@example.com", "links.txt")
+    for key in links.get("_unknown") or []:
+        report("warn", f"השורה '{key}: …' בקובץ links.txt לא מוכרת ולכן לא השפיעה על האתר. "
+                       f"המילים שמותרות: מייל, פליקר, בלוג", "links.txt")
+    values = {k: v for k, v in links.items() if k in ("email", "flickr", "blog")}
+    if not values:
+        return
+
+    def fix_tag(m: re.Match) -> str:
+        tag = m.group(0)
+        key = m.group(1).lower()
+        if key not in values:
+            return tag
+        href = f"mailto:{values[key]}" if key == "email" else values[key]
+        new = f'href="{esc(href)}"'
+        return HREF_RE.sub(new, tag, count=1) if HREF_RE.search(tag) else tag[:-1] + f" {new}>"
+
+    seen: set[Path] = set()
+    for g in LINK_PAGE_GLOBS:
+        for page in sorted(ROOT.glob(g)):
+            if page in seen or "old-site" in page.parts or "archive" in page.relative_to(ROOT).parts:
+                continue
+            seen.add(page)
+            try:
+                text = page.read_text(encoding="utf-8")
+            except (UnicodeDecodeError, OSError):
+                continue
+            if "data-link=" not in text or MARKER in text:
+                continue
+            new = A_TAG_RE.sub(fix_tag, text)
+            if "email" in values:
+                # the visible text of an e-mail anchor is the address itself
+                new = re.sub(r"(<a\b[^>]*\bdata-link=\"email\"[^>]*>)[^<]*(</a>)",
+                             lambda m: m.group(1) + esc(values["email"]) + m.group(2), new)
+            if new != text and write_text(page, new):
+                log(f"links: updated {rel(page)}")
+
+
+# ----------------------------------------------------------------------------- site check
+
+def run_site_check() -> None:
+    """Run scripts/check_site.py on the finished site and put its findings in Efi's report.
+    Informational only: a problem here never fails the build."""
+    if DRY_RUN:
+        return
+    try:
+        import check_site  # noqa: WPS433  (scripts/ is on sys.path)
+        check_site.PROBLEMS[:] = []
+        check_site.WARNINGS[:] = []
+        cache: dict = {}
+        for p in check_site.live_pages():
+            check_site.check_page(p, cache)
+        check_site.check_archive_encoding()
+        check_site.check_manifests()
+        check_site.check_pairs()
+        check_site.check_css()
+        check_site.check_case_collisions()
+        problems = list(check_site.PROBLEMS)
+    except Exception as e:  # noqa: BLE001
+        report("warn", f"בדיקת האתר (check_site) לא הצליחה לרוץ: {e}")
+        return
+    for msg in problems[:20]:
+        report("warn", f"בדיקת האתר מצאה: {msg}")
+    if len(problems) > 20:
+        report("warn", f"בדיקת האתר מצאה עוד {len(problems) - 20} בעיות (ראה GitHub Actions)")
+    log(f"site check: {len(problems)} problem(s)")
+
+
 # ----------------------------------------------------------------------------- root inbox
 
 ROOT_KEEP = {"favicon.ico", "CNAME", "robots.txt", "sitemap.xml", ".nojekyll", "README.md", "CLAUDE.md", "HOWTO.md",
@@ -1382,10 +1486,13 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--dry-run", action="store_true", help="report what would change without writing")
     ap.add_argument("--no-network", action="store_true", help="skip archive.org")
-    ap.add_argument("--only", default="", help="comma list: inbox,books,galleries,teachers,recordings")
+    ap.add_argument("--only", default="", help="comma list: inbox,books,galleries,teachers,recordings,links,sitemap")
+    ap.add_argument("--check", action="store_true", help="run check_site.py afterwards and add its findings to the report")
     args = ap.parse_args(argv)
     DRY_RUN, NO_NETWORK = args.dry_run, args.no_network
-    steps = [s for s in args.only.split(",") if s] or ["inbox", "books", "galleries", "teachers", "recordings", "sitemap"]
+    steps = [s for s in args.only.split(",") if s] or ["inbox", "books", "galleries", "teachers", "recordings", "links", "sitemap"]
+    if args.check:
+        steps.append("check")
     os.chdir(ROOT)
     if REPORT_JSON.exists():
         try:
@@ -1394,7 +1501,8 @@ def main(argv=None) -> int:
             pass
     for step in steps:
         fn = {"inbox": build_inbox, "books": build_books, "galleries": build_galleries,
-              "teachers": build_teachers, "recordings": build_recordings, "sitemap": build_sitemap}.get(step)
+              "teachers": build_teachers, "recordings": build_recordings, "links": build_links,
+              "sitemap": build_sitemap, "check": run_site_check}.get(step)
         if not fn:
             log(f"unknown step {step}")
             continue
