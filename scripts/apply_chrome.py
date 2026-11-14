@@ -67,7 +67,7 @@ def classify(path: Path):
         active = ROOT_ACTIVE.get(path.stem, "home")
         alt = f"en/{path.stem}.html" if path.stem in ROOT_ACTIVE and path.stem not in ("admin", "404") else None
         if path.stem == "404":
-            alt = "/en/index.html"
+            alt = "en/index.html"   # relative: 404.html sets <base> to the site root
     else:
         active, en_page = SECTIONS.get(top, ("home", None))
         if top == "personal" and len(parts) > 2 and parts[1] == "ethics":

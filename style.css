@@ -1485,5 +1485,5 @@ main a, .document-item__title { overflow-wrap: anywhere; }
 }
 
 /* קישורי "לקריאה · להורדה" ברשימות מסמכים: שטח מגע גדול בלי שינוי מראה */
-.document-item__meta a, .card__actions a, .video-item__meta a, .audio-item a { display: inline-block; padding: 6px 2px; margin: -6px 0; }
+.document-item__meta a, .card__actions a:not(.btn), .video-item__meta a, .audio-item a { display: inline-block; padding: 6px 2px; margin: -6px 0; }
 .document-item__title a, .card__title a, .person-card__name a { display: inline-block; padding: 5px 0; margin: -5px 0; }

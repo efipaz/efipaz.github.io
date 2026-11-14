@@ -720,6 +720,15 @@ def scan_documents(folder: Path, covers_dir: Path) -> list[dict]:
     return items
 
 
+def viewer_url(prefix: str, path: str, title: str = "") -> str:
+    """Link to the PDF reader. The title is passed along when it differs from the file name,
+    so the reader shows the book's name and not e.g. 'הודו בשיער שיבה עם שער'."""
+    u = f"{prefix}viewer.html?file={urllib.parse.quote(path, safe='')}"
+    if title and title != Path(path).stem.replace("_", " "):
+        u += f"&amp;title={urllib.parse.quote(title, safe='')}"
+    return u
+
+
 def book_card(item: dict, lang: str, depth: int, h: str = "h3") -> str:
     rp = chrome.root_prefix(depth)
     title = (item["title_en"] if lang == "en" and item["title_en"] else item["title"])
@@ -729,7 +738,7 @@ def book_card(item: dict, lang: str, depth: int, h: str = "h3") -> str:
     download = "Download PDF" if lang == "en" else "להורדה (PDF)"
     download_epub = "Download EPUB" if lang == "en" else "להורדה (EPUB)"
     is_pdf = item["path"].lower().endswith(".pdf")
-    viewer = f"{rp}{'en/' if lang == 'en' else ''}viewer.html?file={urllib.parse.quote(item['path'], safe='')}"
+    viewer = viewer_url(rp + ("en/" if lang == "en" else ""), item["path"], title)
     href_file = rp + url(item["path"])
     page = item.get("page_en" if lang == "en" else "page")
     # where the cover and the title lead: the book's own page, else the reader, else the file itself
@@ -790,7 +799,7 @@ def book_page(item: dict, lang: str) -> str:
     }[lang]
     formats = item.get("formats") or []
     main_pdf = next((f for f in formats if f["type"] == "pdf"), None)
-    viewer = f"{lr}viewer.html?file={urllib.parse.quote(main_pdf['path'], safe='')}" if main_pdf else ""
+    viewer = viewer_url(lr, main_pdf["path"], title) if main_pdf else ""
     rows = []
     for f in formats:
         icon = {"pdf": "PDF", "epub": "EPUB", "doc": "DOC"}[f["type"]]
@@ -1320,7 +1329,7 @@ def teacher_page(t: dict, lang: str) -> str:
         for p in t["_files"]["pdf"]:
             m = sidecar_info(p)
             title = (m.get("title_en") if lang == "en" and m.get("title_en") else m.get("title")) or clean_name(p.stem)
-            viewer = f"{lr}viewer.html?file={urllib.parse.quote(rel(p), safe='')}"
+            viewer = viewer_url(lr, rel(p), title)
             rows.append(f"""        <div class="document-item">
           <div class="document-item__icon">PDF</div>
           <div class="document-item__info">
