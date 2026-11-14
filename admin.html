@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=a039e7ee">
+  <link rel="stylesheet" href="style.css?v=db6d2a23">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -339,7 +339,7 @@
         (res[2].items || []).forEach(function (b) {
           if (b.sidecar) { add('ספר: ' + b.title, b.sidecar); return; }
           var li = document.createElement('li'); var a = document.createElement('a');
-          a.href = GH + '/new/main?filename=' + encodeURIComponent(b.path.replace(/\.pdf$/i, '.txt')) + '&value=' + encodeURIComponent('כותרת: ' + b.title + '\nתיאור: \n');
+          a.href = GH + '/new/main?filename=' + encodeURIComponent(b.path.replace(/\.(pdf|epub)$/i, '.txt')) + '&value=' + encodeURIComponent('כותרת: ' + b.title + '\nתיאור: \n');
           a.target = '_blank'; a.rel = 'noopener'; a.textContent = 'ספר: ' + b.title + ' (עדיין בלי כותרת – ליצור)'; li.appendChild(a); list.appendChild(li);
         });
         if (!list.children.length) list.innerHTML = '<li>אין עדיין קבצי טקסט.</li>';

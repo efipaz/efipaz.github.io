@@ -30,7 +30,7 @@ PROBLEMS: list[str] = []
 WARNINGS: list[str] = []
 
 LIVE_GLOBS = ["*.html", "en/*.html", "living/**/*.html", "personal/**/*.html", "business/**/*.html",
-              "teachers/**/*.html", "travel/**/*.html"]
+              "teachers/**/*.html", "travel/**/*.html", "books/**/*.html", "transcripts/**/*.html"]
 OLD_SITE_ALLOWED = {"archive.html", "en/archive.html", "en/ethics.html", "personal/ethics/index.html"}
 PALETTE_OK = {"#f7f5f0", "#1a1a1a", "#8b2635", "#efebe4", "#4a4a4a", "#d4cfc5", "#fff", "#ffffff"}
 PAIRS = ["index", "spiritual", "travel", "archive"]

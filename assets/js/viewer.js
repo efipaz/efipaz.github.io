@@ -34,7 +34,9 @@
   if (!ok) { bar.setAttribute('data-empty', '1'); msg(T.bad); return; }
 
   var url = base + file.split('/').map(encodeURIComponent).join('/');
-  var name = file.split('/').pop().replace(/\.pdf$/i, '').replace(/_/g, ' ');
+  // the page that links here may pass the book's real title; otherwise the file name is shown
+  var given = (new URLSearchParams(location.search).get('title') || '').trim().slice(0, 200);
+  var name = given || file.split('/').pop().replace(/\.pdf$/i, '').replace(/_/g, ' ');
   titleEl.textContent = name;
   document.title = name + ' | ' + (he ? 'אפי פז' : 'Efi Paz');
   // Every file keeps a download link, but not in the toolbar: it sits under the last page (and in the fallback).

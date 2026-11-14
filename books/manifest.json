@@ -40,17 +40,33 @@
    "order": "3"
   },
   {
-   "sidecar": "books/הודו בשיער שיבה עם שער.txt",
+   "sidecar": "books/india/info.txt",
    "source_sig": null,
    "title": "הודו בשיער שיבה",
    "title_en": "India with Grey Hair",
    "description": "רשמים והרהורים ממסעות להודו לאחר שנים רבות. מבט אחר דרך עיניים שנצברה בהן חוכמה.",
    "description_en": "Reflections and impressions from travels to India after many years.",
-   "path": "books/הודו בשיער שיבה עם שער.pdf",
+   "path": "books/india/הודו בשיער שיבה עם שער.pdf",
    "size_kb": 19844,
    "category": "",
-   "cover": "books/covers/cc59032452.jpg",
-   "order": "4"
+   "cover": "books/covers/e51ff2890b.jpg",
+   "order": "4",
+   "formats": [
+    {
+     "type": "pdf",
+     "path": "books/india/הודו בשיער שיבה עם שער.pdf",
+     "size_kb": 19844
+    },
+    {
+     "type": "epub",
+     "path": "books/india/הודו בשיער שיבה.epub",
+     "size_kb": 15002
+    }
+   ],
+   "page": "books/india/index.html",
+   "page_en": "books/india/index.en.html",
+   "about": "",
+   "about_en": ""
   },
   {
    "sidecar": "books/חוכמה מלאה שמחה.txt",

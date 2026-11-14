@@ -1342,6 +1342,10 @@ blockquote, .quote {
 .two-col--top { align-items: start; }
 .two-col__image--portrait { max-width: 320px; }
 .two-col__image--portrait img { filter: grayscale(30%); }
+/* שער של ספר בעמוד הספר: בצבעיו המקוריים */
+.two-col__image--cover { max-width: 320px; }
+.two-col__image--cover img { filter: none; border: 1px solid var(--color-border); }
+@media (min-width: 901px) { .two-col--book { grid-template-columns: 320px 1fr; } }
 
 /* אודיו / וידאו / הקלטות */
 .audio-list { display: grid; gap: var(--space-md); }
@@ -1481,5 +1485,5 @@ main a, .document-item__title { overflow-wrap: anywhere; }
 }
 
 /* קישורי "לקריאה · להורדה" ברשימות מסמכים: שטח מגע גדול בלי שינוי מראה */
-.document-item__meta a, .card__actions a, .video-item__meta a, .audio-item a { display: inline-block; padding: 6px 2px; margin: -6px 0; }
+.document-item__meta a, .card__actions a:not(.btn), .video-item__meta a, .audio-item a { display: inline-block; padding: 6px 2px; margin: -6px 0; }
 .document-item__title a, .card__title a, .person-card__name a { display: inline-block; padding: 5px 0; margin: -5px 0; }
