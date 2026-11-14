@@ -168,4 +168,14 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.efipaz.com/teachers/watts/index.en.html"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://www.efipaz.com/teachers/watts/"/>
   </url>
+  <url>
+    <loc>https://www.efipaz.com/books/india/</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.efipaz.com/books/india/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.efipaz.com/books/india/index.en.html"/>
+  </url>
+  <url>
+    <loc>https://www.efipaz.com/books/india/index.en.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.efipaz.com/books/india/index.en.html"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.efipaz.com/books/india/"/>
+  </url>
 </urlset>

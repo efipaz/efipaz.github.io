@@ -47,6 +47,7 @@ import subprocess
 import sys
 import urllib.parse
 import urllib.request
+import zipfile
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -73,6 +74,8 @@ HEIC_EXT = {".heic", ".heif"}
 VIDEO_EXT = {".mp4", ".mov", ".webm", ".m4v"}
 AUDIO_EXT = {".mp3", ".m4a", ".ogg", ".wav"}
 DOC_CONVERT_EXT = {".doc", ".docx", ".odt", ".rtf", ".mht", ".mhtml", ".txt_"}  # .txt_ never matches; txt is metadata
+EPUB_EXT = {".epub"}
+COVER_MAX = 600   # px, book covers (same size pdf_cover() produces)
 THUMB_MAX = 800
 THUMB_QUALITY = 82
 IGNORED_IMAGE_NAMES = {"home-1.png", "youremail.gif", "pat 1.jpg"}
@@ -171,8 +174,8 @@ KEY_ALIASES = {
     "dates": {"dates", "שנים", "תאריכים"},
     "role": {"role", "תפקיד"},
     "role_en": {"role_en", "תפקיד באנגלית"},
-    "bio": {"bio", "ביוגרפיה", "ביו", "אודות"},
-    "bio_en": {"bio_en", "ביוגרפיה באנגלית", "about_en"},
+    "bio": {"bio", "ביוגרפיה", "ביו", "אודות", "על הספר", "about"},
+    "bio_en": {"bio_en", "ביוגרפיה באנגלית", "about_en", "על הספר באנגלית"},
     "wiki": {"wiki", "wikipedia", "ויקיפדיה", "ויקי"},
     "wiki_en": {"wiki_en", "wikipedia_en", "ויקיפדיה באנגלית"},
     "cover": {"cover", "portrait", "image", "תמונה", "שער", "כיסוי", "פורטרט"},
@@ -457,9 +460,137 @@ def pdf_cover(pdf: Path, cover: Path) -> bool:
     return False
 
 
+def epub_cover(epub: Path, cover: Path) -> bool:
+    """Extract the cover image an EPUB carries (if any) into a small JPEG. Never raises."""
+    if cover.exists() or DRY_RUN:
+        return False
+    try:
+        with zipfile.ZipFile(epub) as z:
+            names = z.namelist()
+            opf_name = next((n for n in names if n.lower().endswith(".opf")), None)
+            target = None
+            if opf_name:
+                opf = z.read(opf_name).decode("utf-8", errors="replace")
+                base = opf_name.rsplit("/", 1)[0] + "/" if "/" in opf_name else ""
+                items = re.findall(r"<item\b[^>]*>", opf)
+                attr = lambda tag, a: (re.search(rf'\b{a}="([^"]*)"', tag) or [None, ""])[1]  # noqa: E731
+                tag = next((i for i in items if "cover-image" in attr(i, "properties")), None)
+                if tag is None:
+                    m = re.search(r'<meta\b[^>]*\bname="cover"[^>]*>', opf)
+                    cid = attr(m.group(0), "content") if m else ""
+                    tag = next((i for i in items if cid and attr(i, "id") == cid), None)
+                if tag is not None and attr(tag, "href"):
+                    cand = base + urllib.parse.unquote(attr(tag, "href"))
+                    target = cand if cand in names else None
+            if target is None:
+                target = next((n for n in names if re.search(r"(^|/)cover[^/]*\.(jpe?g|png)$", n, re.I)), None)
+            if target is None:
+                return False
+            with Image.open(io.BytesIO(z.read(target))) as im:
+                im.thumbnail((COVER_MAX, COVER_MAX * 2), Image.LANCZOS)
+                if im.mode not in ("RGB", "L"):
+                    im = im.convert("RGB")
+                cover.parent.mkdir(parents=True, exist_ok=True)
+                im.save(cover, "JPEG", quality=THUMB_QUALITY, optimize=True)
+        CHANGED.append(rel(cover))
+        return True
+    except Exception:  # noqa: BLE001  (an EPUB without a usable cover is simply shown without one)
+        return False
+
+
+def is_book_folder(sub: Path) -> bool:
+    """A subfolder with info.txt holds ONE book in several formats (and gets its own page).
+    Without info.txt a subfolder is a category of separate books, as it always was."""
+    return (sub / "info.txt").exists() or (sub / "info.json").exists()
+
+
+def scan_book_folder(sub: Path, covers_dir: Path) -> dict | None:
+    """One book = one folder: every PDF / EPUB / Word file in it is a format of the same book."""
+    info = load_info(sub)
+    files = sorted(p for p in sub.iterdir() if p.is_file() and not p.name.startswith("."))
+    for p in files:
+        if p.suffix.lower() in DOC_CONVERT_EXT and not p.with_suffix(".pdf").exists():
+            convert_to_pdf(p)
+    files = sorted(p for p in sub.iterdir() if p.is_file() and not p.name.startswith("."))
+    pdfs = []
+    for p in files:
+        if p.suffix.lower() == ".pdf":
+            if pdf_is_valid(p):
+                pdfs.append(p)
+            else:
+                report("error", f"הקובץ {p.name} אינו PDF תקין ולא הוצג. אפשר לפתוח אותו במחשב, לשמור מחדש כ-PDF ולהעלות שוב.", rel(p))
+    epubs = [p for p in files if p.suffix.lower() in EPUB_EXT]
+    docs = [p for p in files if p.suffix.lower() in DOC_CONVERT_EXT]
+    formats = [{"type": kind, "path": rel(p), "size_kb": round(p.stat().st_size / 1024)}
+               for kind, group in (("pdf", pdfs), ("epub", epubs), ("doc", docs)) for p in group]
+    if not formats:
+        report("warn", f"בתיקיית הספר {rel(sub)} עדיין אין קובץ ספר (PDF, EPUB או Word) — הספר יופיע כשיועלה קובץ", rel(sub))
+        return None
+    main = (pdfs or epubs or docs)[0]
+    cover = None
+    custom = None
+    if info.get("cover") and (sub / info["cover"]).is_file():
+        custom = sub / info["cover"]
+    else:
+        custom = next((c for c in files if c.stem.lower() == "cover" and c.suffix.lower() in IMAGE_EXT), None)
+    if custom is not None and image_readable(custom):
+        cover = covers_dir / f"{file_sig(custom)}.jpg"
+        make_thumb(custom, cover, COVER_MAX)
+    elif pdfs:
+        cover = covers_dir / f"{file_sig(pdfs[0])}.jpg"
+        pdf_cover(pdfs[0], cover)
+    elif epubs:
+        cover = covers_dir / f"{file_sig(epubs[0])}.jpg"
+        epub_cover(epubs[0], cover)
+    sidecar = sub / "info.txt"
+    return {
+        "sidecar": rel(sidecar) if sidecar.exists() else None,
+        "source_sig": None,
+        "title": info.get("title") or clean_name(sub.name),
+        "title_en": info.get("title_en") or "",
+        "description": info.get("description") or "",
+        "description_en": info.get("description_en") or "",
+        "path": rel(main),
+        "size_kb": round(main.stat().st_size / 1024),
+        "category": "",
+        "cover": rel(cover) if cover is not None and cover.exists() else None,
+        "order": info.get("order") or "",
+        "formats": formats,
+        "page": f"{rel(sub)}/index.html",
+        "page_en": f"{rel(sub)}/index.en.html",
+        "about": info.get("bio") or "",
+        "about_en": info.get("bio_en") or "",
+    }
+
+
+def same_content(a: Path, b: Path) -> bool:
+    try:
+        if a.stat().st_size != b.stat().st_size:
+            return False
+        ha, hb = hashlib.md5(), hashlib.md5()
+        for h, f in ((ha, a), (hb, b)):
+            with f.open("rb") as fh:
+                for chunk in iter(lambda: fh.read(1 << 20), b""):
+                    h.update(chunk)
+        return ha.digest() == hb.digest()
+    except OSError:
+        return False
+
+
 def scan_documents(folder: Path, covers_dir: Path) -> list[dict]:
-    """Collect PDFs (converting other formats) in folder and one level of category subfolders."""
+    """Collect PDFs (converting other formats) in folder and one level of category subfolders.
+    Subfolders with info.txt are single books with their own page (see scan_book_folder)."""
     items: list[dict] = []
+    book_dirs = sorted(d for d in folder.iterdir() if d.is_dir() and d != covers_dir
+                       and not d.name.startswith(".") and is_book_folder(d))
+    # A file left at the old place after a book got its folder (so old links keep working) is the same
+    # book, not a second one: same file name as a file inside a book folder -> no card of its own.
+    in_book: dict[str, Path] = {}
+    for d in book_dirs:
+        for q in d.iterdir():
+            if q.is_file() and q.suffix.lower() in {".pdf"} | EPUB_EXT | DOC_CONVERT_EXT:
+                in_book.setdefault(q.name, q)
+    loose_epubs: list[Path] = []
     seen_stems: set[str] = set()
     previous_sources: dict[str, str] = {}
     mf = folder / "manifest.json"
@@ -469,12 +600,22 @@ def scan_documents(folder: Path, covers_dir: Path) -> list[dict]:
         except Exception:  # noqa: BLE001
             previous_sources = {}
     files = sorted(p for p in folder.rglob("*") if p.is_file() and covers_dir not in p.parents
-                   and not p.name.startswith(".") and len(p.relative_to(folder).parts) <= 3)
+                   and not p.name.startswith(".") and len(p.relative_to(folder).parts) <= 3
+                   and not any(d in p.parents for d in book_dirs))
     # PDFs first, so a converted PDF wins over its source
     files.sort(key=lambda p: (0 if p.suffix.lower() == ".pdf" else 1, p.as_posix()))
     for p in files:
         ext = p.suffix.lower()
         stem_key = p.with_suffix("").as_posix()
+        if p.name in in_book and ext in {".pdf"} | EPUB_EXT | DOC_CONVERT_EXT:
+            twin = in_book[p.name]
+            if not same_content(p, twin):
+                report("warn", f"הקובץ {p.name} קיים בשתי גרסאות שונות: ב-{rel(p.parent)} וב-{rel(twin.parent)}. "
+                               f"באתר מוצגת הגרסה שב-{rel(twin.parent)}. כדי לעדכן את הספר – להעלות את הקובץ החדש לשם.", rel(p))
+            continue
+        if ext in EPUB_EXT:
+            loose_epubs.append(p)
+            continue
         if ext == ".pdf":
             pdf = p
         elif ext in DOC_CONVERT_EXT:
@@ -522,8 +663,42 @@ def scan_documents(folder: Path, covers_dir: Path) -> list[dict]:
             "cover": rel(cover) if cover.exists() else None,
             "order": meta.get("order") or "",
         })
+    # EPUB uploaded next to the other books: an extra download on the card of the PDF with the same
+    # name, or (no such PDF) a download-only card of its own. Never silently ignored.
+    for p in loose_epubs:
+        twin = next((it for it in items if Path(it["path"]).parent == Path(rel(p)).parent
+                     and clean_name(Path(it["path"]).stem) == clean_name(p.stem)), None)
+        if twin is not None:
+            twin["epub"] = rel(p)
+            continue
+        meta = sidecar_info(p)
+        category = p.parent.relative_to(folder).parts[0] if p.parent != folder else ""
+        cover = covers_dir / f"{file_sig(p)}.jpg"
+        epub_cover(p, cover)
+        sidecar = p.with_suffix(".txt")
+        items.append({
+            "sidecar": rel(sidecar) if sidecar.exists() else None,
+            "source_sig": None,
+            "title": meta.get("title") or clean_name(p.stem),
+            "title_en": meta.get("title_en") or "",
+            "description": meta.get("description") or "",
+            "description_en": meta.get("description_en") or "",
+            "path": rel(p),
+            "size_kb": round(p.stat().st_size / 1024),
+            "category": clean_name(category),
+            "cover": rel(cover) if cover.exists() else None,
+            "order": meta.get("order") or "",
+        })
+    for d in book_dirs:
+        try:
+            book = scan_book_folder(d, covers_dir)
+        except Exception as e:  # noqa: BLE001
+            report("error", f"לא הצלחתי לעבד את תיקיית הספר {rel(d)}: {e}", rel(d))
+            book = None
+        if book:
+            items.append(book)
     for it in items:
-        if it["cover"] is None and not DRY_RUN:
+        if it["cover"] is None and not DRY_RUN and it["path"].lower().endswith(".pdf"):
             pdf = ROOT / it["path"]
             if pdf.exists():
                 cover = covers_dir / f"{file_sig(pdf)}.jpg"
@@ -552,25 +727,135 @@ def book_card(item: dict, lang: str, depth: int, h: str = "h3") -> str:
             ("" if lang == "en" else item["description"]))
     read = "Read" if lang == "en" else "לקריאה"
     download = "Download PDF" if lang == "en" else "להורדה (PDF)"
+    download_epub = "Download EPUB" if lang == "en" else "להורדה (EPUB)"
+    is_pdf = item["path"].lower().endswith(".pdf")
     viewer = f"{rp}{'en/' if lang == 'en' else ''}viewer.html?file={urllib.parse.quote(item['path'], safe='')}"
-    href_pdf = rp + url(item["path"])
+    href_file = rp + url(item["path"])
+    page = item.get("page_en" if lang == "en" else "page")
+    # where the cover and the title lead: the book's own page, else the reader, else the file itself
+    main = rp + url(page) if page else (viewer if is_pdf else href_file)
+    main_attr = "" if (page or is_pdf) else " download"
+    actions = []
+    if is_pdf:
+        actions.append(f'<a class="card__link" href="{viewer}">{read}</a>')
+    if page:
+        more = "Book page & downloads" if lang == "en" else "עמוד הספר והורדות"
+        actions.append(f'<a class="card__link{" card__link--plain" if is_pdf else ""}" href="{rp}{url(page)}">{more}</a>')
+    else:
+        if is_pdf:
+            actions.append(f'<a class="card__link card__link--plain" href="{href_file}" download>{download}</a>')
+        else:
+            actions.append(f'<a class="card__link" href="{href_file}" download>{download_epub}</a>')
+        if item.get("epub"):
+            actions.append(f'<a class="card__link card__link--plain" href="{rp}{url(item["epub"])}" download>{download_epub}</a>')
     cover = ""
     if item["cover"]:
-        cover = f"""      <a class="card__image" href="{viewer}" aria-label="{esc(title)}">
+        cover = f"""      <a class="card__image" href="{main}"{main_attr} aria-label="{esc(title)}">
         <img src="{rp}{url(item['cover'])}" alt="" loading="lazy" width="600">
       </a>
 """
     cls = "card card--book" + (" card--with-image" if item["cover"] else "")
     desc_html = f'        <p class="card__text">{esc(desc)}</p>\n' if desc else ""
+    actions_html = "\n".join("          " + x for x in actions)
     return f"""    <div class="{cls}" lang="{'he' if not (lang == 'en' and item['title_en']) else 'en'}">
 {cover}      <div class="card__content">
-        <{h} class="card__title"><a href="{viewer}">{esc(title)}</a></{h}>
+        <{h} class="card__title"><a href="{main}"{main_attr}>{esc(title)}</a></{h}>
 {desc_html}        <p class="card__actions">
-          <a class="card__link" href="{viewer}">{read}</a>
-          <a class="card__link card__link--plain" href="{href_pdf}" download>{download}</a>
+{actions_html}
         </p>
       </div>
     </div>"""
+
+
+def size_label(kb: int) -> str:
+    return f"{kb / 1024:.1f} MB" if kb >= 1024 else f"{kb} KB"
+
+
+def book_page(item: dict, lang: str) -> str:
+    """The page of a book that has its own folder: cover, text, read online, every format to download."""
+    depth = 2
+    rp = chrome.root_prefix(depth)
+    lr = chrome.lang_root(lang, depth)
+    en = lang == "en"
+    title = item["title_en"] if en and item["title_en"] else item["title"]
+    title_lang = "en" if en and item["title_en"] else "he"
+    desc = item["description_en"] if en and item["description_en"] else ("" if en else item["description"])
+    about = item["about_en"] if en and item["about_en"] else item["about"]
+    about_lang = "en" if en and item["about_en"] else "he"
+    L = {
+        "he": dict(crumb="ספרים", read="לקריאה באתר", dl="להורדה", downloads="הורדת הספר", back="חזרה לכל הספרים",
+                   pdf="PDF – לקריאה במחשב ולהדפסה", epub="EPUB – לקריאה בטלפון, במחשב או בקורא ספרים", doc="Word"),
+        "en": dict(crumb="Books", read="Read online", dl="Download", downloads="Download the book", back="Back to all books",
+                   pdf="PDF – for reading on a computer and printing", epub="EPUB – for phones, computers and e-readers", doc="Word"),
+    }[lang]
+    formats = item.get("formats") or []
+    main_pdf = next((f for f in formats if f["type"] == "pdf"), None)
+    viewer = f"{lr}viewer.html?file={urllib.parse.quote(main_pdf['path'], safe='')}" if main_pdf else ""
+    rows = []
+    for f in formats:
+        icon = {"pdf": "PDF", "epub": "EPUB", "doc": "DOC"}[f["type"]]
+        name = clean_name(Path(f["path"]).stem)
+        same_type = [x for x in formats if x["type"] == f["type"]]
+        label = L[f["type"]] + (f" ({name})" if len(same_type) > 1 else "")
+        rows.append(f"""        <a class="document-item" href="{rp}{url(f['path'])}" download>
+          <div class="document-item__icon">{icon}</div>
+          <div class="document-item__info">
+            <div class="document-item__title">{esc(label)}</div>
+            <div class="document-item__meta">{L['dl']} · <span dir="ltr">{size_label(f['size_kb'])}</span></div>
+          </div>
+        </a>""")
+    cover = ""
+    if item["cover"]:
+        img = f'<img src="{rp}{url(item["cover"])}" alt="{esc(title)}" width="600">'
+        cover = (f'<div class="two-col__image two-col__image--cover"><a href="{viewer}">{img}</a></div>' if viewer
+                 else f'<div class="two-col__image two-col__image--cover">{img}</div>')
+    rtl = lambda lg: ' dir="rtl"' if lg == "he" and en else ""  # noqa: E731
+    text = []
+    if desc:
+        text.append(f'            <p>{esc(desc)}</p>')
+    if about:
+        text.append(f'            <div lang="{about_lang}"{rtl(about_lang)}>\n{paragraphs(about)}\n            </div>')
+    if viewer:
+        text.append(f'            <p class="mt-2"><a class="btn btn--filled" href="{viewer}">{L["read"]}</a></p>')
+    body = f"""    {MARKER}
+    <div class="page-header">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="breadcrumb"><a href="{lr}spiritual.html#books">{L['crumb']}</a> / <span lang="{title_lang}">{esc(title)}</span></nav>
+        <h1 lang="{title_lang}"{rtl(title_lang)}>{esc(title)}</h1>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <div class="{'two-col two-col--top two-col--book' if cover else 'container--narrow'}">
+          {cover}
+          <div>
+{chr(10).join(text)}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="download">
+      <div class="container container--narrow">
+        <h2>{L['downloads']}</h2>
+        <div class="document-list">
+{chr(10).join(rows)}
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container text-center">
+        <a href="{lr}spiritual.html#books" class="btn">{L['back']}</a>
+      </div>
+    </section>"""
+    folder = Path(item["page"]).parent.as_posix()
+    canonical = f"{folder}/" + ("index.en.html" if en else "")
+    alt = f"{folder}/" + ("" if en else "index.en.html")
+    return chrome.page(lang, depth, title, desc or first_paragraph(about) or title, "spiritual", body,
+                       canonical_path=url(canonical), alt_path=url(alt), alt_url="index.html" if en else "index.en.html",
+                       og_image=url(item["cover"]) if item["cover"] else None)
 
 
 def render_books(items: list[dict], lang: str, depth: int, h: str = "h3") -> str:
@@ -599,6 +884,20 @@ def build_books() -> None:
             covers.mkdir(exist_ok=True)
         items = scan_documents(folder, covers)
         write_json(folder / "manifest.json", {"items": items})
+        pages = set()
+        for it in items:
+            if it.get("page"):
+                for lang, key in (("he", "page"), ("en", "page_en")):
+                    write_text(ROOT / it[key], book_page(it, lang))
+                    pages.add(ROOT / it[key])
+        # a book folder that is gone (or lost its info.txt) must not leave its generated page behind
+        for sub in sorted(d for d in folder.iterdir() if d.is_dir() and d != covers):
+            for name in ("index.html", "index.en.html"):
+                old_page = sub / name
+                if old_page.exists() and old_page not in pages and not DRY_RUN \
+                        and MARKER in old_page.read_text(encoding="utf-8", errors="replace"):
+                    old_page.unlink()
+                    CHANGED.append(rel(old_page))
         for lang, page_path, depth in (("he", ROOT / "spiritual.html", 0), ("en", ROOT / "en" / "spiritual.html", 1)):
             inject(page_path, dirname, render_books(items, lang, depth, "h4" if dirname == "transcripts" else "h3"))
         log(f"{dirname}: {len(items)} items")
@@ -1430,6 +1729,12 @@ def build_sitemap() -> None:
     for folder in sorted(p for p in TEACHERS_DIR.iterdir() if p.is_dir()):
         if (folder / "index.html").exists():
             pages.append((f"{rel(folder)}/", f"{rel(folder)}/index.en.html"))
+    for dirname in BOOK_DIRS:   # books with their own page
+        base = ROOT / dirname
+        for folder in sorted(p for p in base.iterdir() if p.is_dir()) if base.exists() else []:
+            idx = folder / "index.html"
+            if idx.exists() and MARKER in idx.read_text(encoding="utf-8", errors="replace"):
+                pages.append((f"{rel(folder)}/", f"{rel(folder)}/index.en.html"))
     lines = ['<?xml version="1.0" encoding="UTF-8"?>',
              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">']
     for path, alt in pages:

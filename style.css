@@ -1342,6 +1342,10 @@ blockquote, .quote {
 .two-col--top { align-items: start; }
 .two-col__image--portrait { max-width: 320px; }
 .two-col__image--portrait img { filter: grayscale(30%); }
+/* שער של ספר בעמוד הספר: בצבעיו המקוריים */
+.two-col__image--cover { max-width: 320px; }
+.two-col__image--cover img { filter: none; border: 1px solid var(--color-border); }
+@media (min-width: 901px) { .two-col--book { grid-template-columns: 320px 1fr; } }
 
 /* אודיו / וידאו / הקלטות */
 .audio-list { display: grid; gap: var(--space-md); }

@@ -24,7 +24,8 @@ efipaz/
 ├── 404.html  style.css  sitemap.xml  robots.txt  HOWTO.md  content-report.md
 ├── links.txt               # מייל + קישורים חיצוניים (פליקר, בלוג) שאפי עורך; המנוע מזריק לכל <a data-link>
 ├── en/                     # אותם עמודים באנגלית (index, spiritual, travel, archive, viewer) + living/ethics: תיאור באנגלית של האתרים העבריים
-├── books/                  # ספרים: PDF/Word → שער + כרטיס אוטומטי. <שם>.txt לכותרת/תיאור
+├── books/                  # ספרים: PDF/Word/EPUB → שער + כרטיס אוטומטי. <שם>.txt לכותרת/תיאור
+│   └── india/              # תיקייה עם info.txt = ספר אחד בכמה פורמטים → עמוד ספר אוטומטי (index.html + index.en.html)
 ├── transcripts/            # תמלולים (קבוצות) – אותו מנגנון כמו books
 ├── travel/<תיקייה>/        # כל תיקייה עם תמונות = גלריה. info.txt אופציונלי, cover.jpg אופציונלי
 │   ├── india/ myanmar/     # גלריות ידניות (עם קטגוריות) – index.html נכתב ביד, לא נדרס
@@ -47,7 +48,8 @@ efipaz/
 
 | מה | איך |
 |----|-----|
-| ספרים/תמלולים | ממיר doc/docx/odt/rtf/mht ל-PDF (LibreOffice), מפיק שער מעמוד 1, כותב `manifest.json`, ומזריק כרטיסים ל-`spiritual.html` + `en/spiritual.html` בין `<!-- auto:books -->` ו-`<!-- /auto:books -->` |
+| ספרים/תמלולים | ממיר doc/docx/odt/rtf/mht ל-PDF (LibreOffice), מפיק שער מעמוד 1, כותב `manifest.json`, ומזריק כרטיסים ל-`spiritual.html` + `en/spiritual.html` בין `<!-- auto:books -->` ו-`<!-- /auto:books -->`. EPUB = קובץ להורדה (אין קורא): מצטרף לכרטיס של PDF באותו שם, או מקבל כרטיס הורדה משלו |
+| עמוד ספר | תת-תיקייה של `books/` עם `info.txt` (למשל `books/india/`) = ספר אחד: כל PDF/EPUB/Word בה הוא פורמט שלו. נוצר עמוד he+en עם שער, תיאור, `על הספר:` (אופציונלי), קריאה והורדות, והכרטיס מוביל אליו. תת-תיקייה בלי `info.txt` נשארת קטגוריה. קובץ ב-`books/` ששמו זהה לקובץ שבתיקיית ספר הוא עותק ישן שנשמר כדי לא לשבור קישורים – אין לו כרטיס, ואין למחוק אותו |
 | גלריות | כל תיקייה ב-`travel/` עם תמונות/וידאו: thumbnails, HEIC→JPG, poster לווידאו, `index.html` + `index.en.html` מתבנית, `gallery-manifest.json`, כרטיסים ב-`travel.html` בין `auto:galleries`. תיקייה עם `cover.*` בלבד = כרטיס "בקרוב" |
 | מורים | `teachers/<id>/info.txt` (מפתחות בעברית/אנגלית, ראה דוגמה ב-`teachers/spinoza/info.txt`) → עמוד הוגה he+en עם ביו, ויקיפדיה, PDF דרך ה-viewer, mp3, עמודים ישנים, תמונות; כרטיסים ב-`spiritual.html` בין `auto:teachers` |
 | הקלטות | שואל את archive.org (`uploader:efipaz@gmail.com`) → `recordings/manifest.json` → כרטיסים בין `auto:recordings` |
@@ -59,7 +61,7 @@ efipaz/
 
 **כללים לסוכני AI:**
 - **אין לערוך ידנית** את ה-manifest-ים, את מה שבין סימני `<!-- auto:* -->`, את `travel/*/index.html` של גלריות אוטומטיות,
-  את `teachers/*/index*.html`, את `sitemap.xml` ואת `content-report.*`. אם צריך לתקן – מתקנים את `build_content.py`.
+  את `teachers/*/index*.html`, את `books/*/index*.html`, את `sitemap.xml` ואת `content-report.*`. אם צריך לתקן – מתקנים את `build_content.py`.
   גם `href` של עוגן עם `data-link="…"` הוא בבעלות המנוע: משנים ב-`links.txt`, לא ב-HTML.
   אם מוחקים את שורת `מייל:` מ-`links.txt`, הפוטר מפסיק להציג מייל ו-`apply_chrome.py --check` ידרוש ריצה של `apply_chrome.py` (הפוטר הידני השתנה).
 - המנוע **סלחני**: קובץ בעייתי לעולם לא מפיל את הריצה, הוא נרשם בדוח. שמור על העיקרון הזה.
